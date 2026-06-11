@@ -51,7 +51,12 @@ async function tryUrl(url){
   try{
     const ctrl = new AbortController();
     const to = setTimeout(()=>ctrl.abort(), 20000);
-    const r = await fetch(url, { headers:{ "User-Agent":"Mozilla/5.0 (OeilDuCentaure; veille juridique)", "Accept":"application/rss+xml, application/xml, text/xml, */*" }, signal: ctrl.signal });
+    const r = await fetch(url, { headers:{
+      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+      "Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
+      "Accept-Language":"fr-FR,fr;q=0.9",
+      "Accept-Encoding":"identity"
+    }, signal: ctrl.signal });
     clearTimeout(to);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
     const xml = await r.text();
