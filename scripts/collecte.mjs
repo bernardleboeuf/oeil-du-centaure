@@ -50,8 +50,8 @@ function impactKW(text){
 async function tryUrl(url){
   try{
     const ctrl = new AbortController();
-    const to = setTimeout(()=>ctrl.abort(), 9000);
-    const r = await fetch(url, { headers:{ "User-Agent":"Mozilla/5.0 (OeilDuCentaure; veille juridique)" }, signal: ctrl.signal });
+    const to = setTimeout(()=>ctrl.abort(), 20000);
+    const r = await fetch(url, { headers:{ "User-Agent":"Mozilla/5.0 (OeilDuCentaure; veille juridique)", "Accept":"application/rss+xml, application/xml, text/xml, */*" }, signal: ctrl.signal });
     clearTimeout(to);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
     const xml = await r.text();
@@ -66,7 +66,14 @@ async function fetchSource(src){
   if(src.direct){
     candidates = src.direct;                          // URLs vérifiées (CE, CJUE, Légifrance…)
   } else {
-    const paths = ["/rss/dernieres-decisions","/flux-rss/dernieres-decisions","/rss/actualites-rss","/flux-rss/actualites"];
+    const paths = [
+      "/flux-rss/dernieres-decisions",      // TA standard (Grenoble…)
+      "/rss/dernieres-decisions",           // TA variante (Paris…)
+      "/flux-rss/decisions-de-justice",     // CAA (Marseille…)
+      "/rss/decisions-de-justice",
+      "/flux-rss/actualites",
+      "/rss/actualites-rss"                 // Conseil d'État
+    ];
     candidates = paths.map(p=>src.base+p);            // TA/CAA/CNDA/Cassation : variantes auto
   }
   let lastReason = "aucune variante ne répond";
