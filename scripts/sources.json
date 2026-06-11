@@ -1,122 +1,644 @@
-import { readFileSync, writeFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
-
-const __dir = dirname(fileURLToPath(import.meta.url));
-const SOURCES = JSON.parse(readFileSync(join(__dir, "sources.json"), "utf8"));
-
-const KW = {
-  dpa: ["marché","commande publique","concession","délégation","contrat public","appel d'offres","accord-cadre","ccag","occupation du domaine","référé précontractuel","passation","concessions"],
-  urba: ["permis","urbanisme","aménagement","plu","foncier","domanialité","copropriété","habitat indigne","environnement","icpe","installation classée","éolien","photovolta"],
-  constr: ["construction","désordre","décennale","dommage ouvrage","assurance construction","maître d'œuvre","réception des travaux","garantie décennale"],
-  dpriv: ["société","bail commercial","marque","propriété intellectuelle","procédure collective","redressement","liquidation","fonds de commerce","déspécialisation"],
-  penal: ["pénal","prise illégale","favoritisme","corruption","détournement","garde à vue","correctionnel","probité"],
-  perso: ["fonction publique","agent","discipline","statut","fonctionnaire","révocation","fph","fpt","carrière","disciplinaire"],
-  enfance: ["aide sociale","ase","mineur","mna","handicap","apa","rsa","essms","protection de l'enfance","médico-social"],
-  etrangers: ["étranger","oqtf","séjour","asile","rétention","éloignement","titre de séjour","reconduite","cnda","visa"],
-  dpg: ["acte administratif","référé","responsabilité","police administrative","excès de pouvoir","légalité","retrait","abrogation"]
-};
-
-function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
-function attr(s, tag, a){ const m = s.match(new RegExp("<"+tag+"[^>]*"+a+"=[\"']([^\"']+)","i")); return m ? m[1] : ""; }
-function clean(s){ return (s||"").replace(/<!\[CDATA\[|\]\]>/g,"").replace(/<[^>]+>/g," ").replace(/&[a-z#0-9]+;/g," ").replace(/\s+/g," ").trim(); }
-function normDate(s){ const d = new Date(s); return isNaN(d) ? "" : d.toISOString(); }
-
-function parseFeed(xml, src){
-  const items = [];
-  const blocks = xml.split(/<item[ >]|<entry[ >]/i).slice(1);
-  for (const b of blocks){
-    const title = clean(pick(b,"title"));
-    if (!title) continue;
-    const link = pick(b,"link") || attr(b,"link","href");
-    const date = pick(b,"pubDate")||pick(b,"published")||pick(b,"updated")||"";
-    const desc = clean(pick(b,"description")||pick(b,"summary")||pick(b,"content"));
-    items.push({ titre:title, lien:link, date:normDate(date), source:src.nom, srcType:src.type, resume:desc.slice(0,240) });
-  }
-  return items;
-}
-function classifyKW(text){
-  const t = text.toLowerCase(); let best=null, bs=0;
-  for (const [c,w] of Object.entries(KW)){ const s=w.reduce((a,k)=>a+(t.includes(k)?1:0),0); if(s>bs){bs=s;best=c;} }
-  return bs>0?best:null;
-}
-function impactKW(text){
-  const t=text.toLowerCase();
-  if(/décret|loi |ordonnance|seuil|réforme|revirement|grande chambre|assemblée|seuils/.test(t)) return 3;
-  if(/référé|annulation|sanction|précise|condition|encadre|resserre/.test(t)) return 2;
-  return 1;
-}
-
-// === DIAGNOSTIC : teste chaque source et rapporte son état ===
-async function fetchFeed(src){
-  try{
-    const ctrl = new AbortController();
-    const to = setTimeout(()=>ctrl.abort(), 9000);
-    const r = await fetch(src.rss, { headers:{ "User-Agent":"OeilDuCentaure/1.0 (+veille juridique Centaure Avocats)" }, signal: ctrl.signal });
-    clearTimeout(to);
-    if(!r.ok) return { ok:false, reason:"HTTP "+r.status, items:[] };
-    const xml = await r.text();
-    const items = parseFeed(xml, src);
-    return { ok: items.length>0, reason: items.length>0 ? "" : "0 item (pas un flux ?)", items };
-  }catch(e){ return { ok:false, reason: e.name==="AbortError"?"timeout":"injoignable", items:[] }; }
-}
-
-async function classifyAI(items){
-  const key = process.env.ANTHROPIC_API_KEY;
-  if(!key) return null;
-  const list = items.slice(0,50).map((it,i)=>`${i}. ${it.titre}`).join("\n");
-  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: compétence (dpa,urba,constr,dpriv,penal,perso,enfance,etrangers,dpg ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"dpa\",\"impact\":3}]. Rien d'autre.";
-  try{
-    const r = await fetch("https://api.anthropic.com/v1/messages",{
-      method:"POST",
-      headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
-      body: JSON.stringify({ model:"claude-sonnet-4-20250514", max_tokens:3000, system:sys, messages:[{role:"user",content:list}] })
-    });
-    const data = await r.json();
-    const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/```json|```/g,"").trim();
-    return JSON.parse(txt);
-  }catch(e){ console.error("IA indisponible, repli mots-clés:", e.message); return null; }
-}
-
-async function main(){
-  const all = [...SOURCES.TA, ...SOURCES.CAA, ...SOURCES.SUPRA, ...SOURCES.EUROPE, ...SOURCES.NATIONAL];
-  console.log("=================================================");
-  console.log("DIAGNOSTIC DE COLLECTE — "+all.length+" flux à tester");
-  console.log("=================================================\n");
-
-  const results = [];
-  const ok = [], ko = [];
-  const BATCH = 10;
-  for(let i=0;i<all.length;i+=BATCH){
-    const chunk = await Promise.all(all.slice(i,i+BATCH).map(async src=>({src, res: await fetchFeed(src)})));
-    for(const {src,res} of chunk){
-      if(res.ok){ ok.push({nom:src.nom, n:res.items.length}); results.push(...res.items); }
-      else { ko.push({nom:src.nom, reason:res.reason}); }
+{
+  "TA": [
+    {
+      "type": "TA",
+      "slug": "amiens",
+      "nom": "TA de Amiens — décisions",
+      "rss": "https://amiens.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "amiens",
+      "nom": "TA de Amiens — jurisprudence",
+      "rss": "https://amiens.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "bastia",
+      "nom": "TA de Bastia — décisions",
+      "rss": "https://bastia.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "bastia",
+      "nom": "TA de Bastia — jurisprudence",
+      "rss": "https://bastia.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "besancon",
+      "nom": "TA de Besancon — décisions",
+      "rss": "https://besancon.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "besancon",
+      "nom": "TA de Besancon — jurisprudence",
+      "rss": "https://besancon.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "bordeaux",
+      "nom": "TA de Bordeaux — décisions",
+      "rss": "https://bordeaux.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "bordeaux",
+      "nom": "TA de Bordeaux — jurisprudence",
+      "rss": "https://bordeaux.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "caen",
+      "nom": "TA de Caen — décisions",
+      "rss": "https://caen.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "caen",
+      "nom": "TA de Caen — jurisprudence",
+      "rss": "https://caen.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "cergy-pontoise",
+      "nom": "TA de Cergy-Pontoise — décisions",
+      "rss": "https://cergy-pontoise.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "cergy-pontoise",
+      "nom": "TA de Cergy-Pontoise — jurisprudence",
+      "rss": "https://cergy-pontoise.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "chalons-en-champagne",
+      "nom": "TA de Chalons-En-Champagne — décisions",
+      "rss": "https://chalons-en-champagne.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "chalons-en-champagne",
+      "nom": "TA de Chalons-En-Champagne — jurisprudence",
+      "rss": "https://chalons-en-champagne.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "clermont-ferrand",
+      "nom": "TA de Clermont-Ferrand — décisions",
+      "rss": "https://clermont-ferrand.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "clermont-ferrand",
+      "nom": "TA de Clermont-Ferrand — jurisprudence",
+      "rss": "https://clermont-ferrand.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "dijon",
+      "nom": "TA de Dijon — décisions",
+      "rss": "https://dijon.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "dijon",
+      "nom": "TA de Dijon — jurisprudence",
+      "rss": "https://dijon.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "grenoble",
+      "nom": "TA de Grenoble — décisions",
+      "rss": "https://grenoble.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "grenoble",
+      "nom": "TA de Grenoble — jurisprudence",
+      "rss": "https://grenoble.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "lille",
+      "nom": "TA de Lille — décisions",
+      "rss": "https://lille.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "lille",
+      "nom": "TA de Lille — jurisprudence",
+      "rss": "https://lille.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "limoges",
+      "nom": "TA de Limoges — décisions",
+      "rss": "https://limoges.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "limoges",
+      "nom": "TA de Limoges — jurisprudence",
+      "rss": "https://limoges.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "lyon",
+      "nom": "TA de Lyon — décisions",
+      "rss": "https://lyon.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "lyon",
+      "nom": "TA de Lyon — jurisprudence",
+      "rss": "https://lyon.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "marseille",
+      "nom": "TA de Marseille — décisions",
+      "rss": "https://marseille.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "marseille",
+      "nom": "TA de Marseille — jurisprudence",
+      "rss": "https://marseille.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "montpellier",
+      "nom": "TA de Montpellier — décisions",
+      "rss": "https://montpellier.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "montpellier",
+      "nom": "TA de Montpellier — jurisprudence",
+      "rss": "https://montpellier.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "montreuil",
+      "nom": "TA de Montreuil — décisions",
+      "rss": "https://montreuil.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "montreuil",
+      "nom": "TA de Montreuil — jurisprudence",
+      "rss": "https://montreuil.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "nancy",
+      "nom": "TA de Nancy — décisions",
+      "rss": "https://nancy.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "nancy",
+      "nom": "TA de Nancy — jurisprudence",
+      "rss": "https://nancy.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "nantes",
+      "nom": "TA de Nantes — décisions",
+      "rss": "https://nantes.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "nantes",
+      "nom": "TA de Nantes — jurisprudence",
+      "rss": "https://nantes.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "nice",
+      "nom": "TA de Nice — décisions",
+      "rss": "https://nice.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "nice",
+      "nom": "TA de Nice — jurisprudence",
+      "rss": "https://nice.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "nimes",
+      "nom": "TA de Nimes — décisions",
+      "rss": "https://nimes.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "nimes",
+      "nom": "TA de Nimes — jurisprudence",
+      "rss": "https://nimes.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "orleans",
+      "nom": "TA de Orleans — décisions",
+      "rss": "https://orleans.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "orleans",
+      "nom": "TA de Orleans — jurisprudence",
+      "rss": "https://orleans.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "paris",
+      "nom": "TA de Paris — décisions",
+      "rss": "https://paris.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "paris",
+      "nom": "TA de Paris — jurisprudence",
+      "rss": "https://paris.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "pau",
+      "nom": "TA de Pau — décisions",
+      "rss": "https://pau.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "pau",
+      "nom": "TA de Pau — jurisprudence",
+      "rss": "https://pau.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "poitiers",
+      "nom": "TA de Poitiers — décisions",
+      "rss": "https://poitiers.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "poitiers",
+      "nom": "TA de Poitiers — jurisprudence",
+      "rss": "https://poitiers.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "rennes",
+      "nom": "TA de Rennes — décisions",
+      "rss": "https://rennes.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "rennes",
+      "nom": "TA de Rennes — jurisprudence",
+      "rss": "https://rennes.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "rouen",
+      "nom": "TA de Rouen — décisions",
+      "rss": "https://rouen.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "rouen",
+      "nom": "TA de Rouen — jurisprudence",
+      "rss": "https://rouen.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "strasbourg",
+      "nom": "TA de Strasbourg — décisions",
+      "rss": "https://strasbourg.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "strasbourg",
+      "nom": "TA de Strasbourg — jurisprudence",
+      "rss": "https://strasbourg.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "toulon",
+      "nom": "TA de Toulon — décisions",
+      "rss": "https://toulon.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "toulon",
+      "nom": "TA de Toulon — jurisprudence",
+      "rss": "https://toulon.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "toulouse",
+      "nom": "TA de Toulouse — décisions",
+      "rss": "https://toulouse.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "toulouse",
+      "nom": "TA de Toulouse — jurisprudence",
+      "rss": "https://toulouse.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "versailles",
+      "nom": "TA de Versailles — décisions",
+      "rss": "https://versailles.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "versailles",
+      "nom": "TA de Versailles — jurisprudence",
+      "rss": "https://versailles.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "basse-terre",
+      "nom": "TA de Basse-Terre — décisions",
+      "rss": "https://basse-terre.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "basse-terre",
+      "nom": "TA de Basse-Terre — jurisprudence",
+      "rss": "https://basse-terre.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "cayenne",
+      "nom": "TA de Cayenne — décisions",
+      "rss": "https://cayenne.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "cayenne",
+      "nom": "TA de Cayenne — jurisprudence",
+      "rss": "https://cayenne.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "fort-de-france",
+      "nom": "TA de Fort-De-France — décisions",
+      "rss": "https://fort-de-france.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "fort-de-france",
+      "nom": "TA de Fort-De-France — jurisprudence",
+      "rss": "https://fort-de-france.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "mamoudzou",
+      "nom": "TA de Mamoudzou — décisions",
+      "rss": "https://mamoudzou.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "mamoudzou",
+      "nom": "TA de Mamoudzou — jurisprudence",
+      "rss": "https://mamoudzou.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "nouvelle-caledonie",
+      "nom": "TA de Nouvelle-Caledonie — décisions",
+      "rss": "https://nouvelle-caledonie.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "nouvelle-caledonie",
+      "nom": "TA de Nouvelle-Caledonie — jurisprudence",
+      "rss": "https://nouvelle-caledonie.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "la-reunion",
+      "nom": "TA de La-Reunion — décisions",
+      "rss": "https://la-reunion.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "la-reunion",
+      "nom": "TA de La-Reunion — jurisprudence",
+      "rss": "https://la-reunion.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "papeete",
+      "nom": "TA de Papeete — décisions",
+      "rss": "https://papeete.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "papeete",
+      "nom": "TA de Papeete — jurisprudence",
+      "rss": "https://papeete.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-barthelemy",
+      "nom": "TA de Saint-Barthelemy — décisions",
+      "rss": "https://saint-barthelemy.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-barthelemy",
+      "nom": "TA de Saint-Barthelemy — jurisprudence",
+      "rss": "https://saint-barthelemy.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-denis",
+      "nom": "TA de Saint-Denis — décisions",
+      "rss": "https://saint-denis.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-denis",
+      "nom": "TA de Saint-Denis — jurisprudence",
+      "rss": "https://saint-denis.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-martin",
+      "nom": "TA de Saint-Martin — décisions",
+      "rss": "https://saint-martin.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-martin",
+      "nom": "TA de Saint-Martin — jurisprudence",
+      "rss": "https://saint-martin.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-pierre-et-miquelon",
+      "nom": "TA de Saint-Pierre-Et-Miquelon — décisions",
+      "rss": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "saint-pierre-et-miquelon",
+      "nom": "TA de Saint-Pierre-Et-Miquelon — jurisprudence",
+      "rss": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "TA",
+      "slug": "wallis-et-futuna",
+      "nom": "TA de Wallis-Et-Futuna — décisions",
+      "rss": "https://wallis-et-futuna.tribunal-administratif.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "TA",
+      "slug": "wallis-et-futuna",
+      "nom": "TA de Wallis-Et-Futuna — jurisprudence",
+      "rss": "https://wallis-et-futuna.tribunal-administratif.fr/flux-rss/jurisprudence-du-tribunal"
     }
-  }
-
-  console.log("----- ✓ FLUX QUI RÉPONDENT ("+ok.length+") -----");
-  ok.sort((a,b)=>b.n-a.n).forEach(s=>console.log("  ✓ "+s.n+" items  ·  "+s.nom));
-  console.log("\n----- ✗ FLUX MUETS / EN ÉCHEC ("+ko.length+") -----");
-  ko.forEach(s=>console.log("  ✗ "+s.reason.padEnd(16)+"·  "+s.nom));
-  console.log("\n=================================================");
-  console.log("BILAN : "+ok.length+" flux OK / "+all.length+" testés  ·  "+results.length+" items bruts récoltés");
-  console.log("=================================================\n");
-
-  // dédoublonnage + tri + classement (comme en prod)
-  const seen = new Set();
-  let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
-  items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  items = items.slice(0,150);
-
-  const ai = await classifyAI(items);
-  items = items.map((it,idx)=>{
-    if(ai){ const tag = ai.find(x=>x.i===idx); return { ...it, comp: tag?.comp || classifyKW(it.titre+" "+it.resume), impact: tag?.impact || impactKW(it.titre) }; }
-    return { ...it, comp: classifyKW(it.titre+" "+it.resume), impact: impactKW(it.titre+" "+it.resume) };
-  }).filter(it=>it.comp);
-
-  const out = { generatedAt:new Date().toISOString(), sources:all.length, fluxOk:ok.length, count:items.length, items };
-  writeFileSync(join(__dir,"..","veille.json"), JSON.stringify(out,null,2));
-  console.log("✓ "+items.length+" actualités classées et écrites dans veille.json");
+  ],
+  "CAA": [
+    {
+      "type": "CAA",
+      "slug": "bordeaux",
+      "nom": "CAA de Bordeaux — décisions",
+      "rss": "https://bordeaux.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "bordeaux",
+      "nom": "CAA de Bordeaux — jurisprudence",
+      "rss": "https://bordeaux.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "douai",
+      "nom": "CAA de Douai — décisions",
+      "rss": "https://douai.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "douai",
+      "nom": "CAA de Douai — jurisprudence",
+      "rss": "https://douai.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "lyon",
+      "nom": "CAA de Lyon — décisions",
+      "rss": "https://lyon.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "lyon",
+      "nom": "CAA de Lyon — jurisprudence",
+      "rss": "https://lyon.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "marseille",
+      "nom": "CAA de Marseille — décisions",
+      "rss": "https://marseille.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "marseille",
+      "nom": "CAA de Marseille — jurisprudence",
+      "rss": "https://marseille.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "nancy",
+      "nom": "CAA de Nancy — décisions",
+      "rss": "https://nancy.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "nancy",
+      "nom": "CAA de Nancy — jurisprudence",
+      "rss": "https://nancy.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "nantes",
+      "nom": "CAA de Nantes — décisions",
+      "rss": "https://nantes.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "nantes",
+      "nom": "CAA de Nantes — jurisprudence",
+      "rss": "https://nantes.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "paris",
+      "nom": "CAA de Paris — décisions",
+      "rss": "https://paris.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "paris",
+      "nom": "CAA de Paris — jurisprudence",
+      "rss": "https://paris.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "toulouse",
+      "nom": "CAA de Toulouse — décisions",
+      "rss": "https://toulouse.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "toulouse",
+      "nom": "CAA de Toulouse — jurisprudence",
+      "rss": "https://toulouse.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    },
+    {
+      "type": "CAA",
+      "slug": "versailles",
+      "nom": "CAA de Versailles — décisions",
+      "rss": "https://versailles.cour-administrative-appel.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CAA",
+      "slug": "versailles",
+      "nom": "CAA de Versailles — jurisprudence",
+      "rss": "https://versailles.cour-administrative-appel.fr/flux-rss/jurisprudence-du-tribunal"
+    }
+  ],
+  "SUPRA": [
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — dernières décisions",
+      "rss": "https://www.conseil-etat.fr/flux-rss/dernieres-decisions"
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — actualités",
+      "rss": "https://www.conseil-etat.fr/flux-rss/actualites"
+    }
+  ],
+  "EUROPE": [
+    {
+      "type": "CJUE",
+      "nom": "Cour de justice de l'UE — communiqués",
+      "rss": "https://curia.europa.eu/jcms/jcms/Jo2_16799/fr/?rss=true"
+    }
+  ],
+  "NATIONAL": [
+    {
+      "type": "LEG",
+      "nom": "Légifrance — Journal officiel",
+      "rss": "https://www.legifrance.gouv.fr/contenu/rss/jorf"
+    }
+  ]
 }
-main();
