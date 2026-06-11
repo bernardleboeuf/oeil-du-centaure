@@ -199,11 +199,6 @@
       "type": "TA",
       "nom": "TA de Saint-Pierre-et-Miquelon",
       "base": "https://saint-pierre-et-miquelon.tribunal-administratif.fr"
-    },
-    {
-      "type": "TA",
-      "nom": "TA de Wallis-et-Futuna",
-      "base": "https://mata-utu.tribunal-administratif.fr"
     }
   ],
   "CAA": [
@@ -269,49 +264,167 @@
       ]
     },
     {
-      "type": "CE",
-      "nom": "Conseil d'État — audiences importantes",
+      "type": "AN",
+      "nom": "Assemblée nationale — actualités",
       "direct": [
-        "https://www.conseil-etat.fr/rss/seances-publiques-rss"
+        "https://www.assemblee-nationale.fr/rss/presse.xml",
+        "https://www.assemblee-nationale.fr/rss/"
       ]
     },
     {
-      "type": "CNDA",
-      "nom": "Cour nationale du droit d'asile",
-      "base": "https://www.cnda.fr"
+      "type": "SENAT",
+      "nom": "Sénat — communiqués de presse",
+      "direct": [
+        "http://www.senat.fr/rss/presse.xml",
+        "http://www.senat.fr/rss.html"
+      ]
+    },
+    {
+      "type": "SENAT",
+      "nom": "Sénat — projets et propositions de loi",
+      "direct": [
+        "http://www.senat.fr/rss/textes.xml"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — lois",
+      "direct": [
+        "https://www.vie-publique.fr/flux-rss/lois.xml",
+        "https://www.vie-publique.fr/rss/lois"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — rapports",
+      "direct": [
+        "https://www.vie-publique.fr/flux-rss/rapports.xml"
+      ]
+    },
+    {
+      "type": "CC",
+      "nom": "Conseil constitutionnel",
+      "direct": [
+        "https://www.conseil-constitutionnel.fr/flux/rss.xml"
+      ]
+    },
+    {
+      "type": "CESE",
+      "nom": "Conseil économique social environnemental",
+      "direct": [
+        "https://www.lecese.fr/rss.xml",
+        "https://www.lecese.fr/abonnement-aux-flux-rss-du-cese"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "CNIL — données personnelles (RGPD)",
+      "comp": "dpriv",
+      "direct": [
+        "https://www.cnil.fr/fr/rss.xml"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "HAS — santé",
+      "comp": "enfance",
+      "direct": [
+        "https://www.has-sante.fr/jcms/c_1771214/fr/nos-flux-d-information-rss"
+      ]
+    },
+    {
+      "type": "DAJ",
+      "nom": "DAJ Bercy — commande publique",
+      "comp": "dpa",
+      "direct": [
+        "https://www.economie.gouv.fr/daj/rss",
+        "https://www.economie.gouv.fr/rss"
+      ]
+    },
+    {
+      "type": "CCOMPTES",
+      "nom": "Cour des comptes",
+      "direct": [
+        "https://www.ccomptes.fr/fr/rss/general",
+        "https://www.ccomptes.fr/fr/rss.xml"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "ARCEP — communications/transports",
+      "comp": "dpa",
+      "direct": [
+        "https://www.arcep.fr/?eID=rssfeed",
+        "https://www.arcep.fr/rss.xml"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "AMF — marchés financiers",
+      "comp": "dpriv",
+      "direct": [
+        "https://www.amf-france.org/fr/rss.xml"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "ART — régulation des transports",
+      "comp": "dpa",
+      "direct": [
+        "https://www.autorite-transports.fr/feed/",
+        "https://www.autorite-transports.fr/rss.xml"
+      ]
+    },
+    {
+      "type": "BO",
+      "nom": "BO Transition écologique (urbanisme/environnement)",
+      "comp": "urba",
+      "direct": [
+        "https://www.bulletin-officiel.developpement-durable.gouv.fr/rss",
+        "https://www.bulletin-officiel.developpement-durable.gouv.fr/feed"
+      ]
+    },
+    {
+      "type": "BO",
+      "nom": "Bofip — finances publiques (fiscal)",
+      "comp": "dpriv",
+      "direct": [
+        "https://bofip.impots.gouv.fr/flux-rss"
+      ]
+    },
+    {
+      "type": "SP",
+      "nom": "Service-public — actualités pro",
+      "direct": [
+        "https://www.service-public.fr/professionnels-entreprises/actualites?rss",
+        "https://www.service-public.fr/P10008"
+      ]
     }
   ],
   "EUROPE": [
     {
-      "type": "CJUE",
-      "nom": "Cour de justice de l'UE",
+      "type": "CURIA",
+      "nom": "CJUE — communiqués de presse",
       "direct": [
         "https://curia.europa.eu/jcms/jcms/Jo2_16799/fr/?rss=true",
         "https://curia.europa.eu/cms/rss/fr/cp.xml"
       ]
     },
     {
-      "type": "CEDH",
-      "nom": "Cour européenne des droits de l'homme",
+      "type": "EURLEX",
+      "nom": "Eur-Lex — jurisprudence CJUE",
       "direct": [
-        "https://www.echr.coe.int/rss",
-        "https://hudoc.echr.coe.int/rss"
-      ]
-    }
-  ],
-  "NATIONAL": [
-    {
-      "type": "LEG",
-      "nom": "Légifrance — Journal officiel",
-      "direct": [
-        "https://www.legifrance.gouv.fr/contenu/rss/jorf",
-        "https://www.legifrance.gouv.fr/rss/jorf"
+        "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=cellar%3Ajurisprudence"
       ]
     },
     {
-      "type": "CASS",
-      "nom": "Cour de cassation — actualités",
-      "base": "https://www.courdecassation.fr"
+      "type": "CEDH",
+      "nom": "CEDH — communiqués de presse",
+      "direct": [
+        "https://www.echr.coe.int/sites/search_filter/rss/press",
+        "https://www.echr.coe.int/fr/echr-rss-feeds"
+      ]
     }
-  ]
+  ],
+  "NATIONAL": []
 }
