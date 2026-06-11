@@ -264,11 +264,18 @@
       ]
     },
     {
+      "type": "CE",
+      "nom": "Conseil d'État — audiences importantes",
+      "direct": [
+        "https://www.conseil-etat.fr/rss/seances-publiques-rss"
+      ]
+    },
+    {
       "type": "AN",
       "nom": "Assemblée nationale — actualités",
       "direct": [
-        "https://www.assemblee-nationale.fr/rss/presse.xml",
-        "https://www.assemblee-nationale.fr/rss/"
+        "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml",
+        "http://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires"
       ]
     },
     {
@@ -290,15 +297,15 @@
       "type": "VP",
       "nom": "Vie-publique — lois",
       "direct": [
-        "https://www.vie-publique.fr/flux-rss/lois.xml",
-        "https://www.vie-publique.fr/rss/lois"
+        "https://www.vie-publique.fr/flux/lois.xml",
+        "https://www.vie-publique.fr/rss/loi.xml"
       ]
     },
     {
       "type": "VP",
       "nom": "Vie-publique — rapports",
       "direct": [
-        "https://www.vie-publique.fr/flux-rss/rapports.xml"
+        "https://www.vie-publique.fr/flux/rapports.xml"
       ]
     },
     {
@@ -312,8 +319,7 @@
       "type": "CESE",
       "nom": "Conseil économique social environnemental",
       "direct": [
-        "https://www.lecese.fr/rss.xml",
-        "https://www.lecese.fr/abonnement-aux-flux-rss-du-cese"
+        "https://www.lecese.fr/flux-rss-actualites.xml"
       ]
     },
     {
@@ -329,7 +335,7 @@
       "nom": "HAS — santé",
       "comp": "enfance",
       "direct": [
-        "https://www.has-sante.fr/jcms/c_1771214/fr/nos-flux-d-information-rss"
+        "https://www.has-sante.fr/rss/c_1771214.xml"
       ]
     },
     {
@@ -354,8 +360,7 @@
       "nom": "ARCEP — communications/transports",
       "comp": "dpa",
       "direct": [
-        "https://www.arcep.fr/?eID=rssfeed",
-        "https://www.arcep.fr/rss.xml"
+        "https://www.arcep.fr/rss/actualites.xml"
       ]
     },
     {
@@ -389,15 +394,14 @@
       "nom": "Bofip — finances publiques (fiscal)",
       "comp": "dpriv",
       "direct": [
-        "https://bofip.impots.gouv.fr/flux-rss"
+        "https://bofip.impots.gouv.fr/rss"
       ]
     },
     {
       "type": "SP",
       "nom": "Service-public — actualités pro",
       "direct": [
-        "https://www.service-public.fr/professionnels-entreprises/actualites?rss",
-        "https://www.service-public.fr/P10008"
+        "https://www.service-public.fr/professionnels-entreprises/actualites/rss"
       ]
     }
   ],
@@ -414,15 +418,14 @@
       "type": "EURLEX",
       "nom": "Eur-Lex — jurisprudence CJUE",
       "direct": [
-        "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=cellar%3Ajurisprudence"
+        "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=e1Wry2%2FymXEa8eDqcSnEH1U7yA4fdABTRMHEfmK6V0Q%3D"
       ]
     },
     {
       "type": "CEDH",
       "nom": "CEDH — communiqués de presse",
       "direct": [
-        "https://www.echr.coe.int/sites/search_filter/rss/press",
-        "https://www.echr.coe.int/fr/echr-rss-feeds"
+        "https://hudoc.echr.coe.int/app/rss/press"
       ]
     }
   ],
