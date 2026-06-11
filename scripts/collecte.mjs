@@ -59,7 +59,12 @@ async function tryUrl(url){
     }, signal: ctrl.signal });
     clearTimeout(to);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
-    const xml = await r.text();
+    // gérer l'encodage : certains flux sont en ISO-8859-1, pas UTF-8
+    const buf = Buffer.from(await r.arrayBuffer());
+    let enc = "utf-8";
+    const head = buf.slice(0, 200).toString("latin1").toLowerCase();
+    if(head.includes("iso-8859-1") || head.includes("windows-1252") || head.includes("iso-8859-15")) enc = "latin1";
+    let xml = new TextDecoder(enc).decode(buf);
     if(!/<item[ >]|<entry[ >]/i.test(xml)) return { ok:false, reason:"pas un flux" };
     return { ok:true, xml };
   }catch(e){ return { ok:false, reason: e.name==="AbortError"?"timeout":"injoignable" }; }
