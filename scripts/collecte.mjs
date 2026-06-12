@@ -137,14 +137,9 @@ async function main(){
 
   const seen = new Set();
   let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
-  // HEBDO : priorité à la fraîcheur. On trie par date décroissante.
+  // Tri par fraîcheur (plus récent d'abord) — la fraîcheur reste la priorité d'affichage
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  // fenêtre de fraîcheur : on privilégie les ~14 derniers jours (un hebdo regarde l'actu récente)
-  const now = Date.now(); const J14 = 14*24*3600*1000;
-  const frais = items.filter(it=> it.date && (now - new Date(it.date).getTime()) <= J14);
-  // si trop peu de frais (flux peu datés), on complète avec les plus récents disponibles
-  items = (frais.length >= 60) ? frais : items;
-  // diversité : max 6 items par source
+  // diversité : max 6 items par source (évite qu'un TA noie tout)
   const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=6; });
 
   const ai = await classifyAI(items);
@@ -178,11 +173,26 @@ async function main(){
     if(!comp) comp = defaultTheme(it);   // au lieu de jeter, ranger par défaut selon la source
     return {...it, comp, impact};
   });
-  // équilibrage : trier par impact puis limiter à 18 par thème
-  items.sort((a,b)=> b.impact-a.impact || (b.date||"").localeCompare(a.date||""));
-  const perComp={}; items = items.filter(it=>{ perComp[it.comp]=(perComp[it.comp]||0)+1; return perComp[it.comp]<=8; });
-  // total calibré presse : ~40-50 articles frais bien répartis
-  items = items.slice(0,50);
+  // ===== ÉQUILIBRAGE HEBDO : un volume conforme presse, JAMAIS de rubrique vide =====
+  // Pour chaque thème : on prend les plus FRAIS d'abord, et on COMPLÈTE avec des plus anciens
+  // jusqu'à atteindre un minimum, sans dépasser un maximum.
+  const MIN_PAR_THEME = 4;   // jamais moins de 4 articles par thème affiché (évite le vide)
+  const MAX_PAR_THEME = 10;  // jamais plus de 10 (volume presse)
+  const THEMES = ["imm","cac","env","lib","pia","enf","rhs"];
+  const parTheme = {};
+  THEMES.forEach(t=>parTheme[t]=[]);
+  // répartir tous les items dans leur thème (déjà triés par fraîcheur)
+  items.forEach(it=>{ if(parTheme[it.comp]) parTheme[it.comp].push(it); });
+  // pour chaque thème : prendre jusqu'à MAX, en privilégiant frais + forts impacts
+  let final = [];
+  THEMES.forEach(t=>{
+    let arr = parTheme[t];
+    // tri : forts impacts ET récents en tête, mais on garde les anciens pour compléter
+    arr.sort((a,b)=> b.impact-a.impact || (b.date||"").localeCompare(a.date||""));
+    // on prend au moins MIN (même si vieux), au plus MAX
+    final = final.concat(arr.slice(0, MAX_PAR_THEME));
+  });
+  items = final;
 
   const out = { generatedAt:new Date().toISOString(), juridictionsOk:ok.length, count:items.length, items };
   writeFileSync(join(__dir,"..","veille.json"), JSON.stringify(out,null,2));
