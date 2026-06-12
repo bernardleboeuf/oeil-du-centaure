@@ -138,13 +138,44 @@ async function main(){
   const seen = new Set();
   let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  items = items.slice(0,150);
+  // limiter à 8 items max par source pour la diversité (évite qu'un TA noie tout)
+  const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=8; });
+  items = items.slice(0,250);
 
   const ai = await classifyAI(items);
+  // classement par défaut selon le type de source (si les mots-clés ne suffisent pas)
+  function defaultTheme(it){
+    const t=it.srcType||"";
+    if(t==="DAJ") return "cac";
+    if(t==="BO") return "imm";
+    if(t==="DG"){ const n=(it.source||"").toLowerCase();
+      if(n.includes("environnement")||n.includes("énergie")) return "env";
+      if(n.includes("emploi")||n.includes("social")) return "rhs";
+      if(n.includes("santé")) return "enf";
+      if(n.includes("marché")||n.includes("concurrence")) return "cac";
+      return "lib"; }
+    if(t==="AAI"){ const n=(it.source||"").toLowerCase();
+      if(n.includes("cnil")||n.includes("données")) return "lib";
+      if(n.includes("concurrence")||n.includes("amf")) return "pia";
+      if(n.includes("has")||n.includes("santé")) return "enf";
+      if(n.includes("transport")) return "cac";
+      return "lib"; }
+    if(t==="TA"||t==="CAA"||t==="CE"||t==="CNDA") return "lib";   // décisions admin → Libertés & procédures par défaut
+    if(t==="AN"||t==="SENAT"||t==="VP"||t==="CC") return "lib";    // textes parlementaires
+    if(t==="CCOMPTES") return "cac";
+    if(t==="MIN") return "lib";
+    return "lib";
+  }
   items = items.map((it,idx)=>{
-    if(ai){ const tag=ai.find(x=>x.i===idx); return {...it, comp: tag?.comp||classifyKW(it.titre+" "+it.resume), impact: tag?.impact||impactKW(it.titre)}; }
-    return {...it, comp: classifyKW(it.titre+" "+it.resume), impact: impactKW(it.titre+" "+it.resume)};
-  }).filter(it=>it.comp);
+    let comp, impact;
+    if(ai){ const tag=ai.find(x=>x.i===idx); comp=tag?.comp||classifyKW(it.titre+" "+it.resume); impact=tag?.impact||impactKW(it.titre); }
+    else { comp=classifyKW(it.titre+" "+it.resume); impact=impactKW(it.titre+" "+it.resume); }
+    if(!comp) comp = defaultTheme(it);   // au lieu de jeter, ranger par défaut selon la source
+    return {...it, comp, impact};
+  });
+  // équilibrage : trier par impact puis limiter à 18 par thème
+  items.sort((a,b)=> b.impact-a.impact || (b.date||"").localeCompare(a.date||""));
+  const perComp={}; items = items.filter(it=>{ perComp[it.comp]=(perComp[it.comp]||0)+1; return perComp[it.comp]<=18; });
 
   const out = { generatedAt:new Date().toISOString(), juridictionsOk:ok.length, count:items.length, items };
   writeFileSync(join(__dir,"..","veille.json"), JSON.stringify(out,null,2));
