@@ -33,13 +33,18 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optionnel (tri IA)
         run: node scripts/collecte.mjs
 
-      - name: Publier veille.json si modifié
+      - name: Publier veille.json
         run: |
           git config user.name "Oeil du Centaure (bot)"
           git config user.email "actions@users.noreply.github.com"
+          # récupérer le dernier état du dépôt SANS toucher au veille.json qu'on vient de générer
+          cp veille.json /tmp/veille-new.json
+          git stash --include-untracked || true
+          git fetch origin main
+          git reset --hard origin/main
+          # remettre le veille.json fraîchement généré
+          cp /tmp/veille-new.json veille.json
           git add veille.json
           git diff --staged --quiet && echo "Aucune modification" && exit 0
           git commit -m "Mise à jour de la veille — $(date +'%d/%m/%Y')"
-          # synchroniser avant de pousser (évite les conflits si le dépôt a changé)
-          git pull --rebase --autostash origin main || true
           git push origin main
