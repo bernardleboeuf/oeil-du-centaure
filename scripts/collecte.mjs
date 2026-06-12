@@ -6,15 +6,13 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const SOURCES = JSON.parse(readFileSync(join(__dir, "sources.json"), "utf8"));
 
 const KW = {
-  dpa: ["marché","commande publique","concession","délégation","contrat public","appel d'offres","accord-cadre","ccag","occupation du domaine","référé précontractuel","passation","concessions","candidat"],
-  urba: ["permis","urbanisme","aménagement","plu","foncier","domanialité","copropriété","habitat indigne","environnement","icpe","installation classée","éolien","photovolta","construire","logement"],
-  constr: ["construction","désordre","décennale","dommage ouvrage","assurance construction","maître d'œuvre","réception des travaux","garantie décennale","malfaçon"],
-  dpriv: ["société","bail commercial","marque","propriété intellectuelle","procédure collective","redressement","liquidation","fonds de commerce","déspécialisation"],
-  penal: ["pénal","prise illégale","favoritisme","corruption","détournement","garde à vue","correctionnel","probité","escroquerie"],
-  perso: ["fonction publique","agent","discipline","statut","fonctionnaire","révocation","fph","fpt","carrière","disciplinaire","traitement"],
-  enfance: ["aide sociale","ase","mineur","mna","handicap","apa","rsa","essms","protection de l'enfance","médico-social"],
-  etrangers: ["étranger","oqtf","séjour","asile","rétention","éloignement","titre de séjour","reconduite","cnda","visa","ressortissant"],
-  dpg: ["acte administratif","référé","responsabilité","police administrative","excès de pouvoir","légalité","retrait","abrogation","arrêté"]
+  imm: ["bail","copropriété","domanialité","habitat indigne","urbanisme","permis","foncier","plu","logement","recouvrement locatif","aménagement","construire","lotissement","zac","syndic","asl"],
+  cac: ["marché public","commande publique","ccag","concession","délégation","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance","chantier","maître d'œuvre","réception","occupation du domaine","référé précontractuel"],
+  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie","éolien","photovolta","biodiversité","pollution","climat"],
+  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","rgpd","données personnelles","surveillance","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté","police administrative","retrait","abrogation","lanceur d'alerte"],
+  pia: ["société","contrat","marque","propriété intellectuelle","brevet","droit d'auteur","dirigeant","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","déspécialisation","cession"],
+  enf: ["mineur","mna","enfance","aide sociale","apa","rsa","handicap","essms","personne âgée","protection de l'enfance","médico-social","ase","vulnérable","audition de l'enfant","allocation"],
+  rhs: ["fonction publique","agent","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","syndical","révocation","enquête administrative","dialogue social"]
 };
 
 function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
@@ -28,7 +26,9 @@ function parseFeed(xml, srcNom, srcType){
   for (const b of blocks){
     const title = clean(pick(b,"title"));
     if (!title) continue;
-    const link = pick(b,"link") || attr(b,"link","href");
+    let link = attr(b,"link","href") || pick(b,"link") || pick(b,"guid") || pick(b,"id") || "";
+    link = link.trim();
+    if(link && !/^https?:/i.test(link)) link = "";  // ignorer les liens non-http
     const date = pick(b,"pubDate")||pick(b,"published")||pick(b,"updated")||"";
     const desc = clean(pick(b,"description")||pick(b,"summary")||pick(b,"content"));
     items.push({ titre:title, lien:link, date:normDate(date), source:srcNom, srcType, resume:desc.slice(0,240) });
@@ -102,7 +102,7 @@ async function classifyAI(items){
   const key = process.env.ANTHROPIC_API_KEY;
   if(!key) return null;
   const list = items.slice(0,60).map((it,i)=>`${i}. ${it.titre}`).join("\n");
-  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: compétence (dpa,urba,constr,dpriv,penal,perso,enfance,etrangers,dpg ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"dpa\",\"impact\":3}]. Rien d'autre.";
+  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (imm, cac, env, lib, pia, enf, rhs ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
   try{
     const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
       headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
