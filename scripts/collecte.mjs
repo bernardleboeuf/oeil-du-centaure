@@ -31,7 +31,7 @@ function parseFeed(xml, srcNom, srcType){
     if(link && !/^https?:/i.test(link)) link = "";  // ignorer les liens non-http
     const date = pick(b,"pubDate")||pick(b,"published")||pick(b,"updated")||"";
     const desc = clean(pick(b,"description")||pick(b,"summary")||pick(b,"content"));
-    items.push({ titre:title, lien:link, date:normDate(date), source:srcNom, srcType, resume:desc.slice(0,240) });
+    items.push({ titre:title, lien:link, date:normDate(date)||new Date().toISOString(), source:srcNom, srcType, resume:desc.slice(0,240) });
   }
   return items;
 }
@@ -137,10 +137,15 @@ async function main(){
 
   const seen = new Set();
   let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
+  // HEBDO : priorité à la fraîcheur. On trie par date décroissante.
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  // limiter à 8 items max par source pour la diversité (évite qu'un TA noie tout)
-  const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=8; });
-  items = items.slice(0,250);
+  // fenêtre de fraîcheur : on privilégie les ~14 derniers jours (un hebdo regarde l'actu récente)
+  const now = Date.now(); const J14 = 14*24*3600*1000;
+  const frais = items.filter(it=> it.date && (now - new Date(it.date).getTime()) <= J14);
+  // si trop peu de frais (flux peu datés), on complète avec les plus récents disponibles
+  items = (frais.length >= 60) ? frais : items;
+  // diversité : max 6 items par source
+  const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=6; });
 
   const ai = await classifyAI(items);
   // classement par défaut selon le type de source (si les mots-clés ne suffisent pas)
@@ -175,7 +180,9 @@ async function main(){
   });
   // équilibrage : trier par impact puis limiter à 18 par thème
   items.sort((a,b)=> b.impact-a.impact || (b.date||"").localeCompare(a.date||""));
-  const perComp={}; items = items.filter(it=>{ perComp[it.comp]=(perComp[it.comp]||0)+1; return perComp[it.comp]<=18; });
+  const perComp={}; items = items.filter(it=>{ perComp[it.comp]=(perComp[it.comp]||0)+1; return perComp[it.comp]<=8; });
+  // total calibré presse : ~40-50 articles frais bien répartis
+  items = items.slice(0,50);
 
   const out = { generatedAt:new Date().toISOString(), juridictionsOk:ok.length, count:items.length, items };
   writeFileSync(join(__dir,"..","veille.json"), JSON.stringify(out,null,2));
