@@ -6,15 +6,15 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const SOURCES = JSON.parse(readFileSync(join(__dir, "sources.json"), "utf8"));
 
 const KW = {
-  imm: ["bail d'habitation","copropriété","domanialité","habitat indigne","permis de construire","foncier","plu","logement social","recouvrement locatif","lotissement","zac","syndic","expropriation","préemption"],
-  cac: ["marché public","commande publique","marché de travaux","ccag","concession","délégation de service public","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance construction","maître d'œuvre","réception des travaux","occupation du domaine","référé précontractuel","contrat administratif","contrat public","passation","marché de fournitures"],
-  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie renouvelable","éolien","photovolta","biodiversité","pollution","autorisation environnementale"],
-  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","rgpd","données personnelles","surveillance","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté publique","police administrative","retrait d'acte","abrogation","lanceur d'alerte"],
-  pia: ["bail commercial","marque","propriété intellectuelle","brevet","droit d'auteur","procédure collective","redressement judiciaire","liquidation judiciaire","fonds de commerce","déspécialisation","cession de parts","pacte d'associés","responsabilité du dirigeant","plan de sauvegarde"],
+  imm: ["bail d'habitation","copropriété","domanialité","habitat indigne","permis de construire","foncier","plu","logement social","recouvrement locatif","lotissement","zac","syndic","expropriation","préemption","urbanisme"],
+  cac: ["marché public","commande publique","marché de travaux","ccag","concession","délégation de service public","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance","maître d'œuvre","réception des travaux","contrat administratif","contrat public","passation","société","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","dirigeant","concurrence","entreprise en difficulté","plan de sauvegarde","cession"],
+  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie renouvelable","éolien","photovolta","biodiversité","pollution","autorisation environnementale","climat"],
+  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté publique","police administrative","retrait d'acte","abrogation","lanceur d'alerte"],
+  pia: ["rgpd","données personnelles","protection des données","cnil","marque","propriété intellectuelle","brevet","droit d'auteur","contrefaçon","propriété industrielle","secret des affaires","cybersécurité"],
   enf: ["mineur","mna","mineur non accompagné","aide sociale à l'enfance","ase","protection de l'enfance","audition de l'enfant","assistance éducative","tutelle"],
-  rhs: ["fonction publique","agent public","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","dialogue social","révocation","enquête administrative","retraite des agents"],
+  rhs: ["fonction publique","agent public","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","dialogue social","révocation","enquête administrative"],
   sante: ["hôpital","établissement de santé","médico-social","ehpad","ght","produit de santé","médicament","dispositif médical","ars","soins","praticien hospitalier","sécurité sociale","assurance maladie","has","autorisation sanitaire","responsabilité médicale","apa","rsa","handicap","essms","personne âgée"],
-  om: ["outre-mer","guadeloupe","martinique","guyane","réunion","mayotte","nouvelle-calédonie","polynésie","saint-barthélemy","saint-martin","wallis","collectivité d'outre-mer","département d'outre-mer","ultramarin"]
+  om: ["outre-mer","guadeloupe","martinique","guyane","réunion","mayotte","nouvelle-calédonie","polynésie","saint-barthélemy","saint-martin","wallis","ultramarin"]
 };
 
 function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
@@ -134,14 +134,14 @@ async function classifyAI(items){
   const sys = `Tu es le rédacteur en chef d'un hebdomadaire juridique français destiné aux acteurs publics et institutionnels. Tu classes chaque actualité dans l'UN des 9 thèmes suivants, selon son contenu juridique réel (pas selon des mots-clés). Les sources peuvent être en anglais (Commission européenne) : traduis mentalement et classe sur le fond.
 
 LES 9 THÈMES :
-• cac = MARCHÉS & CONSTRUCTION : commande publique, marchés publics, concessions, délégations de service public, CCAG, achat public, subventions, contrats administratifs, droit de la construction, assurance-construction, désordres, garantie décennale.
-• lib = LIBERTÉS & PROCÉDURES : contentieux administratif général, droit pénal, droit des étrangers (séjour, asile, OQTF, rétention), RGPD et données personnelles, libertés publiques, police administrative, actes administratifs, référés, probité/corruption.
+• cac = DROIT ÉCONOMIQUE : commande publique, marchés publics, concessions, CCAG, achat public, subventions, contrats administratifs, construction, assurance-construction, garantie décennale, et aussi droit des sociétés, baux commerciaux, procédures collectives, entreprises en difficulté, concurrence, finance, responsabilité du dirigeant. Tout ce qui touche à l economie et aux affaires.
+• lib = LIBERTÉS & PROCÉDURES : contentieux administratif général, droit pénal, droit des étrangers (séjour, asile, OQTF, rétention), libertés publiques, police administrative, actes administratifs, référés, probité/corruption. Le RGPD et les données vont en pia, pas ici.
 • imm = IMMOBILIER & DOMANIAL : urbanisme, permis de construire, aménagement, domanialité publique, baux d'habitation, copropriété, habitat indigne, logement social, expropriation, foncier.
 • rhs = AGENTS & RH : fonction publique (statut, discipline, carrière), droit du travail, dialogue social, CSE, santé au travail, protection fonctionnelle des agents.
 • sante = SANTÉ & MÉDICO-SOCIAL : hôpitaux, GHT, ESSMS, EHPAD, ARS, produits de santé, responsabilité médicale, sécurité sociale, assurance maladie.
 • enf = ENFANCE & ACTION SOCIALE : protection de l'enfance, ASE, mineurs non accompagnés, aide sociale, APA, RSA, handicap, personnes vulnérables.
 • env = ENVIRONNEMENT : droit de l'environnement, ICPE, transition écologique, énergie, climat, déchets, eau, biodiversité, autorisations environnementales.
-• pia = ENTREPRISES & PI : droit des sociétés, propriété intellectuelle, marques, droit des affaires, baux commerciaux, procédures collectives, responsabilité du dirigeant, concurrence, finance.
+• pia = PROTECTION DES DONNÉES & PROPRIÉTÉ INTELLECTUELLE : RGPD, données personnelles, CNIL, cybersécurité, marques, brevets, droit d auteur, propriété intellectuelle et industrielle, contrefaçon, secret des affaires. Uniquement données et PI, PAS le droit des sociétés ni les affaires (qui vont en cac).
 • om = OUTRE-MER : sujets spécifiquement relatifs aux territoires ultramarins (Guadeloupe, Martinique, Guyane, Réunion, Mayotte, Nouvelle-Calédonie, Polynésie, etc.).
 
 RÈGLE : choisis le thème le plus pertinent sur le FOND. Si une décision vient d'un tribunal d'outre-mer mais porte sur un marché public, classe en "cac" (le sujet prime sur le lieu), SAUF si l'enjeu ultramarin est central → "om".
@@ -221,7 +221,7 @@ async function main(){
       if(n.includes("marché")||n.includes("concurrence")) return "cac";
       return "lib"; }
     if(t==="AAI"){ const n=(it.source||"").toLowerCase();
-      if(n.includes("cnil")||n.includes("données")) return "lib";
+      if(n.includes("cnil")||n.includes("données")) return "pia";
       if(n.includes("concurrence")||n.includes("amf")) return "pia";
       if(n.includes("has")||n.includes("santé")) return "sante";
       if(n.includes("transport")) return "cac";
