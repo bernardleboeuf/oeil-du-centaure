@@ -128,16 +128,48 @@ async function fetchSource(src){
 
 async function classifyAI(items){
   const key = process.env.ANTHROPIC_API_KEY;
-  if(!key) return null;
-  const list = items.slice(0,60).map((it,i)=>`${i}. ${it.titre}`).join("\n");
-  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (cac, lib, imm, rhs, sante, enf, env, pia, om ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
+  if(!key){ console.log("Pas de clé IA → classement par mots-clés"); return null; }
+  // titre + résumé pour donner plus de matière à l'IA, y compris pour les sources en anglais
+  const list = items.map((it,i)=>`${i}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
+  const sys = `Tu es le rédacteur en chef d'un hebdomadaire juridique français destiné aux acteurs publics et institutionnels. Tu classes chaque actualité dans l'UN des 9 thèmes suivants, selon son contenu juridique réel (pas selon des mots-clés). Les sources peuvent être en anglais (Commission européenne) : traduis mentalement et classe sur le fond.
+
+LES 9 THÈMES :
+• cac = MARCHÉS & CONSTRUCTION : commande publique, marchés publics, concessions, délégations de service public, CCAG, achat public, subventions, contrats administratifs, droit de la construction, assurance-construction, désordres, garantie décennale.
+• lib = LIBERTÉS & PROCÉDURES : contentieux administratif général, droit pénal, droit des étrangers (séjour, asile, OQTF, rétention), RGPD et données personnelles, libertés publiques, police administrative, actes administratifs, référés, probité/corruption.
+• imm = IMMOBILIER & DOMANIAL : urbanisme, permis de construire, aménagement, domanialité publique, baux d'habitation, copropriété, habitat indigne, logement social, expropriation, foncier.
+• rhs = AGENTS & RH : fonction publique (statut, discipline, carrière), droit du travail, dialogue social, CSE, santé au travail, protection fonctionnelle des agents.
+• sante = SANTÉ & MÉDICO-SOCIAL : hôpitaux, GHT, ESSMS, EHPAD, ARS, produits de santé, responsabilité médicale, sécurité sociale, assurance maladie.
+• enf = ENFANCE & ACTION SOCIALE : protection de l'enfance, ASE, mineurs non accompagnés, aide sociale, APA, RSA, handicap, personnes vulnérables.
+• env = ENVIRONNEMENT : droit de l'environnement, ICPE, transition écologique, énergie, climat, déchets, eau, biodiversité, autorisations environnementales.
+• pia = ENTREPRISES & PI : droit des sociétés, propriété intellectuelle, marques, droit des affaires, baux commerciaux, procédures collectives, responsabilité du dirigeant, concurrence, finance.
+• om = OUTRE-MER : sujets spécifiquement relatifs aux territoires ultramarins (Guadeloupe, Martinique, Guyane, Réunion, Mayotte, Nouvelle-Calédonie, Polynésie, etc.).
+
+RÈGLE : choisis le thème le plus pertinent sur le FOND. Si une décision vient d'un tribunal d'outre-mer mais porte sur un marché public, classe en "cac" (le sujet prime sur le lieu), SAUF si l'enjeu ultramarin est central → "om".
+Si vraiment aucun thème ne convient, mets "comp":"null".
+
+IMPACT : 3 = fort (loi, décret, revirement de jurisprudence, réforme majeure) ; 2 = à suivre (décision notable, nouvelle règle) ; 1 = information courante.
+
+TRADUCTION : si le titre est en anglais (ou autre langue), TRADUIS-le en français clair et journalistique dans le champ "titre_fr". Si le titre est déjà en français, recopie-le tel quel dans "titre_fr".
+
+INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique pour des lecteurs professionnels (acteurs publics, institutionnels) : nominations, inaugurations, visites officielles, recrutements, anniversaires, communiqués protocolaires, événements internes, articles purement promotionnels ou pédagogiques, newsletters administratives, annonces d'inscription à un colloque, contenus de communication institutionnelle sans portée juridique. Mets "keep":true pour tout ce qui a un vrai intérêt juridique (décisions, réformes, nouvelles règles, directives, analyses de fond).
+
+Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"cac","impact":3,"titre_fr":"...","keep":true},...]`;
   try{
-    const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
-      headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
-      body: JSON.stringify({ model:"claude-sonnet-4-20250514", max_tokens:4000, system:sys, messages:[{role:"user",content:list}] })});
-    const data = await r.json();
-    const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/```json|```/g,"").trim();
-    return JSON.parse(txt);
+    // traiter par lots de 50 pour rester dans les limites
+    const all = [];
+    for(let start=0; start<items.length; start+=50){
+      const batch = items.slice(start, start+50);
+      const bl = batch.map((it,j)=>`${start+j}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
+      const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
+        headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
+        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:4000, system:sys, messages:[{role:"user",content:bl}] })});
+      const data = await r.json();
+      if(data.error){ console.error("Erreur API:", data.error.message); return null; }
+      const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/\`\`\`json|\`\`\`/g,"").trim();
+      try{ all.push(...JSON.parse(txt)); }catch(e){ console.error("Parse lot:", e.message); }
+    }
+    console.log("✓ Classement IA :", all.length, "items classés");
+    return all;
   }catch(e){ console.error("IA indisponible, repli mots-clés:", e.message); return null; }
 }
 
@@ -170,6 +202,12 @@ async function main(){
   // diversité : max 6 items par source (évite qu'un TA noie tout)
   const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=6; });
 
+  // PRÉ-FILTRAGE AVANT l'IA : on ne classe que les 120 articles les plus récents.
+  // Largement assez pour alimenter 9 thèmes × 10 articles, et ça limite le coût IA.
+  items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  items = items.slice(0,180);
+  console.log("Articles envoyés au classement IA :", items.length, "(les 180 plus récents)");
+
   const ai = await classifyAI(items);
   // classement par défaut selon le type de source (si les mots-clés ne suffisent pas)
   function defaultTheme(it){
@@ -201,12 +239,26 @@ async function main(){
     return "lib";
   }
   items = items.map((it,idx)=>{
-    let comp, impact;
-    if(ai){ const tag=ai.find(x=>x.i===idx); comp=tag?.comp||classifyKW(it.titre+" "+it.resume); impact=tag?.impact||impactKW(it.titre); }
-    else { comp=classifyKW(it.titre+" "+it.resume); impact=impactKW(it.titre+" "+it.resume); }
-    if(!comp) comp = defaultTheme(it);   // au lieu de jeter, ranger par défaut selon la source
-    return {...it, comp, impact};
+    let comp, impact, keep=true, lang="fr";
+    let titre = it.titre;
+    if(ai){
+      const tag=ai.find(x=>x.i===idx);
+      comp = (tag && tag.comp && tag.comp!=="null") ? tag.comp : classifyKW(it.titre+" "+it.resume);
+      impact = tag?.impact || impactKW(it.titre);
+      if(tag){
+        keep = tag.keep!==false;
+        if(tag.titre_fr && tag.titre_fr.trim()) titre = tag.titre_fr.trim();  // titre traduit en français
+      }
+    } else {
+      comp=classifyKW(it.titre+" "+it.resume); impact=impactKW(it.titre+" "+it.resume);
+    }
+    if(!comp) comp = defaultTheme(it);
+    return {...it, titre, comp, impact, keep};
   });
+  // FILTRE INTÉRÊT : retirer les articles sans valeur juridique (l'anglais est traduit, pas retiré)
+  const avant = items.length;
+  items = items.filter(it=> it.keep!==false);
+  console.log("Filtre intérêt :", avant, "→", items.length, "articles retenus (titres anglais traduits en FR)");
   // ===== ÉQUILIBRAGE HEBDO : un volume conforme presse, JAMAIS de rubrique vide =====
   // Pour chaque thème : on prend les plus FRAIS d'abord, et on COMPLÈTE avec des plus anciens
   // jusqu'à atteindre un minimum, sans dépasser un maximum.
