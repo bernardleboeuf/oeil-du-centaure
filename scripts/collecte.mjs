@@ -188,7 +188,13 @@ async function main(){
   THEMES.forEach(t=>{
     let arr = parTheme[t];
     // tri : forts impacts ET récents en tête, mais on garde les anciens pour compléter
-    arr.sort((a,b)=> b.impact-a.impact || (b.date||"").localeCompare(a.date||""));
+    // FRAÎCHEUR D'ABORD : les plus récents en tête. L'impact ne sert qu'à départager
+    // deux articles de même jour (pour choisir lequel mettre en avant).
+    arr.sort((a,b)=>{
+      const da=(a.date||"").slice(0,10), db=(b.date||"").slice(0,10);
+      if(db!==da) return db.localeCompare(da);   // jour le plus récent d'abord
+      return b.impact-a.impact;                    // même jour → fort impact d'abord
+    });
     // on prend au moins MIN (même si vieux), au plus MAX
     final = final.concat(arr.slice(0, MAX_PAR_THEME));
   });
