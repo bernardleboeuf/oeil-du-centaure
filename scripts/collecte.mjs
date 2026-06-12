@@ -6,14 +6,15 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const SOURCES = JSON.parse(readFileSync(join(__dir, "sources.json"), "utf8"));
 
 const KW = {
-  imm: ["bail","copropriété","domanialité","habitat indigne","urbanisme","permis","foncier","plu","logement","recouvrement locatif","aménagement","construire","lotissement","zac","syndic","asl"],
-  cac: ["marché public","commande publique","ccag","concession","délégation","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance","chantier","maître d'œuvre","réception","occupation du domaine","référé précontractuel"],
-  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie","éolien","photovolta","biodiversité","pollution","climat"],
-  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","rgpd","données personnelles","surveillance","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté","police administrative","retrait","abrogation","lanceur d'alerte"],
-  pia: ["société","contrat","marque","propriété intellectuelle","brevet","droit d'auteur","dirigeant","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","déspécialisation","cession"],
-  enf: ["mineur","mna","enfance","aide sociale","apa","rsa","handicap","essms","personne âgée","protection de l'enfance","médico-social","ase","vulnérable","audition de l'enfant","allocation"],
-  rhs: ["fonction publique","agent","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","syndical","révocation","enquête administrative","dialogue social"],
-  sante: ["hôpital","santé","médico-social","ehpad","ght","établissement de santé","produit de santé","médicament","dispositif médical","ars","agence régionale","soins","patient","médecin","praticien hospitalier","sécurité sociale","assurance maladie","has","autorisation sanitaire","responsabilité médicale","bioéthique"]
+  imm: ["bail d'habitation","copropriété","domanialité","habitat indigne","permis de construire","foncier","plu","logement social","recouvrement locatif","lotissement","zac","syndic","expropriation","préemption"],
+  cac: ["marché public","commande publique","marché de travaux","ccag","concession","délégation de service public","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance construction","maître d'œuvre","réception des travaux","occupation du domaine","référé précontractuel","contrat administratif","contrat public","passation","marché de fournitures"],
+  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie renouvelable","éolien","photovolta","biodiversité","pollution","autorisation environnementale"],
+  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","rgpd","données personnelles","surveillance","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté publique","police administrative","retrait d'acte","abrogation","lanceur d'alerte"],
+  pia: ["bail commercial","marque","propriété intellectuelle","brevet","droit d'auteur","procédure collective","redressement judiciaire","liquidation judiciaire","fonds de commerce","déspécialisation","cession de parts","pacte d'associés","responsabilité du dirigeant","plan de sauvegarde"],
+  enf: ["mineur","mna","mineur non accompagné","aide sociale à l'enfance","ase","protection de l'enfance","audition de l'enfant","assistance éducative","tutelle"],
+  rhs: ["fonction publique","agent public","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","dialogue social","révocation","enquête administrative","retraite des agents"],
+  sante: ["hôpital","établissement de santé","médico-social","ehpad","ght","produit de santé","médicament","dispositif médical","ars","soins","praticien hospitalier","sécurité sociale","assurance maladie","has","autorisation sanitaire","responsabilité médicale","apa","rsa","handicap","essms","personne âgée"],
+  om: ["outre-mer","guadeloupe","martinique","guyane","réunion","mayotte","nouvelle-calédonie","polynésie","saint-barthélemy","saint-martin","wallis","collectivité d'outre-mer","département d'outre-mer","ultramarin"]
 };
 
 function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
@@ -129,7 +130,7 @@ async function classifyAI(items){
   const key = process.env.ANTHROPIC_API_KEY;
   if(!key) return null;
   const list = items.slice(0,60).map((it,i)=>`${i}. ${it.titre}`).join("\n");
-  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (imm, cac, env, lib, pia, enf, rhs, sante ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
+  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (cac, lib, imm, rhs, sante, enf, env, pia, om ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
   try{
     const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
       headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
@@ -187,7 +188,13 @@ async function main(){
       if(n.includes("has")||n.includes("santé")) return "sante";
       if(n.includes("transport")) return "cac";
       return "lib"; }
-    if(t==="TA"||t==="CAA"||t==="CE"||t==="CNDA") return "lib";   // décisions admin → Libertés & procédures par défaut
+    if(t==="TA"||t==="CAA"){
+      // TA d'outre-mer → thème outre-mer
+      const om=["guadeloupe","martinique","guyane","réunion","mayotte","calédonie","polynésie","barthélemy","saint-martin","miquelon"];
+      if(om.some(o=>(it.source||"").toLowerCase().includes(o))) return "om";
+      return "lib";  // autres décisions admin → Libertés & procédures
+    }
+    if(t==="CE"||t==="CNDA") return "lib";
     if(t==="AN"||t==="SENAT"||t==="VP"||t==="CC") return "lib";    // textes parlementaires
     if(t==="CCOMPTES") return "cac";
     if(t==="MIN") return "lib";
@@ -205,7 +212,7 @@ async function main(){
   // jusqu'à atteindre un minimum, sans dépasser un maximum.
   const MIN_PAR_THEME = 4;   // jamais moins de 4 articles par thème affiché (évite le vide)
   const MAX_PAR_THEME = 10;  // jamais plus de 10 (volume presse)
-  const THEMES = ["imm","cac","env","lib","pia","enf","rhs","sante"];
+  const THEMES = ["cac","lib","imm","rhs","sante","enf","env","pia","om"];
   const parTheme = {};
   THEMES.forEach(t=>parTheme[t]=[]);
   // répartir tous les items dans leur thème (déjà triés par fraîcheur)
