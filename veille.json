@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-12T19:49:02.878Z",
+  "generatedAt": "2026-06-12T19:50:20.824Z",
   "juridictionsOk": 85,
-  "count": 69,
+  "count": 70,
   "items": [
     {
-      "titre": "Projet d'arrêté modifiant l'arrêté du 23 mai 2024 relatif aux redevances pour services rendus sur les aérodromes",
+      "titre": "Projet d'arrêté modifiant l'arrêté du 23 mai 2024 relatif aux redevances pour services rendus sur les aérodromes - Avis n°2026-044 du 18 mai 2026",
       "lien": "https://www.autorite-transports.fr/avisdecision/projet-darrete-modifiant-larrete-du-23-mai-2024-relatif-aux-redevances-pour-services-rendus-sur-les-aerodromes-avis-n2026-044-du-18-mai-2026/",
       "date": "2026-06-12T08:09:23.000Z",
       "source": "ART — transports",
@@ -29,7 +29,7 @@
       "keep": true,
       "profils": [
         "commune",
-        "entreprise"
+        "etat"
       ]
     },
     {
@@ -44,7 +44,7 @@
       "keep": true,
       "profils": [
         "commune",
-        "entreprise"
+        "etat"
       ]
     },
     {
@@ -59,7 +59,7 @@
       "keep": true,
       "profils": [
         "etat",
-        "commune"
+        "entreprise"
       ]
     },
     {
@@ -73,8 +73,8 @@
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat",
         "commune",
+        "etat",
         "entreprise"
       ]
     },
@@ -94,6 +94,20 @@
       ]
     },
     {
+      "titre": "Avis de marché : Appel d'offres pour la fourniture de données pour la section « Tarifs », « Taxes » et « Procédures et formalités » d'Access2Markets 2027-2030",
+      "lien": "https://ted.europa.eu/en/notice/-/detail/377655-2026",
+      "date": "2026-06-02T09:46:43.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p EC-TRADE/2026/OP/0021-PIN - Procurement of data for Access2Markets for 2027-2030 /p",
+      "comp": "dpa",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ]
+    },
+    {
       "titre": "Action justice climat Lyon : le tribunal juge que le refus de subvention de la préfète de la région Auvergne-Rhône-Alpes est en partie injustifié",
       "lien": "https://lyon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/action-justice-climat-lyon-le-tribunal-juge-que-le-refus-de-subvention-de-la-prefete-de-la-region-auvergne-rhone-alpes-est-en-partie-injustifie",
       "date": "2026-06-02T00:00:00.000Z",
@@ -101,7 +115,7 @@
       "srcType": "TA",
       "resume": "",
       "comp": "dpa",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
         "etat",
@@ -116,25 +130,11 @@
       "srcType": "CAA",
       "resume": "",
       "comp": "dpa",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "commune"
-      ]
-    },
-    {
-      "titre": "Avis de préinformation - Appel d'offres : Marché public de données pour la section « Tarifs », « Taxes » et « Procédures et formalités » d'Access2Markets 2027-2030",
-      "lien": "https://ted.europa.eu/en/notice/-/detail/377655-2026",
-      "date": "2026-06-02T09:46:43.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p EC-TRADE/2026/OP/0021-PIN - Procurement of data for Access2Markets for 2027-2030 /p",
-      "comp": "dpa",
       "impact": 1,
       "keep": true,
       "profils": [
-        "entreprise"
+        "etat",
+        "collectivite"
       ]
     },
     {
@@ -149,22 +149,8 @@
       "keep": true,
       "profils": [
         "commune",
-        "etat"
-      ]
-    },
-    {
-      "titre": "La Commission accueille l'accord du Conseil sur le renforcement du mécanisme d'ajustement carbone aux frontières",
-      "lien": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en",
-      "date": "2026-06-12T12:56:55.000Z",
-      "source": "Commission UE — Fiscalité & douanes",
-      "srcType": "DG",
-      "resume": "p The European Commission welcomes the Council agreement to extend the Carbon Border Adjustment Mechanism (CBAM) to specific downstream goods and reinforce existing anti-circumvention safeguards. /p",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
         "etat",
-        "entreprise"
+        "departement"
       ]
     },
     {
@@ -183,21 +169,6 @@
       ]
     },
     {
-      "titre": "Conférence de presse - Commission d'enquête sur la prédation des capacités productives françaises par les fonds spéculatifs (15 juin 2026)",
-      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2026/conference-de-presse-commission-d-enquete-sur-la-predation-des-capacites-productives-francaises-par-les-fonds-speculatifs",
-      "date": "2026-06-11T14:01:03.000Z",
-      "source": "Assemblée nationale — communiqués",
-      "srcType": "AN",
-      "resume": "Lundi 15 juin 2026 à 14h30, Aurélie Trouvé (LFI-NFP, Seine-Saint-Denis), rapporteure, et Emmanuel Mandon (Dem, Loire), président, présenteront les conclusions de la commission d’enquête sur la prédation des capacités productives françaises ",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ]
-    },
-    {
       "titre": "Arrêts du Tribunal dans les affaires T-1097/23 Vivendi/Commission et T-1119/23 Lagardère/Commission",
       "lien": "https://curia.europa.eu/site/jcms/p1_1000084407",
       "date": "2026-06-11T07:57:00.000Z",
@@ -208,12 +179,12 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
+        "entreprise",
+        "etat"
       ]
     },
     {
-      "titre": "Webinaire de suivi du CBAM : « Comment rentabiliser vos efforts de décarbonation »",
+      "titre": "Webinaire de suivi du CBAM : comment tirer profit de vos efforts de décarbonation",
       "lien": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-how-make-your-decarbonisation-efforts-pay-2026-06-11_en",
       "date": "2026-06-11T06:44:39.000Z",
       "source": "Commission UE — Fiscalité & douanes",
@@ -223,34 +194,9 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise"
-      ]
-    },
-    {
-      "titre": "Le système d'information préalable sur les cargaisons (ICS2) de l'UE aide les douanes à arrêter les contrebandiers, les fraudeurs et les criminels",
-      "lien": "https://taxation-customs.ec.europa.eu/news/eu-advance-cargo-information-system-ics2-helps-customs-catch-smugglers-fraudsters-and-criminal-2026-06-01_en",
-      "date": "2026-06-11T08:34:27.000Z",
-      "source": "Commission UE — Fiscalité & douanes",
-      "srcType": "DG",
-      "resume": "p ICS2 is already providing concrete benefits for customs authorities on the frontline, protecting citizens and the EU economy. nbsp; Take a look at examples of ICS2 in action in 2025. /p",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
+        "entreprise",
         "etat"
       ]
-    },
-    {
-      "titre": "Conclusions de l'avocat général dans les affaires C-631/24 P Commission/Auken e.a. et C-632/24 P Commission/Courtois e.a.",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000084419",
-      "date": "2026-06-11T08:08:36.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class='wiki feed' C-631/24 P Commission/Auken e.a. et C-632/24 P Commission/Courtois e.a. br/ br/ div class= wysiwyg p Avocat général Rantos : la Commission n’a pas accordé au public un accès suffisamment large aux contrats d’achat de v",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": []
     },
     {
       "titre": "Arrêt de la Cour dans l'affaire C-81/24 (Jenec) - Services bancaires",
@@ -265,6 +211,35 @@
       "profils": []
     },
     {
+      "titre": "L'UE et la Corée signent un accord commercial numérique de référence en sommet",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1317",
+      "date": "2026-06-10T15:21:55.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p Today, the EU and the Republic of Korea signed a landmark Digital Trade Agreement (DTA) during the EU-Republic of Korea Summit held in Brussels. /p",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise",
+        "etat"
+      ]
+    },
+    {
+      "titre": "Zone euro : les taux de la Banque centrale européenne repartent à la hausse",
+      "lien": "https://www.vie-publique.fr/en-bref/303587-zone-euro-hausse-des-taux-de-la-banque-centrale-europeenne?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-06-10T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "comp": "dpe",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ]
+    },
+    {
       "titre": "Taxe foncière : quel poids dans les finances locales ?",
       "lien": "https://www.vie-publique.fr/en-bref/303585-taxe-fonciere-quel-poids-dans-les-finances-locales?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
       "date": "2026-06-10T22:00:00.000Z",
@@ -272,7 +247,7 @@
       "srcType": "VP",
       "resume": "",
       "comp": "dpe",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
         "commune",
@@ -280,17 +255,62 @@
       ]
     },
     {
-      "titre": "Évolutions et perspectives des retraites en France - Rapport annuel du Conseil d'orientation des retraites - Juin 2026",
-      "lien": "https://www.vie-publique.fr/rapport/303623-evolutions-et-perspectives-des-retraites-en-france-juin-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
-      "date": "2026-06-10T22:00:00.000Z",
-      "source": "Vie-publique — rapports",
-      "srcType": "VP",
-      "resume": "",
+      "titre": "Eurostat : l'UE a vendu 10,4 milliards d'euros d'éoliennes en 2024",
+      "lien": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/edn-20260609-1",
+      "date": "2026-06-10T10:40:06.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p Between 2014 and 2015, the sold production quantity of wind-powered generating sets in the EU fell from 22 200 to 8 300. From 2015 to 2023, the number varied each year between 6 800 and 12 000, before increasing to 15 500 in 2024. /p",
+      "comp": "dpe",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "entreprise",
+        "etat"
+      ]
+    },
+    {
+      "titre": "Orientations et texte juridique sur le droit de douane forfaitaire temporaire sur les importations de faible valeur (applicable jusqu'au 1er juillet 2028)",
+      "lien": "https://taxation-customs.ec.europa.eu/news/guidance-and-legal-text-temporary-flat-fee-low-value-imports-which-will-apply-until-1-july-2028-2026-06-08_en",
+      "date": "2026-06-09T11:46:00.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p From 1 July 2026, the EU will apply a temporary €3 customs duty per item on low-value consignments (up to €150) imported from outside the EU, abolishing the duty exemption applicable until 30 June 2026. /p",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "entreprise"
+      ]
+    },
+    {
+      "titre": "Étude technique sur les émissions indirectes dans le mécanisme d'ajustement carbone aux frontières",
+      "lien": "https://taxation-customs.ec.europa.eu/news/technical-study-indirect-emissions-cbam-2026-06-08_en",
+      "date": "2026-06-08T13:36:38.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p The study provides policy analysis to support the implementation and potential evolution of the Carbon Border Adjustment Mechanism (CBAM). /p",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ]
+    },
+    {
+      "titre": "La Commission accueille l'accord du Conseil sur le renforcement du mécanisme d'ajustement carbone aux frontières",
+      "lien": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en",
+      "date": "2026-06-12T12:56:55.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p The European Commission welcomes the Council agreement to extend the Carbon Border Adjustment Mechanism (CBAM) to specific downstream goods and reinforce existing anti-circumvention safeguards. /p",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
       ]
     },
     {
@@ -304,8 +324,8 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
-        "etat"
+        "etat",
+        "commune"
       ]
     },
     {
@@ -324,22 +344,37 @@
       ]
     },
     {
-      "titre": "La Commission salue l'accord sur les garanties clés du nouveau système d'échange de quotas d'émission pour les bâtiments et le transport routier",
+      "titre": "La Commission accueille favorablement l'accord sur les garanties essentielles du nouveau système d'échange de quotas pour les bâtiments et le transport routier",
       "lien": "https://climate.ec.europa.eu/news-other-reads/news/commission-welcomes-agreement-key-safeguards-new-emissions-trading-system-buildings-and-road-2026-06-11_en",
       "date": "2026-06-11T09:43:39.000Z",
       "source": "Commission UE — Climat",
       "srcType": "DG",
       "resume": "p The Commission welcomes a provisional agreement to strengthen safeguards for the new ETS2 carbon market covering buildings and road transport. The measures will enhance price stability, boost predictability for citizens and investors and ",
       "comp": "urb",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
         "etat",
-        "commune"
+        "commune",
+        "entreprise"
       ]
     },
     {
-      "titre": "Nouvelles lignes directrices pour améliorer la planification urbaine durable en Europe",
+      "titre": "L'UE et la République de Corée renforcent leur partenariat stratégique avec de nouveaux domaines de coopération",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1325",
+      "date": "2026-06-11T15:12:18.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p The EU and the Republic of Korea have launched a High-Level Energy Dialogue to coordinate efforts on energy security, economic resilience, and the transition to clean energy. /p",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ]
+    },
+    {
+      "titre": "Nouvelles lignes directrices pour améliorer la planification durable de la mobilité urbaine en Europe",
       "lien": "https://transport.ec.europa.eu/news-events/news/new-guidelines-improve-eu-sustainable-urban-mobility-planning-2026-06-11_en",
       "date": "2026-06-11T06:10:10.000Z",
       "source": "Commission UE — Transports",
@@ -369,17 +404,17 @@
       ]
     },
     {
-      "titre": "L'UE et la République de Corée renforcent leur partenariat stratégique avec de nouveaux domaines de coopération",
-      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1325",
-      "date": "2026-06-11T15:12:18.000Z",
-      "source": "Commission UE — Énergie",
-      "srcType": "DG",
-      "resume": "p The EU and the Republic of Korea have launched a High-Level Energy Dialogue to coordinate efforts on energy security, economic resilience, and the transition to clean energy. /p",
+      "titre": "Aménagement du tour du Cap d'Antibes : le maire devra réexaminer la demande de l'association Choisir le vélo",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/amenagement-du-tour-du-cap-d-antibes-le-maire-devra-reexaminer-la-demande-de-l-association-choisir-le-velo",
+      "date": "2026-06-11T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
       "comp": "urb",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "commune"
       ]
     },
     {
@@ -393,7 +428,8 @@
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "entreprise"
       ]
     },
     {
@@ -412,40 +448,22 @@
       ]
     },
     {
-      "titre": "La Commission renforce l'action sur la bioéconomie de l'UE",
-      "lien": "https://environment.ec.europa.eu/news/commission-steps-action-eu-bioeconomy-2026-06-10_en",
-      "date": "2026-06-10T11:03:41.000Z",
-      "source": "Commission UE — Environnement",
-      "srcType": "DG",
-      "resume": "p Three complementary initiatives will be launched, including the Bio-based Europe Alliance to support scaling up the bioeconomy sector. /p",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ]
-    },
-    {
-      "titre": "Projet de décret relatif à la révision des normes de qualité de l'air, aux missions en matière de surveillance et à la simplification des consultations dans le cadre des plans de protection de l'atmosphère",
-      "lien": "https://www.vie-publique.fr/consultations/303560-projet-de-decret-relatif-revision-des-normes-de-la-qualite-de-lair",
-      "date": "2026-06-10T10:00:00.000Z",
-      "source": "Vie-publique — débats & consultations",
-      "srcType": "VP",
-      "resume": "",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ]
-    },
-    {
       "titre": "Loi du 11 juin 2026 portant transposition de l'avenant n°3 du 25 février 2026 au protocole d'accord du 10 novembre 2023 relatif à l'assurance chômage",
       "lien": "https://www.vie-publique.fr/loi/302566-accord-assurance-chomage-rupture-conventionnelle-loi?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
       "date": "2026-06-11T22:00:00.000Z",
       "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Évolutions et perspectives des retraites en France - Rapport annuel du Conseil d'orientation des retraites - Juin 2026",
+      "lien": "https://www.vie-publique.fr/rapport/303623-evolutions-et-perspectives-des-retraites-en-france-juin-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
+      "date": "2026-06-10T22:00:00.000Z",
+      "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
       "comp": "fps",
@@ -464,26 +482,10 @@
       "srcType": "DG",
       "resume": "p The 2026 European Semester Spring Package, adopted on 3 June 2026 by the European Commission, spotlights social dialogue and collective bargaining as crucial for helping workers and businesses adapt to change. /p",
       "comp": "fps",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
-      ]
-    },
-    {
-      "titre": "Les coordinateurs de l'UE ont discuté de la Garantie européenne renforcée pour l'enfance et du soutien aux jeunes vulnérables",
-      "lien": "https://employment-social-affairs.ec.europa.eu/news/eu-coordinators-discussed-strengthened-european-child-guarantee-and-support-vulnerable-young-people-2026-06-12_en",
-      "date": "2026-06-12T08:38:57.000Z",
-      "source": "Commission UE — Emploi & social",
-      "srcType": "DG",
-      "resume": "p Representatives from EU countries gathered for the 25th meeting of the Child Guarantee Coordinators. Under the Cyprus Presidency, discussions focused on strengthening the European Child Guarantee and reviewing progress in its implementati",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "departement",
-        "sante"
+        "etat"
       ]
     },
     {
@@ -497,12 +499,44 @@
       "impact": 1,
       "keep": true,
       "profils": [
-        "departement"
+        "departement",
+        "etat"
+      ]
+    },
+    {
+      "titre": "Les coordinateurs européens ont discuté de la Garantie européenne pour l'enfance renforcée et du soutien aux jeunes vulnérables",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/eu-coordinators-discussed-strengthened-european-child-guarantee-and-support-vulnerable-young-people-2026-06-12_en",
+      "date": "2026-06-12T08:38:57.000Z",
+      "source": "Commission UE — Emploi & social",
+      "srcType": "DG",
+      "resume": "p Representatives from EU countries gathered for the 25th meeting of the Child Guarantee Coordinators. Under the Cyprus Presidency, discussions focused on strengthening the European Child Guarantee and reviewing progress in its implementati",
+      "comp": "asn",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "departement",
+        "sante"
       ]
     },
     {
       "titre": "Analyse du fonds d'intervention régional : actions, doctrine d'emploi, pilotage et gestion par les ARS",
       "lien": "https://www.vie-publique.fr/rapport/303646-analyse-du-fonds-dintervention-regional-rapport-conjoint-igas-igf?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
+      "date": "2026-06-11T22:00:00.000Z",
+      "source": "Vie-publique — rapports",
+      "srcType": "VP",
+      "resume": "",
+      "comp": "asn",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "sante",
+        "etat",
+        "departement"
+      ]
+    },
+    {
+      "titre": "Revue de dépenses sur les prescriptions en ville et à l'hôpital",
+      "lien": "https://www.vie-publique.fr/rapport/303633-revue-de-depenses-sur-les-prescriptions-en-ville-et-lhopital-igas-igf?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
       "date": "2026-06-11T22:00:00.000Z",
       "source": "Vie-publique — rapports",
       "srcType": "VP",
@@ -531,21 +565,6 @@
       ]
     },
     {
-      "titre": "Revue de dépenses sur les prescriptions en ville et à l'hôpital",
-      "lien": "https://www.vie-publique.fr/rapport/303633-revue-de-depenses-sur-les-prescriptions-en-ville-et-lhopital-igas-igf?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
-      "date": "2026-06-11T22:00:00.000Z",
-      "source": "Vie-publique — rapports",
-      "srcType": "VP",
-      "resume": "",
-      "comp": "asn",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "sante",
-        "departement"
-      ]
-    },
-    {
       "titre": "Trois scénarios pour une réforme des dépassements d'honoraires des médecins",
       "lien": "https://www.vie-publique.fr/rapport/303561-3-scenarios-pour-reforme-des-depassements-d-honoraires-medecins-hcaam?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
       "date": "2026-06-08T22:00:00.000Z",
@@ -556,12 +575,11 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "sante",
-        "departement"
+        "sante"
       ]
     },
     {
-      "titre": "La Commission approuve le plan climat-social de la Lituanie d'une valeur de 884 millions d'euros pour soutenir les ménages vulnérables et les micro-entreprises dans la transition écologique",
+      "titre": "La Commission approuve le Plan climatique social de la Lituanie de 884 millions d'euros pour soutenir les ménages vulnérables et les microentreprises dans la transition écologique",
       "lien": "https://employment-social-affairs.ec.europa.eu/news/commission-endorses-lithuanias-eu884-million-social-climate-plan-support-vulnerable-households-and-2026-06-05_en",
       "date": "2026-06-05T10:51:10.000Z",
       "source": "Commission UE — Emploi & social",
@@ -571,12 +589,12 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
-        "departement"
+        "departement",
+        "etat"
       ]
     },
     {
-      "titre": "Nouvelles règles de migration et d'asile : ce qui change",
+      "titre": "Nouvelles règles de migration et d'asile en application : quels changements ?",
       "lien": "https://home-affairs.ec.europa.eu/news/new-migration-and-asylum-rules-enter-application-what-changing-2026-06-12_en",
       "date": "2026-06-12T13:18:59.000Z",
       "source": "Commission UE — Migration & asile",
@@ -587,7 +605,7 @@
       "keep": true,
       "profils": [
         "etat",
-        "departement"
+        "commune"
       ]
     },
     {
@@ -601,11 +619,12 @@
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "commune"
       ]
     },
     {
-      "titre": "Les demandes de visa Schengen court séjour augmentent en 2025 mais restent inférieures aux niveaux d'avant la pandémie",
+      "titre": "Les demandes de visa Schengen court séjour augmentent en 2025 mais restent en deçà des niveaux d'avant la pandémie",
       "lien": "https://home-affairs.ec.europa.eu/news/schengen-short-stay-visa-applications-rise-2025-remain-below-pre-pandemic-levels-2026-05-28_en",
       "date": "2026-06-11T17:03:42.000Z",
       "source": "Commission UE — Migration & asile",
@@ -687,6 +706,20 @@
       ]
     },
     {
+      "titre": "La Commission met à jour la liste de sécurité aérienne de l'UE : suppression de tous les transporteurs du Kirghizistan, ajout d'Air Express Algérie",
+      "lien": "https://transport.ec.europa.eu/news-events/news/commission-updates-eu-air-safety-list-all-air-carriers-kyrgyzstan-removed-air-express-algeria-added-2026-06-09_en",
+      "date": "2026-06-09T10:02:08.000Z",
+      "source": "Commission UE — Transports",
+      "srcType": "DG",
+      "resume": "p The Commission updated the EU Air Safety List, the list of airlines that are subject to an operating ban or operational restrictions within the European Union, because they do not meet international safety standards. /p",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ]
+    },
+    {
       "titre": "Conseil Justice et Affaires intérieures",
       "lien": "https://home-affairs.ec.europa.eu/news/justice-and-home-affairs-council-2026-06-08_en",
       "date": "2026-06-08T08:37:25.000Z",
@@ -694,78 +727,14 @@
       "srcType": "DG",
       "resume": "p On 4 June, Justice and Home Affairs Ministers from EU Member States and Schengen Associated Countries met at the JHA Council in Luxembourg. Among other topics, Commissioner for Internal Affairs and Migration Magnus Brunner presented the m",
       "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "departement"
-      ]
-    },
-    {
-      "titre": "Les coordinateurs nationaux et rapporteurs de l'UE en matière de lutte contre la traite discutent de la préparation, de la réaction en cas de crise et des plans d'action nationaux",
-      "lien": "https://home-affairs.ec.europa.eu/news/eu-national-anti-trafficking-coordinators-and-rapporteurs-discuss-preparedness-crisis-response-and-2026-06-05_en",
-      "date": "2026-06-05T14:53:56.000Z",
-      "source": "Commission UE — Migration & asile",
-      "srcType": "DG",
-      "resume": "p The meeting focused on preparedness and crisis response mechanisms for trafficking in human beings as well as the development and implementation of national action plans to support the fight against trafficking. /p",
-      "comp": "lib",
       "impact": 1,
       "keep": true,
       "profils": [
-        "etat",
-        "departement"
+        "etat"
       ]
     },
     {
-      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat (12 juin 2026)",
-      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0747/",
-      "date": "2026-06-12T00:00:00.000Z",
-      "source": "ANSSI — cybersécurité",
-      "srcType": "AAI",
-      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à ",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": []
-    },
-    {
-      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (12 juin 2026)",
-      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0746/",
-      "date": "2026-06-12T00:00:00.000Z",
-      "source": "ANSSI — cybersécurité",
-      "srcType": "AAI",
-      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une élévation de privilèges et une atteinte à la confidentialité ",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": []
-    },
-    {
-      "titre": "Multiples vulnérabilités dans le noyau Linux de SUSE (12 juin 2026)",
-      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0745/",
-      "date": "2026-06-12T00:00:00.000Z",
-      "source": "ANSSI — cybersécurité",
-      "srcType": "AAI",
-      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": []
-    },
-    {
-      "titre": "Multiples vulnérabilités dans Google Chrome (12 juin 2026)",
-      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0740/",
-      "date": "2026-06-12T00:00:00.000Z",
-      "source": "ANSSI — cybersécurité",
-      "srcType": "AAI",
-      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": []
-    },
-    {
-      "titre": "Multiples vulnérabilités dans les produits Spring (12 juin 2026)",
+      "titre": "Multiples vulnérabilités dans les produits Spring",
       "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0744/",
       "date": "2026-06-12T00:00:00.000Z",
       "source": "ANSSI — cybersécurité",
@@ -780,7 +749,7 @@
       ]
     },
     {
-      "titre": "Multiples vulnérabilités dans les produits IBM (12 juin 2026)",
+      "titre": "Multiples vulnérabilités dans les produits IBM",
       "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0748/",
       "date": "2026-06-12T00:00:00.000Z",
       "source": "ANSSI — cybersécurité",
@@ -795,6 +764,54 @@
       ]
     },
     {
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat (12 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0747/",
+      "date": "2026-06-12T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
+      "srcType": "AAI",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à ",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (12 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0746/",
+      "date": "2026-06-12T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
+      "srcType": "AAI",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une élévation de privilèges et une atteinte à la confidentialité ",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Multiples vulnérabilités dans le noyau Linux de SUSE (12 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0745/",
+      "date": "2026-06-12T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
+      "srcType": "AAI",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Multiples vulnérabilités dans Google Chrome (12 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0740/",
+      "date": "2026-06-12T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
+      "srcType": "AAI",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": []
+    },
+    {
       "titre": "Proposition de loi relative au contrat d'édition, visant à favoriser les meilleures pratiques entre les acteurs des filières du livre et de l'œuvre musicale et portant simplification de l'exception au droit d'auteur pour les personnes en situation de handicap",
       "lien": "https://www.vie-publique.fr/loi/303563-contrat-dedition-droit-dauteur-proposition-de-loi-darcos-robert?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
       "date": "2026-06-11T22:00:00.000Z",
@@ -802,10 +819,23 @@
       "srcType": "VP",
       "resume": "",
       "comp": "dpi",
+      "impact": 3,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Le système de déclaration préalable de marchandises de l'UE (ICS2) aide les douanes à arrêter les contrebandiers, les fraudeurs et les criminels",
+      "lien": "https://taxation-customs.ec.europa.eu/news/eu-advance-cargo-information-system-ics2-helps-customs-catch-smugglers-fraudsters-and-criminal-2026-06-01_en",
+      "date": "2026-06-11T08:34:27.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p ICS2 is already providing concrete benefits for customs authorities on the frontline, protecting citizens and the EU economy. nbsp; Take a look at examples of ICS2 in action in 2025. /p",
+      "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "entreprise"
       ]
     },
     {
@@ -838,24 +868,9 @@
       ]
     },
     {
-      "titre": "Quelles qualifications pour les acteurs de l'informatique en nuage (cloud) ?",
-      "lien": "https://www.cnil.fr/fr/quelles-qualifications-pour-les-acteurs-de-linformatique-en-nuage-cloud",
-      "date": "2026-05-28T12:00:00.000Z",
-      "source": "CNIL — données personnelles",
-      "srcType": "AAI",
-      "resume": "Avant de traiter des données personnelles, il est essentiel que les acteurs identifient leurs rôles. La CNIL fournit des orientations pour aider ceux du secteur de l’informatique en nuage (cloud) à identifier leurs responsabilités avec des ",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ]
-    },
-    {
-      "titre": "Décision n° 2026-1201 QPC du 2 juin 2026",
-      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261201QPC.htm",
-      "date": "2026-06-12T19:46:09.149Z",
+      "titre": "Décision n° 2026-1193 QPC du 10 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261193QPC.htm",
+      "date": "2026-06-12T19:47:52.652Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -865,9 +880,9 @@
       "profils": []
     },
     {
-      "titre": "Décision n° 2026-905 DC du 28 mai 2026",
-      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/2026905DC.htm",
-      "date": "2026-06-12T19:46:09.149Z",
+      "titre": "Décision n° 2026-1190 QPC du 10 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261190QPC.htm",
+      "date": "2026-06-12T19:47:52.652Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -877,31 +892,66 @@
       "profils": []
     },
     {
-      "titre": "Loi organique portant régularisation des natifs dans le corps électoral pour les élections au congrès et aux assemblées",
-      "lien": "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2026-905-dc-du-28-mai-2026-communique-de-presse",
-      "date": "2026-06-12T19:46:09.149Z",
+      "titre": "Décision n° 2026-1192 QPC du 10 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261192QPC.htm",
+      "date": "2026-06-12T19:47:52.652Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
-      "resume": "Loi organique portant régularisation des natifs dans le corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie : le Conseil constitutionnel déclare la loi organique conforme à la Constitution.",
+      "resume": "",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
-      "profils": [
-        "etat"
-      ]
+      "profils": []
     },
     {
-      "titre": "Projet de loi portant habilitation à prendre par ordonnances les adaptations rendues nécessaires par l'entrée en application des règlements (UE) n° 2024/1347, 2024/1348, 2024/1349, 2024/1351, 2024/1356, 2024/1358",
+      "titre": "Décision n° 2025-6571 AN du 3 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20256571AN.htm",
+      "date": "2026-06-12T19:47:52.652Z",
+      "source": "Conseil constitutionnel",
+      "srcType": "CC",
+      "resume": "",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Décision n° 2026-1191 QPC du 3 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261191QPC.htm",
+      "date": "2026-06-12T19:47:52.652Z",
+      "source": "Conseil constitutionnel",
+      "srcType": "CC",
+      "resume": "",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Décision n° 2026-318 L du 2 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/2026318L.htm",
+      "date": "2026-06-12T19:47:52.652Z",
+      "source": "Conseil constitutionnel",
+      "srcType": "CC",
+      "resume": "",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": []
+    },
+    {
+      "titre": "Projet de loi portant habilitation à prendre par ordonnances les adaptations rendues nécessaires par l'entrée en application des règlements (UE) n° s 2024/1347, 2024/1348, 2024/1349, 2024/1351, 2024/1356, 2024/1358, et dispositions nécessaires à leur transposition",
       "lien": "https://www.vie-publique.fr/loi/303243-pacte-migration-et-asile-etranger-projet-de-loi-habilitation-ordonnances?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
       "date": "2026-06-11T22:00:00.000Z",
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
       "comp": "dpg",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "commune"
       ]
     },
     {
@@ -916,22 +966,7 @@
       "keep": true,
       "profils": [
         "commune",
-        "departement",
         "etat"
-      ]
-    },
-    {
-      "titre": "Aménagement du tour du Cap d'Antibes : le maire devra réexaminer la demande de l'association Choisir le vélo",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/amenagement-du-tour-du-cap-d-antibes-le-maire-devra-reexaminer-la-demande-de-l-association-choisir-le-velo",
-      "date": "2026-06-11T00:00:00.000Z",
-      "source": "TA de Nice",
-      "srcType": "TA",
-      "resume": "",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune"
       ]
     },
     {
@@ -950,46 +985,16 @@
       ]
     },
     {
-      "titre": "Le tribunal valide les élections municipales de La Brigue",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-valide-les-elections-municipales-de-la-brigue",
-      "date": "2026-06-11T00:00:00.000Z",
-      "source": "TA de Nice",
-      "srcType": "TA",
-      "resume": "",
+      "titre": "Conclusions de l'avocat général dans les affaires C-631/24 P Commission/Auken e.a. et C-632/24 P Commission/Courtois e.a.",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000084419",
+      "date": "2026-06-11T08:08:36.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class='wiki feed' C-631/24 P Commission/Auken e.a. et C-632/24 P Commission/Courtois e.a. br/ br/ div class= wysiwyg p Avocat général Rantos : la Commission n’a pas accordé au public un accès suffisamment large aux contrats d’achat de v",
       "comp": "dpg",
       "impact": 1,
       "keep": true,
-      "profils": [
-        "commune"
-      ]
-    },
-    {
-      "titre": "Le tribunal administratif de Nice valide les élections municipales de La Turbie",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-valide-les-elections-municipales-de-la-turbie",
-      "date": "2026-06-10T00:00:00.000Z",
-      "source": "TA de Nice",
-      "srcType": "TA",
-      "resume": "",
-      "comp": "dpg",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "commune"
-      ]
-    },
-    {
-      "titre": "Le tribunal annule la délibération du 5 juillet 2023 par laquelle la commission permanente du conseil régional d'Île-de-France a décidé de donner...",
-      "lien": "https://montreuil.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-annule-la-deliberation-du-5-juillet-2023-par-laquelle-la-commission-permanente-du-conseil-regional-d-ile-de-france-a-decide-de-donner-l",
-      "date": "2026-06-09T00:00:00.000Z",
-      "source": "TA de Montreuil",
-      "srcType": "TA",
-      "resume": "",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ]
+      "profils": []
     }
   ]
 }
