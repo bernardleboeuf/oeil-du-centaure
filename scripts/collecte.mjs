@@ -153,7 +153,9 @@ PERTINENCE PAR PROFIL : pour chaque article, indique dans "profils" la liste des
 
 INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique pour des lecteurs professionnels (acteurs publics, institutionnels) : nominations, inaugurations, visites officielles, recrutements, anniversaires, communiqués protocolaires, événements internes, articles purement promotionnels ou pédagogiques, newsletters administratives, annonces d'inscription à un colloque, contenus de communication institutionnelle sans portée juridique. Mets "keep":true pour tout ce qui a un vrai intérêt juridique (décisions, réformes, nouvelles règles, directives, analyses de fond).
 
-Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"cac","impact":3,"titre_fr":"...","keep":true,"profils":["commune","etat"]},...]`;
+PERTINENCE PAR SECTEUR D'ACTIVITÉ : dans "secteurs", liste GÉNÉREUSEMENT tous les secteurs concernés (parmi : sante, transport, energie, btp, numerique, environnement, social, eau, amenagement, culture, agriculture). C'est OBLIGATOIRE et IMPORTANT : un article sur un marché de travaux → ["btp"] ; une décision sur l'énergie → ["energie"] ; un arrêt sur les aérodromes/SNCF/RATP → ["transport"] ; une décision environnementale → ["environnement"] (+ "energie","eau","agriculture" si pertinent) ; un sujet hospitalier → ["sante"] ; l'aide sociale → ["social","sante"]. Sois inclusif : 1 à 3 secteurs par article. Ne mets [] QUE si l'article est purement procédural sans lien sectoriel.
+
+Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","impact":3,"titre_fr":"...","keep":true,"profils":["commune","etat"],"secteurs":["btp","energie"]},...]`;
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
