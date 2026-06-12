@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Œil du Centaure — Hebdomadaire d'actualité numérique · Centaure Avocats</title>
+<meta name="description" content="La hebdomadaire d'actualité numérique juridique de Centaure Avocats. Actualité des juridictions administratives françaises, de l'Union européenne et de la Cour de cassation, composée pour votre profil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#C8102E; --ink:#171513; --paper:#FBFAF7; --hair:#E6E1D8;
+    --mute:#7C766B; --card:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Libre Franklin',system-ui,sans-serif;color:var(--ink);background:#EFECE5;padding:28px clamp(16px,4vw,64px)}
+  .wrap{position:relative;max-width:1400px;margin:0 auto;background:var(--paper);border:1px solid var(--hair);border-radius:24px;overflow:hidden;box-shadow:0 30px 80px -40px rgba(23,21,19,.22), 0 4px 16px -8px rgba(23,21,19,.06)}
+  .dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(23,21,19,.06) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 480px);mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 480px)}
+
+  /* MAST */
+  .mast{position:relative;z-index:1;padding:26px clamp(28px,4vw,64px) 0}
+  .mast-top{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:var(--mute);font-weight:600;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+  .mast-title{display:flex;align-items:center;justify-content:center;gap:15px;padding:20px 0 14px}
+  .mast-eye,.mast-cent{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;letter-spacing:-.02em;line-height:1}
+  .mast-cent{color:var(--red)}
+  .mast-mark{font-size:30px;color:var(--red);transform:translateY(-3px)}
+  .mast-sub{display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--ink);padding:9px 0;border-bottom:1px solid var(--hair)}
+  .mast-sub-l{font-size:9.5px;letter-spacing:.16em;font-weight:700}
+  .mast-profil{font-size:10.5px;color:var(--red);font-weight:700;display:flex;align-items:center;gap:10px}
+  .change{background:none;border:none;color:var(--mute);font-size:10.5px;cursor:pointer;font-style:italic;transition:color .14s}
+  .change:hover{color:var(--red)}
+
+  /* COVER */
+  .cover{position:relative;z-index:1;padding:44px 48px}
+  .cover-lead{font-family:'Lora',serif;font-size:18.5px;line-height:1.6;color:#3a352f;max-width:600px;margin-bottom:32px}
+  .step{display:flex;align-items:baseline;gap:13px;padding-bottom:12px;border-bottom:2px solid var(--ink);margin-bottom:18px}
+  .step-n{font-family:'Playfair Display',serif;font-size:17px;font-weight:800;color:var(--red)}
+  .step-t{font-size:13px;letter-spacing:.1em;font-weight:800}
+  .step-h{font-size:11.5px;color:var(--mute);font-style:italic;font-family:'Lora',serif;margin-left:auto}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-bottom:32px}
+  .pcard{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border:1px solid var(--hair);border-radius:12px;background:#fff;cursor:pointer;text-align:left;transition:all .18s cubic-bezier(.2,.8,.3,1);font-family:inherit}
+  .pcard:hover{border-color:#B5AFA3;transform:translateY(-1px);box-shadow:0 8px 22px -14px rgba(23,21,19,.3)}
+  .pcard.on{border-color:var(--ink);box-shadow:0 8px 24px -12px rgba(23,21,19,.25);transform:translateY(-1px)}
+  .pcard-l{font-family:'Playfair Display',serif;font-size:18px;font-weight:700}
+  .ptick{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--hair);transition:all .16s}
+  .pcard.on .ptick{border-color:var(--red);background:radial-gradient(circle,var(--red) 42%,transparent 46%)}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:8px;margin-bottom:28px}
+  .tcard{display:flex;align-items:center;gap:11px;padding:12px 14px;border:1px solid var(--hair);border-radius:11px;background:#fff;cursor:pointer;text-align:left;transition:all .15s cubic-bezier(.2,.8,.3,1);font-family:inherit}
+  .tcard:hover{border-color:#B5AFA3}
+  .tcard.on{border-color:#D8C2C4;box-shadow:0 4px 14px -8px rgba(200,16,46,.25)}
+  .tbox{width:18px;height:18px;border-radius:6px;border:1.5px solid var(--hair);display:grid;place-items:center;font-size:11px;color:#fff;flex-shrink:0;transition:all .15s}
+  .tcard.on .tbox{background:var(--red);border-color:var(--red)}
+  .tname{font-size:11.5px;letter-spacing:.05em;font-weight:700;color:#9A948A}
+  .tcard.on .tname{color:var(--ink)}
+  .publish{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;border:none;border-radius:12px;padding:15px 30px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Playfair Display',serif;transition:all .2s}
+  .publish:disabled{opacity:.34;cursor:default}
+  .publish .arr{transition:transform .2s}
+  .publish:hover:not(:disabled) .arr{transform:translateX(4px)}
+
+  /* PAPER */
+  .paper{position:relative;z-index:1;padding:40px clamp(28px,4vw,64px) 48px}
+  .status{font-size:11px;color:var(--mute);font-family:'Lora',serif;font-style:italic;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+  .status .live{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(200,16,46,.6)}
+  .toprow{display:grid;grid-template-columns:2fr 1fr;gap:48px}
+  @media(max-width:740px){.toprow{grid-template-columns:1fr}}
+  .lead-img{position:relative;width:100%;height:380px;overflow:hidden;background:#EDE9E2;border-radius:10px}
+  .lead-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.02);transition:transform .8s cubic-bezier(.2,.8,.3,1)}
+  .lead:hover .lead-img img{transform:scale(1.03)}
+  .lead-img .grad{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,15,12,.32));border-radius:10px}
+  .lead-img .fallback{position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px 16px;color:rgba(255,255,255,.9);font-size:10.5px;letter-spacing:.16em;font-weight:700}
+  .lead-rub{font-size:11px;letter-spacing:.18em;color:var(--red);font-weight:700;margin:18px 0 12px}
+  .lead-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.02em;margin-bottom:15px}
+  .lead-chapo{font-family:'Lora',serif;font-size:17px;line-height:1.6;color:#3a352f;margin-bottom:16px}
+  .drop{float:left;font-family:'Playfair Display',serif;font-size:54px;line-height:.8;font-weight:800;color:var(--red);padding-right:10px;padding-top:6px}
+  .lead-meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mute);margin-bottom:16px}
+  .by{color:var(--red);font-weight:700}
+  .it{font-style:italic}
+  .sep{color:#C4BDB0}
+  .eclair{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid var(--ink);border-radius:100px;padding:11px 20px;font-size:13.5px;font-weight:700;color:var(--ink);cursor:pointer;margin-top:16px;transition:all .18s cubic-bezier(.2,.8,.3,1);font-family:inherit}
+  .eclair:hover{background:var(--ink);color:#fff;transform:translateY(-1px);box-shadow:0 10px 26px -12px rgba(23,21,19,.45)}
+  .eclair .d{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(200,16,46,.6)}
+  .eclair:hover .d{background:#fff;box-shadow:none}
+
+  .bref-head{font-size:11.5px;letter-spacing:.2em;font-weight:800;color:#fff;background:var(--ink);display:inline-block;padding:5px 13px;border-radius:6px;margin-bottom:18px}
+  @media(max-width:740px){.bref{border-top:1px solid var(--hair);padding-top:22px;margin-top:10px}}
+  .bref-item{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--hair);padding:0 0 14px;margin-bottom:14px;cursor:pointer;transition:all .14s;font-family:inherit}
+  .bref-rub{display:block;font-size:9.5px;letter-spacing:.1em;color:var(--red);font-weight:700;margin-bottom:5px}
+  .bref-titre{display:block;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;line-height:1.26;margin-bottom:6px;transition:color .14s;color:var(--ink)}
+  .bref-item:hover .bref-titre{color:var(--red)}
+  .bref-meta{display:block;font-size:11px;color:var(--mute)}
+
+  .big-rule{height:3px;background:var(--ink);margin:30px 0 28px;border-radius:2px}
+  .rubgrid{column-count:3;column-gap:44px}
+  @media(max-width:1100px){.rubgrid{column-count:2}}
+  @media(max-width:740px){.rubgrid{column-count:1}}
+  .sec{break-inside:avoid;margin-bottom:30px;display:inline-block;width:100%}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:9px;border-bottom:2px solid var(--red);margin-bottom:14px}
+  .sec-name{font-size:12.5px;letter-spacing:.1em;font-weight:800}
+  .sec-ref{font-size:10.5px;color:var(--mute);font-style:italic;font-family:'Lora',serif}
+  .art{padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--hair)}
+  .art:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .art-btn{display:block;width:100%;text-align:left;background:none;border:none;padding:0;cursor:pointer;font-family:inherit}
+  .flash{display:inline-block;font-size:9px;letter-spacing:.1em;font-weight:800;color:#fff;background:var(--red);padding:2px 6px;border-radius:4px;margin-bottom:8px}
+  .art-t{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;line-height:1.24;margin-bottom:6px;transition:color .14s;color:var(--ink)}
+  .art-t.lead{font-size:19.5px;line-height:1.18}
+  .art-btn:hover .art-t{color:var(--red)}
+  .art-c{font-family:'Lora',serif;font-size:13.5px;line-height:1.5;color:#4a443d;margin-bottom:8px}
+  .art-m{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--mute)}
+  .art-src{color:var(--red);font-weight:700}
+  .art-read{margin-left:auto;font-size:10.5px;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--hair);white-space:nowrap}
+  .art-read:hover{color:var(--red);border-color:var(--red)}
+
+  .forma{display:flex;align-items:center;gap:12px;text-decoration:none;background:linear-gradient(100deg,rgba(200,16,46,.04),rgba(200,16,46,.015));border:1px solid rgba(200,16,46,.18);border-radius:10px;padding:11px 14px;margin-top:12px;transition:all .16s}
+  .forma:hover{border-color:rgba(200,16,46,.4);transform:translateX(2px)}
+  .forma-badge{font-size:8.5px;letter-spacing:.1em;font-weight:800;color:#fff;background:var(--red);padding:4px 7px;border-radius:5px;white-space:nowrap;flex-shrink:0}
+  .forma-txt{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+  .forma-titre{font-size:13px;font-weight:700;color:var(--ink);line-height:1.25}
+  .forma-date{font-size:11px;color:var(--mute);font-family:'Lora',serif;font-style:italic}
+  .forma-arr{color:var(--red);font-weight:700;font-size:16px;flex-shrink:0}
+
+  .disc{font-family:'Lora',serif;font-size:11.5px;color:var(--mute);margin-top:24px;padding-top:16px;border-top:1px solid var(--hair);line-height:1.55;font-style:italic}
+  
+  
+
+  /* PANNEAU ÉCLAIRAGE */
+  .overlay{position:fixed;inset:0;background:rgba(23,21,19,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .sheet{position:relative;background:var(--paper);border-radius:18px;padding:32px;max-width:440px;width:100%;box-shadow:0 40px 90px -30px rgba(0,0,0,.5);border:1px solid var(--hair);animation:slidein .32s cubic-bezier(.2,.9,.3,1) both}
+  @keyframes slidein{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+  .sheet-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:16px;color:var(--mute);cursor:pointer}
+  .sheet-kick{font-size:10.5px;letter-spacing:.18em;color:var(--red);font-weight:700;margin-bottom:14px}
+  .sheet-sub{font-size:10.5px;letter-spacing:.1em;color:var(--mute);font-weight:700;margin-bottom:6px}
+  .sheet-titre{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;line-height:1.25;margin-bottom:14px}
+  .sheet-txt{font-family:'Lora',serif;font-size:14.5px;line-height:1.55;color:#4a443d;margin-bottom:20px}
+  .sheet-cta{display:block;text-align:center;background:var(--red);color:#fff;padding:13px;border-radius:10px;font-size:14.5px;font-weight:700;text-decoration:none;transition:all .16s}
+  .sheet-cta:hover{background:#A60D26}
+  .sheet-or{text-align:center;font-size:11.5px;color:var(--mute);margin:12px 0;font-style:italic;font-family:'Lora',serif}
+  .sheet-forma{display:block;text-align:center;background:#fff;color:var(--ink);padding:12px;border-radius:10px;font-size:13.5px;font-weight:600;text-decoration:none;border:1px solid var(--hair);transition:all .16s}
+  .sheet-forma:hover{border-color:#B5AFA3}
+  .sheet-source{display:block;text-align:center;background:var(--ink);color:#fff;padding:12px;border-radius:10px;font-size:13.5px;font-weight:600;text-decoration:none;margin-top:10px;transition:all .16s}
+  .sheet-source:hover{background:#000}
+
+  .rev{animation:rev .52s cubic-bezier(.2,.8,.3,1) both}
+  @keyframes rev{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media(max-width:600px){.cover,.paper,.mast,.mast-eye,.mast-cent{font-size:33px}.lead-title{font-size:27px}}
+  @media(prefers-reduced-motion:reduce){.rev,.sheet,.lead-img img{animation:none!important;transition:none!important}}
+  button:focus-visible,a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+  .galaxy{position:relative;z-index:1;padding:32px clamp(28px,4vw,64px) 8px;border-top:3px solid var(--ink)}
+  .galaxy-title{font-size:11px;letter-spacing:.2em;font-weight:800;color:var(--mute);margin-bottom:16px}
+  .galaxy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .galaxy-card{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--hair);border-radius:12px;background:#fff;text-decoration:none;transition:all .18s cubic-bezier(.2,.8,.3,1)}
+  .galaxy-card:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 10px 26px -14px rgba(200,16,46,.3)}
+  .g-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--ink)}
+  .g-desc{font-size:12px;color:var(--mute)}
+  .colo{position:relative;z-index:1;padding:20px clamp(28px,4vw,64px) 28px;font-size:11px;color:var(--mute)}
+  .colo-main{margin-bottom:12px}
+  .colo-name{font-family:'Playfair Display',serif;font-weight:800;color:var(--ink);font-size:14px;letter-spacing:.03em}
+  .colo-deon{font-family:'Lora',serif;font-style:italic;font-size:11.5px;line-height:1.6;color:var(--mute);max-width:900px;padding-top:12px;border-top:1px solid var(--hair)}
+
+  .avts{display:inline-flex;align-items:center;margin-right:8px;vertical-align:middle}
+  .avt{width:26px;height:26px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-left:-8px;background:#ddd}
+  .avt:first-child{margin-left:0}
+  .avt-i{display:inline-flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:#fff;background:var(--red);font-family:'Libre Franklin',sans-serif}
+  .sec-ref .avts .avt{width:22px;height:22px}
+
+.sheet-avts{margin-bottom:14px}
+  .sheet-avts .avt{width:40px;height:40px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="dots"></div>
+  <div id="app"></div>
+</div>
+
+<script>
+/* ====== CONFIG ====== */
+// URL de la fonction de collecte (Netlify). Quand déployée :
+const VEILLE_ENDPOINT = "veille.json";  // fichier voisin, régénéré chaque matin par la minuterie
+// Tant que non branchée, on utilise le jeu de démonstration ci-dessous.
+
+const PROFILS = [
+  { id:"commune", label:"Commune / EPCI", comps:["cac","imm","rhs","lib","env"] },
+  { id:"sante", label:"Hôpital / GHT / ESSMS", comps:["rhs","enf","cac","lib"] },
+  { id:"departement", label:"Département / Action sociale", comps:["enf","lib","rhs","imm"] },
+  { id:"bailleur", label:"Bailleur social", comps:["imm","cac","env","pia"] },
+  { id:"etat", label:"Opérateur de l'État", comps:["cac","lib","rhs","env"] },
+  { id:"entreprise", label:"Entreprise / Dirigeant", comps:["pia","cac","rhs","lib"] },
+];
+const COMP = {
+  imm:{nom:"Immobilier & domanial",ref:"Amine Moghrani · Ludovic Landivaux",mail:"am@centaure-avocats.com",rub:"IMMOBILIER & DOMANIAL",tint:"#3E5266",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Paris_-_Quartier_de_la_D%C3%A9fense.jpg/1280px-Paris_-_Quartier_de_la_D%C3%A9fense.jpg",forma:{t:"Urbanisme et aménagement",d:"15 septembre 2026 · Saint-Ouen",slug:"urbanisme"}},
+  cac:{nom:"Construction, assurance & commande publique",ref:"Jehan Béjot · Nicolas Ferré · Nathalie Lagrée",mail:"jbe@centaure-avocats.com",rub:"MARCHÉS & CONSTRUCTION",tint:"#7A3B2E",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Conseil-d-etat-paris.jpg/1280px-Conseil-d-etat-paris.jpg",forma:{t:"Maîtriser les CCAG (passation et exécution)",d:"2 juillet 2026 · Saint-Ouen",slug:"nouveaux-ccag"}},
+  env:{nom:"Environnement & transition écologique",ref:"Amine Moghrani",mail:"am@centaure-avocats.com",rub:"ENVIRONNEMENT",tint:"#3a5a40",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Construction_site_crane.jpg/1280px-Construction_site_crane.jpg",forma:{t:"Police de l'environnement",d:"22-23 octobre 2026 · Lille",slug:"police-environnement"}},
+  lib:{nom:"Libertés & procédures",ref:"Yves Claisse · Romain Dussault · Olivier Magnaval",mail:"yc@centaure-avocats.com",rub:"LIBERTÉS & PROCÉDURES",tint:"#4A3A3A",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Palais_de_Justice_de_Paris_2.jpg/1280px-Palais_de_Justice_de_Paris_2.jpg",forma:{t:"Dispositifs de surveillance",d:"7 juillet 2026 · Lille",slug:"dispositifs-surveillance"}},
+  pia:{nom:"Propriété intellectuelle & droit des affaires",ref:"Ludovic Landivaux · Ali Derrouiche",mail:"ll@centaure-avocats.com",rub:"ENTREPRISES & PI",tint:"#3A4A5A",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/La_D%C3%A9fense_Paris.jpg/1280px-La_D%C3%A9fense_Paris.jpg",forma:{t:"Responsabilité juridique du chef d'entreprise",d:"8 octobre 2026 · Saint-Ouen",slug:"responsabilite-chef-entreprise"}},
+  enf:{nom:"Enfance & vulnérabilité",ref:"Ourida Derrouiche · Jean-Alexandre Cano",mail:"ode@centaure-avocats.com",rub:"ENFANCE & ACTION SOCIALE",tint:"#5A4A5A",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Conseil_constitutionnel_-_Montpensier.jpg/1280px-Conseil_constitutionnel_-_Montpensier.jpg",forma:{t:"L'aide sociale aux personnes âgées en établissement",d:"9-10 septembre 2026 · Lille",slug:"aide-sociale-personnes-agees"}},
+  rhs:{nom:"Droit des personnels",ref:"Ourida Derrouiche · Olivier Magnaval",mail:"ode@centaure-avocats.com",rub:"AGENTS & RH",tint:"#4A4A38",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Minist%C3%A8re_du_Travail_France.jpg/1280px-Minist%C3%A8re_du_Travail_France.jpg",forma:{t:"L'enquête administrative",d:"3 septembre 2026 · Saint-Ouen",slug:"enquete-administrative"}},
+};
+const ORDER=["cac","lib","imm","rhs","enf","env","pia"];
+const FORMA_URL="https://celadon-sopapillas-42aeb2.netlify.app";
+
+/* jeu de démonstration (remplacé par la fonction une fois branchée) */
+const DEMO=[
+ {comp:"dpa",source:"Conseil d'État",date:"5 juin",type:"Jurisprudence",titre:"Marchés de travaux : le juge précise les conditions de la résiliation pour faute",chapo:"Une décision attendue clarifie l'office du juge face à l'abandon de chantier par le titulaire.",impact:3,forma:true,lien:"#"},
+ {comp:"dpa",source:"CJUE",date:"4 juin",type:"Jurisprudence",titre:"Concessions : la Cour de justice encadre la modification en cours d'exécution",chapo:"",impact:3,lien:"#"},
+ {comp:"dpa",source:"BOAMP",date:"3 juin",type:"Réglementation",titre:"Les seuils de procédure formalisée relevés au 1er juillet",chapo:"",impact:3,lien:"#"},
+ {comp:"dpa",source:"TA de Paris",date:"28 mai",type:"Jurisprudence",titre:"Référé précontractuel : le contrôle des critères de sélection resserré",chapo:"",impact:2,lien:"#"},
+ {comp:"urba",source:"BO Transition écologique",date:"2 juin",type:"Réglementation",titre:"Un décret réécrit l'instruction des autorisations d'urbanisme",chapo:"Les délais et pièces exigibles évoluent ; les services instructeurs adaptent leurs procédures.",impact:3,forma:true,lien:"#"},
+ {comp:"urba",source:"CAA de Lyon",date:"27 mai",type:"Jurisprudence",titre:"Permis de construire : l'intérêt à agir du voisin de nouveau précisé",chapo:"",impact:2,lien:"#"},
+ {comp:"constr",source:"Cour de cassation",date:"1 juin",type:"Jurisprudence",titre:"Garantie décennale : la réception tacite peut faire courir le délai",chapo:"Un arrêt qui rebat les cartes du point de départ de la garantie.",impact:2,lien:"#"},
+ {comp:"perso",source:"Conseil d'État",date:"4 juin",type:"Jurisprudence",titre:"Discipline : le contrôle de proportionnalité de la sanction se durcit",chapo:"Le juge administratif renforce son examen de l'adéquation entre la faute et la sanction.",impact:3,forma:true,lien:"#"},
+ {comp:"perso",source:"Légifrance",date:"30 mai",type:"Réglementation",titre:"Protection sociale complémentaire : le décret FPT est paru",chapo:"",impact:2,lien:"#"},
+ {comp:"enfance",source:"Conseil d'État",date:"6 juin",type:"Jurisprudence",titre:"Mineurs non accompagnés : le contradictoire s'impose dans l'évaluation de la minorité",chapo:"Une décision qui encadre la procédure d'évaluation et renforce les garanties offertes au jeune.",impact:3,forma:true,lien:"#"},
+ {comp:"enfance",source:"Légifrance",date:"29 mai",type:"Réglementation",titre:"L'aide sociale à l'hébergement revalorisée",chapo:"",impact:2,lien:"#"},
+ {comp:"etrangers",source:"CEDH",date:"5 juin",type:"Jurisprudence",titre:"Rétention : la Cour de Strasbourg rappelle les garanties procédurales",chapo:"",impact:3,lien:"#"},
+ {comp:"etrangers",source:"Conseil d'État",date:"5 juin",type:"Jurisprudence",titre:"OQTF : l'administration doit motiver le refus de délai de départ volontaire",chapo:"Le Conseil d'État resserre les exigences de motivation, avec des conséquences pour les préfectures.",impact:3,forma:true,lien:"#"},
+ {comp:"dpg",source:"Conseil d'État",date:"2 juin",type:"Jurisprudence",titre:"Retrait d'un acte créateur de droits : les délais reprécisés",chapo:"Un rappel utile des conditions dans lesquelles l'administration peut revenir sur ses décisions.",impact:2,lien:"#"},
+ {comp:"penal",source:"Cour de cassation",date:"31 mai",type:"Jurisprudence",titre:"Prise illégale d'intérêts : l'élément intentionnel au cœur du débat",chapo:"",impact:2,lien:"#"},
+ {comp:"dpriv",source:"Cour de cassation",date:"28 mai",type:"Jurisprudence",titre:"Bail commercial : les contours du refus de déspécialisation",chapo:"",impact:2,lien:"#"},
+];
+
+let state={profil:null,comps:null,built:false,feed:DEMO,live:false};
+const app=document.getElementById("app");
+
+// --- Photos d'associés ---
+const PHOTOS={"Jehan Béjot":"bejot","Nicolas Ferré":"ferre","Guillaume Blanchard":"blanchard","Amine Moghrani":"moghrani","Nathalie Lagrée":"lagree","Ludovic Landivaux":"landivaux","Ali Derrouiche":"a-derrouiche","Ourida Derrouiche":"o-derrouiche","Yves Claisse":"claisse","Olivier Magnaval":"magnaval","Jean-Alexandre Cano":"cano","Romain Dussault":"dussault"};
+function avatars(refStr){
+  const names=refStr.split("·").map(s=>s.trim());
+  return `<span class="avts">`+names.map(n=>{
+    const slug=PHOTOS[n];
+    return slug ? `<img class="avt" src="images/associes/${slug}.jpg" alt="${esc(n)}" title="${esc(n)}">` 
+                : `<span class="avt avt-i" title="${esc(n)}">${esc(n.split(" ").map(w=>w[0]).join("").slice(0,2))}</span>`;
+  }).join("")+`</span>`;
+}
+const esc=(s)=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const weekNo=()=>Math.ceil(((new Date()-new Date(new Date().getFullYear(),0,1))/86400000+1)/7);
+const today=()=>{const d=new Date().toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});return d.charAt(0).toUpperCase()+d.slice(1);};
+
+/* tentative de branchement réel ; sinon démo */
+async function loadFeed(){
+  try{
+    const r=await fetch(VEILLE_ENDPOINT,{signal:AbortSignal.timeout(9000),headers:{"Accept":"application/json; charset=utf-8"}});
+    if(!r.ok) throw 0;
+    const buf=await r.arrayBuffer();
+    const txt=new TextDecoder("utf-8").decode(buf);
+    const data=JSON.parse(txt);
+    if(data.items&&data.items.length){
+      state.feed=data.items.map(it=>({
+        comp: it.comp,
+        source: it.source,
+        date: it.date && it.date.includes("T") ? fmtDate(it.date) : (it.date||""),
+        type: it.type || (it.srcType==="LEG"?"Réglementation":"Jurisprudence"),
+        titre: it.titre,
+        chapo: it.chapo || it.resume || "",
+        impact: it.impact || 1,
+        forma: it.impact===3,        // encart formation sur les sujets à fort impact
+        lien: it.lien || "#"
+      }));
+      state.live=true;
+      if(data.generatedAt){ state.generatedAt = data.generatedAt; }
+    }
+  }catch(e){/* on garde la démo */}
+}
+function fmtDate(iso){if(!iso)return"";const d=new Date(iso);if(isNaN(d))return"";return d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"});}
+
+function mast(){
+  return `<div class="mast">
+    <div class="mast-top"><span>N° ${weekNo()} · ${today()}</span><span>HEBDOMADAIRE D'ACTUALITÉ NUMÉRIQUE</span></div>
+    <div class="mast-title"><span class="mast-eye">L'ŒIL</span><span class="mast-mark">◐</span><span class="mast-cent">DU CENTAURE</span></div>
+    <div class="mast-sub"><span class="mast-sub-l">PAR CENTAURE AVOCATS · ENTREPRISE D'INTELLIGENCES JURIDIQUES</span>
+      ${state.built?`<span class="mast-profil">${esc(state.profil.label)}<button class="change" onclick="reset()">↻ refaire</button></span>`:""}
+    </div></div>`;
+}
+function colo(){return `
+  <div class="galaxy">
+    <div class="galaxy-title">LA GALAXIE CENTAURE</div>
+    <div class="galaxy-grid">
+      <a class="galaxy-card" href="https://idyllic-choux-fa2fd0.netlify.app/" target="_blank" rel="noreferrer"><span class="g-name">Centaure Avocats</span><span class="g-desc">Le cabinet · 9 compétences, 12 associés</span></a>
+      <a class="galaxy-card" href="${FORMA_URL}/" target="_blank" rel="noreferrer"><span class="g-name">FormaConseils</span><span class="g-desc">La formation juridique en semi-mesure</span></a>
+      <a class="galaxy-card" href="https://ornate-pudding-8b6b3b.netlify.app/" target="_blank" rel="noreferrer"><span class="g-name">EasyLitis</span><span class="g-desc">La gestion du contentieux</span></a>
+      <a class="galaxy-card" href="https://resonant-sundae-b29e1d.netlify.app/" target="_blank" rel="noreferrer"><span class="g-name">Ateliers Lill'loi</span><span class="g-desc">Le coworking juridique à Lille</span></a>
+    </div>
+  </div>
+  <div class="colo">
+    <div class="colo-main"><span class="colo-name">L'ŒIL DU CENTAURE</span> · Hebdomadaire d'actualité numérique · contact@centaure-avocats.com</div>
+    <div class="colo-deon">Les sources de cette veille ont été recensées et organisées par Centaure Avocats ; elles sont actualisées automatiquement chaque jour. Les informations présentées émanent exclusivement de sources publiques officielles (juridictions, institutions, autorités) et non de Centaure Avocats. Cet outil de veille est purement informatif : il ne constitue ni une consultation, ni un avis juridique, et ne saurait engager la responsabilité du cabinet. Pour toute analyse de votre situation, seul un échange avec un avocat fait foi.</div>
+  </div>`;}
+
+function renderCover(){
+  app.innerHTML=mast()+`<div class="cover"><div class="rev">
+    <p class="cover-lead">Une hebdomadaire d'actualité numérique juridique composée pour vous seul. Dites-nous qui vous êtes et ce que vous suivez — la rédaction assemble votre édition à partir des sources officielles : l'ensemble des juridictions administratives françaises, l'Union européenne, la Cour de cassation.</p>
+    <div class="step"><span class="step-n">I</span><span class="step-t">Votre profil</span></div>
+    <div class="pgrid" id="pgrid"></div>
+    <div id="step2"></div>
+  </div></div>`+colo();
+  const pg=document.getElementById("pgrid");
+  pg.innerHTML=PROFILS.map(p=>`<button class="pcard ${state.profil&&state.profil.id===p.id?'on':''}" onclick="pick('${p.id}')"><span class="pcard-l">${esc(p.label)}</span><span class="ptick"></span></button>`).join("");
+  if(state.profil)renderStep2();
+}
+function renderStep2(){
+  const s2=document.getElementById("step2");
+  s2.innerHTML=`<div class="rev"><div class="step"><span class="step-n">II</span><span class="step-t">Votre sommaire</span><span class="step-h">les rubriques à suivre</span></div>
+    <div class="tgrid">${ORDER.map(id=>`<button class="tcard ${state.comps.includes(id)?'on':''}" onclick="toggle('${id}')"><span class="tbox">${state.comps.includes(id)?'✓':''}</span><span class="tname">${esc(COMP[id].rub)}</span></button>`).join("")}</div>
+    <button class="publish" ${state.comps.length?'':'disabled'} onclick="publish()">Publier mon édition <span class="arr">→</span></button></div>`;
+}
+function pick(id){state.profil=PROFILS.find(p=>p.id===id);state.comps=[...state.profil.comps];renderCover();}
+function toggle(id){const i=state.comps.indexOf(id);if(i>=0)state.comps.splice(i,1);else state.comps.push(id);renderStep2();
+  document.querySelectorAll('.publish')[0]&&(document.querySelectorAll('.publish')[0].disabled=!state.comps.length);}
+function reset(){state.built=false;renderCover();}
+function publish(){if(!state.comps.length)return;state.built=true;renderEdition();}
+
+function img(comp){
+  const c=COMP[comp];
+  // image Wikimedia (charge en prod ; repli aplat si bloquée)
+  const src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Conseil-d-etat-paris.jpg/1280px-Conseil-d-etat-paris.jpg";
+  return `<div class="lead-img"><div class="fallback" style="background:linear-gradient(135deg,${c.tint},${shade(c.tint,-20)})">${esc(c.rub)}</div>
+    <img src="${src}" alt="" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'"><div class="grad"></div></div>`;
+}
+function shade(h,p){const n=parseInt(h.slice(1),16);let r=Math.max(0,Math.min(255,(n>>16)+p)),g=Math.max(0,Math.min(255,((n>>8)&255)+p)),b=Math.max(0,Math.min(255,(n&255)+p));return"#"+((r<<16)|(g<<8)|b).toString(16).padStart(6,"0");}
+const SRC_HOME={"Conseil d'État":"https://www.conseil-etat.fr/decisions-de-justice/dernieres-decisions","Sénat":"https://www.senat.fr/","Assemblée nationale":"https://www.assemblee-nationale.fr/","CNIL":"https://www.cnil.fr/fr/actualites","DAJ Bercy":"https://www.economie.gouv.fr/daj","BO Transition écologique":"https://www.bulletin-officiel.developpement-durable.gouv.fr/","Conseil constitutionnel":"https://www.conseil-constitutionnel.fr/"};
+function srcHome(it){ if(SRC_HOME[it.source]) return SRC_HOME[it.source]; if((it.source||'').startsWith('TA de')) return 'https://www.tribunal-administratif.fr/'; if((it.source||'').startsWith('CAA de')) return 'https://www.cour-administrative-appel.fr/'; return 'https://www.centaure-avocats.com/'; }
+function readLink(it){ const url=(it.lien && it.lien!=='#' && /^https?:/.test(it.lien)) ? it.lien : srcHome(it); return `<a class="art-read" href="${url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Lire la source \u2197</a>`; }
+let _formaShown=new Set();
+function forma(comp){const f=COMP[comp].forma; if(_formaShown.has(f.t)) return ''; _formaShown.add(f.t);return `<a class="forma" href="${FORMA_URL}/formations/${f.slug}" target="_blank" rel="noreferrer"><span class="forma-badge">FORMACONSEILS</span><span class="forma-txt"><span class="forma-titre">${esc(f.t)}</span><span class="forma-date">Prochaine session · ${esc(f.d)}</span></span><span class="forma-arr">→</span></a>`;}
+
+function renderEdition(){
+  _formaShown=new Set();
+  const items=state.feed.filter(f=>state.comps.includes(f.comp));
+  let lead=null;for(const id of state.comps){lead=items.find(it=>it.comp===id&&it.impact===3);if(lead)break;}
+  if(!lead)lead=items[0];
+  const brefs=items.filter(it=>it!==lead&&it.impact>=2).slice(0,5);
+  const m={};items.forEach(it=>{if(it!==lead)(m[it.comp]=m[it.comp]||[]).push(it);});
+  const sections=state.comps.filter(id=>m[id]&&m[id].length).map(id=>({id,items:m[id]}));
+
+  app.innerHTML=mast()+`<div class="paper">
+    <div class="status"><span class="live"></span>${state.live?"Mise à jour automatique quotidienne":"Démonstration"} · ${items.length} actualités · sources officielles</div>
+    <div class="toprow">
+      <div class="lead rev">${lead?`${img(lead.comp)}
+        <div class="lead-rub">${esc(COMP[lead.comp].rub)}</div>
+        <h1 class="lead-title">${esc(lead.titre)}</h1>
+        ${lead.chapo?`<p class="lead-chapo"><span class="drop">${esc(lead.chapo.charAt(0))}</span>${esc(lead.chapo.slice(1))}</p>`:""}
+        <div class="lead-meta"><span class="by">${esc(lead.source)}</span><span class="sep">·</span>${esc(lead.date)}<span class="sep">·</span><span class="it">${esc(lead.type)}</span>${readLink(lead)}</div>
+        ${lead.forma?forma(lead.comp):""}
+        <button class="eclair" onclick="sheet('${lead.comp}',${idx(lead)})"><span class="d"></span>Demander un éclairage à ${esc(COMP[lead.comp].ref.split(" · ")[0])}</button>`:""}
+      </div>
+      <aside class="bref rev"><div class="bref-head">EN BREF</div>
+        ${brefs.map(b=>`<button class="bref-item" onclick="sheet('${b.comp}',${idx(b)})"><span class="bref-rub">${esc(COMP[b.comp].rub)}</span><span class="bref-titre">${esc(b.titre)}</span><span class="bref-meta">${esc(b.source)} · ${esc(b.date)}</span></button>`).join("")}
+      </aside>
+    </div>
+    <div class="big-rule"></div>
+    <div class="rubgrid">
+      ${sections.map(s=>`<section class="sec rev"><div class="sec-head"><span class="sec-name">${esc(COMP[s.id].rub)}</span><span class="sec-ref">${avatars(COMP[s.id].ref)}${esc(COMP[s.id].ref)}</span></div>
+        ${s.items.map((it,i)=>`<div class="art"><button class="art-btn" onclick="sheet('${it.comp}',${idx(it)})">${it.impact===3?'<span class="flash">À LA UNE</span>':''}<h3 class="art-t ${i===0?'lead':''}">${esc(it.titre)}</h3>${i===0&&it.chapo?`<p class="art-c">${esc(it.chapo)}</p>`:""}<div class="art-m"><span class="art-src">${esc(it.source)}</span><span class="sep">·</span>${esc(it.date)}${readLink(it)}</div></button>${it.forma?forma(it.comp):""}</div>`).join("")}
+      </section>`).join("")}
+    </div>
+    <div class="disc">L'Œil du Centaure — hebdomadaire d'actualité numérique composée à partir de sources publiques officielles : les 42 tribunaux administratifs et 9 cours administratives d'appel (métropole et outre-mer), le Conseil d'État, la CNDA, la Cour de justice de l'UE, la CEDH, la Commission européenne, la Cour de cassation et Légifrance. ${state.live?"Mise à jour automatique.":"Édition de démonstration ; flux à brancher via la fonction de collecte fournie."} Ne constitue pas une consultation juridique.</div>
+  </div>`+colo();
+}
+function idx(it){return state.feed.indexOf(it);}
+function sheet(comp,i){
+  const it=state.feed[i];const c=COMP[comp];
+  const ov=document.createElement("div");ov.className="overlay";ov.onclick=()=>ov.remove();
+  ov.innerHTML=`<div class="sheet" onclick="event.stopPropagation()">
+    <button class="sheet-close" onclick="this.closest('.overlay').remove()">✕</button>
+    <div class="sheet-kick">DEMANDER UN ÉCLAIRAGE</div>
+    <div class="sheet-sub">${esc(c.rub)}</div>
+    <div class="sheet-titre">« ${esc(it.titre)} »</div>
+    <div class="sheet-avts">${avatars(c.ref)}</div><p class="sheet-txt">${esc(c.ref)} et son équipe peuvent revenir vers vous sur l'impact de cette actualité pour votre activité. Un échange court, sans engagement.</p>
+    <a class="sheet-cta" href="mailto:${c.mail}?subject=${encodeURIComponent("Éclairage — "+it.titre)}">Écrire à ${esc(c.ref)} →</a>
+    <a class="sheet-source" href="${(it.lien&&/^https?:/.test(it.lien))?it.lien:srcHome(it)}" target="_blank" rel="noreferrer">Accéder à la source officielle ↗</a>
+    <div class="sheet-or">ou</div>
+    <a class="sheet-forma" href="${FORMA_URL}/formations/${c.forma.slug}" target="_blank" rel="noreferrer">Se former sur ce sujet · ${esc(c.forma.t)} ↗</a>
+  </div>`;
+  document.body.appendChild(ov);
+}
+
+/* démarrage : on tente le flux réel, puis on rend */
+loadFeed().then(renderCover);
+</script>
+</body>
+</html>
