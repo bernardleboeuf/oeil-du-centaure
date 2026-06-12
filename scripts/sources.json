@@ -258,49 +258,36 @@
       "type": "CE",
       "nom": "Conseil d'État — actualités",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Factualites-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — avis (projets de loi)",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Favis-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/avis-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/avis-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — études",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fetudes-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/etudes-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — analyses de jurisprudence",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fanalyses-de-jurisprudence-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss"
-      ]
-    },
-    {
-      "type": "CNDA",
-      "nom": "Cour nationale du droit d'asile",
-      "base": "https://www.cnda.fr"
-    },
-    {
-      "type": "CCOMPTES",
-      "nom": "Cour des comptes",
-      "direct": [
-        "https://www.ccomptes.fr/fr/rss/general",
-        "https://www.ccomptes.fr/fr/feed"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss"
       ]
     },
     {
@@ -308,42 +295,6 @@
       "nom": "Conseil constitutionnel",
       "direct": [
         "https://www.conseil-constitutionnel.fr/flux/rss.xml"
-      ]
-    },
-    {
-      "type": "AN",
-      "nom": "Assemblée nationale — communiqués",
-      "direct": [
-        "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml"
-      ]
-    },
-    {
-      "type": "AN",
-      "nom": "Assemblée nationale — documents parlementaires",
-      "direct": [
-        "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires"
-      ]
-    },
-    {
-      "type": "SENAT",
-      "nom": "Sénat — communiqués",
-      "direct": [
-        "http://www.senat.fr/rss/presse.xml"
-      ]
-    },
-    {
-      "type": "SENAT",
-      "nom": "Sénat — textes de loi",
-      "direct": [
-        "http://www.senat.fr/rss/textes.xml"
-      ]
-    },
-    {
-      "type": "VP",
-      "nom": "Vie-publique — actualités",
-      "direct": [
-        "https://www.vie-publique.fr/flux/actualites.xml",
-        "https://www.vie-publique.fr/rss.xml"
       ]
     },
     {
@@ -365,6 +316,7 @@
       "type": "AAI",
       "nom": "ARCOM — audiovisuel & numérique",
       "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.arcom.fr%2Frss.xml",
         "https://www.arcom.fr/rss.xml"
       ]
     },
@@ -373,20 +325,6 @@
       "nom": "ART — transports",
       "direct": [
         "https://www.autorite-transports.fr/feed/"
-      ]
-    },
-    {
-      "type": "AAI",
-      "nom": "HAS — santé",
-      "direct": [
-        "https://www.has-sante.fr/rss/c_1771214.xml"
-      ]
-    },
-    {
-      "type": "AAI",
-      "nom": "AMF — marchés financiers",
-      "direct": [
-        "https://www.amf-france.org/fr/rss.xml"
       ]
     },
     {
@@ -403,13 +341,6 @@
       "direct": [
         "https://www.cert.ssi.gouv.fr/feed/",
         "https://www.ssi.gouv.fr/feed/"
-      ]
-    },
-    {
-      "type": "AAI",
-      "nom": "CADA — accès aux documents",
-      "direct": [
-        "https://www.cada.fr/rss.xml"
       ]
     },
     {
@@ -438,47 +369,137 @@
       "type": "MIN",
       "nom": "Ministère de l'Intérieur — actualités",
       "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.interieur.gouv.fr%2Frss.xml",
         "https://www.interieur.gouv.fr/rss.xml"
       ]
     },
     {
-      "type": "BOFIP",
-      "nom": "Bofip — fiscal",
+      "type": "VP",
+      "nom": "Vie-publique — actualités",
       "direct": [
-        "https://bofip.impots.gouv.fr/rss"
+        "https://www.vie-publique.fr/actualites-feeds.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Factualites-feeds.xml"
       ]
     },
     {
-      "type": "SP",
-      "nom": "Service-public — professionnels",
+      "type": "VP",
+      "nom": "Vie-publique — lois",
       "direct": [
-        "https://www.service-public.fr/professionnels-entreprises/actualites/rss"
+        "https://www.vie-publique.fr/lois-feeds.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Flois-feeds.xml"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — rapports",
+      "direct": [
+        "https://www.vie-publique.fr/rapports-feeds.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Frapports-feeds.xml"
+      ]
+    },
+    {
+      "type": "CCOMPTES",
+      "nom": "Cour des comptes — actualités",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Factualites",
+        "https://www.ccomptes.fr/rss/actualites"
+      ]
+    },
+    {
+      "type": "CCOMPTES",
+      "nom": "Cour des comptes — publications",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fpublications",
+        "http://www.ccomptes.fr/rss/publications"
+      ]
+    },
+    {
+      "type": "AN",
+      "nom": "Assemblée nationale — communiqués",
+      "direct": [
+        "https://www.assemblee-nationale.fr/dyn/rss/communiques-de-presse.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.assemblee-nationale.fr%2Fdyn%2Frss%2Fcommuniques-de-presse.xml"
+      ]
+    },
+    {
+      "type": "SENAT",
+      "nom": "Sénat — communiqués",
+      "direct": [
+        "https://www.senat.fr/rss/presse.rss",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.senat.fr%2Frss%2Fpresse.rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — discours et interventions",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fdiscours-et-interventions-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — colloques et conférences",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fcolloques-seminaires-et-conferences-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — rapports d'activité",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Frapports-d-activite-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — prochaines audiences",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fseances-publiques-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — Lettre de la justice administrative",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Flja-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/lja-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/lja-rss"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — publications",
+      "direct": [
+        "https://www.vie-publique.fr/publications-feeds.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Fpublications-feeds.xml"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — débats & consultations",
+      "direct": [
+        "https://www.vie-publique.fr/debats-consultations-feeds.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Fdebats-consultations-feeds.xml"
+      ]
+    },
+    {
+      "type": "CCOMPTES",
+      "nom": "Cour des comptes — général",
+      "direct": [
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fgeneral",
+        "https://www.ccomptes.fr/rss/general"
       ]
     }
   ],
   "EUROPE": [
-    {
-      "type": "CJUE",
-      "nom": "Cour de justice de l'UE",
-      "direct": [
-        "https://curia.europa.eu/jcms/jcms/Jo2_16799/fr/?rss=true"
-      ]
-    },
-    {
-      "type": "CEDH",
-      "nom": "CEDH — communiqués",
-      "direct": [
-        "https://www.echr.coe.int/sites/search_filter/rss/press",
-        "https://hudoc.echr.coe.int/app/rss/press"
-      ]
-    },
-    {
-      "type": "EDPB",
-      "nom": "Comité européen protection des données",
-      "direct": [
-        "https://www.edpb.europa.eu/feed_en"
-      ]
-    },
     {
       "type": "DG",
       "nom": "Commission UE — Concurrence",
@@ -554,6 +575,14 @@
       "nom": "Commission UE — Transports",
       "direct": [
         "https://transport.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "CJUE",
+      "nom": "Cour de justice de l'UE",
+      "direct": [
+        "https://curia.europa.eu/site/rss.jsp?lang=fr",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fcuria.europa.eu%2Fsite%2Frss.jsp?lang=fr"
       ]
     }
   ],
