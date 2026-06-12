@@ -12,7 +12,8 @@ const KW = {
   lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","rgpd","données personnelles","surveillance","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté","police administrative","retrait","abrogation","lanceur d'alerte"],
   pia: ["société","contrat","marque","propriété intellectuelle","brevet","droit d'auteur","dirigeant","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","déspécialisation","cession"],
   enf: ["mineur","mna","enfance","aide sociale","apa","rsa","handicap","essms","personne âgée","protection de l'enfance","médico-social","ase","vulnérable","audition de l'enfant","allocation"],
-  rhs: ["fonction publique","agent","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","syndical","révocation","enquête administrative","dialogue social"]
+  rhs: ["fonction publique","agent","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","syndical","révocation","enquête administrative","dialogue social"],
+  sante: ["hôpital","santé","médico-social","ehpad","ght","établissement de santé","produit de santé","médicament","dispositif médical","ars","agence régionale","soins","patient","médecin","praticien hospitalier","sécurité sociale","assurance maladie","has","autorisation sanitaire","responsabilité médicale","bioéthique"]
 };
 
 function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
@@ -102,7 +103,7 @@ async function classifyAI(items){
   const key = process.env.ANTHROPIC_API_KEY;
   if(!key) return null;
   const list = items.slice(0,60).map((it,i)=>`${i}. ${it.titre}`).join("\n");
-  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (imm, cac, env, lib, pia, enf, rhs ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
+  const sys = "Tu classes des actualités juridiques pour Centaure Avocats. Pour chaque item: thème (imm, cac, env, lib, pia, enf, rhs, sante ou null) et impact (3=fort: loi/décret/revirement, 2=à suivre, 1=info). JSON strict: [{\"i\":0,\"comp\":\"cac\",\"impact\":3}]. Rien d'autre.";
   try{
     const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
       headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
@@ -151,13 +152,13 @@ async function main(){
     if(t==="DG"){ const n=(it.source||"").toLowerCase();
       if(n.includes("environnement")||n.includes("énergie")) return "env";
       if(n.includes("emploi")||n.includes("social")) return "rhs";
-      if(n.includes("santé")) return "enf";
+      if(n.includes("santé")) return "sante";
       if(n.includes("marché")||n.includes("concurrence")) return "cac";
       return "lib"; }
     if(t==="AAI"){ const n=(it.source||"").toLowerCase();
       if(n.includes("cnil")||n.includes("données")) return "lib";
       if(n.includes("concurrence")||n.includes("amf")) return "pia";
-      if(n.includes("has")||n.includes("santé")) return "enf";
+      if(n.includes("has")||n.includes("santé")) return "sante";
       if(n.includes("transport")) return "cac";
       return "lib"; }
     if(t==="TA"||t==="CAA"||t==="CE"||t==="CNDA") return "lib";   // décisions admin → Libertés & procédures par défaut
@@ -178,7 +179,7 @@ async function main(){
   // jusqu'à atteindre un minimum, sans dépasser un maximum.
   const MIN_PAR_THEME = 4;   // jamais moins de 4 articles par thème affiché (évite le vide)
   const MAX_PAR_THEME = 10;  // jamais plus de 10 (volume presse)
-  const THEMES = ["imm","cac","env","lib","pia","enf","rhs"];
+  const THEMES = ["imm","cac","env","lib","pia","enf","rhs","sante"];
   const parTheme = {};
   THEMES.forEach(t=>parTheme[t]=[]);
   // répartir tous les items dans leur thème (déjà triés par fraîcheur)
