@@ -48,26 +48,45 @@ function impactKW(text){
   return 1;
 }
 
+async function rawFetch(url){
+  const ctrl = new AbortController();
+  const to = setTimeout(()=>ctrl.abort(), 20000);
+  const r = await fetch(url, { headers:{
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
+    "Accept-Language":"fr-FR,fr;q=0.9",
+    "Accept-Encoding":"identity"
+  }, signal: ctrl.signal });
+  clearTimeout(to);
+  if(!r.ok) return { ok:false, status:r.status };
+  const buf = Buffer.from(await r.arrayBuffer());
+  let enc = "utf-8";
+  const head = buf.slice(0,200).toString("latin1").toLowerCase();
+  if(head.includes("iso-8859-1")||head.includes("windows-1252")||head.includes("iso-8859-15")) enc="latin1";
+  return { ok:true, text:new TextDecoder(enc).decode(buf) };
+}
+
 async function tryUrl(url){
   try{
-    const ctrl = new AbortController();
-    const to = setTimeout(()=>ctrl.abort(), 20000);
-    const r = await fetch(url, { headers:{
-      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-      "Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
-      "Accept-Language":"fr-FR,fr;q=0.9",
-      "Accept-Encoding":"identity"
-    }, signal: ctrl.signal });
-    clearTimeout(to);
+    const r = await rawFetch(url);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
-    // gérer l'encodage : certains flux sont en ISO-8859-1, pas UTF-8
-    const buf = Buffer.from(await r.arrayBuffer());
-    let enc = "utf-8";
-    const head = buf.slice(0, 200).toString("latin1").toLowerCase();
-    if(head.includes("iso-8859-1") || head.includes("windows-1252") || head.includes("iso-8859-15")) enc = "latin1";
-    let xml = new TextDecoder(enc).decode(buf);
-    if(!/<item[ >]|<entry[ >]/i.test(xml)) return { ok:false, reason:"pas un flux" };
-    return { ok:true, xml };
+    const xml = r.text;
+    // vrai flux ?
+    if(/<item[ >]|<entry[ >]/i.test(xml)) return { ok:true, xml };
+    // sinon : page /flux_rss → chercher les liens vers les vrais flux et les suivre
+    const origin = new URL(url).origin;
+    const links = [...xml.matchAll(/href=["']([^"']*(?:flux-rss|\/rss\/|flux_rss)[^"']*)["']/gi)]
+                    .map(m=>m[1])
+                    .filter(l=>/decision|jurisprudence|actualit/i.test(l));
+    for(const l of [...new Set(links)].slice(0,4)){
+      const u = l.startsWith("http") ? l : origin + (l.startsWith("/")?l:"/"+l);
+      if(u===url) continue;
+      try{
+        const r2 = await rawFetch(u);
+        if(r2.ok && /<item[ >]|<entry[ >]/i.test(r2.text)) return { ok:true, xml:r2.text };
+      }catch(e){}
+    }
+    return { ok:false, reason:"pas un flux" };
   }catch(e){ return { ok:false, reason: e.name==="AbortError"?"timeout":"injoignable" }; }
 }
 
@@ -82,7 +101,14 @@ async function fetchSource(src){
       "/rss/dernieres-decisions",           // TA variante (Paris…)
       "/flux-rss/decisions-de-justice",     // CAA (Marseille…)
       "/rss/decisions-de-justice",
+      "/flux_rss",                          // ancien format (page→parfois flux)
+      "/flux-rss",
+      "/rss",
+      "/feed",
+      "/flux-rss/jurisprudence",
+      "/rss/jurisprudence",
       "/flux-rss/actualites",
+      "/rss/actualites",
       "/rss/actualites-rss"                 // Conseil d'État
     ];
     candidates = paths.map(p=>src.base+p);            // TA/CAA/CNDA/Cassation : variantes auto
