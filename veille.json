@@ -1,95 +1,337 @@
 {
-  "generatedAt": "2026-06-12T06:00:00.000Z",
-  "juridictionsOk": 52,
-  "count": 8,
+  "generatedAt": "2026-06-12T07:14:07.954Z",
+  "juridictionsOk": 63,
+  "count": 33,
   "items": [
     {
-      "comp": "cac",
-      "source": "Conseil d'État",
-      "srcType": "CE",
-      "date": "2026-06-05T10:00:00Z",
-      "type": "Jurisprudence",
-      "titre": "Marchés de travaux : le juge précise les conditions de la résiliation pour faute",
-      "chapo": "Une décision attendue clarifie l'office du juge face à l'abandon de chantier par le titulaire.",
-      "impact": 3,
-      "lien": "https://www.conseil-etat.fr/decisions-de-justice/dernieres-decisions"
-    },
-    {
-      "comp": "imm",
-      "source": "BO Transition écologique",
-      "srcType": "BO",
-      "date": "2026-06-02T10:00:00Z",
-      "type": "Réglementation",
-      "titre": "Un décret réécrit l'instruction des autorisations d'urbanisme",
-      "chapo": "Les délais et pièces exigibles évoluent ; les services instructeurs adaptent leurs procédures dès cet été.",
-      "impact": 3,
-      "lien": "https://www.bulletin-officiel.developpement-durable.gouv.fr/"
-    },
-    {
-      "comp": "rhs",
-      "source": "Conseil d'État",
-      "srcType": "CE",
-      "date": "2026-06-04T10:00:00Z",
-      "type": "Jurisprudence",
-      "titre": "Discipline : le contrôle de proportionnalité de la sanction se durcit",
-      "chapo": "Le juge administratif renforce son examen de l'adéquation entre la faute de l'agent et la sanction.",
-      "impact": 3,
-      "lien": "https://www.conseil-etat.fr/"
-    },
-    {
+      "titre": "Strengthening Europe’s tech sovereignty",
+      "lien": "https://commission.europa.eu/news-and-media/news/strengthening-europes-tech-sovereignty-2026-06-03_en",
+      "date": "2026-06-11T07:37:34.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p A set of measures to strengthen nbsp;the EU’s capacity in semiconductors, artificial intelligence (AI), cloud and open source, that will help Europe become a leader in AI. /p",
       "comp": "enf",
-      "source": "Sénat",
-      "srcType": "SENAT",
-      "date": "2026-06-06T10:00:00Z",
-      "type": "Réglementation",
-      "titre": "Mineurs non accompagnés : le contradictoire s'impose dans l'évaluation de la minorité",
-      "chapo": "Une décision qui encadre la procédure d'évaluation et renforce les garanties offertes au jeune.",
-      "impact": 3,
-      "lien": "https://www.senat.fr/"
+      "impact": 1
     },
     {
-      "comp": "lib",
-      "source": "Conseil d'État",
-      "srcType": "CE",
-      "date": "2026-06-05T10:00:00Z",
-      "type": "Jurisprudence",
-      "titre": "OQTF : l'administration doit motiver le refus de délai de départ volontaire",
-      "chapo": "Le Conseil d'État resserre les exigences de motivation, avec des conséquences directes pour les préfectures.",
-      "impact": 3,
-      "lien": "https://www.conseil-etat.fr/"
+      "titre": "EU and Republic of Korea bolster their strategic partnership",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1325",
+      "date": "2026-06-11T07:34:39.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p At the 11th EU-Republic of Korea Summit in Brussels the two parties marked a new phase in their strategic partnership. They agreed to enhance economic resilience, security and defence cooperation, research, and the clean energy transition",
+      "comp": "enf",
+      "impact": 1
     },
     {
-      "comp": "cac",
-      "source": "DAJ Bercy",
-      "srcType": "DAJ",
-      "date": "2026-06-03T10:00:00Z",
-      "type": "Réglementation",
-      "titre": "Les seuils de procédure formalisée relevés au 1er juillet",
-      "chapo": "",
-      "impact": 2,
-      "lien": "https://www.economie.gouv.fr/daj"
+      "titre": "Aménagement du tour du Cap d’Antibes : le maire devra réexaminer la demande de l’association Choisir le vélo",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/amenagement-du-tour-du-cap-d-antibes-le-maire-devra-reexaminer-la-demande-de-l-association-choisir-le-velo",
+      "date": "2026-06-11T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
+      "comp": "imm",
+      "impact": 1
     },
     {
-      "comp": "lib",
-      "source": "CNIL",
+      "titre": "Multiples vulnérabilités dans les produits Splunk (11 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0736/",
+      "date": "2026-06-11T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
       "srcType": "AAI",
-      "date": "2026-05-30T10:00:00Z",
-      "type": "Réglementation",
-      "titre": "Protection des données des agents : la CNIL publie de nouvelles recommandations",
-      "chapo": "",
-      "impact": 2,
-      "lien": "https://www.cnil.fr/"
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Splunk. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une falsi",
+      "comp": "imm",
+      "impact": 1
     },
     {
-      "comp": "pia",
-      "source": "Cour de cassation",
-      "srcType": "CASS",
-      "date": "2026-05-28T10:00:00Z",
-      "type": "Jurisprudence",
-      "titre": "Bail commercial : les contours du refus de déspécialisation",
-      "chapo": "",
-      "impact": 2,
-      "lien": "https://www.courdecassation.fr/"
+      "titre": "PES Network publishes 15 new PES practices",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/pes-network-publishes-15-new-pes-practices-2026-06-10_en",
+      "date": "2026-06-10T11:58:10.000Z",
+      "source": "Commission UE — Emploi & affaires sociales",
+      "srcType": "DG",
+      "resume": "p The PES Network has added 15 new practices to its PES Practices database, showcasing how Public Employment Services across Europe are responding to labour market changes and evolving skills needs. /p",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Affaire Lyhanna : demande des pouvoirs de commission d'enquête dans le cadre de la mission d'information sur le pilotage de la politique pénale et la prévention de ses dysfonctionnements",
+      "lien": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/10-06-2026/affaire-lyhanna-demande-pouvoirs-de-commission-denquete-dans-cadre-de-mission-dinformation-sur-pilotage-de-politique-penale-et-prevention-de-ses-dysfonctionnements.html",
+      "date": "2026-06-10T11:47:36.000Z",
+      "source": "Sénat — communiqués",
+      "srcType": "SENAT",
+      "resume": "Communiqué de presse du 10/06/2026",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Joint press release: Commission and EIB Group increase financial support for the EU economy and speed up key transformative investments under InvestEU",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1329",
+      "date": "2026-06-10T11:38:35.000Z",
+      "source": "Commission UE — Marché intérieur",
+      "srcType": "DG",
+      "resume": "p In a significant move to bolster Europe's economic future, the European Commission and the European Investment Bank (EIB) Group today have signed an agreement, adding €22 billion in strategic financing under the InvestEU programme. /p",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Retrait partiel de la décision de l’Autorité n° 2026-014 du 18 février 2026 portant règlement du différend opposant SNCF Connect à Île-de-France Mobilités relatif au contrat Pack V0 Décision n° 2026-043 du 18 mai 2026",
+      "lien": "https://www.autorite-transports.fr/avisdecision/retrait-partiel-de-la-decision-de-lautorite-n-2026-014-du-18-fevrier-2026-portant-reglement-du-differend-opposant-sncf-connect-a-ile-de-france-mobilites-relatif-au-contrat-pack-v0-dec/",
+      "date": "2026-06-10T10:02:47.000Z",
+      "source": "ART — transports",
+      "srcType": "AAI",
+      "resume": "The post Retrait partiel de la décision de l’Autorité n° 2026-014 du 18 février 2026 portant règlement du différend opposant SNCF Connect à Île-de-France Mobilités relatif au contrat Pack V0 Décision n° 2026-043 du 18 mai 2026 appeared firs",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Retrait partiel de la décision de l’Autorité n° 2026-013 du 18 février 2026 portant règlement du différend opposant RATP Smart Systems à Île-de-France Mobilités relatif au contrat Pack V0 Décision n° 2026-042 du 18 mai 2026",
+      "lien": "https://www.autorite-transports.fr/avisdecision/retrait-partiel-de-la-decision-de-lautorite-n-2026-013-du-18-fevrier-2026-portant-reglement-du-differend-opposant-ratp-smart-systems-a-ile-de-france-mobilites-relatif-au-contrat-pack-v0/",
+      "date": "2026-06-10T10:00:46.000Z",
+      "source": "ART — transports",
+      "srcType": "AAI",
+      "resume": "The post Retrait partiel de la décision de l’Autorité n° 2026-013 du 18 février 2026 portant règlement du différend opposant RATP Smart Systems à Île-de-France Mobilités relatif au contrat Pack V0 Décision n° 2026-042 du 18 mai 2026 appeare",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Rencontre semestrielle des autorités administratives et publiques indépendantes : l IA au service de la régulation",
+      "lien": "https://www.autorite-transports.fr/actualites/rencontre-semestrielle-des-autorites-administratives-et-publiques-independantes-lia-au-service-de-la-regulation/",
+      "date": "2026-06-10T08:28:05.000Z",
+      "source": "ART — transports",
+      "srcType": "AAI",
+      "resume": "L’Arcep a eu le plaisir d’accueillir, mardi 9 juin 2026, la réunion du réseau des Autorités administratives et publiques indépendantes [ ] The post Rencontre semestrielle des autorités administratives et publiques indépendantes : l IA au se",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "La Lettre de la DAJ n°402 est en ligne !",
+      "lien": "https://www.economie.gouv.fr/daj/la-lettre-de-la-daj-ndeg402-est-en-ligne",
+      "date": "2026-06-09T15:49:07.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Actualités législatives et jurisprudentielles, dernières évolutions du droit de la commande publique, du droit financier ou encore du droit de la propriété intellectuelle : cette nouvelle édition décrypte les principaux enjeux juridiques du",
+      "comp": "cac",
+      "impact": 1
+    },
+    {
+      "titre": "Commission hosts 20th edition of the European Sustainable Energy Week",
+      "lien": "https://energy.ec.europa.eu/news/commission-hosts-20th-edition-european-sustainable-energy-week-2026-06-09_en",
+      "date": "2026-06-09T15:24:25.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p Taking place both onsite and online, this year's anniversary edition has the theme nbsp;‘A clean, secure and competitive Energy Union'. nbsp; /p",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Commission seeks views on the EU Anti-corruption Strategy",
+      "lien": "https://commission.europa.eu/news-and-media/news/commission-seeks-views-eu-anti-corruption-strategy-2026-05-11_en",
+      "date": "2026-06-09T09:53:13.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p Today, the European Commission launched an nbsp;open public consultation nbsp;and a call for evidence to gather feedback for the upcoming EU Anti-corruption Strategy. The feedback will help shape a reinforced approach to preventing and co",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Multiples vulnérabilités dans Apache HTTP Server (09 juin 2026)",
+      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0710/",
+      "date": "2026-06-09T00:00:00.000Z",
+      "source": "ANSSI — cybersécurité",
+      "srcType": "AAI",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Apache HTTP Server. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une injection de code indirecte à distance",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Demande d’homologation des tarifs des redevances aéroportuaires applicables à l’aéroport de Bordeaux-Mérignac à compter du 1er août 2026 Décision n°2026-045 du 18 mai 2026",
+      "lien": "https://www.autorite-transports.fr/avisdecision/demande-dhomologation-des-tarifs-des-redevances-aeroportuaires-applicables-a-laeroport-de-bordeaux-merignac-a-compter-du-1er-aout-2026-decision-n2026-045-du-18-mai-2026/",
+      "date": "2026-06-08T16:05:22.000Z",
+      "source": "ART — transports",
+      "srcType": "AAI",
+      "resume": "The post Demande d’homologation des tarifs des redevances aéroportuaires applicables à l’aéroport de Bordeaux-Mérignac à compter du 1er août 2026 Décision n°2026-045 du 18 mai 2026 appeared first on ART .",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "Stronger EU-wide rules to fight corruption take effect",
+      "lien": "https://commission.europa.eu/news-and-media/news/stronger-eu-wide-rules-fight-corruption-take-effect-2026-06-01_en",
+      "date": "2026-06-08T14:50:11.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p More harmonised anti-corruption rules took effect across the EU yesterday under the new Directive on combating corruption. /p",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "5 things you should know about climate scenarios",
+      "lien": "https://climate.ec.europa.eu/news-other-reads/news/five-things-you-should-know-about-climate-scenarios-2026-06-05_en",
+      "date": "2026-06-05T14:52:42.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p Here are 5 facts to help shed some light on the latest news. /p",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "Commission endorses Lithuania’s €884 million Social Climate Plan to support vulnerable households and micro-enterprises in the clean transition",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/commission-endorses-lithuanias-eu884-million-social-climate-plan-support-vulnerable-households-and-2026-06-05_en",
+      "date": "2026-06-05T10:51:10.000Z",
+      "source": "Commission UE — Emploi & affaires sociales",
+      "srcType": "DG",
+      "resume": "p The European Commission has adopted Lithuania’s Social Climate Plan, the second one under the new Social Climate Fund. /p",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "New EU rules on pay transparency explained",
+      "lien": "https://commission.europa.eu/news-and-media/news/new-eu-rules-pay-transparency-explained-2026-06-05_en",
+      "date": "2026-06-05T07:53:30.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p New EU pay transparency rules are now taking effect across the EU. They will increase pay transparency, strengthen enforcement of the principle of equal pay between women and men, and improve access to justice for victims of pay discrimin",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Ordre du jour de la séance plénière du 4 juin 2026",
+      "lien": "https://www.cnil.fr/fr/ordre-du-jour-de-la-seance-pleniere-du-4-juin-2026",
+      "date": "2026-06-04T12:00:00.000Z",
+      "source": "CNIL — données personnelles",
+      "srcType": "AAI",
+      "resume": "La Commission nationale de l'informatique et des libertés s’est réunie le jeudi 4 juin 2026 à 9 amp;nbsp;h amp;nbsp;30 avec l’ordre du jour suivant amp;nbsp;:",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Loi de simplification de la vie économique : une censure limitée qui préserve l'économie générale de la loi",
+      "lien": "https://www.economie.gouv.fr/daj/loi-de-simplification-de-la-vie-economique-une-censure-limitee-qui-preserve-leconomie-generale-de-la-loi",
+      "date": "2026-06-04T11:17:56.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Saisi par deux groupes de plus de 60 députés, le Conseil constitutionnel a validé la grande majorité des 84 articles du projet de loi de simplification de la vie économique. Seuls 25 articles ont été totalement ou partiellement censurés, co",
+      "comp": "imm",
+      "impact": 3
+    },
+    {
+      "titre": "L’Agent judiciaire de l’État présente son action en matière de préjudice écologique aux services du ministère de la Transition écologique",
+      "lien": "https://www.economie.gouv.fr/daj/lagent-judiciaire-de-letat-presente-son-action-en-matiere-de-prejudice-ecologique-aux-services-du-ministere-de-la-transition-ecologique",
+      "date": "2026-06-04T10:10:44.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Invité par la direction des Affaires juridiques du ministère de la Transition écologique (MTE), l’Agent judiciaire de l’Etat (AJE) est intervenu, le 21 mai 2026, lors du séminaire annuel des cheffes et chefs de services \"eau et nature\", org",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "Précisions des modalités de régularisation d’un acte illégal en cours d’instance en matière minière",
+      "lien": "https://www.economie.gouv.fr/daj/precisions-des-modalites-de-regularisation-dun-acte-illegal-en-cours-dinstance-en-matiere-miniere",
+      "date": "2026-06-04T09:41:50.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Dans une nouvelle décision avant-dire droit du 7 mai 2026, le Conseil d’Etat a précisé les modalités de régularisation, en cours d’instance, d’un vice de procédure entachant l’octroi de prolongations de concessions minières accordées par dé",
+      "comp": "cac",
+      "impact": 1
+    },
+    {
+      "titre": "Responsabilité des gestionnaires publics : trois décisions emblématiques de la Cour des comptes",
+      "lien": "https://www.economie.gouv.fr/daj/responsabilite-des-gestionnaires-publics-trois-decisions-emblematiques-de-la-cour-des-comptes",
+      "date": "2026-06-04T09:20:16.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Au cours du mois de mai 2026, la chambre du contentieux de la Cour des comptes a rendu des décisions qui illustrent une même exigence : celle du respect des règles encadrant l'engagement, la gestion et l'utilisation des fonds publics. Qu'il",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
+      "titre": "Besançon : la conférence-débat animée par M. Hamouri n’est plus interdite",
+      "lien": "https://besancon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/besancon-la-conference-debat-animee-par-m.-hamouri-n-est-plus-interdite",
+      "date": "2026-06-04T00:00:00.000Z",
+      "source": "TA de Besancon",
+      "srcType": "TA",
+      "resume": "",
+      "comp": "imm",
+      "impact": 1
+    },
+    {
+      "titre": "Le tribunal administratif annule le permis accordé pour la construction d’un restaurant de plage à La Grande Motte et les dispositions du plan loca...",
+      "lien": "https://montpellier.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-annule-le-permis-accorde-pour-la-construction-d-un-restaurant-de-plage-a-la-grande-motte-et-les-dispositions-du-plan-loca",
+      "date": "2026-06-04T00:00:00.000Z",
+      "source": "TA de Montpellier",
+      "srcType": "TA",
+      "resume": "",
+      "comp": "imm",
+      "impact": 1
+    },
+    {
+      "titre": "Spring semester package: steering EU economies to increased competitiveness",
+      "lien": "https://commission.europa.eu/news-and-media/news/spring-semester-package-steering-eu-economies-increased-competitiveness-2026-06-03_en",
+      "date": "2026-06-03T13:34:33.000Z",
+      "source": "Commission UE — Justice",
+      "srcType": "DG",
+      "resume": "p The European Commission has set out policy guidance for EU countries to help them revitalise the EU's competitiveness. The guidance also steers EU countries along a path to greater strategic autonomy, economic and social resilience and co",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "La cour valide le système de collecte des déchets ménagers en Dordogne",
+      "lien": "https://bordeaux.cour-administrative-appel.fr/decisions-de-justice/dernieres-decisions/la-cour-valide-le-systeme-de-collecte-des-dechets-menagers-en-dordogne",
+      "date": "2026-06-03T00:00:00.000Z",
+      "source": "CAA de Bordeaux",
+      "srcType": "CAA",
+      "resume": "",
+      "comp": "env",
+      "impact": 1
+    },
+    {
+      "titre": "20th anniversary of European Sustainable Energy Week welcomes all EU energy commissioners since 2007",
+      "lien": "https://energy.ec.europa.eu/news/20th-anniversary-european-sustainable-energy-week-welcomes-all-eu-energy-commissioners-2007-2026-06-02_en",
+      "date": "2026-06-02T16:29:28.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p The theme of this year’s event is 'A Clean, Secure and Competitive Energy Union'. /p",
+      "comp": "enf",
+      "impact": 1
+    },
+    {
+      "titre": "Action justice climat Lyon : le tribunal juge que le refus de subvention de la préfète de la région Auvergne-Rhône-Alpes est en partie injustifié",
+      "lien": "https://lyon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/action-justice-climat-lyon-le-tribunal-juge-que-le-refus-de-subvention-de-la-prefete-de-la-region-auvergne-rhone-alpes-est-en-partie-injustifie",
+      "date": "2026-06-02T00:00:00.000Z",
+      "source": "TA de Lyon",
+      "srcType": "TA",
+      "resume": "",
+      "comp": "cac",
+      "impact": 1
+    },
+    {
+      "titre": "La cour confirme la résiliation anticipée de la convention de délégation de service public du Port de Longoni à Mayotte",
+      "lien": "https://bordeaux.cour-administrative-appel.fr/decisions-de-justice/dernieres-decisions/la-cour-confirme-la-resiliation-anticipee-de-la-convention-de-delegation-de-service-public-du-port-de-longoni-a-mayotte",
+      "date": "2026-06-02T00:00:00.000Z",
+      "source": "CAA de Bordeaux",
+      "srcType": "CAA",
+      "resume": "",
+      "comp": "cac",
+      "impact": 1
+    },
+    {
+      "titre": "The role of quality assurance in advancing inclusive upper secondary VET in Slovenia",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/role-quality-assurance-advancing-inclusive-upper-secondary-vet-slovenia-2026-05-29_en",
+      "date": "2026-06-01T07:15:28.000Z",
+      "source": "Commission UE — Emploi & affaires sociales",
+      "srcType": "DG",
+      "resume": "p The primary objective of the Peer Review was to obtain expert feedback in order to strengthening the role of quality assurance in promoting inclusive upper secondary VET in Slovenia. /p",
+      "comp": "cac",
+      "impact": 1
+    },
+    {
+      "titre": "Commission approves €9 billion Spanish capacity mechanism for security of electricity supply",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1163",
+      "date": "2026-06-01T06:57:01.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p This aid measure aims to ensure that there is sufficient capacity to produce, store or flexibly consume electricity and that electricity production meets the expected demand. /p",
+      "comp": "enf",
+      "impact": 1
     }
   ]
 }
