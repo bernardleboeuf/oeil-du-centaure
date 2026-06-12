@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-12T13:39:38.585Z",
-  "juridictionsOk": 82,
+  "generatedAt": "2026-06-12T13:39:55.377Z",
+  "juridictionsOk": 80,
   "count": 82,
   "items": [
     {
@@ -124,9 +124,19 @@
       "impact": 3
     },
     {
+      "titre": "Décision n° 2026-1192 QPC du 10 avril 2026",
+      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261192QPC.htm",
+      "date": "2026-06-12T13:38:11.004Z",
+      "source": "Conseil constitutionnel",
+      "srcType": "CC",
+      "resume": "",
+      "comp": "lib",
+      "impact": 1
+    },
+    {
       "titre": "Décision n° 2025-6571 AN du 3 avril 2026",
       "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20256571AN.htm",
-      "date": "2026-06-12T13:37:44.572Z",
+      "date": "2026-06-12T13:38:11.004Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -136,7 +146,7 @@
     {
       "titre": "Décision n° 2026-1191 QPC du 3 avril 2026",
       "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261191QPC.htm",
-      "date": "2026-06-12T13:37:44.572Z",
+      "date": "2026-06-12T13:38:11.004Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -146,7 +156,7 @@
     {
       "titre": "Décision n° 2026-318 L du 2 avril 2026",
       "lien": "https://www.conseil-constitutionnel.fr/decision/2026/2026318L.htm",
-      "date": "2026-06-12T13:37:44.572Z",
+      "date": "2026-06-12T13:38:11.004Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -190,16 +200,6 @@
       "source": "TA de Rouen",
       "srcType": "TA",
       "resume": "",
-      "comp": "lib",
-      "impact": 1
-    },
-    {
-      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat (12 juin 2026)",
-      "lien": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0747/",
-      "date": "2026-06-12T00:00:00.000Z",
-      "source": "ANSSI — cybersécurité",
-      "srcType": "AAI",
-      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à ",
       "comp": "lib",
       "impact": 1
     },
@@ -346,7 +346,7 @@
     {
       "titre": "Décision n° 2026-1189 QPC du 27 mars 2026 - Communiqué de presse",
       "lien": "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2026-1189-qpc-du-27-mars-2026-communique-de-presse",
-      "date": "2026-06-12T13:37:44.572Z",
+      "date": "2026-06-12T13:38:11.004Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "Le Conseil constitutionnel valide la taxe sur les opérations de réduction de capital réalisées par les grandes entreprises par achat/ annulation de leurs propres titres.",
@@ -356,17 +356,7 @@
     {
       "titre": "Décision n° 2026-1188 QPC du 27 mars 2026",
       "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261188QPC.htm",
-      "date": "2026-06-12T13:37:44.572Z",
-      "source": "Conseil constitutionnel",
-      "srcType": "CC",
-      "resume": "",
-      "comp": "sante",
-      "impact": 1
-    },
-    {
-      "titre": "Décision n° 2026-1189 QPC du 27 mars 2026",
-      "lien": "https://www.conseil-constitutionnel.fr/decision/2026/20261189QPC.htm",
-      "date": "2026-06-12T13:37:44.572Z",
+      "date": "2026-06-12T13:38:11.004Z",
       "source": "Conseil constitutionnel",
       "srcType": "CC",
       "resume": "",
@@ -440,6 +430,16 @@
       "source": "Commission UE — Énergie",
       "srcType": "DG",
       "resume": "p In 2024, EU households used 9.54 million terajoules of energy, a slight decline (-0.2%) from 9.57 million terajoules in 2023. /p",
+      "comp": "sante",
+      "impact": 1
+    },
+    {
+      "titre": "New EU rules will improve cross-border rail traffic and optimise network capacity",
+      "lien": "https://transport.ec.europa.eu/news-events/news/new-eu-rules-will-improve-cross-border-rail-traffic-and-optimise-network-capacity-2026-06-10_en",
+      "date": "2026-06-10T07:21:25.000Z",
+      "source": "Commission UE — Transports",
+      "srcType": "DG",
+      "resume": "p The European Union has adopted new rules on the use of railway infrastructure capacity, marking a significant step towards a more efficient, coordinated and reliable European rail network. /p",
       "comp": "sante",
       "impact": 1
     },
