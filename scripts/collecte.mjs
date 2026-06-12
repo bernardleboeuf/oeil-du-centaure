@@ -238,23 +238,24 @@ async function main(){
     if(t==="MIN") return "lib";
     return "lib";
   }
+  // construire un index des résultats IA par position (fiable)
+  const aiByIdx = {};
+  if(ai){ for(const tag of ai){ if(tag && typeof tag.i==="number") aiByIdx[tag.i]=tag; } }
   items = items.map((it,idx)=>{
-    let comp, impact, keep=true, lang="fr";
-    let titre = it.titre;
-    if(ai){
-      const tag=ai.find(x=>x.i===idx);
-      comp = (tag && tag.comp && tag.comp!=="null") ? tag.comp : classifyKW(it.titre+" "+it.resume);
-      impact = tag?.impact || impactKW(it.titre);
-      if(tag){
-        keep = tag.keep!==false;
-        if(tag.titre_fr && tag.titre_fr.trim()) titre = tag.titre_fr.trim();  // titre traduit en français
-        var profils = Array.isArray(tag.profils) ? tag.profils : [];
-      }
+    let comp, impact, keep=true, titre=it.titre, profils=[], secteurs=[];
+    const tag = ai ? aiByIdx[idx] : null;
+    if(tag){
+      comp = (tag.comp && tag.comp!=="null") ? tag.comp : classifyKW(it.titre+" "+it.resume);
+      impact = tag.impact || impactKW(it.titre);
+      keep = tag.keep!==false;
+      if(tag.titre_fr && String(tag.titre_fr).trim()) titre = String(tag.titre_fr).trim();
+      profils = Array.isArray(tag.profils) ? tag.profils : [];
+      secteurs = Array.isArray(tag.secteurs) ? tag.secteurs : [];
     } else {
-      comp=classifyKW(it.titre+" "+it.resume); impact=impactKW(it.titre+" "+it.resume);
+      comp = classifyKW(it.titre+" "+it.resume); impact = impactKW(it.titre+" "+it.resume);
     }
     if(!comp) comp = defaultTheme(it);
-    return {...it, titre, comp, impact, keep, profils: (typeof profils!=="undefined"?profils:[])};
+    return {...it, titre, comp, impact, keep, profils, secteurs};
   });
   // FILTRE INTÉRÊT : retirer les articles sans valeur juridique (l'anglais est traduit, pas retiré)
   const avant = items.length;
