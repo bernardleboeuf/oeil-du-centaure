@@ -157,12 +157,12 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"cac","imp
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
-    for(let start=0; start<items.length; start+=50){
-      const batch = items.slice(start, start+50);
+    for(let start=0; start<items.length; start+=25){
+      const batch = items.slice(start, start+25);
       const bl = batch.map((it,j)=>`${start+j}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
       const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
         headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
-        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:4000, system:sys, messages:[{role:"user",content:bl}] })});
+        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:8000, system:sys, messages:[{role:"user",content:bl}] })});
       const data = await r.json();
       if(data.error){ console.error("Erreur API:", data.error.message); return null; }
       const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/\`\`\`json|\`\`\`/g,"").trim();
