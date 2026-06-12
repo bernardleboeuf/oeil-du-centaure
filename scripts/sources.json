@@ -259,7 +259,8 @@
       "nom": "Conseil d'État — actualités",
       "direct": [
         "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
-        "https://www.conseil-etat.fr/rss/actualites-rss"
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Factualites-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
       ]
     },
     {
@@ -267,14 +268,26 @@
       "nom": "Conseil d'État — avis (projets de loi)",
       "direct": [
         "https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
-        "https://www.conseil-etat.fr/rss/avis-rss"
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Favis-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/avis-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — études",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
+        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fetudes-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
+      ]
+    },
+    {
+      "type": "CE",
+      "nom": "Conseil d'État — analyses de jurisprudence",
+      "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fanalyses-de-jurisprudence-rss",
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss"
       ]
     },
     {
