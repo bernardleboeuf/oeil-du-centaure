@@ -6,15 +6,14 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const SOURCES = JSON.parse(readFileSync(join(__dir, "sources.json"), "utf8"));
 
 const KW = {
-  imm: ["bail d'habitation","copropriété","domanialité","habitat indigne","permis de construire","foncier","plu","logement social","recouvrement locatif","lotissement","zac","syndic","expropriation","préemption","urbanisme"],
-  cac: ["marché public","commande publique","marché de travaux","ccag","concession","délégation de service public","dsp","achat public","appel d'offres","accord-cadre","subvention","construction","décennale","dommage ouvrage","assurance","maître d'œuvre","réception des travaux","contrat administratif","contrat public","passation","société","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","dirigeant","concurrence","entreprise en difficulté","plan de sauvegarde","cession"],
-  env: ["environnement","icpe","installation classée","police de l'environnement","transition écologique","déchets","eau","énergie renouvelable","éolien","photovolta","biodiversité","pollution","autorisation environnementale","climat"],
-  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","probité","favoritisme","prise illégale","corruption","acte administratif","référé","excès de pouvoir","liberté publique","police administrative","retrait d'acte","abrogation","lanceur d'alerte"],
-  pia: ["rgpd","données personnelles","protection des données","cnil","marque","propriété intellectuelle","brevet","droit d'auteur","contrefaçon","propriété industrielle","secret des affaires","cybersécurité"],
-  enf: ["mineur","mna","mineur non accompagné","aide sociale à l'enfance","ase","protection de l'enfance","audition de l'enfant","assistance éducative","tutelle"],
-  rhs: ["fonction publique","agent public","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","dialogue social","révocation","enquête administrative"],
-  sante: ["hôpital","établissement de santé","médico-social","ehpad","ght","produit de santé","médicament","dispositif médical","ars","soins","praticien hospitalier","sécurité sociale","assurance maladie","has","autorisation sanitaire","responsabilité médicale","apa","rsa","handicap","essms","personne âgée"],
-  om: ["outre-mer","guadeloupe","martinique","guyane","réunion","mayotte","nouvelle-calédonie","polynésie","saint-barthélemy","saint-martin","wallis","ultramarin"]
+  dpa: ["marché public","commande publique","marché de travaux","ccag","concession","délégation de service public","dsp","achat public","appel d'offres","accord-cadre","subvention","contrat administratif","contrat public","passation","construction","décennale","dommage ouvrage","assurance construction","maître d'œuvre","réception des travaux","occupation du domaine","référé précontractuel"],
+  dpe: ["société","bail commercial","procédure collective","redressement","liquidation","fonds de commerce","dirigeant","concurrence","entreprise en difficulté","plan de sauvegarde","cession","droit des affaires","commercial","fiscal"],
+  dpi: ["rgpd","données personnelles","protection des données","cnil","marque","propriété intellectuelle","brevet","droit d'auteur","contrefaçon","propriété industrielle","secret des affaires","cybersécurité","numérique"],
+  urb: ["urbanisme","permis de construire","aménagement","plu","foncier","domanialité","habitat indigne","logement","lotissement","zac","expropriation","préemption","environnement","icpe","installation classée","déchets","eau","énergie renouvelable","éolien","pollution","autorisation environnementale","biodiversité","copropriété","bail d'habitation"],
+  fps: ["fonction publique","agent public","discipline","statut","fonctionnaire","cse","santé au travail","protection fonctionnelle","licenciement","carrière","disciplinaire","fph","fpt","accord collectif","dialogue social","révocation","enquête administrative","droit du travail"],
+  asn: ["aide sociale","mineur","mna","enfance","ase","apa","rsa","handicap","essms","personne âgée","protection de l'enfance","médico-social","hôpital","établissement de santé","ehpad","ght","produit de santé","médicament","ars","soins","praticien hospitalier","sécurité sociale","assurance maladie","responsabilité médicale"],
+  lib: ["contentieux","pénal","étranger","oqtf","asile","séjour","rétention","éloignement","probité","favoritisme","prise illégale","corruption","liberté publique","lanceur d'alerte","garde à vue","détention"],
+  dpg: ["acte administratif","référé","responsabilité administrative","police administrative","excès de pouvoir","légalité","retrait d'acte","abrogation","plein contentieux","arrêté"]
 };
 
 function pick(s, tag){ const m = s.match(new RegExp("<"+tag+"[^>]*>([\\s\\S]*?)<\\/"+tag+">","i")); return m ? m[1].trim() : ""; }
@@ -133,27 +132,28 @@ async function classifyAI(items){
   const list = items.map((it,i)=>`${i}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
   const sys = `Tu es le rédacteur en chef d'un hebdomadaire juridique français destiné aux acteurs publics et institutionnels. Tu classes chaque actualité dans l'UN des 9 thèmes suivants, selon son contenu juridique réel (pas selon des mots-clés). Les sources peuvent être en anglais (Commission européenne) : traduis mentalement et classe sur le fond.
 
-LES 9 THÈMES :
-• cac = DROIT ÉCONOMIQUE : commande publique, marchés publics, concessions, CCAG, achat public, subventions, contrats administratifs, construction, assurance-construction, garantie décennale, et aussi droit des sociétés, baux commerciaux, procédures collectives, entreprises en difficulté, concurrence, finance, responsabilité du dirigeant. Tout ce qui touche à l economie et aux affaires.
-• lib = LIBERTÉS & PROCÉDURES : contentieux administratif général, droit pénal, droit des étrangers (séjour, asile, OQTF, rétention), libertés publiques, police administrative, actes administratifs, référés, probité/corruption. Le RGPD et les données vont en pia, pas ici.
-• imm = IMMOBILIER & DOMANIAL : urbanisme, permis de construire, aménagement, domanialité publique, baux d'habitation, copropriété, habitat indigne, logement social, expropriation, foncier.
-• rhs = AGENTS & RH : fonction publique (statut, discipline, carrière), droit du travail, dialogue social, CSE, santé au travail, protection fonctionnelle des agents.
-• sante = SANTÉ & MÉDICO-SOCIAL : hôpitaux, GHT, ESSMS, EHPAD, ARS, produits de santé, responsabilité médicale, sécurité sociale, assurance maladie.
-• enf = ENFANCE & ACTION SOCIALE : protection de l'enfance, ASE, mineurs non accompagnés, aide sociale, APA, RSA, handicap, personnes vulnérables.
-• env = ENVIRONNEMENT : droit de l'environnement, ICPE, transition écologique, énergie, climat, déchets, eau, biodiversité, autorisations environnementales.
-• pia = PROTECTION DES DONNÉES & PROPRIÉTÉ INTELLECTUELLE : RGPD, données personnelles, CNIL, cybersécurité, marques, brevets, droit d auteur, propriété intellectuelle et industrielle, contrefaçon, secret des affaires. Uniquement données et PI, PAS le droit des sociétés ni les affaires (qui vont en cac).
-• om = OUTRE-MER : sujets spécifiquement relatifs aux territoires ultramarins (Guadeloupe, Martinique, Guyane, Réunion, Mayotte, Nouvelle-Calédonie, Polynésie, etc.).
+LES 8 MATIÈRES JURIDIQUES :
+• dpa = DROIT PUBLIC DES AFFAIRES : commande publique, marchés publics, concessions, délégations de service public, CCAG, achat public, subventions, contrats administratifs, construction publique, assurance-construction, garantie décennale.
+• dpe = DROIT PRIVÉ & ÉCONOMIQUE : droit des sociétés, baux commerciaux, procédures collectives, entreprises en difficulté, concurrence, fiscalité, droit commercial et des affaires, responsabilité du dirigeant.
+• dpi = DONNÉES & PROPRIÉTÉ INTELLECTUELLE : RGPD, données personnelles, CNIL, cybersécurité, marques, brevets, droit d'auteur, propriété intellectuelle et industrielle, contrefaçon, secret des affaires.
+• urb = URBANISME & ENVIRONNEMENT : urbanisme, permis de construire, aménagement, domanialité, foncier, habitat indigne, logement, copropriété, ET droit de l'environnement, ICPE, déchets, eau, énergie, climat, autorisations environnementales.
+• fps = FONCTION PUBLIQUE & SOCIAL : fonction publique (statut, discipline, carrière), droit du travail, dialogue social, CSE, santé au travail, protection fonctionnelle des agents.
+• asn = ACTION SOCIALE & SANTÉ : aide sociale, enfance (ASE, MNA), APA, RSA, handicap, ESSMS, médico-social, ET santé (hôpitaux, GHT, ARS, produits de santé, responsabilité médicale, sécurité sociale).
+• lib = LIBERTÉS, ÉTRANGERS & PÉNAL : contentieux des libertés publiques, droit des étrangers (séjour, asile, OQTF, rétention), droit pénal, probité, corruption, lanceurs d'alerte.
+• dpg = DROIT PUBLIC GÉNÉRAL : actes administratifs, référés, responsabilité administrative, police administrative, excès de pouvoir, retrait/abrogation d'actes — la matière transversale du droit public.
 
-RÈGLE : choisis le thème le plus pertinent sur le FOND. Si une décision vient d'un tribunal d'outre-mer mais porte sur un marché public, classe en "cac" (le sujet prime sur le lieu), SAUF si l'enjeu ultramarin est central → "om".
+RÈGLE : choisis la matière la plus pertinente sur le FOND, quelle que soit la juridiction ou le territoire. Une décision d'un tribunal d'outre-mer sur un marché public va en "dpa" (la matière prime sur le lieu).
 Si vraiment aucun thème ne convient, mets "comp":"null".
 
 IMPACT : 3 = fort (loi, décret, revirement de jurisprudence, réforme majeure) ; 2 = à suivre (décision notable, nouvelle règle) ; 1 = information courante.
 
 TRADUCTION : si le titre est en anglais (ou autre langue), TRADUIS-le en français clair et journalistique dans le champ "titre_fr". Si le titre est déjà en français, recopie-le tel quel dans "titre_fr".
 
+PERTINENCE PAR PROFIL : pour chaque article, indique dans "profils" la liste des profils de lecteurs pour qui il est PRIORITAIRE (parmi : commune, sante, departement, bailleur, etat, entreprise). Un article sur les marchés hospitaliers → ["sante","commune"]. Une réforme de l'urbanisme → ["commune","bailleur","etat"]. Une décision sur l'aide sociale → ["departement","sante"]. Mets [] si l'article n'a pas de pertinence sectorielle marquée (il restera visible pour tous, mais sans priorité).
+
 INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique pour des lecteurs professionnels (acteurs publics, institutionnels) : nominations, inaugurations, visites officielles, recrutements, anniversaires, communiqués protocolaires, événements internes, articles purement promotionnels ou pédagogiques, newsletters administratives, annonces d'inscription à un colloque, contenus de communication institutionnelle sans portée juridique. Mets "keep":true pour tout ce qui a un vrai intérêt juridique (décisions, réformes, nouvelles règles, directives, analyses de fond).
 
-Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"cac","impact":3,"titre_fr":"...","keep":true},...]`;
+Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"cac","impact":3,"titre_fr":"...","keep":true,"profils":["commune","etat"]},...]`;
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
@@ -248,12 +248,13 @@ async function main(){
       if(tag){
         keep = tag.keep!==false;
         if(tag.titre_fr && tag.titre_fr.trim()) titre = tag.titre_fr.trim();  // titre traduit en français
+        var profils = Array.isArray(tag.profils) ? tag.profils : [];
       }
     } else {
       comp=classifyKW(it.titre+" "+it.resume); impact=impactKW(it.titre+" "+it.resume);
     }
     if(!comp) comp = defaultTheme(it);
-    return {...it, titre, comp, impact, keep};
+    return {...it, titre, comp, impact, keep, profils: (typeof profils!=="undefined"?profils:[])};
   });
   // FILTRE INTÉRÊT : retirer les articles sans valeur juridique (l'anglais est traduit, pas retiré)
   const avant = items.length;
@@ -264,7 +265,7 @@ async function main(){
   // jusqu'à atteindre un minimum, sans dépasser un maximum.
   const MIN_PAR_THEME = 4;   // jamais moins de 4 articles par thème affiché (évite le vide)
   const MAX_PAR_THEME = 10;  // jamais plus de 10 (volume presse)
-  const THEMES = ["cac","lib","imm","rhs","sante","enf","env","pia","om"];
+  const THEMES = ["dpa","dpe","urb","fps","asn","lib","dpi","dpg"];
   const parTheme = {};
   THEMES.forEach(t=>parTheme[t]=[]);
   // répartir tous les items dans leur thème (déjà triés par fraîcheur)
