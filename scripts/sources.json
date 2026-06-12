@@ -258,20 +258,15 @@
       "type": "CE",
       "nom": "Conseil d'État — actualités",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
         "https://www.conseil-etat.fr/rss/actualites-rss"
       ]
     },
     {
       "type": "CE",
-      "nom": "Conseil d'État — analyses de jurisprudence",
+      "nom": "Conseil d'État — avis (projets de loi)",
       "direct": [
-        "https://www.conseil-etat.fr/rss/analyses-de-jurisprudence-rss"
-      ]
-    },
-    {
-      "type": "CE",
-      "nom": "Conseil d'État — avis",
-      "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
         "https://www.conseil-etat.fr/rss/avis-rss"
       ]
     },
@@ -279,14 +274,7 @@
       "type": "CE",
       "nom": "Conseil d'État — études",
       "direct": [
-        "https://www.conseil-etat.fr/rss/etudes-rss"
-      ]
-    },
-    {
-      "type": "CE",
-      "nom": "Conseil d'État — audiences",
-      "direct": [
-        "https://www.conseil-etat.fr/rss/audiences-rss"
+        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
       ]
     },
     {
@@ -472,38 +460,73 @@
       ]
     },
     {
+      "type": "EDPB",
+      "nom": "Comité européen protection des données",
+      "direct": [
+        "https://www.edpb.europa.eu/feed_en"
+      ]
+    },
+    {
       "type": "DG",
       "nom": "Commission UE — Concurrence",
       "direct": [
-        "https://competition-policy.ec.europa.eu/node/2/rss_en"
+        "https://ec.europa.eu/newsroom/comp/feed?item_type_id=1066&lang=en&orderby=item_date"
       ]
     },
     {
       "type": "DG",
-      "nom": "Commission UE — Justice",
+      "nom": "Commission UE — Justice & droits fondamentaux",
       "direct": [
-        "https://commission.europa.eu/node/2/rss_en"
+        "https://ec.europa.eu/newsroom/just/feed?item_type_id=957&lang=en&orderby=item_date"
       ]
     },
     {
       "type": "DG",
-      "nom": "Commission UE — Marché intérieur",
+      "nom": "Commission UE — Finance (FISMA)",
       "direct": [
-        "https://single-market-economy.ec.europa.eu/node/2/rss_en"
+        "https://ec.europa.eu/newsroom/fisma/feed?item_type_id=911&lang=en&orderby=item_date"
       ]
     },
     {
       "type": "DG",
-      "nom": "Commission UE — Numérique",
+      "nom": "Commission UE — Commerce & sanctions",
       "direct": [
-        "https://digital-strategy.ec.europa.eu/en/rss.xml"
+        "https://policy.trade.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Fiscalité & douanes",
+      "direct": [
+        "https://taxation-customs.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Migration & asile",
+      "direct": [
+        "https://home-affairs.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Emploi & social",
+      "direct": [
+        "https://employment-social-affairs.ec.europa.eu/node/2/rss_en"
       ]
     },
     {
       "type": "DG",
       "nom": "Commission UE — Environnement",
       "direct": [
-        "https://environment.ec.europa.eu/node/2/rss_en"
+        "https://environment.ec.europa.eu/node/92/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Climat",
+      "direct": [
+        "https://climate.ec.europa.eu/node/2/rss_en"
       ]
     },
     {
@@ -515,23 +538,9 @@
     },
     {
       "type": "DG",
-      "nom": "Commission UE — Emploi & affaires sociales",
+      "nom": "Commission UE — Transports",
       "direct": [
-        "https://employment-social-affairs.ec.europa.eu/node/2/rss_en"
-      ]
-    },
-    {
-      "type": "DG",
-      "nom": "Commission UE — Santé",
-      "direct": [
-        "https://health.ec.europa.eu/node/2/rss_en"
-      ]
-    },
-    {
-      "type": "EDPB",
-      "nom": "Comité européen protection des données",
-      "direct": [
-        "https://www.edpb.europa.eu/feed_en"
+        "https://transport.ec.europa.eu/node/2/rss_en"
       ]
     }
   ],
