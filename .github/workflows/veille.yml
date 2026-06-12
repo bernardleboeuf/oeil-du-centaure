@@ -1,14 +1,20 @@
+# ==================================================================
+# L'ŒIL DU CENTAURE — Minuterie automatique
+# Tourne chaque matin à 6h00 (heure de Paris) et après chaque push.
+# Va chercher les flux, régénère veille.json, le commit dans le dépôt.
+# Gratuit dans la limite GitHub Actions (très large pour cet usage).
+# ==================================================================
 name: Veille juridique — collecte quotidienne
 
 on:
   schedule:
-    - cron: "0 4 * * *"
-  workflow_dispatch:
+    - cron: "0 4 * * *"      # 04h00 UTC = 06h00 Paris (été)
+  workflow_dispatch:          # bouton "lancer maintenant" dans l'onglet Actions
   push:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: write             # autorise le commit du veille.json
 
 jobs:
   collecte:
@@ -24,7 +30,7 @@ jobs:
 
       - name: Lancer la collecte
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optionnel (tri IA)
         run: node scripts/collecte.mjs
 
       - name: Publier veille.json si modifié
@@ -32,5 +38,8 @@ jobs:
           git config user.name "Oeil du Centaure (bot)"
           git config user.email "actions@users.noreply.github.com"
           git add veille.json
-          git diff --staged --quiet || git commit -m "Mise à jour de la veille"
-          git push
+          git diff --staged --quiet && echo "Aucune modification" && exit 0
+          git commit -m "Mise à jour de la veille — $(date +'%d/%m/%Y')"
+          # synchroniser avant de pousser (évite les conflits si le dépôt a changé)
+          git pull --rebase --autostash origin main || true
+          git push origin main
