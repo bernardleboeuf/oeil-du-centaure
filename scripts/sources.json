@@ -72,6 +72,11 @@
     },
     {
       "type": "TA",
+      "nom": "TA de Melun",
+      "base": "https://melun.tribunal-administratif.fr"
+    },
+    {
+      "type": "TA",
       "nom": "TA de Montpellier",
       "base": "https://montpellier.tribunal-administratif.fr"
     },
@@ -265,47 +270,36 @@
     },
     {
       "type": "CE",
-      "nom": "Conseil d'État — audiences importantes",
+      "nom": "Conseil d'État — avis",
       "direct": [
-        "https://www.conseil-etat.fr/rss/seances-publiques-rss"
+        "https://www.conseil-etat.fr/rss/avis-rss"
       ]
     },
     {
-      "type": "AN",
-      "nom": "Assemblée nationale — actualités",
+      "type": "CE",
+      "nom": "Conseil d'État — études",
       "direct": [
-        "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml",
-        "http://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires"
+        "https://www.conseil-etat.fr/rss/etudes-rss"
       ]
     },
     {
-      "type": "SENAT",
-      "nom": "Sénat — communiqués de presse",
+      "type": "CE",
+      "nom": "Conseil d'État — audiences",
       "direct": [
-        "http://www.senat.fr/rss/presse.xml",
-        "http://www.senat.fr/rss.html"
+        "https://www.conseil-etat.fr/rss/audiences-rss"
       ]
     },
     {
-      "type": "SENAT",
-      "nom": "Sénat — projets et propositions de loi",
-      "direct": [
-        "http://www.senat.fr/rss/textes.xml"
-      ]
+      "type": "CNDA",
+      "nom": "Cour nationale du droit d'asile",
+      "base": "https://www.cnda.fr"
     },
     {
-      "type": "VP",
-      "nom": "Vie-publique — lois",
+      "type": "CCOMPTES",
+      "nom": "Cour des comptes",
       "direct": [
-        "https://www.vie-publique.fr/flux/lois.xml",
-        "https://www.vie-publique.fr/rss/loi.xml"
-      ]
-    },
-    {
-      "type": "VP",
-      "nom": "Vie-publique — rapports",
-      "direct": [
-        "https://www.vie-publique.fr/flux/rapports.xml"
+        "https://www.ccomptes.fr/fr/rss/general",
+        "https://www.ccomptes.fr/fr/feed"
       ]
     },
     {
@@ -316,90 +310,146 @@
       ]
     },
     {
-      "type": "CESE",
-      "nom": "Conseil économique social environnemental",
+      "type": "AN",
+      "nom": "Assemblée nationale — communiqués",
       "direct": [
-        "https://www.lecese.fr/flux-rss-actualites.xml"
+        "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml"
+      ]
+    },
+    {
+      "type": "AN",
+      "nom": "Assemblée nationale — documents parlementaires",
+      "direct": [
+        "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires"
+      ]
+    },
+    {
+      "type": "SENAT",
+      "nom": "Sénat — communiqués",
+      "direct": [
+        "http://www.senat.fr/rss/presse.xml"
+      ]
+    },
+    {
+      "type": "SENAT",
+      "nom": "Sénat — textes de loi",
+      "direct": [
+        "http://www.senat.fr/rss/textes.xml"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Vie-publique — actualités",
+      "direct": [
+        "https://www.vie-publique.fr/flux/actualites.xml",
+        "https://www.vie-publique.fr/rss.xml"
       ]
     },
     {
       "type": "AAI",
-      "nom": "CNIL — données personnelles (RGPD)",
-      "comp": "dpriv",
+      "nom": "CNIL — données personnelles",
       "direct": [
         "https://www.cnil.fr/fr/rss.xml"
       ]
     },
     {
       "type": "AAI",
+      "nom": "Autorité de la concurrence",
+      "direct": [
+        "https://www.autoritedelaconcurrence.fr/fr/rss.xml",
+        "https://www.autoritedelaconcurrence.fr/fr/feed"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "ARCOM — audiovisuel & numérique",
+      "direct": [
+        "https://www.arcom.fr/rss.xml"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "ART — transports",
+      "direct": [
+        "https://www.autorite-transports.fr/feed/"
+      ]
+    },
+    {
+      "type": "AAI",
       "nom": "HAS — santé",
-      "comp": "enfance",
       "direct": [
         "https://www.has-sante.fr/rss/c_1771214.xml"
       ]
     },
     {
-      "type": "DAJ",
-      "nom": "DAJ Bercy — commande publique",
-      "comp": "dpa",
-      "direct": [
-        "https://www.economie.gouv.fr/daj/rss",
-        "https://www.economie.gouv.fr/rss"
-      ]
-    },
-    {
-      "type": "CCOMPTES",
-      "nom": "Cour des comptes",
-      "direct": [
-        "https://www.ccomptes.fr/fr/rss/general",
-        "https://www.ccomptes.fr/fr/rss.xml"
-      ]
-    },
-    {
-      "type": "AAI",
-      "nom": "ARCEP — communications/transports",
-      "comp": "dpa",
-      "direct": [
-        "https://www.arcep.fr/rss/actualites.xml"
-      ]
-    },
-    {
       "type": "AAI",
       "nom": "AMF — marchés financiers",
-      "comp": "dpriv",
       "direct": [
         "https://www.amf-france.org/fr/rss.xml"
       ]
     },
     {
       "type": "AAI",
-      "nom": "ART — régulation des transports",
-      "comp": "dpa",
+      "nom": "Défenseur des droits",
       "direct": [
-        "https://www.autorite-transports.fr/feed/",
-        "https://www.autorite-transports.fr/rss.xml"
+        "https://www.defenseurdesdroits.fr/rss.xml",
+        "https://www.defenseurdesdroits.fr/fr/feed"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "ANSSI — cybersécurité",
+      "direct": [
+        "https://www.cert.ssi.gouv.fr/feed/",
+        "https://www.ssi.gouv.fr/feed/"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "CADA — accès aux documents",
+      "direct": [
+        "https://www.cada.fr/rss.xml"
       ]
     },
     {
       "type": "BO",
-      "nom": "BO Transition écologique (urbanisme/environnement)",
-      "comp": "urba",
+      "nom": "BO Transition écologique",
       "direct": [
-        "https://www.bulletin-officiel.developpement-durable.gouv.fr/rss",
-        "https://www.bulletin-officiel.developpement-durable.gouv.fr/feed"
+        "https://www.bulletin-officiel.developpement-durable.gouv.fr/rss"
       ]
     },
     {
-      "type": "BO",
-      "nom": "Bofip — finances publiques (fiscal)",
-      "comp": "dpriv",
+      "type": "DAJ",
+      "nom": "DAJ Bercy — commande publique",
+      "direct": [
+        "https://www.economie.gouv.fr/daj/rss"
+      ]
+    },
+    {
+      "type": "MIN",
+      "nom": "Ministère de la Justice — actualités",
+      "direct": [
+        "https://www.justice.gouv.fr/rss.xml",
+        "https://www.justice.gouv.fr/feed"
+      ]
+    },
+    {
+      "type": "MIN",
+      "nom": "Ministère de l'Intérieur — actualités",
+      "direct": [
+        "https://www.interieur.gouv.fr/rss.xml"
+      ]
+    },
+    {
+      "type": "BOFIP",
+      "nom": "Bofip — fiscal",
       "direct": [
         "https://bofip.impots.gouv.fr/rss"
       ]
     },
     {
       "type": "SP",
-      "nom": "Service-public — actualités pro",
+      "nom": "Service-public — professionnels",
       "direct": [
         "https://www.service-public.fr/professionnels-entreprises/actualites/rss"
       ]
@@ -407,25 +457,81 @@
   ],
   "EUROPE": [
     {
-      "type": "CURIA",
-      "nom": "CJUE — communiqués de presse",
+      "type": "CJUE",
+      "nom": "Cour de justice de l'UE",
       "direct": [
-        "https://curia.europa.eu/jcms/jcms/Jo2_16799/fr/?rss=true",
-        "https://curia.europa.eu/cms/rss/fr/cp.xml"
-      ]
-    },
-    {
-      "type": "EURLEX",
-      "nom": "Eur-Lex — jurisprudence CJUE",
-      "direct": [
-        "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=e1Wry2%2FymXEa8eDqcSnEH1U7yA4fdABTRMHEfmK6V0Q%3D"
+        "https://curia.europa.eu/jcms/jcms/Jo2_16799/fr/?rss=true"
       ]
     },
     {
       "type": "CEDH",
-      "nom": "CEDH — communiqués de presse",
+      "nom": "CEDH — communiqués",
       "direct": [
+        "https://www.echr.coe.int/sites/search_filter/rss/press",
         "https://hudoc.echr.coe.int/app/rss/press"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Concurrence",
+      "direct": [
+        "https://competition-policy.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Justice",
+      "direct": [
+        "https://commission.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Marché intérieur",
+      "direct": [
+        "https://single-market-economy.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Numérique",
+      "direct": [
+        "https://digital-strategy.ec.europa.eu/en/rss.xml"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Environnement",
+      "direct": [
+        "https://environment.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Énergie",
+      "direct": [
+        "https://energy.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Emploi & affaires sociales",
+      "direct": [
+        "https://employment-social-affairs.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "DG",
+      "nom": "Commission UE — Santé",
+      "direct": [
+        "https://health.ec.europa.eu/node/2/rss_en"
+      ]
+    },
+    {
+      "type": "EDPB",
+      "nom": "Comité européen protection des données",
+      "direct": [
+        "https://www.edpb.europa.eu/feed_en"
       ]
     }
   ],
