@@ -258,36 +258,36 @@
       "type": "CE",
       "nom": "Conseil d'État — actualités",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Factualites-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — avis (projets de loi)",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Favis-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/avis-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/avis-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/avis-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — études",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fetudes-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/etudes-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/etudes-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — analyses de jurisprudence",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fanalyses-de-jurisprudence-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/analyses-de-jurisprudence-rss"
       ]
     },
     {
@@ -316,8 +316,8 @@
       "type": "AAI",
       "nom": "ARCOM — audiovisuel & numérique",
       "direct": [
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.arcom.fr%2Frss.xml",
-        "https://www.arcom.fr/rss.xml"
+        "https://www.arcom.fr/rss.xml",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.arcom.fr%2Frss.xml"
       ]
     },
     {
@@ -401,16 +401,16 @@
       "type": "CCOMPTES",
       "nom": "Cour des comptes — actualités",
       "direct": [
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Factualites",
-        "https://www.ccomptes.fr/rss/actualites"
+        "https://www.ccomptes.fr/rss/actualites",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Factualites"
       ]
     },
     {
       "type": "CCOMPTES",
       "nom": "Cour des comptes — publications",
       "direct": [
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fpublications",
-        "http://www.ccomptes.fr/rss/publications"
+        "http://www.ccomptes.fr/rss/publications",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fpublications"
       ]
     },
     {
@@ -433,45 +433,45 @@
       "type": "CE",
       "nom": "Conseil d'État — discours et interventions",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fdiscours-et-interventions-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/discours-et-interventions-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — colloques et conférences",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fcolloques-seminaires-et-conferences-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/colloques-seminaires-et-conferences-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — rapports d'activité",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Frapports-d-activite-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/rapports-d-activite-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — prochaines audiences",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Fseances-publiques-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/seances-publiques-rss"
       ]
     },
     {
       "type": "CE",
       "nom": "Conseil d'État — Lettre de la justice administrative",
       "direct": [
+        "https://www.conseil-etat.fr/outils/flux-rss/lja-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Flja-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/lja-rss",
-        "https://www.conseil-etat.fr/outils/flux-rss/lja-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/lja-rss"
       ]
     },
     {
@@ -494,8 +494,8 @@
       "type": "CCOMPTES",
       "nom": "Cour des comptes — général",
       "direct": [
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fgeneral",
-        "https://www.ccomptes.fr/rss/general"
+        "https://www.ccomptes.fr/rss/general",
+        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fgeneral"
       ]
     }
   ],
