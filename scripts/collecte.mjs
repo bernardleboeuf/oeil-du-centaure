@@ -21,6 +21,11 @@ function attr(s, tag, a){ const m = s.match(new RegExp("<"+tag+"[^>]*"+a+"=[\"']
 function clean(s){ return (s||"").replace(/<!\[CDATA\[|\]\]>/g,"").replace(/<[^>]+>/g," ").replace(/&[a-z#0-9]+;/g," ").replace(/\s+/g," ").trim(); }
 function normDate(s){ const d = new Date(s); return isNaN(d) ? "" : d.toISOString(); }
 
+function cleanResume(s){
+  if(!s) return "";
+  return s.replace(/<[^>]+>/g," ").replace(/&[a-z#0-9]+;/gi," ").replace(/\b(nbsp|amp|wysiwyg|field|wiki feed)\b/gi," ").replace(/\s+/g," ").trim();
+}
+
 function parseFeed(xml, srcNom, srcType){
   const items = [];
   const blocks = xml.split(/<item[ >]|<entry[ >]/i).slice(1);
@@ -32,7 +37,7 @@ function parseFeed(xml, srcNom, srcType){
     if(link && !/^https?:/i.test(link)) link = "";  // ignorer les liens non-http
     const date = pick(b,"pubDate")||pick(b,"published")||pick(b,"updated")||"";
     const desc = clean(pick(b,"description")||pick(b,"summary")||pick(b,"content"));
-    items.push({ titre:title, lien:link, date:normDate(date)||new Date().toISOString(), source:srcNom, srcType, resume:desc.slice(0,240) });
+    items.push({ titre:title, lien:link, date:normDate(date)||new Date().toISOString(), source:srcNom, srcType, resume:cleanResume(desc).slice(0,240) });
   }
   return items;
 }
@@ -147,7 +152,7 @@ Si vraiment aucun thème ne convient, mets "comp":"null".
 
 IMPACT : 3 = fort (loi, décret, revirement de jurisprudence, réforme majeure) ; 2 = à suivre (décision notable, nouvelle règle) ; 1 = information courante.
 
-TRADUCTION : si le titre est en anglais (ou autre langue), TRADUIS-le en français clair et journalistique dans le champ "titre_fr". Si le titre est déjà en français, recopie-le tel quel dans "titre_fr".
+TRADUCTION : si le titre est en anglais, traduis-le en français dans "titre_fr" (sinon recopie-le). Et rédige toujours dans "chapo_fr" un résumé d UNE phrase en français (20-30 mots) expliquant l enjeu de l article, même si la source est en anglais.
 
 PERTINENCE PAR PROFIL : pour chaque article, indique dans "profils" la liste des profils de lecteurs pour qui il est PRIORITAIRE (parmi : commune, sante, departement, bailleur, etat, entreprise). Un article sur les marchés hospitaliers → ["sante","commune"]. Une réforme de l'urbanisme → ["commune","bailleur","etat"]. Une décision sur l'aide sociale → ["departement","sante"]. Mets [] si l'article n'a pas de pertinence sectorielle marquée (il restera visible pour tous, mais sans priorité).
 
@@ -155,7 +160,7 @@ INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique p
 
 PERTINENCE PAR SECTEUR D'ACTIVITÉ : dans "secteurs", liste GÉNÉREUSEMENT tous les secteurs concernés (parmi : sante, transport, energie, btp, numerique, environnement, social, eau, amenagement, culture, agriculture). C'est OBLIGATOIRE et IMPORTANT : un article sur un marché de travaux → ["btp"] ; une décision sur l'énergie → ["energie"] ; un arrêt sur les aérodromes/SNCF/RATP → ["transport"] ; une décision environnementale → ["environnement"] (+ "energie","eau","agriculture" si pertinent) ; un sujet hospitalier → ["sante"] ; l'aide sociale → ["social","sante"]. Sois inclusif : 1 à 3 secteurs par article. Ne mets [] QUE si l'article est purement procédural sans lien sectoriel.
 
-Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","impact":3,"titre_fr":"...","keep":true,"profils":["commune","etat"],"secteurs":["btp","energie"]},...]`;
+Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","impact":3,"titre_fr":"...","chapo_fr":"...","keep":true,"profils":["commune","etat"],"secteurs":["btp","energie"]},...]`;
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
@@ -244,20 +249,21 @@ async function main(){
   const aiByIdx = {};
   if(ai){ for(const tag of ai){ if(tag && typeof tag.i==="number") aiByIdx[tag.i]=tag; } }
   items = items.map((it,idx)=>{
-    let comp, impact, keep=true, titre=it.titre, profils=[], secteurs=[];
+    let comp, impact, keep=true, titre=it.titre, chapo="", profils=[], secteurs=[];
     const tag = ai ? aiByIdx[idx] : null;
     if(tag){
       comp = (tag.comp && tag.comp!=="null") ? tag.comp : classifyKW(it.titre+" "+it.resume);
       impact = tag.impact || impactKW(it.titre);
       keep = tag.keep!==false;
       if(tag.titre_fr && String(tag.titre_fr).trim()) titre = String(tag.titre_fr).trim();
+      if(tag.chapo_fr && String(tag.chapo_fr).trim()) chapo = String(tag.chapo_fr).trim();
       profils = Array.isArray(tag.profils) ? tag.profils : [];
       secteurs = Array.isArray(tag.secteurs) ? tag.secteurs : [];
     } else {
       comp = classifyKW(it.titre+" "+it.resume); impact = impactKW(it.titre+" "+it.resume);
     }
     if(!comp) comp = defaultTheme(it);
-    return {...it, titre, comp, impact, keep, profils, secteurs};
+    return {...it, titre, chapo, comp, impact, keep, profils, secteurs};
   });
   // FILTRE INTÉRÊT : retirer les articles sans valeur juridique (l'anglais est traduit, pas retiré)
   const avant = items.length;
