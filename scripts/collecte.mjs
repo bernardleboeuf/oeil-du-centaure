@@ -76,21 +76,23 @@ async function tryUrl(url){
     const r = await rawFetch(url);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
     const xml = r.text;
-    // vrai flux ?
-    if(/<item[ >]|<entry[ >]/i.test(xml)) return { ok:true, xml };
-    // sinon : page /flux_rss → chercher les liens vers les vrais flux et les suivre
+    // vrai flux ? → un seul xml
+    if(/<item[ >]|<entry[ >]/i.test(xml)) return { ok:true, xmls:[xml] };
+    // sinon : page /flux_rss → découvrir TOUS les flux pertinents et les suivre (décisions + lettre de jurisprudence…)
     const origin = new URL(url).origin;
     const links = [...xml.matchAll(/href=["']([^"']*(?:flux-rss|\/rss\/|flux_rss)[^"']*)["']/gi)]
                     .map(m=>m[1])
                     .filter(l=>/decision|jurisprudence|actualit/i.test(l));
-    for(const l of [...new Set(links)].slice(0,4)){
+    const xmls = [];
+    for(const l of [...new Set(links)].slice(0,6)){
       const u = l.startsWith("http") ? l : origin + (l.startsWith("/")?l:"/"+l);
       if(u===url) continue;
       try{
         const r2 = await rawFetch(u);
-        if(r2.ok && /<item[ >]|<entry[ >]/i.test(r2.text)) return { ok:true, xml:r2.text };
+        if(r2.ok && /<item[ >]|<entry[ >]/i.test(r2.text)) xmls.push(r2.text);
       }catch(e){}
     }
+    if(xmls.length) return { ok:true, xmls };
     return { ok:false, reason:"pas un flux" };
   }catch(e){ return { ok:false, reason: e.name==="AbortError"?"timeout":"injoignable" }; }
 }
@@ -102,11 +104,11 @@ async function fetchSource(src){
     candidates = src.direct;                          // URLs vérifiées (CE, CJUE, Légifrance…)
   } else {
     const paths = [
+      "/flux_rss",                          // page listant TOUS les flux → on les collecte tous (décisions + lettre de jurisprudence…)
       "/flux-rss/dernieres-decisions",      // TA standard (Grenoble…)
       "/rss/dernieres-decisions",           // TA variante (Paris…)
       "/flux-rss/decisions-de-justice",     // CAA (Marseille…)
       "/rss/decisions-de-justice",
-      "/flux_rss",                          // ancien format (page→parfois flux)
       "/flux-rss",
       "/rss",
       "/feed",
@@ -122,8 +124,16 @@ async function fetchSource(src){
   for(const url of candidates){
     const r = await tryUrl(url);
     if(r.ok){
-      const items = parseFeed(r.xml, src.nom, src.type);
-      if(items.length) return { ok:true, url, items };
+      // r.xmls peut contenir plusieurs flux (ex. décisions + lettre de jurisprudence)
+      const items = [];
+      for(const xml of r.xmls) items.push(...parseFeed(xml, src.nom, src.type));
+      // dé-doublonnage interne par lien/titre (un flux peut recouper l'autre)
+      const seen = new Set(), uniq = [];
+      for(const it of items){
+        const k = (it.lien||it.titre||"").trim();
+        if(k && !seen.has(k)){ seen.add(k); uniq.push(it); }
+      }
+      if(uniq.length) return { ok:true, url, items:uniq };
       lastReason = "0 item";
     } else { lastReason = r.reason; }
   }
