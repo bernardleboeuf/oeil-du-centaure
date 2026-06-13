@@ -150,15 +150,23 @@ LES 8 MATIÈRES JURIDIQUES :
 RÈGLE : choisis la matière la plus pertinente sur le FOND, quelle que soit la juridiction ou le territoire. Une décision d'un tribunal d'outre-mer sur un marché public va en "dpa" (la matière prime sur le lieu).
 Si vraiment aucun thème ne convient, mets "comp":"null".
 
+ARBITRAGES ENTRE MATIÈRES PROCHES (applique ces priorités quand deux matières se disputent un article) :
+• Mécanisme carbone aux frontières (MACF/CBAM), marché carbone (ETS/SEQE), quotas d'émission → "urb" (c'est un instrument environnemental), PAS "dpe", même si l'angle est fiscal ou commercial.
+• Fiscalité, douanes, taxes, accords commerciaux internationaux, sanctions économiques → "dpe".
+• Système douanier de données/déclaration (ICS2, guichet unique) → "dpe" (commerce/douane), PAS "dpi" : "dpi" est réservé aux DONNÉES PERSONNELLES, RGPD, cybersécurité, propriété intellectuelle.
+• Sécurité aérienne, listes de transporteurs, sûreté des transports → "dpg" (police administrative), PAS "lib".
+• Énergie, climat, biodiversité, eau, déchets, pêche, agriculture environnementale → "urb".
+• Un texte qui touche plusieurs domaines : choisis la matière de son DISPOSITIF principal, pas d'un thème secondaire évoqué.
+
 IMPACT : 3 = fort (loi, décret, revirement de jurisprudence, réforme majeure) ; 2 = à suivre (décision notable, nouvelle règle) ; 1 = information courante.
 
 TRADUCTION : si le titre est en anglais, traduis-le en français dans "titre_fr" (sinon recopie-le). Et rédige toujours dans "chapo_fr" un résumé d UNE phrase en français (20-30 mots) expliquant l enjeu de l article, même si la source est en anglais.
 
 PERTINENCE PAR PROFIL : pour chaque article, indique dans "profils" la liste des profils de lecteurs pour qui il est PRIORITAIRE (parmi : commune, sante, departement, bailleur, etat, entreprise). Un article sur les marchés hospitaliers → ["sante","commune"]. Une réforme de l'urbanisme → ["commune","bailleur","etat"]. Une décision sur l'aide sociale → ["departement","sante"]. Mets [] si l'article n'a pas de pertinence sectorielle marquée (il restera visible pour tous, mais sans priorité).
 
-INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique pour des lecteurs professionnels (acteurs publics, institutionnels) : nominations, inaugurations, visites officielles, recrutements, anniversaires, communiqués protocolaires, événements internes, articles purement promotionnels ou pédagogiques, newsletters administratives, annonces d'inscription à un colloque, contenus de communication institutionnelle sans portée juridique. Mets "keep":true pour tout ce qui a un vrai intérêt juridique (décisions, réformes, nouvelles règles, directives, analyses de fond).
+INTÉRÊT : mets "keep":false pour ÉCARTER les contenus sans valeur juridique opérationnelle pour des lecteurs professionnels (acteurs publics, institutionnels) : nominations, inaugurations, visites officielles, recrutements, anniversaires, communiqués protocolaires, événements internes, articles purement promotionnels ou pédagogiques, newsletters administratives, annonces d'inscription à un colloque, contenus de communication institutionnelle. ÉCARTE AUSSI les simples comptes-rendus de réunion, de dialogue, de coordination ou de sommet qui n'annoncent AUCUNE décision, règle, texte ou orientation concrète (ex. « les coordinateurs discutent de… », « les ministres se réunissent pour évoquer… », « réunion du conseil sur… ») : ces contenus n'ont pas de portée normative. GARDE ("keep":true) tout ce qui a un effet juridique réel ou imminent : décisions de justice, lois, décrets, règlements, directives, avis et décisions d'autorités, accords formels adoptés, rapports d'évaluation substantiels, consultations publiques sur un projet de texte, analyses de fond sur une réforme.
 
-PERTINENCE PAR SECTEUR D'ACTIVITÉ : dans "secteurs", liste GÉNÉREUSEMENT tous les secteurs concernés (parmi : sante, transport, energie, btp, numerique, environnement, social, eau, amenagement, culture, agriculture). C'est OBLIGATOIRE et IMPORTANT : un article sur un marché de travaux → ["btp"] ; une décision sur l'énergie → ["energie"] ; un arrêt sur les aérodromes/SNCF/RATP → ["transport"] ; une décision environnementale → ["environnement"] (+ "energie","eau","agriculture" si pertinent) ; un sujet hospitalier → ["sante"] ; l'aide sociale → ["social","sante"]. Sois inclusif : 1 à 3 secteurs par article. Ne mets [] QUE si l'article est purement procédural sans lien sectoriel.
+PERTINENCE PAR SECTEUR D'ACTIVITÉ : dans "secteurs", indique le ou les secteurs RÉELLEMENT et DIRECTEMENT concernés par l'article (parmi : sante, transport, energie, btp, numerique, environnement, social, eau, amenagement, culture, agriculture). Règle de SOBRIÉTÉ : 1 secteur en général, 2 au maximum, et seulement si le second est tout aussi central. N'ajoute JAMAIS un secteur simplement évoqué ou mentionné en passant. Exemples : un arrêt sur les aérodromes/SNCF/RATP → ["transport"] (et rien d'autre) ; un marché de travaux → ["btp"] ; une décision purement environnementale → ["environnement"] ; un sujet hospitalier → ["sante"] ; l'aide sociale aux personnes âgées → ["social"] ; une décision sur l'eau agricole → ["eau","agriculture"] si les deux sont au cœur du texte. Les régulateurs sectoriels (ART = transports, ANSSI/CNIL = numérique) ne portent JAMAIS d'autre secteur que le leur. Mets [] si l'article est procédural ou général sans ancrage sectoriel net (élections, actes administratifs, contentieux de la fonction publique générale, etc.).
 
 Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","impact":3,"titre_fr":"...","chapo_fr":"...","keep":true,"profils":["commune","etat"],"secteurs":["btp","energie"]},...]`;
   try{
@@ -206,14 +214,14 @@ async function main(){
   let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
   // Tri par fraîcheur (plus récent d'abord) — la fraîcheur reste la priorité d'affichage
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  // diversité : max 6 items par source (évite qu'un TA noie tout)
-  const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=6; });
+  // diversité : max 8 items par source (évite qu'un TA noie tout)
+  const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=8; });
 
-  // PRÉ-FILTRAGE AVANT l'IA : on ne classe que les 120 articles les plus récents.
-  // Largement assez pour alimenter 9 thèmes × 10 articles, et ça limite le coût IA.
+  // PRÉ-FILTRAGE AVANT l'IA : on ne classe que les 250 articles les plus récents.
+  // Large pour bien alimenter chaque secteur et chaque matière, tout en bornant le coût IA.
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  items = items.slice(0,180);
-  console.log("Articles envoyés au classement IA :", items.length, "(les 180 plus récents)");
+  items = items.slice(0,250);
+  console.log("Articles envoyés au classement IA :", items.length, "(les 250 plus récents)");
 
   const ai = await classifyAI(items);
   // classement par défaut selon le type de source (si les mots-clés ne suffisent pas)
@@ -263,6 +271,15 @@ async function main(){
       comp = classifyKW(it.titre+" "+it.resume); impact = impactKW(it.titre+" "+it.resume);
     }
     if(!comp) comp = defaultTheme(it);
+    // VERROU SECTORIEL : certaines sources sont mono-sectorielles par nature.
+    // Leur secteur est imposé, quel que soit le tag IA (qui sur-tague parfois).
+    const src = (it.source||"").toLowerCase();
+    const SECTOR_LOCK = [
+      { test:/\bart\b|autorité de régulation des transports|autorite-transports/, secteurs:["transport"] },
+    ];
+    for(const lock of SECTOR_LOCK){
+      if(lock.test.test(src)){ secteurs = lock.secteurs.slice(); break; }
+    }
     return {...it, titre, chapo, comp, impact, keep, profils, secteurs};
   });
   // FILTRE INTÉRÊT : retirer les articles sans valeur juridique (l'anglais est traduit, pas retiré)
