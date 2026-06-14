@@ -198,6 +198,65 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","imp
   }catch(e){ console.error("IA indisponible, repli mots-clés:", e.message); return null; }
 }
 
+// ===== Génération du réservoir outre-mer =====
+// Détection d'un territoire ultramarin par source locale ou mention dans le titre/résumé.
+const OM_TERRITOIRES_DEF = {
+  guadeloupe:  { label:"Guadeloupe",            re:/guadeloupe|pointe-à-pitre|basse-terre|gourbeyre|baie-mahault/i },
+  martinique:  { label:"Martinique",            re:/martinique|fort-de-france/i },
+  guyane:      { label:"Guyane",                re:/\bguyane\b|cayenne|kourou/i },
+  stbarthelemy:{ label:"Saint-Barthélemy",      re:/saint-barthélemy|saint-barth/i },
+  stmartin:    { label:"Saint-Martin",          re:/saint-martin/i },
+  reunion:     { label:"La Réunion",            re:/\bla réunion\b|saint-denis de la réunion|saint-pierre de la réunion|île de la réunion/i },
+  mayotte:     { label:"Mayotte",               re:/mayotte|mamoudzou/i },
+  ncaledonie:  { label:"Nouvelle-Calédonie",    re:/nouvelle-calédonie|nouvelle-caledonie|nouméa|noumea|kanak/i },
+  polynesie:   { label:"Polynésie française",   re:/polynésie|polynesie|papeete|tahiti/i },
+  wallis:      { label:"Wallis-et-Futuna",      re:/wallis-et-futuna|wallis et futuna|\bwallis\b|futuna/i },
+  stpierre:    { label:"Saint-Pierre-et-Miquelon", re:/saint-pierre-et-miquelon|miquelon/i }
+};
+function territoiresDe(it){
+  const hay = (it.source||"")+" "+(it.titre||"")+" "+(it.resume||"");
+  const ids=[];
+  for(const [id,t] of Object.entries(OM_TERRITOIRES_DEF)){ if(t.re.test(hay)) ids.push(id); }
+  return ids;
+}
+async function genererOutremer(results, juridictionsOk){
+  // 1. Filtrer toutes les décisions rattachées à au moins un territoire
+  const bruts = results.filter(it=>territoiresDe(it).length>0);
+  // 2. Dé-doublonnage par titre
+  const seen=new Set();
+  let oms = bruts.filter(it=>{ const k=(it.titre||"").toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
+  // 3. Garder les plus récentes par territoire (plafond OM_MAX_PAR_TERR), pour borner le coût IA
+  const OM_MAX_PAR_TERR = 8;
+  const parTerr={};
+  oms.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  for(const it of oms){
+    for(const id of territoiresDe(it)){
+      parTerr[id]=parTerr[id]||[];
+      if(parTerr[id].length<OM_MAX_PAR_TERR && !parTerr[id].includes(it)) parTerr[id].push(it);
+    }
+  }
+  // ensemble unique à conserver (décisions brutes, sans IA — les flux sont datés, cela suffit)
+  const aClasser=[...new Set(Object.values(parTerr).flat())];
+  console.log("Réservoir outre-mer :", aClasser.length, "décisions sur", Object.keys(parTerr).length, "territoires");
+  if(!aClasser.length){
+    writeFileSync(join(__dir,"..","outremer.json"), JSON.stringify({generatedAt:new Date().toISOString(),juridictionsOk,count:0,items:[]},null,2));
+    console.log("✓ outremer.json (vide)");
+    return;
+  }
+  // Pas de classement IA : on garde le titre brut, on déduit la matière par mots-clés (gratuit),
+  // l'impact par mots-clés, et on conserve le résumé comme chapô.
+  const items = aClasser.map(it=>{
+    const comp = classifyKW(it.titre+" "+(it.resume||"")) || "dpg";
+    const impact = impactKW(it.titre+" "+(it.resume||""));
+    return {...it, titre:it.titre, chapo:it.resume||"", comp, impact, territoires:territoiresDe(it)};
+  });
+  // tri par date (fraîcheur) — l'édition spéciale les ordonnera par impact puis date côté front
+  items.sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  const out={ generatedAt:new Date().toISOString(), juridictionsOk, count:items.length, items };
+  writeFileSync(join(__dir,"..","outremer.json"), JSON.stringify(out,null,2));
+  console.log("✓ "+items.length+" décisions ultramarines → outremer.json (sans IA)");
+}
+
 async function main(){
   const all = [...SOURCES.TA, ...SOURCES.CAA, ...SOURCES.SUPRA, ...(SOURCES.EUROPE||[]), ...(SOURCES.NATIONAL||[])];
   console.log("=================================================");
@@ -220,6 +279,12 @@ async function main(){
   ko.forEach(s=>console.log("  ✗ "+s.reason.padEnd(24)+"· "+s.nom));
   console.log("\nBILAN : "+ok.length+"/"+all.length+" juridictions · "+results.length+" items bruts\n");
 
+  // ===== RÉSERVOIR OUTRE-MER (outremer.json) =====
+  // Indépendant du cap de fraîcheur du veille.json général. On capture TOUTES les décisions
+  // ultramarines collectées (sources locales OU mention d'un territoire), on les dé-doublonne,
+  // on en garde les plus récentes par territoire, et on les classe légèrement par IA.
+  await genererOutremer(results, ok.length);
+
   const seen = new Set();
   let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
   // Tri par fraîcheur (plus récent d'abord) — la fraîcheur reste la priorité d'affichage
@@ -227,11 +292,12 @@ async function main(){
   // diversité : max 8 items par source (évite qu'un TA noie tout)
   const perSrc={}; items = items.filter(it=>{ const s=it.source; perSrc[s]=(perSrc[s]||0)+1; return perSrc[s]<=8; });
 
-  // PRÉ-FILTRAGE AVANT l'IA : on ne classe que les 250 articles les plus récents.
-  // Large pour bien alimenter chaque secteur et chaque matière, tout en bornant le coût IA.
+  // PRÉ-FILTRAGE AVANT l'IA : on ne classe que les 250 articles les plus récents (cap pur, sans exception).
+  // L'édition outre-mer dispose de son propre réservoir (outremer.json), généré en amont, indépendant de ce cap.
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   items = items.slice(0,250);
   console.log("Articles envoyés au classement IA :", items.length, "(les 250 plus récents)");
+
 
   const ai = await classifyAI(items);
   // classement par défaut selon le type de source (si les mots-clés ne suffisent pas)
