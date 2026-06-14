@@ -1,16 +1,959 @@
 {
- "generatedAt": "2026-06-14T12:00:00.000Z",
- "juridictionsOk": 84,
- "count": 9,
- "items": [
-  {"titre":"Le tribunal administratif de Mayotte suspend un arrêté d'expulsion locative à Mamoudzou","source":"TA de Mayotte","srcType":"TA","date":"2026-05-12T00:00:00Z","chapo":"Le TA de Mayotte suspend en référé un arrêté préfectoral d'expulsion, faute d'urgence caractérisée.","comp":"lib","impact":2,"territoires":["mayotte"],"lien":"https://mayotte.ta.fr/r1"},
-  {"titre":"Reconstruction post-Chido à Mayotte : encadrement des marchés de travaux d'urgence","source":"TA de Mayotte","srcType":"TA","date":"2026-04-28T00:00:00Z","chapo":"Le tribunal précise les conditions de passation des marchés publics de reconstruction après le cyclone.","comp":"dpa","impact":3,"territoires":["mayotte"],"lien":"https://mayotte.ta.fr/r2"},
-  {"titre":"Orpaillage illégal en Guyane : validation des destructions de sites par l'administration","source":"TA de Guyane","srcType":"TA","date":"2026-05-02T00:00:00Z","chapo":"Le TA de Guyane juge légales les opérations administratives de lutte contre l'orpaillage illégal.","comp":"urb","impact":2,"territoires":["guyane"],"lien":"https://guyane.ta.fr/r3"},
-  {"titre":"Contrats publics en Guyane : annulation d'un marché de la collectivité territoriale","source":"TA de Guyane","srcType":"TA","date":"2026-04-20T00:00:00Z","chapo":"Le tribunal annule un marché pour méconnaissance des règles de publicité et de mise en concurrence.","comp":"dpa","impact":2,"territoires":["guyane"],"lien":"https://guyane.ta.fr/r4"},
-  {"titre":"La Réunion : annulation d'un refus de permis de construire à Saint-Denis","source":"TA de La Réunion","srcType":"TA","date":"2026-05-08T00:00:00Z","chapo":"Le TA de La Réunion annule pour erreur d'appréciation un refus opposé par la commune.","comp":"urb","impact":2,"territoires":["reunion"],"lien":"https://reunion.ta.fr/r5"},
-  {"titre":"Octroi de mer à La Réunion : précisions sur l'exonération des produits locaux","source":"TA de La Réunion","srcType":"TA","date":"2026-04-15T00:00:00Z","chapo":"Le tribunal clarifie le régime d'exonération d'octroi de mer pour la production locale.","comp":"dpe","impact":2,"territoires":["reunion"],"lien":"https://reunion.ta.fr/r6"},
-  {"titre":"Polynésie française : validation d'une loi du pays sur la commande publique locale","source":"TA de Polynésie française","srcType":"TA","date":"2026-05-01T00:00:00Z","chapo":"Le tribunal valide une loi du pays polynésienne encadrant la commande publique.","comp":"dpa","impact":2,"territoires":["polynesie"],"lien":"https://polynesie.ta.fr/r7"},
-  {"titre":"Élections municipales en Martinique : rejet d'une protestation à Fort-de-France","source":"TA de Martinique","srcType":"TA","date":"2026-04-30T00:00:00Z","chapo":"Le TA de Martinique rejette un recours contestant les opérations électorales municipales.","comp":"dpg","impact":2,"territoires":["martinique"],"lien":"https://martinique.ta.fr/r8"},
-  {"titre":"Nouvelle-Calédonie : compétences fiscales après l'accord de Nouméa","source":"TA de Nouvelle-Calédonie","srcType":"TA","date":"2026-04-18T00:00:00Z","chapo":"Le tribunal précise la répartition des compétences fiscales entre l'État et la Nouvelle-Calédonie.","comp":"dpg","impact":2,"territoires":["ncaledonie"],"lien":"https://ncaledonie.ta.fr/r9"}
- ]
+  "generatedAt": "2026-06-14T19:07:01.237Z",
+  "juridictionsOk": 82,
+  "count": 67,
+  "items": [
+    {
+      "titre": "Ordonnance du 10 juin 2026 portant extension et adaptation aux collectivités relevant de l'article 74 de la Constitution et à la Nouvelle-Calédonie des dispositions de la loi du 22 décembre 2025 portant création d'un statut de l'élu local",
+      "lien": "https://www.vie-publique.fr/loi/303595-adaption-outre-mer-du-satut-de-lelu-local-ordonnance-du-10-juin-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-06-10T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "fps",
+      "impact": 3,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Rejet de la protestation présentée contre les élections municipales des 15 et 22 mars 2026 dans la commune de Gourbeyre",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/rejet-de-la-protestation-presentee-contre-les-elections-municipales-des-15-et-22-mars-2026-dans-la-commune-de-gourbeyre",
+      "date": "2026-06-09T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "asn",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Ordonnance du 3 juin 2026 portant adaptation et modernisation des dispositions du code général des collectivités territoriales applicables en Polynésie française",
+      "lien": "https://www.vie-publique.fr/loi/303461-adapation-du-cgct-la-polynesie-ordonnance-du-3-juin-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-06-03T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "La cour confirme la résiliation anticipée de la convention de délégation de service public du Port de Longoni à Mayotte",
+      "lien": "https://bordeaux.cour-administrative-appel.fr/decisions-de-justice/dernieres-decisions/la-cour-confirme-la-resiliation-anticipee-de-la-convention-de-delegation-de-service-public-du-port-de-longoni-a-mayotte",
+      "date": "2026-06-02T00:00:00.000Z",
+      "source": "CAA de Bordeaux",
+      "srcType": "CAA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpa",
+      "impact": 1,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Elections provinciales",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/elections-provinciales",
+      "date": "2026-06-01T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Loi organique du 28 mai 2026 portant régularisation des natifs dans le corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+      "lien": "https://www.vie-publique.fr/loi/303239-nouvelle-caledonie-natifs-elections-provinciales-loi-28-mai-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-05-28T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Emeutes du mois de mai 2024",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/emeutes-du-mois-de-mai-2024",
+      "date": "2026-05-21T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Proposition de loi relative à la sortie des collections publiques de restes humains kali'nas et arawaks en vue de funérailles sur le territoire de la Guyane",
+      "lien": "https://www.vie-publique.fr/loi/303245-restitution-de-restes-humains-kalinas-arawaks-guyane-proposition-de-loi?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-05-18T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Centre pénitentiaire de Baie-Mahault : le tribunal administratif ordonne l’exécution de plusieurs mesures d’urgence",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/centre-penitentiaire-de-baie-mahault-le-tribunal-administratif-ordonne-l-execution-de-plusieurs-mesures-d-urgence",
+      "date": "2026-04-30T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Point sur les recours contre les résultats des élections municipales en Nouvelle-Calédonie",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/point-sur-les-recours-contre-les-resultats-des-elections-municipales-en-nouvelle-caledonie",
+      "date": "2026-04-21T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie",
+      "lien": "https://www.vie-publique.fr/loi/300461-etat-de-la-nouvelle-caledonie-projet-de-loi-constitutionnelle?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-04-01T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Projet de loi portant habilitation de l'assemblée de Martinique à fixer des règles applicables sur son territoire en application de l'article 73 de la Constitution en matière d'énergie, d'eau et d'assainissement",
+      "lien": "https://www.vie-publique.fr/loi/302666-habilitation-de-la-martinique-energie-eau-assainissement-projet-de-loi?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-03-31T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 3,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Le tribunal administratif d’Amiens valide la modification de l’unité d’élevage de volailles située à Eragny-sur-Epte, Flavacourt et Sérifontaine (O...",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-d-amiens-valide-la-modification-de-l-unite-d-elevage-de-volailles-situee-a-eragny-sur-epte-flavacourt-et-serifontaine-o",
+      "date": "2026-03-24T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Le Tribunal rejette la requête du maire démissionaire de Koungou",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-rejette-la-requete-du-maire-demissionaire-de-koungou",
+      "date": "2026-02-20T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "ELECTIONS MUNICIPALES",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/elections-municipales",
+      "date": "2026-02-11T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Projet de centrale photovoltaïque sur les territoires des communes de Rosières et Versigny (Oise) : le tribunal administratif d’Amiens sursoit à...",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/projet-de-centrale-photovoltaique-sur-les-territoires-des-communes-de-rosieres-et-versigny-oise-le-tribunal-administratif-d-amiens-sursoit-a",
+      "date": "2026-02-06T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Jour de fermeture hebdomadaire des vendeurs de pain dans l’Aisne : l’interdiction d’ouvrir sept jours sur sept est illégale en l’absence de majorit...",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/jour-de-fermeture-hebdomadaire-des-vendeurs-de-pain-dans-l-aisne-l-interdiction-d-ouvrir-sept-jours-sur-sept-est-illegale-en-l-absence-de-majorit",
+      "date": "2026-02-03T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Rapport d’information sur les modalités de mise en place à Brest d’un Institut Océan de l’Université des Nations unies et d’une unité en Polynésie...",
+      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2026/rapport-d-information-sur-les-modalites-de-mise-en-place-a-brest-d-un-institut-ocean-de-l-universite-des-nations-unies-et-d-une-unite-en-polynesie",
+      "date": "2026-02-02T14:26:14.000Z",
+      "source": "Assemblée nationale — communiqués",
+      "srcType": "AN",
+      "resume": "Lors de sa réunion du 21 janvier 2026, la commission des affaires étrangères de l’Assemblée nationale a autorisé la publication du rapport sur les modalités de mise en place à Brest d’un Institut Océan de l’Université des Nations unies et d",
+      "chapo": "Lors de sa réunion du 21 janvier 2026, la commission des affaires étrangères de l’Assemblée nationale a autorisé la publication du rapport sur les modalités de mise en place à Brest d’un Institut Océan de l’Université des Nations unies et d",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Proposition de loi visant à réparer les préjudices causés par la transplantation de mineurs de La Réunion en France hexagonale de 1962 à 1984",
+      "lien": "https://www.vie-publique.fr/loi/301947-enfants-de-la-creuse-reunionnais-reparation-proposition-de-loi?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-01-29T23:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "",
+      "comp": "asn",
+      "impact": 3,
+      "territoires": [
+        "reunion"
+      ]
+    },
+    {
+      "titre": "Illégalité des aides du Pays accordées à Air Moana",
+      "lien": "https://polynesie-francaise.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/illegalite-des-aides-du-pays-accordees-a-air-moana",
+      "date": "2026-01-27T00:00:00.000Z",
+      "source": "TA de Polynésie française",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Publication de la neuvième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-neuvieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2026-01-14T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Le tribunal administratif suspend partiellement le permis de construire une usine de production de laine de roche accordé à la société Rockwool France",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-suspend-partiellement-le-permis-de-construire-une-usine-de-production-de-laine-de-roche-accorde-a-la-societe-rockwool-france",
+      "date": "2026-01-07T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpe",
+      "impact": 2,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Interruption et prolongation des délais de recours contentieux",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/interruption-et-prolongation-des-delais-de-recours-contentieux",
+      "date": "2025-12-23T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "lib",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Responsabilité des établissements de santé",
+      "lien": "https://guyane.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/responsabilite-des-etablissements-de-sante",
+      "date": "2025-12-22T00:00:00.000Z",
+      "source": "TA de Guyane",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Le tribunal administratif annule la délibération de l’assemblée de la Polynésie française décidant la création d’une commission d’enquête.",
+      "lien": "https://polynesie-francaise.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-annule-la-deliberation-de-l-assemblee-de-la-polynesie-francaise-decidant-la-creation-d-une-commission-d-enquete",
+      "date": "2025-12-18T00:00:00.000Z",
+      "source": "TA de Polynésie française",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 3,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Maintien de l’ordre public pendant les émeutes de mai/juin 2024",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/maintien-de-l-ordre-public-pendant-les-emeutes-de-mai-juin-2024",
+      "date": "2025-12-16T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "ncaledonie"
+      ]
+    },
+    {
+      "titre": "Publication du rapport de la commission d’enquête sur les dysfonctionnements obstruant l’accès à une justice adaptée aux besoins des justiciables u...",
+      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2025/publication-du-rapport-de-la-commission-d-enquete-sur-les-dysfonctionnements-obstruant-l-acces-a-une-justice-adaptee-aux-besoins-des-justiciables-u",
+      "date": "2025-12-05T14:10:39.000Z",
+      "source": "Assemblée nationale — communiqués",
+      "srcType": "AN",
+      "resume": "Ce vendredi 5 décembre 2025, la commission d’enquête sur les dysfonctionnements obstruant l’accès à une justice adaptée aux besoins des justiciables ultramarins, présidée par M. Frantz Gumbs (Les Démocrates, Saint-Martin-et-Saint-Barthélemy",
+      "chapo": "Ce vendredi 5 décembre 2025, la commission d’enquête sur les dysfonctionnements obstruant l’accès à une justice adaptée aux besoins des justiciables ultramarins, présidée par M. Frantz Gumbs (Les Démocrates, Saint-Martin-et-Saint-Barthélemy",
+      "comp": "asn",
+      "impact": 1,
+      "territoires": [
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "DIALOGUE DE DECOLONISATION : LE TRIBUNAL DECLINE LA COMPETENCE DE LA JURIDICTION ADMINISTRATIVE",
+      "lien": "https://polynesie-francaise.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/dialogue-de-decolonisation-le-tribunal-decline-la-competence-de-la-juridiction-administrative",
+      "date": "2025-12-02T00:00:00.000Z",
+      "source": "TA de Polynésie française",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Le règlement national d’urbanisme s’applique directement en cas d’une seconde annulation contentieuse d’un plan local d’urbanisme.",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-reglement-national-d-urbanisme-s-applique-directement-en-cas-d-une-seconde-annulation-contentieuse-d-un-plan-local-d-urbanisme",
+      "date": "2025-12-01T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 2,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Lutte contre le narcotrafic : la cour confirme la légalité du dispositif « 100% contrôle » en Guyane",
+      "lien": "https://bordeaux.cour-administrative-appel.fr/decisions-de-justice/dernieres-decisions/lutte-contre-le-narcotrafic-la-cour-confirme-la-legalite-du-dispositif-100-controle-en-guyane",
+      "date": "2025-11-27T00:00:00.000Z",
+      "source": "CAA de Bordeaux",
+      "srcType": "CAA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guyane"
+      ]
+    },
+    {
+      "titre": "Contrôle aux frontières : l’accès au territoire de la Martinique ne peut être refusé à un étranger titulaire d’un titre de séjour valide",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/controle-aux-frontieres-l-acces-au-territoire-de-la-martinique-ne-peut-etre-refuse-a-un-etranger-titulaire-d-un-titre-de-sejour-valide",
+      "date": "2025-11-21T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "lib",
+      "impact": 1,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Avis relatif à la répartition des compétences entre l’Etat et la Polynésie française en matière de restitution de restes humains d’origine de la Po...",
+      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/avis-relatif-a-la-repartition-des-competences-entre-l-etat-et-la-polynesie-francaise-en-matiere-de-restitution-de-restes-humains-d-origine-de-la-po",
+      "date": "2025-11-18T00:00:00.000Z",
+      "source": "Conseil d'État — avis (projets de loi)",
+      "srcType": "CE",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Avis portant sur la répartition des compétences entre l’Etat, la collectivité territoriale de Saint-Pierre-et-Miquelon et les communes en matière d...",
+      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/avis-portant-sur-la-repartition-des-competences-entre-l-etat-la-collectivite-territoriale-de-saint-pierre-et-miquelon-et-les-communes-en-matiere-d",
+      "date": "2025-11-18T00:00:00.000Z",
+      "source": "Conseil d'État — avis (projets de loi)",
+      "srcType": "CE",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Un militaire affecté en Martinique alors qu’il résidait déjà sur l’île peut bénéficier dans certains cas de l’indemnité d’installation en outre-mer",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/un-militaire-affecte-en-martinique-alors-qu-il-residait-deja-sur-l-ile-peut-beneficier-dans-certains-cas-de-l-indemnite-d-installation-en-outre-mer",
+      "date": "2025-10-28T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Zone d’activité du Touron à Saint-Martin-Vésubie : le tribunal annule le permis d’aménager",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/zone-d-activite-du-touron-a-saint-martin-vesubie-le-tribunal-annule-le-permis-d-amenager",
+      "date": "2025-10-16T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Refus de réaliser des travaux d’extension des réseaux d’eau potable et d’assainissement pour le raccordement d’une maison d’habitation à Saint-Pierre",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/refus-de-realiser-des-travaux-d-extension-des-reseaux-d-eau-potable-et-d-assainissement-pour-le-raccordement-d-une-maison-d-habitation-a-saint-pierre",
+      "date": "2025-08-28T00:00:00.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Le référé de l’Institut Pasteur de Guadeloupe contre l’attribution du marché public de contrôle sanitaire des eaux est rejeté",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-refere-de-l-institut-pasteur-de-guadeloupe-contre-l-attribution-du-marche-public-de-controle-sanitaire-des-eaux-est-rejete",
+      "date": "2025-07-28T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpa",
+      "impact": 2,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Publication de la huitième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-huitieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2025-07-07T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "La fermeture définitive de l’établissement d’enseignement privé « Génie en Herbe » est validée",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/la-fermeture-definitive-de-l-etablissement-d-enseignement-prive-genie-en-herbe-est-validee",
+      "date": "2025-06-30T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Le tribunal administratif annule les délibérations du CCAS et de la commune de Pointe-à-Pitre autorisant l’octroi de bons d’achats aux agents.",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-annule-les-deliberations-du-ccas-et-de-la-commune-de-pointe-a-pitre-autorisant-l-octroi-de-bons-d-achats-aux-agents",
+      "date": "2025-06-30T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe"
+      ]
+    },
+    {
+      "titre": "Le tribunal met fin à la délégation de service public du Port de Longoni",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-met-fin-a-la-delegation-de-service-public-du-port-de-longoni",
+      "date": "2025-06-16T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpa",
+      "impact": 1,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Avis sur l’autorité compétente pour intenter les actions contentieuses en matière de recouvrement des créances de la Polynésie française",
+      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/avis-sur-l-autorite-competente-pour-intenter-les-actions-contentieuses-en-matiere-de-recouvrement-des-creances-de-la-polynesie-francaise",
+      "date": "2025-06-04T00:00:00.000Z",
+      "source": "Conseil d'État — avis (projets de loi)",
+      "srcType": "CE",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Exposition au Chlordécone : condamnation de l’Etat à indemniser deux anciennes ouvrières agricoles démontrant un préjudice moral d’anxiété",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/exposition-au-chlordecone-condamnation-de-l-etat-a-indemniser-deux-anciennes-ouvrieres-agricoles-demontrant-un-prejudice-moral-d-anxiete",
+      "date": "2025-05-12T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "asn",
+      "impact": 1,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Rythmes scolaires",
+      "lien": "https://polynesie-francaise.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/rythmes-scolaires",
+      "date": "2025-04-29T00:00:00.000Z",
+      "source": "TA de Polynésie française",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "polynesie"
+      ]
+    },
+    {
+      "titre": "Exposition au chlordécone en Martinique et en Guadeloupe : l’Etat doit indemniser les victimes qui démontrent un préjudice moral d’anxiété",
+      "lien": "https://paris.cour-administrative-appel.fr/decisions-de-justice/dernieres-decisions/exposition-au-chlordecone-en-martinique-et-en-guadeloupe-l-etat-doit-indemniser-les-victimes-qui-demontrent-un-prejudice-moral-d-anxiete",
+      "date": "2025-03-11T00:00:00.000Z",
+      "source": "CAA de Paris",
+      "srcType": "CAA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Refonte de la carte intercommunale de l’eau : annulation de l’arrêté de répartition des usines de production d’eau potable de l’ancien SICSM",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/refonte-de-la-carte-intercommunale-de-l-eau-annulation-de-l-arrete-de-repartition-des-usines-de-production-d-eau-potable-de-l-ancien-sicsm",
+      "date": "2025-03-06T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 2,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Suspension de la campagne de recherche sismique menée dans les aires marines protégées des Antilles françaises, afin de protéger les mammifères marins",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/suspension-de-la-campagne-de-recherche-sismique-menee-dans-les-aires-marines-protegees-des-antilles-francaises-afin-de-proteger-les-mammiferes-marins",
+      "date": "2025-03-04T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 2,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Publication de la septième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-septieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2025-02-19T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Radiation des cadres des agents du CHUM ayant exercé leur droit de retrait lors de l’instauration de l’obligation vaccinale des soignants contre la...",
+      "lien": "https://martinique.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/radiation-des-cadres-des-agents-du-chum-ayant-exerce-leur-droit-de-retrait-lors-de-l-instauration-de-l-obligation-vaccinale-des-soignants-contre-la",
+      "date": "2025-02-06T00:00:00.000Z",
+      "source": "TA de Martinique",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "martinique"
+      ]
+    },
+    {
+      "titre": "Recours contre l’arrêté du préfet de Mayotte règlementant la vente de tôles en acier",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/recours-contre-l-arrete-du-prefet-de-mayotte-reglementant-la-vente-de-toles-en-acier",
+      "date": "2025-01-29T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Maison centrale de Saint-Martin-de-Ré : trois mesures à prendre pour garantir des conditions de détention dignes.",
+      "lien": "https://poitiers.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/maison-centrale-de-saint-martin-de-re-trois-mesures-a-prendre-pour-garantir-des-conditions-de-detention-dignes",
+      "date": "2024-12-17T00:00:00.000Z",
+      "source": "TA de Poitiers",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "lib",
+      "impact": 2,
+      "territoires": [
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Les conventions d’occupation temporaire de l'îlet Pinel, conclues par le Conservatoire du littoral, sont légales",
+      "lien": "https://saint-martin.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/les-conventions-d-occupation-temporaire-de-l-ilet-pinel-conclues-par-le-conservatoire-du-littoral-sont-legales",
+      "date": "2024-11-21T00:00:00.000Z",
+      "source": "TA de Saint-Martin",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Suspension de l’arrêté préfectoral prononçant la fermeture du centre nautique « Maoré Jet » pour une durée de trois mois.",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/suspension-de-l-arrete-prefectoral-prononcant-la-fermeture-du-centre-nautique-maore-jet-pour-une-duree-de-trois-mois",
+      "date": "2024-09-27T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 2,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Le tribunal administratif de Mayotte rejette les trois requêtes présentées par M. Rachadi Saindou contre les opérations électorales",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-de-mayotte-rejette-les-trois-requetes-presentees-par-m.-rachadi-saindou-contre-les-operations-electorales",
+      "date": "2024-09-13T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Rejet d’une requête tendant à l’annulation du schéma directeur territorial d’aménagement numérique adopté par la collectivité territoriale de Saint...",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/rejet-d-une-requete-tendant-a-l-annulation-du-schema-directeur-territorial-d-amenagement-numerique-adopte-par-la-collectivite-territoriale-de-saint",
+      "date": "2024-07-25T00:00:00.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpi",
+      "impact": 2,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Résiliation de la convention autorisant l’activité de fret de la collectivité territoriale via son service de transports de personnes vers Terre-Neuve",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/resiliation-de-la-convention-autorisant-l-activite-de-fret-de-la-collectivite-territoriale-via-son-service-de-transports-de-personnes-vers-terre-neuve",
+      "date": "2024-07-25T00:00:00.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Le juge des référés du tribunal administratif de Mayotte rejette le recours de M. M’Dere contre l’arrêté du préfet de Mayotte le déclarant démissio...",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-du-tribunal-administratif-de-mayotte-rejette-le-recours-de-m.-m-dere-contre-l-arrete-du-prefet-de-mayotte-le-declarant-demissio",
+      "date": "2024-07-15T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 2,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Publication de la sixième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-sixieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2024-06-28T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Le juge des référés annule la procédure de passation du marché de transports publics Caribus",
+      "lien": "https://mayotte.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-annule-la-procedure-de-passation-du-marche-de-transports-publics-caribus",
+      "date": "2024-06-05T00:00:00.000Z",
+      "source": "TA de Mayotte",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpa",
+      "impact": 2,
+      "territoires": [
+        "mayotte"
+      ]
+    },
+    {
+      "titre": "Rechercher une décision",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/rechercher-une-decision",
+      "date": "2024-03-01T17:52:24.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Publication de la cinquième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-cinquieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2024-01-22T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Publication de la quatrième lettre de jurisprudence des Tribunaux administratifs de la Guadeloupe, Saint-Barthélemy et Saint-Martin",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/publications/lettres-de-jurisprudence/publication-de-la-quatrieme-lettre-de-jurisprudence-des-tribunaux-administratifs-de-la-guadeloupe-saint-barthelemy-et-saint-martin",
+      "date": "2023-07-01T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "guadeloupe",
+        "stbarthelemy",
+        "stmartin"
+      ]
+    },
+    {
+      "titre": "Jugement 2200786 et 2201232",
+      "lien": "https://saint-barthelemy.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/jugement-2200786-et-2201232",
+      "date": "2023-03-14T00:00:00.000Z",
+      "source": "TA de Saint-Barthélemy",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stbarthelemy"
+      ]
+    },
+    {
+      "titre": "Compétence pour attribuer les autorisations d’accès aux ouvrages de génie civil destinés à accueillir les réseaux de télécommunication des opérateurs",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/competence-pour-attribuer-les-autorisations-d-acces-aux-ouvrages-de-genie-civil-destines-a-accueillir-les-reseaux-de-telecommunication-des-operateurs",
+      "date": "2022-07-28T00:00:00.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "urb",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Lettres de jurisprudence",
+      "lien": "https://la-reunion.tribunal-administratif.fr/publications/lettres-de-jurisprudence",
+      "date": "2022-01-27T01:06:01.000Z",
+      "source": "TA de La Réunion",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "reunion"
+      ]
+    },
+    {
+      "titre": "Calendrier des audiences",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/calendrier-des-audiences",
+      "date": "2022-01-27T01:05:48.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    },
+    {
+      "titre": "Conclusions des rapporteurs publics",
+      "lien": "https://saint-pierre-et-miquelon.tribunal-administratif.fr/decisions-de-justice/conclusions-des-rapporteurs-publics",
+      "date": "2022-01-27T01:05:47.000Z",
+      "source": "TA de Saint-Pierre-et-Miquelon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "",
+      "comp": "dpg",
+      "impact": 1,
+      "territoires": [
+        "stpierre"
+      ]
+    }
+  ]
 }
