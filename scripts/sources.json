@@ -243,9 +243,9 @@
       "type": "CE",
       "nom": "Conseil d'État — actualités",
       "direct": [
-        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.conseil-etat.fr%2Foutils%2Fflux-rss%2Factualites-rss",
-        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
+        "https://corsproxy.io/?url=https://www.conseil-etat.fr/outils/flux-rss/actualites-rss",
+        "https://www.conseil-etat.fr/outils/flux-rss/actualites-rss"
       ]
     },
     {
@@ -315,14 +315,6 @@
       ]
     },
     {
-      "type": "AAI",
-      "nom": "ANSSI — cybersécurité",
-      "direct": [
-        "https://www.cert.ssi.gouv.fr/feed/",
-        "https://www.ssi.gouv.fr/feed/"
-      ]
-    },
-    {
       "type": "BO",
       "nom": "BO Transition écologique",
       "direct": [
@@ -374,22 +366,6 @@
       "direct": [
         "https://www.vie-publique.fr/rapports-feeds.xml",
         "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.vie-publique.fr%2Frapports-feeds.xml"
-      ]
-    },
-    {
-      "type": "CCOMPTES",
-      "nom": "Cour des comptes — actualités",
-      "direct": [
-        "https://www.ccomptes.fr/rss/actualites",
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Factualites"
-      ]
-    },
-    {
-      "type": "CCOMPTES",
-      "nom": "Cour des comptes — publications",
-      "direct": [
-        "http://www.ccomptes.fr/rss/publications",
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fpublications"
       ]
     },
     {
@@ -470,11 +446,24 @@
       ]
     },
     {
-      "type": "CCOMPTES",
-      "nom": "Cour des comptes — général",
+      "type": "VP",
+      "nom": "CESE — travaux",
       "direct": [
-        "https://www.ccomptes.fr/rss/general",
-        "https://api.allorigins.win/raw?url=https%3A%2F%2Fwww.ccomptes.fr%2Frss%2Fgeneral"
+        "https://www.lecese.fr/rss/flux/travaux"
+      ]
+    },
+    {
+      "type": "VP",
+      "nom": "Service-public — actualités pro",
+      "direct": [
+        "https://www.service-public.gouv.fr/abonnements/rss/actu-actu-pro.rss"
+      ]
+    },
+    {
+      "type": "CEDH",
+      "nom": "CEDH — communiqués de presse",
+      "direct": [
+        "https://hudoc.echr.coe.int/app/transform/rss?library=echrfrepress&query=contentsitename:ECHR%20AND%20doctype=PR&sort=&start=0&length=20&rankingModelId=11111111-0000-0000-0000-000000000000"
       ]
     }
   ],
