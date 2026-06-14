@@ -1,1 +1,52 @@
+# ==================================================================
+# L'ŒIL DU CENTAURE — Minuterie automatique
+# Tourne chaque matin à 6h00 (heure de Paris) et après chaque push.
+# Va chercher les flux, régénère veille.json, le commit dans le dépôt.
+# Gratuit dans la limite GitHub Actions (très large pour cet usage).
+# ==================================================================
+name: Veille juridique — collecte quotidienne
 
+on:
+  schedule:
+    - cron: "0 4 * * *"      # 04h00 UTC = 06h00 Paris (été)
+  workflow_dispatch:          # bouton "lancer maintenant" dans l'onglet Actions
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write             # autorise le commit du veille.json
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v5
+
+      - name: Installer Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Lancer la collecte
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optionnel (tri IA)
+        run: node scripts/collecte.mjs
+
+      - name: Publier veille.json
+        run: |
+          git config user.name "Oeil du Centaure (bot)"
+          git config user.email "actions@users.noreply.github.com"
+          # récupérer le dernier état du dépôt SANS toucher aux fichiers qu'on vient de générer
+          cp veille.json /tmp/veille-new.json
+          cp outremer.json /tmp/outremer-new.json 2>/dev/null || true
+          git stash --include-untracked || true
+          git fetch origin main
+          git reset --hard origin/main
+          # remettre les fichiers fraîchement générés
+          cp /tmp/veille-new.json veille.json
+          cp /tmp/outremer-new.json outremer.json 2>/dev/null || true
+          git add veille.json outremer.json
+          git diff --staged --quiet && echo "Aucune modification" && exit 0
+          git commit -m "Mise à jour de la veille — $(date +'%d/%m/%Y')"
+          git push origin main
