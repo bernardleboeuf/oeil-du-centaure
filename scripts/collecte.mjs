@@ -191,18 +191,29 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","imp
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
+    let cacheWrite=0, cacheRead=0, inputNormal=0;
     const LOT = 15;  // lots plus petits : évite que la réponse JSON soit tronquée (titres UE longs non traduits)
     for(let start=0; start<items.length; start+=LOT){
       const batch = items.slice(start, start+LOT);
       const bl = batch.map((it,j)=>`${start+j}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
       const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
         headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
-        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:12000, system:sys, messages:[{role:"user",content:bl}] })});
+        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:12000, system:[{type:"text",text:sys,cache_control:{type:"ephemeral"}}], messages:[{role:"user",content:bl}] })});
       const data = await r.json();
       if(data.error){ console.error("Erreur API:", data.error.message); return null; }
       if(data.stop_reason==="max_tokens"){ console.warn("⚠ Lot "+start+" tronqué (max_tokens atteint) — certains titres peuvent rester non traduits"); }
+      // Suivi du cache : tokens écrits vs lus depuis le cache (le prompt système, répété à chaque lot)
+      if(data.usage){
+        const u=data.usage;
+        cacheWrite += u.cache_creation_input_tokens||0;
+        cacheRead  += u.cache_read_input_tokens||0;
+        inputNormal+= u.input_tokens||0;
+      }
       const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/\`\`\`json|\`\`\`/g,"").trim();
       try{ all.push(...JSON.parse(txt)); }catch(e){ console.error("Parse lot:", e.message); }
+    }
+    if(cacheRead||cacheWrite){
+      console.log(`  Cache : ${cacheRead} tokens lus (à -90%), ${cacheWrite} écrits, ${inputNormal} entrée normale`);
     }
     console.log("✓ Classement IA :", all.length, "items classés");
     return all;
