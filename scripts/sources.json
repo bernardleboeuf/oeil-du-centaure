@@ -276,13 +276,6 @@
       ]
     },
     {
-      "type": "CC",
-      "nom": "Conseil constitutionnel",
-      "direct": [
-        "https://www.conseil-constitutionnel.fr/flux/rss.xml"
-      ]
-    },
-    {
       "type": "AAI",
       "nom": "CNIL — données personnelles",
       "direct": [
@@ -309,7 +302,8 @@
       "type": "AAI",
       "nom": "ART — transports",
       "direct": [
-        "https://www.autorite-transports.fr/feed/"
+        "https://autorite-transports.fr/feed/?post_type=communiques",
+        "https://autorite-transports.fr/feed"
       ]
     },
     {
