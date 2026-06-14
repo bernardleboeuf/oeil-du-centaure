@@ -41,6 +41,15 @@ function parseFeed(xml, srcNom, srcType){
   }
   return items;
 }
+// Détecte si un titre est (resté) en anglais : présence de mots anglais courants
+// ET absence de marqueurs français évidents (accents ou petits mots FR).
+function estTitreAnglais(t){
+  if(!t) return false;
+  const s=String(t);
+  const motsEN=/\b(the|and|for|with|new|agreement|welcomes|adopts|launches|presents|customs|trade|safeguards|emissions|trading|system|cargo|smugglers|judgment|relinquishment|favour|chamber|cross-border|guidelines|safety|list|carriers|removed|added|workforce)\b/i;
+  const marqueursFR=/[àâäéèêëîïôöùûüçœ]|\b(le|la|les|des|une|un|aux|sur|dans|pour|par|du|de|et|à|en|au)\b/i;
+  return motsEN.test(s) && !marqueursFR.test(s);
+}
 function classifyKW(text){
   const t = text.toLowerCase(); let best=null, bs=0;
   for (const [c,w] of Object.entries(KW)){ const s=w.reduce((a,k)=>a+(t.includes(k)?1:0),0); if(s>bs){bs=s;best=c;} }
@@ -182,14 +191,16 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","imp
   try{
     // traiter par lots de 50 pour rester dans les limites
     const all = [];
-    for(let start=0; start<items.length; start+=25){
-      const batch = items.slice(start, start+25);
+    const LOT = 15;  // lots plus petits : évite que la réponse JSON soit tronquée (titres UE longs non traduits)
+    for(let start=0; start<items.length; start+=LOT){
+      const batch = items.slice(start, start+LOT);
       const bl = batch.map((it,j)=>`${start+j}. [${it.source}] ${it.titre}${it.resume?" — "+it.resume.slice(0,120):""}`).join("\n");
       const r = await fetch("https://api.anthropic.com/v1/messages",{method:"POST",
         headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01"},
-        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:8000, system:sys, messages:[{role:"user",content:bl}] })});
+        body: JSON.stringify({ model:"claude-haiku-4-5-20251001", max_tokens:12000, system:sys, messages:[{role:"user",content:bl}] })});
       const data = await r.json();
       if(data.error){ console.error("Erreur API:", data.error.message); return null; }
+      if(data.stop_reason==="max_tokens"){ console.warn("⚠ Lot "+start+" tronqué (max_tokens atteint) — certains titres peuvent rester non traduits"); }
       const txt = data.content.filter(b=>b.type==="text").map(b=>b.text).join("").replace(/\`\`\`json|\`\`\`/g,"").trim();
       try{ all.push(...JSON.parse(txt)); }catch(e){ console.error("Parse lot:", e.message); }
     }
@@ -220,8 +231,11 @@ function territoiresDe(it){
   return ids;
 }
 async function genererOutremer(results, juridictionsOk){
-  // 1. Filtrer toutes les décisions rattachées à au moins un territoire
-  const bruts = results.filter(it=>territoiresDe(it).length>0);
+  // 1. Filtrer les décisions rattachées à un territoire, MAIS seulement les sources françaises.
+  // On exclut les sources étrangères anglophones (Commission UE, CJUE, CEDH) : sans IA on ne traduit pas,
+  // et ces sujets ultramarins remontent de toute façon dans la une transversale (veille.json, traduit).
+  const SRC_ETRANGERE = /commission ue|cjue|cour de justice de l'ue|curia|echr|cedh/i;
+  const bruts = results.filter(it=> territoiresDe(it).length>0 && !SRC_ETRANGERE.test(it.source||""));
   // 2. Dé-doublonnage par titre
   const seen=new Set();
   let oms = bruts.filter(it=>{ const k=(it.titre||"").toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
@@ -285,8 +299,15 @@ async function main(){
   // on en garde les plus récentes par territoire, et on les classe légèrement par IA.
   await genererOutremer(results, ok.length);
 
+  // Le flux CEDH est bilingue : chaque communiqué paraît en FR et en EN. On ne garde que le FR.
+  let results2 = results.filter(it=>{
+    const estCEDH = /cedh|echr/i.test(it.source||"");
+    if(estCEDH && estTitreAnglais(it.titre||"")) return false; // version anglaise = doublon
+    return true;
+  });
+
   const seen = new Set();
-  let items = results.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
+  let items = results2.filter(it=>{ const k=it.titre.toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
   // Tri par fraîcheur (plus récent d'abord) — la fraîcheur reste la priorité d'affichage
   items.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   // diversité : max 8 items par source (évite qu'un TA noie tout)
@@ -341,6 +362,9 @@ async function main(){
       keep = tag.keep!==false;
       if(tag.titre_fr && String(tag.titre_fr).trim()) titre = String(tag.titre_fr).trim();
       if(tag.chapo_fr && String(tag.chapo_fr).trim()) chapo = String(tag.chapo_fr).trim();
+      // Filet anti-anglais : si le titre est resté en anglais (titre_fr non rempli par l'IA)
+      // mais qu'on a un chapô français, on promeut le chapô en titre pour ne jamais afficher d'anglais.
+      if(estTitreAnglais(titre) && chapo && !estTitreAnglais(chapo)){ titre = chapo; }
       profils = Array.isArray(tag.profils) ? tag.profils : [];
       secteurs = Array.isArray(tag.secteurs) ? tag.secteurs : [];
     } else {
