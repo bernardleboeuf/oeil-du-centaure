@@ -158,7 +158,9 @@
     {
       "type": "TA",
       "nom": "TA de Guyane",
-      "base": "https://guyane.tribunal-administratif.fr"
+      "direct": [
+        "https://guyane.tribunal-administratif.fr/flux-rss/vie-du-tribunal"
+      ]
     },
     {
       "type": "TA",
