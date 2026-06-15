@@ -91,7 +91,10 @@ async function tryUrl(url){
     const origin = new URL(url).origin;
     const links = [...xml.matchAll(/href=["']([^"']*(?:flux-rss|\/rss\/|flux_rss)[^"']*)["']/gi)]
                     .map(m=>m[1])
-                    .filter(l=>/decision|jurisprudence|actualit/i.test(l));
+                    .filter(l=>/decision|jurisprudence|actualit/i.test(l))
+                    // Exclure les flux NON propres à la juridiction (inter-juridictions, nationaux),
+                    // qui feraient hériter des décisions d'autres tribunaux de la mauvaise source.
+                    .filter(l=>!/toute|ensemble|national|administrative-?fr|tous-les|inter-?juridiction/i.test(l));
     const xmls = [];
     for(const l of [...new Set(links)].slice(0,6)){
       const u = l.startsWith("http") ? l : origin + (l.startsWith("/")?l:"/"+l);
@@ -113,19 +116,20 @@ async function fetchSource(src){
     candidates = src.direct;                          // URLs vérifiées (CE, CJUE, Légifrance…)
   } else {
     const paths = [
-      "/flux_rss",                          // page listant TOUS les flux → on les collecte tous (décisions + lettre de jurisprudence…)
-      "/flux-rss/dernieres-decisions",      // TA standard (Grenoble…)
+      "/flux-rss/dernieres-decisions",      // TA standard (Grenoble…) — flux PROPRE à la juridiction
       "/rss/dernieres-decisions",           // TA variante (Paris…)
       "/flux-rss/decisions-de-justice",     // CAA (Marseille…)
       "/rss/decisions-de-justice",
+      "/flux-rss/jurisprudence",
+      "/rss/jurisprudence",
       "/flux-rss",
       "/rss",
       "/feed",
-      "/flux-rss/jurisprudence",
-      "/rss/jurisprudence",
       "/flux-rss/actualites",
       "/rss/actualites",
-      "/rss/actualites-rss"                 // Conseil d'État
+      "/rss/actualites-rss",                // Conseil d'État
+      "/flux_rss"                           // EN DERNIER RECOURS : page listant tous les flux
+                                            // (risque de ramener des décisions inter-juridictions — évité tant qu'un flux propre répond)
     ];
     candidates = paths.map(p=>src.base+p);            // TA/CAA/CNDA/Cassation : variantes auto
   }
@@ -240,10 +244,9 @@ function territoiresDe(it){
   const txt = (it.titre||"")+" "+(it.resume||"");
   const ids=[];
   for(const [id,t] of Object.entries(OM_TERRITOIRES_DEF)){
-    // Priorité ABSOLUE à la source : si la juridiction est ultramarine, c'est ce territoire.
+    // Priorité à la source : si la juridiction est ultramarine, c'est ce territoire.
     if(t.src.test(src)){ ids.push(id); continue; }
-    // Sinon, on ne retient une mention dans le texte QUE si elle est très explicite
-    // (évite qu'une décision métropolitaine citant un territoire soit mal classée).
+    // Sinon, mention dans le texte seulement si très explicite.
     if(t.txt.test(txt)) ids.push(id);
   }
   return ids;
@@ -253,7 +256,16 @@ async function genererOutremer(results, juridictionsOk){
   // On exclut les sources étrangères anglophones (Commission UE, CJUE, CEDH) : sans IA on ne traduit pas,
   // et ces sujets ultramarins remontent de toute façon dans la une transversale (veille.json, traduit).
   const SRC_ETRANGERE = /commission ue|cjue|cour de justice de l'ue|curia|echr|cedh/i;
-  const bruts = results.filter(it=> territoiresDe(it).length>0 && !SRC_ETRANGERE.test(it.source||""));
+  // Le flux Guyane (vie-du-tribunal) mêle décisions et événements internes du tribunal.
+  // Filtre léger sans IA : on écarte ce qui n'est manifestement pas une décision de justice.
+  const BRUIT_VIE_TRIBUNAL = /\b(cérémonie|ceremonie|vœux|voeux|audience solennelle|installation|nomination|communiqué de presse|portes ouvertes|colloque|conférence|conference|partenariat|convention de|signature|rentrée|rentree|hommage|visite|inauguration|recrutement|stage|concours|bilan d'activité|rapport d'activité|assemblée générale)\b/i;
+  const bruts = results.filter(it=>{
+    if(territoiresDe(it).length===0) return false;
+    if(SRC_ETRANGERE.test(it.source||"")) return false;
+    // Filtre de bruit appliqué UNIQUEMENT aux sources passant par vie-du-tribunal (Guyane)
+    if(/guyane/i.test(it.source||"") && BRUIT_VIE_TRIBUNAL.test((it.titre||"")+" "+(it.resume||""))) return false;
+    return true;
+  });
   // 2. Dé-doublonnage par titre
   const seen=new Set();
   let oms = bruts.filter(it=>{ const k=(it.titre||"").toLowerCase().slice(0,80); if(seen.has(k))return false; seen.add(k); return true; });
