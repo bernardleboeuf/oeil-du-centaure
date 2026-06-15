@@ -8,7 +8,7 @@ name: Veille juridique — collecte quotidienne
 
 on:
   schedule:
-    - cron: "0 4 * * *"      # 04h00 UTC = 06h00 Paris (été)
+    - cron: "0 22 * * *"      # 22h00 UTC = 00h00 Paris (été)
   workflow_dispatch:          # bouton "lancer maintenant" dans l'onglet Actions
   push:
     branches: [ main ]
