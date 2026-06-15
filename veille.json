@@ -1,22 +1,59 @@
 {
-  "generatedAt": "2026-06-15T18:56:40.277Z",
-  "juridictionsOk": 85,
-  "count": 70,
+  "generatedAt": "2026-06-15T18:57:49.712Z",
+  "juridictionsOk": 84,
+  "count": 77,
   "items": [
     {
-      "titre": "Loi de simplification de la vie économique : censure limitée du Conseil constitutionnel preservant l'économie générale de la loi",
+      "titre": "Fraude aux aides publiques : sanction en cas de non-immatriculation au RNE",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18354?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p La loi du 30 juin 2025 contre toutes les fraudes aux aides publiques instaure une sanction à l’encontre des entreprises non-immatriculées au registre national des entreprises (RNE). /p",
+      "chapo": "La loi du 30 juin 2025 institue une sanction pour les entreprises non immatriculées au Registre national des entreprises.",
+      "comp": "dpa",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Lutte contre la fraude aux aides publiques : les mesures relatives au label RGE",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18356?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Plusieurs dispositions de la loi de lutte contre la fraude aux aides publiques concernent le label Reconnu Garant de l'Environnement (RGE) dont disposent les professionnels du bâtiment spécialisés dans les travaux de rénovation énergétiqu",
+      "chapo": "La loi de juillet 2025 encadre le label Reconnu Garant de l'Environnement pour prévenir les fraudes aux aides publiques.",
+      "comp": "dpa",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune"
+      ],
+      "secteurs": [
+        "energie",
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Loi de simplification de la vie économique : censure limitée du Conseil constitutionnel préservant l'économie générale",
       "lien": "https://www.economie.gouv.fr/daj/loi-de-simplification-de-la-vie-economique-une-censure-limitee-qui-preserve-leconomie-generale-de-la-loi",
       "date": "2026-06-04T11:17:56.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Saisi par deux groupes de plus de 60 députés, le Conseil constitutionnel a validé la grande majorité des 84 articles du projet de loi de simplification de la vie économique. Seuls 25 articles ont été totalement ou partiellement censurés, co",
-      "chapo": "Le Conseil constitutionnel valide la majorité des 84 articles de la loi de simplification de la vie économique, avec quelques censures limitées.",
+      "chapo": "Le Conseil constitutionnel censure partiellement la loi de simplification de la vie économique mais valide sa majorité, impactant la commande publique et les marchés.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat",
         "commune",
+        "etat",
         "entreprise"
       ],
       "secteurs": []
@@ -28,7 +65,7 @@
       "source": "TA de Lyon",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le TA reconnaît que le refus de subvention pour une action climatique par la préfecture méconnaît partiellement la légalité administrative.",
+      "chapo": "Le tribunal administratif annule partiellement une décision de refus de subvention climatique pour défaut de motivation.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
@@ -47,55 +84,54 @@
       "source": "CAA de Bordeaux",
       "srcType": "CAA",
       "resume": "",
-      "chapo": "La CAA valide la décision de résiliation anticipée d'une délégation de service public portuaire à Mayotte.",
+      "chapo": "La CAA de Bordeaux valide la résiliation anticipée d'une convention de délégation de service public portuaire.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
-        "commune"
+        "commune",
+        "etat"
       ],
       "secteurs": [
         "transport"
       ]
     },
     {
-      "titre": "Publication du guide sur l'accessibilité numérique pour les acheteurs publics",
+      "titre": "Le tribunal administratif de Montreuil juge illégale l'édition de manuels scolaires numériques par la région Île-de-France",
+      "lien": "https://montreuil.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-de-montreuil-juge-illegale-l-edition-de-manuels-scolaires-numeriques-par-la-region-ile-de-france",
+      "date": "2026-05-26T00:00:00.000Z",
+      "source": "TA de Montreuil",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif annule l'intervention directe d'une région dans l'édition de manuels scolaires numériques, matière relève d'une délégation ou d'un marché public régulé.",
+      "comp": "dpa",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "commune",
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Publication du guide sur l'accessibilité numérique : outil pour les acheteurs publics",
       "lien": "https://www.economie.gouv.fr/daj/publication-du-guide-sur-laccessibilite-numerique-un-outil-pratique-pour-les-acheteurs-publics",
       "date": "2026-05-21T16:56:10.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Afin d’accompagner les acheteurs publics dans la prise en compte de l'accessibilité numérique dans leurs marchés, l’Observatoire de la commande publique (OECP) publie un nouveau guide pratique consacré à l'intégration de clauses d'accessibi",
-      "chapo": "La direction des achats de Bercy publie un guide pratique pour intégrer l'accessibilité numérique dans les marchés publics.",
+      "chapo": "La DAJ Bercy publie un guide pratique pour intégrer l'accessibilité numérique dans les marchés publics.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
       "profils": [
         "commune",
         "etat",
-        "sante",
-        "bailleur"
+        "departement"
       ],
       "secteurs": [
         "numerique"
       ]
-    },
-    {
-      "titre": "Avis de préinformation — Appel d'offres : My Trade Assistant pour les services et l'investissement",
-      "lien": "https://ted.europa.eu/en/notice/-/detail/332055-2026",
-      "date": "2026-05-18T07:59:49.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p EC-TRADE/2026/OP/0014-PIN - Trade assistant for services and investment /p",
-      "chapo": "Marché public de la Commission européenne pour la fourniture de données sur l'exportation de services et d'investissements.",
-      "comp": "dpa",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ],
-      "secteurs": []
     },
     {
       "titre": "Nouvelle fiche technique sur la mise en œuvre de l'article 31 de la loi du 21 mai 2024 visant à sécuriser et à réguler l'espace numérique",
@@ -104,7 +140,7 @@
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "La direction des Affaires juridiques publie une fiche technique présentant les mesures du décret n° 2026-272 du 14 avril 2026, d’application de l’article 31 de la loi n° 2024-449 du 21 mai 2024 visant à sécuriser et à réguler l’espace numér",
-      "chapo": "La DAJ publie une fiche technique et des clauses-types pour renforcer la souveraineté des achats numériques publics en application du décret n° 2026-272.",
+      "chapo": "DAJ Bercy publie une fiche technique et des clauses-types pour renforcer la souveraineté des achats numériques dans les marchés publics.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
@@ -117,68 +153,18 @@
       ]
     },
     {
-      "titre": "Ouverture de l'annuaire dédié à la facturation électronique",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18462?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
+      "titre": "Démarchage téléphonique : les nouvelles règles",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18384?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Dans le cadre de la réforme de la facturation électronique, la direction générale des Finances publiques et l’Agence pour l'informatique financière de l'État (AIFE) viennent de mettre en ligne un annuaire visant à répertorier les entrepri",
-      "chapo": "La direction générale des Finances publiques et l'Agence ouvrent un annuaire pour faciliter la facturation électronique conformément à la réforme en cours.",
+      "resume": "p La loi contre toutes les fraudes aux aides publiques, promulguée le 30 juin 2025, comprend un volet sur le démarchage commercial par téléphone ou par voie électronique. Dans certains secteurs, ce type de démarchage est désormais stricteme",
+      "chapo": "La loi du 30 juin 2025 contre les fraudes aux aides publiques renforce la régulation du démarchage téléphonique.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Société anonyme : Un nouveau seuil pour le remplacement exceptionnel du directoire",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18447?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Dans le cadre de la loi em Attractivité /em du 13 juin 2024 visant à améliorer la compétitivité de la France, un décret d’application définit un nouveau seuil en dessous duquel une société anonyme (SA) peut remplacer le directoire par un ",
-      "chapo": "Un décret issu de la loi Attractivité du 13 juin 2024 fixe un nouveau seuil pour le remplacement exceptionnel du directoire en SA.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Nouveaux tarifs pour les timbres et les colis",
-      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A17915?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p À partir du 1 sup er /sup janvier 2026, les prix des courriers et des colis augmenteront de 7,4 % en moyenne. Ces ajustements tarifaires ont été annoncés par La Poste dans un communiqué du 28 juillet 2025. /p",
-      "chapo": "À partir du 1er janvier 2026, les prix des courriers et colis augmentent de 7,4 % en moyenne.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": [
-        "transport"
-      ]
-    },
-    {
-      "titre": "CVAE : versement de la contribution complémentaire avant le 15 septembre 2025",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18439?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Vous êtes redevable de la contribution sur la valeur ajoutée des entreprises (CVAE) ? Dans ce cas, vous devez verser la contribution complémentaire à la CVAE. /p",
-      "chapo": "Les redevables de la CVAE doivent verser leur contribution complémentaire avant le 15 septembre 2025.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
+        "etat",
         "entreprise"
       ],
       "secteurs": []
@@ -190,59 +176,25 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Proposition de nationalisation d'ArcelorMittal France pour préserver la souveraineté industrielle française.",
+      "chapo": "Proposition de loi autorisant la nationalisation du groupe sidérurgique ArcelorMittal France pour assurer la souveraineté industrielle nationale.",
       "comp": "dpe",
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
+        "etat"
       ],
       "secteurs": []
     },
     {
-      "titre": "Projet de loi portant habilitation à prendre par ordonnances les adaptations rendues nécessaires par l'entrée en application des règlements (UE) n° s 2024/1347, 2024/1348, 2024/1349, 2024/1351, 2024/1356, 2024/1358, et les dispositions nécessaires à la transposition",
+      "titre": "Projet de loi portant habilitation à prendre par ordonnances les adaptations rendues nécessaires par l'entrée en application des règlements (UE) n°s 2024/1347, 2024/1348, 2024/1349, 2024/1351, 2024/1356, 2024/1358, et les dispositions nécessaires à la transposition",
       "lien": "https://www.vie-publique.fr/loi/303243-pacte-migration-et-asile-etranger-projet-de-loi-habilitation-ordonnances?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
       "date": "2026-06-11T22:00:00.000Z",
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Projet de loi d'habilitation pour adapter la législation française aux nouveaux règlements européens de 2024 relatifs aux douanes et commerces.",
+      "chapo": "Projet de loi habilitant le gouvernement à adapter par ordonnances le droit français à plusieurs règlements européens sur le commerce électronique et les données.",
       "comp": "dpe",
       "impact": 3,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Arrêts du Tribunal dans les affaires T-1097/23 Vivendi/Commission et T-1119/23 Lagardère/Commission — concurrence",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000084407",
-      "date": "2026-06-11T07:57:00.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class=' ' T-1097/23Vivendi/Commission et T-1119/23 Lagardère/Commission br/ Concurrence br/ div class= p Concurrence : la Commission peut, sous certaines conditions, exiger la transmission de documents conservés sur des outils de commun",
-      "chapo": "Le Tribunal de l'UE rend ses arrêts dans deux affaires de droit de la concurrence opposant Vivendi et Lagardère à la Commission.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Le système d'information douanière avancée (ICS2) aide les douanes à combattre la contrebande, la fraude et la criminalité",
-      "lien": "https://taxation-customs.ec.europa.eu/news/eu-advance-cargo-information-system-ics2-helps-customs-catch-smugglers-fraudsters-and-criminal-2026-06-01_en",
-      "date": "2026-06-11T08:34:27.000Z",
-      "source": "Commission UE — Fiscalité & douanes",
-      "srcType": "DG",
-      "resume": "p ICS2 is already providing concrete benefits for customs authorities on the frontline, protecting citizens and the EU economy. ; Take a look at examples of ICS2 in action in 2025. /p",
-      "chapo": "Le système ICS2 renforce les contrôles douaniers en fournissant aux autorités une information aérienne avancée pour détecter fraudes et activités criminelles.",
-      "comp": "dpe",
-      "impact": 1,
       "keep": true,
       "profils": [
         "etat"
@@ -252,20 +204,56 @@
       ]
     },
     {
-      "titre": "Arrêt de la Cour dans l'affaire C-81/24 (Jenec) — rapprochement des législations, services bancaires",
+      "titre": "Arrêts du Tribunal dans les affaires T-1097/23 Vivendi/Commission et T-1119/23 Lagardère/Commission",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000084407",
+      "date": "2026-06-11T07:57:00.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class=' ' T-1097/23Vivendi/Commission et T-1119/23 Lagardère/Commission br/ Concurrence br/ div class= p Concurrence : la Commission peut, sous certaines conditions, exiger la transmission de documents conservés sur des outils de commun",
+      "chapo": "Le Tribunal de l'UE rend des arrêts en matière de concurrence impliquant Vivendi et Lagardère contre la Commission européenne.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Arrêt de la Cour dans l'affaire C-81/24 (Jenec)",
       "lien": "https://curia.europa.eu/site/jcms/p1_1000084406",
       "date": "2026-06-11T07:56:59.000Z",
       "source": "Cour de justice de l'UE",
       "srcType": "CJUE",
       "resume": "div class=' ' [Jenec] br/ Rapprochement des législations br/ div class= p Services bancaires : l’inscription sur une liste de sanctions des États-Unis ne suffit pas, à elle seule, pour refuser l’ouverture d’un compte /p /div /p /div",
-      "chapo": "Arrêt de la Cour de justice sur l'inscription sur une liste bancaire en matière de harmonisation législative.",
+      "chapo": "La Cour de justice se prononce en matière de rapprochement des législations sur les services bancaires et l'inscription sur liste.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Le système avancé d'information sur le fret de l'UE (ICS2) aide les douanes à attraper les contrebandiers, les fraudeurs et les criminels",
+      "lien": "https://taxation-customs.ec.europa.eu/news/eu-advance-cargo-information-system-ics2-helps-customs-catch-smugglers-fraudsters-and-criminal-2026-06-01_en",
+      "date": "2026-06-11T08:34:27.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p ICS2 is already providing concrete benefits for customs authorities on the frontline, protecting citizens and the EU economy. ; Take a look at examples of ICS2 in action in 2025. /p",
+      "chapo": "L'ICS2, système douanier d'information préalable sur les cargaisons, offre des bénéfices concrets aux autorités douanières dans la lutte contre la fraude et la criminalité.",
       "comp": "dpe",
       "impact": 1,
       "keep": true,
       "profils": [
-        "entreprise"
+        "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "transport"
+      ]
     },
     {
       "titre": "Guerre en Ukraine : 21e série de sanctions européennes contre la Russie",
@@ -274,7 +262,7 @@
       "source": "Vie-publique — actualités",
       "srcType": "VP",
       "resume": "",
-      "chapo": "L'UE adopte une nouvelle série de sanctions économiques contre la Russie dans le contexte du conflit en Ukraine.",
+      "chapo": "L'Union européenne adopte une nouvelle série de sanctions économiques contre la Russie dans le contexte du conflit en Ukraine.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
@@ -284,67 +272,99 @@
       "secteurs": []
     },
     {
-      "titre": "La Commission demande des preuves pour la nouvelle stratégie de recherche océanique",
-      "lien": "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/commission-launches-two-calls-evidence-future-ocean-and-water-research-and-innovation-strategy-2026-06-15_en",
-      "date": "2026-06-15T12:57:16.000Z",
-      "source": "Commission UE — Environnement",
+      "titre": "L'UE et la Corée du Sud signent un accord historique sur le commerce numérique",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1317",
+      "date": "2026-06-10T15:21:55.000Z",
+      "source": "Commission UE — Commerce & sanctions",
       "srcType": "DG",
-      "resume": "p The future Ocean and Water Research and Innovation (R ;I) Strategy is expected to be presented by the end of 2026. /p",
-      "chapo": "La Commission européenne collecte des preuves en vue de présenter une Stratégie pour la recherche et l'innovation océanique et aquatique d'ici fin 2026.",
-      "comp": "urb",
-      "impact": 1,
+      "resume": "p Today, the EU and the Republic of Korea signed a landmark Digital Trade Agreement (DTA) during the EU-Republic of Korea Summit held in Brussels. /p",
+      "chapo": "L'Union européenne et la Corée du Sud signent un accord de commerce numérique ambitieux lors d'un sommet bilatéral.",
+      "comp": "dpe",
+      "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
       "secteurs": [
-        "environnement",
-        "eau"
+        "numerique"
       ]
     },
     {
-      "titre": "Projets de décrets et d'arrêté adaptant le cadre juridique pour accélérer le déploiement des petits réacteurs nucléaires en France",
+      "titre": "Déclaration conjointe sur l'approfondissement de l'accord de partenariat économique UE-Afrique de l'Est et du Sud",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1327",
+      "date": "2026-06-10T09:29:16.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p A Joint Statement on the conclusion of negotiations to deepen the EU-Eastern and Southern Africa Economic Partnership Agreement. /p",
+      "chapo": "L'UE et quatre États d'Afrique de l'Est et du Sud finalisent les négociations pour approfondir leur accord économique de partenariat.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "L'UE conclut un accord économique de partenariat modernisé avec des partenaires d'Afrique subsaharienne",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1315",
+      "date": "2026-06-10T09:25:48.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p Today, the EU and four Eastern and Southern Africa (ESA) States (Comoros, Madagascar, Mauritius, and Seychelles) concluded negotiations on an enhanced Economic Partnership Agreement (EPA). /p",
+      "chapo": "L'UE et quatre États d'Afrique de l'Est et du Sud (Comores, Madagascar, Maurice, Seychelles) concluent un accord économique de partenariat modernisé.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Le Commissaire Roswall tient des discussions sur les enjeux liés aux PFAS",
+      "lien": "https://environment.ec.europa.eu/news/commissioner-roswall-holds-talks-pfas-related-challenges-2026-06-15_en",
+      "date": "2026-06-15T08:05:57.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p Discussions in Brussels addressed the widespread pollution of 'forever chemicals' and strategies for their phase-out. /p",
+      "chapo": "La Commission européenne engage un dialogue stratégique sur la pollution par les polluants éternels et les modalités de leur élimination progressive.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Projets de décrets et d'arrêté pour accélérer le déploiement en France des petits réacteurs nucléaires innovants",
       "lien": "https://www.vie-publique.fr/consultations/303654-deploiement-de-petits-reacteurs-nucleaires-et-de-reacteurs-innovants",
       "date": "2026-06-12T10:00:00.000Z",
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Consultations sur projets de textes réglementaires visant à adapter la législation existante pour accélérer le déploiement des SMR et réacteurs nucléaires innovants.",
+      "chapo": "Consultation sur la modification du cadre juridique pour faciliter l'implantation de petits réacteurs nucléaires en France.",
       "comp": "urb",
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
+        "etat"
       ],
       "secteurs": [
         "energie"
       ]
     },
     {
-      "titre": "Pêche durable dans l'UE : la Commission européenne publie son bilan annuel",
-      "lien": "https://www.vie-publique.fr/en-bref/303562-peche-durable-dans-lue-la-commission-europeenne-publie-son-bilan-annuel?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-06-12T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Publication du rapport annuel de la Commission européenne sur la politique de pêche durable et sa mise en œuvre.",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [],
-      "secteurs": [
-        "agriculture"
-      ]
-    },
-    {
-      "titre": "Commission accueille l'accord du Conseil renforçant le mécanisme d'ajustement carbone aux frontières",
+      "titre": "La Commission se félicite de l'accord du Conseil sur le renforcement du mécanisme d'ajustement carbone aux frontières",
       "lien": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en",
       "date": "2026-06-12T12:56:55.000Z",
       "source": "Commission UE — Fiscalité & douanes",
       "srcType": "DG",
       "resume": "p The European Commission welcomes the Council agreement to extend the Carbon Border Adjustment Mechanism (CBAM) to specific downstream goods and reinforce existing anti-circumvention safeguards. /p",
-      "chapo": "La Commission UE accueille l'accord du Conseil pour étendre le mécanisme d'ajustement carbone aux frontières (MACF) à davantage de secteurs.",
+      "chapo": "Le Conseil approuve l'extension du mécanisme carbone aux frontières (MACF) à de nouveaux secteurs.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -358,18 +378,19 @@
       ]
     },
     {
-      "titre": "Projet de décret d'expérimentation du régime réglementaire d'équilibre de la fertilisation et de gestion de l'azote en Bretagne",
+      "titre": "Projet de décret expérimental d'équilibre de la fertilisation et gestion de l'azote en Bretagne",
       "lien": "https://www.vie-publique.fr/consultations/303625-equilibre-de-la-fertilisation-et-de-gestion-de-lazote-en-bretagne",
       "date": "2026-06-12T10:00:00.000Z",
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Consultation publique sur un décret d'expérimentation réglementaire en Bretagne supprimant le plan prévisionnel de fumure et introduisant des mesures de reliquats d'azote.",
+      "chapo": "Consultation sur un décret expérimental de régulation agronomique et environnementale de l'azote en Bretagne.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
       "profils": [
         "commune",
+        "departement",
         "etat"
       ],
       "secteurs": [
@@ -384,9 +405,28 @@
       "source": "TA de Rouen",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Décision du tribunal administratif de Rouen sur la protection d'un site Natura 2000 marin.",
+      "chapo": "Décision du tribunal administratif sur la protection environnementale d'un site Natura 2000 marin.",
       "comp": "urb",
       "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune"
+      ],
+      "secteurs": [
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Pêche durable dans l'UE : la Commission européenne publie son bilan annuel",
+      "lien": "https://www.vie-publique.fr/en-bref/303562-peche-durable-dans-lue-la-commission-europeenne-publie-son-bilan-annuel?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-06-12T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Rapport d'évaluation de la Commission sur la mise en œuvre de la politique commune de la pêche et la durabilité des ressources halieutiques.",
+      "comp": "urb",
+      "impact": 1,
       "keep": true,
       "profils": [
         "etat"
@@ -396,53 +436,66 @@
       ]
     },
     {
-      "titre": "La Commission salue l'accord sur les garanties clés du nouveau système d'échange de quotas d'émission pour les bâtiments et le transport routier",
+      "titre": "L'UE et la République de Corée renforcent leur partenariat stratégique par de nouveaux domaines de coopération",
+      "lien": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1325",
+      "date": "2026-06-11T15:12:18.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p The EU and the Republic of Korea have launched a High-Level Energy Dialogue to coordinate efforts on energy security, economic resilience, and the transition to clean energy. /p",
+      "chapo": "Lancement d'un dialogue énergétique de haut niveau entre l'UE et la Corée du Sud pour coordonner la sécurité énergétique et les transitions.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "energie"
+      ]
+    },
+    {
+      "titre": "Déverrouillez votre puissance : nouvelle campagne de l'UE pour aider les citoyens à mieux comprendre et exercer leurs droits énergétiques",
+      "lien": "https://energy.ec.europa.eu/news/unlock-your-power-new-eu-campaign-help-citizens-better-understand-and-use-their-energy-rights-2026-06-11_en",
+      "date": "2026-06-11T14:44:34.000Z",
+      "source": "Commission UE — Énergie",
+      "srcType": "DG",
+      "resume": "p On 11 June the European Commission launched 'Unlock Your Power! Your energy. Your rights. Your choice.' - a new awareness-raising campaign designed to improve citizens’ understanding of their energy consumer rights. /p",
+      "chapo": "Campagne européenne d'information destinée à renforcer la connaissance et l'exercice des droits des consommateurs en matière d'énergie.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [],
+      "secteurs": [
+        "energie"
+      ]
+    },
+    {
+      "titre": "La Commission salue l'accord sur les garde-fous clés du nouveau système d'échange de quotas pour les bâtiments et le transport routier",
       "lien": "https://climate.ec.europa.eu/news-other-reads/news/commission-welcomes-agreement-key-safeguards-new-emissions-trading-system-buildings-and-road-2026-06-11_en",
       "date": "2026-06-11T09:43:39.000Z",
       "source": "Commission UE — Climat",
       "srcType": "DG",
       "resume": "p The Commission welcomes a provisional agreement to strengthen safeguards for the new ETS2 carbon market covering buildings and road transport. The measures will enhance price stability, boost predictability for citizens and investors and ",
-      "chapo": "Accord provisoire sur le renforcement des garanties du marché du carbone ETS2 couvrant les bâtiments et les transports routiers.",
+      "chapo": "La Commission européenne accueille favorablement un accord provisoire renforçant les garde-fous du nouvel ETS2 couvrant les marchés du carbone pour le bâtiment et le transport routier.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
         "etat",
-        "entreprise"
+        "commune"
       ],
       "secteurs": [
-        "energie",
-        "transport"
+        "energie"
       ]
     },
     {
-      "titre": "Nouvelles directives pour améliorer la planification de la mobilité urbaine durable en Europe",
+      "titre": "Nouvelles lignes directrices pour améliorer la planification durable de la mobilité urbaine en Europe",
       "lien": "https://transport.ec.europa.eu/news-events/news/new-guidelines-improve-eu-sustainable-urban-mobility-planning-2026-06-11_en",
       "date": "2026-06-11T06:10:10.000Z",
       "source": "Commission UE — Transports",
       "srcType": "DG",
       "resume": "p The third edition (2026) of the Sustainable Urban Mobility Planning (SUMP) Guidelines will provide cities across Europe with improved support to plan, develop and implement sustainable urban mobility. /p",
-      "chapo": "Publication de la troisième édition des Directives pour une planification de la mobilité urbaine durable (SUMP) 2026 à destination des villes.",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune"
-      ],
-      "secteurs": [
-        "transport",
-        "amenagement"
-      ]
-    },
-    {
-      "titre": "Projet de complexe religieux à Saint-Pierre-de-Colombier (Ardèche) : le préfet pouvait suspendre la poursuite des travaux pour protéger une espèce",
-      "lien": "https://lyon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/projet-de-complexe-religieux-a-saint-pierre-de-colombier-ardeche-le-prefet-pouvait-suspendre-la-poursuite-des-travaux-pour-proteger-une-espece",
-      "date": "2026-06-11T00:00:00.000Z",
-      "source": "TA de Lyon",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Lyon reconnaît au préfet le pouvoir de suspendre des travaux de construction pour protéger une espèce protégée.",
+      "chapo": "La Commission publie la troisième édition (2026) des lignes directrices sur la planification durable de la mobilité urbaine (SUMP) à destination des villes européennes.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -451,41 +504,70 @@
         "etat"
       ],
       "secteurs": [
+        "transport",
         "environnement"
       ]
     },
     {
-      "titre": "Aménagement du tour du Cap d'Antibes : le maire devra réexaminer la demande de l'association Choisir le vélo",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/amenagement-du-tour-du-cap-d-antibes-le-maire-devra-reexaminer-la-demande-de-l-association-choisir-le-velo",
-      "date": "2026-06-11T00:00:00.000Z",
-      "source": "TA de Nice",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Nice ordonne au maire de réexaminer une demande d'association relative à un projet d'aménagement urbain.",
-      "comp": "urb",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "commune"
-      ],
-      "secteurs": [
-        "amenagement"
-      ]
-    },
-    {
-      "titre": "Le salarié malade durant ses vacances peut reporter ces jours",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18456?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
+      "titre": "L'obligation de l'employeur s'étend-elle aux locaux des sociétés où intervient le salarié ?",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18393?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p La Cour de cassation vient de confirmer dans un arrêt que le salarié malade pendant ses congés payés a le droit de les reporter. /p",
-      "chapo": "La Cour de cassation confirme que le salarié malade pendant ses congés payés a le droit de les reporter.",
+      "resume": "p La Cour de cassation, dans un arrêt du 11 juin 2025 publié au bulletin, précise les contours de l’obligation de sécurité de l’employeur vis-à-vis de son salarié. /p",
+      "chapo": "La Cour de cassation précise que l'obligation de sécurité de l'employeur s'applique aussi dans les locaux tiers où travaille le salarié.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
       "profils": [
         "entreprise"
       ],
+      "secteurs": []
+    },
+    {
+      "titre": "Du nouveau pour les salariés engagés dans un parcours de PMA ou d'adoption",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18383?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p La loi publiée au em Journal officiel /em du 1 sup er /sup juillet 2025 vise à protéger d'éventuelles discriminations au travail les personnes engagées dans un projet parental de PMA ou d'adoption. Désormais, des autorisations d'absence v",
+      "chapo": "La loi du 1er juillet 2025 protège les salariés en parcours de PMA ou d'adoption contre les discriminations.",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Obligation de sécurité : l'employeur doit réagir dès qu'il a connaissance du mal-être du salarié",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18380?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p L’employeur qui prend les mesures appropriées pour protéger la santé de son salarié dès qu’il a pris connaissance de ses difficultés ne manque pas à son obligation de sécurité. C’est ce que la Cour de cassation indique dans un arrêt rendu",
+      "chapo": "L'employeur qui connaît un mal-être salarié doit prendre immédiatement les mesures appropriées pour protéger la santé.",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Tenue vestimentaire au travail : quelles sont les règles ?",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18391?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Puis-je porter un short sur mon lieu de travail durant une canicule ? Mon employeur peut-il m’imposer une tenue ? En principe, la tenue vestimentaire relève de la liberté individuelle du salarié. Mais selon le Code du travail, l’employeur",
+      "chapo": "Un employeur peut imposer une tenue professionnelle mais doit respecter les limites liées à la santé et au bien-être du salarié.",
+      "comp": "fps",
+      "impact": 1,
+      "keep": true,
+      "profils": [],
       "secteurs": []
     },
     {
@@ -495,7 +577,7 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi transposant l'avenant n°3 au protocole d'accord sur l'assurance chômage, modifiant les règles d'indemnisation.",
+      "chapo": "Loi de transposition du troisième avenant à l'accord sur l'assurance chômage, modifiant les règles de cotisation et d'indemnisation.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -503,51 +585,52 @@
         "etat",
         "entreprise"
       ],
-      "secteurs": [
-        "social"
-      ]
+      "secteurs": []
     },
     {
-      "titre": "Évolutions et perspectives des retraites en France - Rapport annuel du Conseil d'orientation des retraites - Juin 2026",
+      "titre": "Évolutions et perspectives des retraites en France - Rapport annuel du Conseil d'orientation des retraites",
       "lien": "https://www.vie-publique.fr/rapport/303623-evolutions-et-perspectives-des-retraites-en-france-juin-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
       "date": "2026-06-10T22:00:00.000Z",
       "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Le COR publie son rapport annuel 2026 analysant l'équilibre et les perspectives du système de retraite français.",
-      "comp": "fps",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "departement"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Le dialogue social et la négociation collective soulignés comme outils fondamentaux pour gérer la transformation",
-      "lien": "https://employment-social-affairs.ec.europa.eu/news/social-dialogue-and-collective-bargaining-highlighted-fundamental-tools-manage-transformation-2026-06-03_en",
-      "date": "2026-06-08T09:51:47.000Z",
-      "source": "Commission UE — Emploi & social",
-      "srcType": "DG",
-      "resume": "p The 2026 European Semester Spring Package, adopted on 3 June 2026 by the European Commission, spotlights social dialogue and collective bargaining as crucial for helping workers and businesses adapt to change. /p",
-      "chapo": "Le Paquet du semestre européen 2026 met en avant le dialogue social et la négociation collective face aux transformations économiques.",
+      "chapo": "Le Conseil d'orientation des retraites publie son rapport annuel analysant les évolutions et perspectives du système de retraite français.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "social"
+      ]
     },
     {
-      "titre": "Le paquet du semestre printemps 2026 fixe des orientations sur des marchés du travail plus équitables et une protection sociale améliorée",
+      "titre": "Le dialogue social et la négociation collective mis en avant comme outils fondamentaux de la transformation",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/social-dialogue-and-collective-bargaining-highlighted-fundamental-tools-manage-transformation-2026-06-03_en",
+      "date": "2026-06-08T09:51:47.000Z",
+      "source": "Commission UE — Emploi & social",
+      "srcType": "DG",
+      "resume": "p The 2026 European Semester Spring Package, adopted on 3 June 2026 by the European Commission, spotlights social dialogue and collective bargaining as crucial for helping workers and businesses adapt to change. /p",
+      "chapo": "Le Paquet du Semestre européen printemps 2026 souligne l'importance du dialogue social structuré pour gérer les transitions économiques et environnementales.",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "social"
+      ]
+    },
+    {
+      "titre": "Paquet de printemps 2026 du Semestre européen : orientations sur des marchés du travail plus justes et une meilleure protection sociale",
       "lien": "https://employment-social-affairs.ec.europa.eu/news/2026-spring-semester-package-sets-out-guidance-fairer-labour-markets-and-improved-social-protection-2026-06-03_en",
       "date": "2026-06-03T12:24:51.000Z",
       "source": "Commission UE — Emploi & social",
       "srcType": "DG",
       "resume": "p The 2026 European Semester Spring Package presents new guidelines regarding employment and social policies, with recommendations on human capital (investing in people and their skills), improving job quality and reducing poverty. /p",
-      "chapo": "Le semestre européen printemps 2026 émet de nouvelles recommandations sur l'emploi et les politiques sociales applicables aux États membres.",
+      "chapo": "Le Semestre européen 2026 publie des recommandations de politique d'emploi et de protection sociale pour les États membres.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -563,7 +646,7 @@
       "source": "CAA de Versailles",
       "srcType": "CAA",
       "resume": "",
-      "chapo": "La Cour administrative d'appel de Versailles confirme la sanction disciplinaire d'un policier ayant blessé un manifestant.",
+      "chapo": "La CAA de Versailles confirme la sanction disciplinaire d'un policier pour usage excessif de la force lors de manifestations.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -573,19 +656,35 @@
       "secteurs": []
     },
     {
-      "titre": "Un livret destiné aux employeurs pour aider les travailleurs pauvres",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18441?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Afin de lutter efficacement contre la précarité dont peuvent souffrir certains salariés en situation de pauvreté, un livret destiné aux entreprises présente les actions à mettre en œuvre pour améliorer leur prise en charge. /p",
-      "chapo": "Un livret aide les employeurs à soutenir les salariés en situation de pauvreté et de précarité.",
-      "comp": "asn",
+      "titre": "Prétendue démission d'un conseiller municipal de Marignane",
+      "lien": "https://marseille.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/pretendue-demission-d-un-conseiller-municipal-de-marignane",
+      "date": "2026-04-29T00:00:00.000Z",
+      "source": "TA de Marseille",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Contentieux sur le statut d'un conseiller municipal concernant une démission contestée.",
+      "comp": "fps",
       "impact": 1,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
+        "commune"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "La parole de l'enfant devant la justice : le point en six questions",
+      "lien": "https://www.vie-publique.fr/questions-reponses/303614-la-parole-de-lenfant-devant-la-justice-le-point-en-6-questions?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-06-14T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Synthèse des règles de recueil et de valorisation du témoignage de l'enfant dans les procédures judiciaires civiles et pénales.",
+      "comp": "asn",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "departement",
+        "etat"
       ],
       "secteurs": [
         "social"
@@ -598,13 +697,14 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi créant des droits et mesures d'accompagnement pour les parents d'enfants gravement malades ou en situation de handicap.",
+      "chapo": "Loi instituant des droits et allocations spécifiques aux parents d'enfants atteints de pathologies graves pour faciliter leur prise en charge.",
       "comp": "asn",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
         "departement",
-        "sante"
+        "sante",
+        "etat"
       ],
       "secteurs": [
         "social",
@@ -618,53 +718,16 @@
       "source": "Ministère de la Justice — actualités",
       "srcType": "MIN",
       "resume": "span class=\" --name-title --type-string --label-hidden\" Le tableau de suivi des mineurs non accompagnés /span div class=\"clearfix text-formatted --name- -formatted-longtext --type-text-long --label-hidden field__item\" p Chaque semaine, retr",
-      "chapo": "Mise à disposition d'un outil de suivi des mineurs non accompagnés par le Ministère de la Justice.",
+      "chapo": "Présentation du dispositif de monitoring opérationnel des mineurs étrangers non accompagnés par les services de l'État.",
       "comp": "asn",
       "impact": 1,
       "keep": true,
       "profils": [
-        "departement"
-      ],
-      "secteurs": [
-        "social"
-      ]
-    },
-    {
-      "titre": "Mieux prévenir, mieux dépister et mieux prendre en charge la maladie rénale chronique",
-      "lien": "https://www.vie-publique.fr/rapport/303629-prevention-et-prise-en-charge-en-charge-de-la-maladie-renale-chronique?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
-      "date": "2026-06-11T22:00:00.000Z",
-      "source": "Vie-publique — rapports",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Rapport sur les stratégies de prévention, dépistage et prise en charge de la maladie rénale chronique.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante",
-        "departement"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "Revue de dépenses sur les prescriptions en ville et à l'hôpital",
-      "lien": "https://www.vie-publique.fr/rapport/303633-revue-de-depenses-sur-les-prescriptions-en-ville-et-lhopital-igas-igf?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
-      "date": "2026-06-11T22:00:00.000Z",
-      "source": "Vie-publique — rapports",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Revue d'évaluation des dépenses liées aux prescriptions médicales en ambulatoire et secteur hospitalier.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante",
+        "departement",
         "etat"
       ],
       "secteurs": [
-        "sante"
+        "social"
       ]
     },
     {
@@ -674,33 +737,32 @@
       "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Analyse du fonctionnement et de la gestion du fonds d'intervention régional par les agences régionales de santé.",
+      "chapo": "Analyse fonctionnelle et managériale du fonds d'intervention régional piloté par les agences régionales de santé.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
       "profils": [
         "sante",
-        "departement",
-        "etat"
+        "departement"
       ],
       "secteurs": [
         "sante"
       ]
     },
     {
-      "titre": "Arrêt C.P. c. Espagne — hospitalisation d'office pour accouchement",
+      "titre": "Arrêt C.P. c. Espagne - Décision d'un tribunal national autorisant l'hospitalisation d'office de la requérante pour accoucher",
       "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8559885-12166285\"]}",
       "date": "2026-06-11T00:00:00.000Z",
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "Arrêt de la CEDH sur l'hospitalisation d'office d'une femme enceinte ordonnée par un tribunal national.",
+      "chapo": "La Cour européenne des droits de l'homme statue sur les garanties procédurales et droits fondamentaux relatifs à une hospitalisation d'office lors d'un accouchement en Espagne.",
       "comp": "asn",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
         "sante",
-        "departement"
+        "etat"
       ],
       "secteurs": [
         "sante"
@@ -713,7 +775,7 @@
       "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Rapport proposant trois scénarios de réforme du système des dépassements d'honoraires médicaux en France.",
+      "chapo": "Rapport explorant différents scénarios de réforme du régime des dépassements d'honoraires dans le système de santé français.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
@@ -726,13 +788,13 @@
       ]
     },
     {
-      "titre": "Commission approuve le Plan climatique social de la Lituanie pour soutenir les ménages vulnérables et micro-entreprises",
+      "titre": "La Commission approuve le Plan Climatique Social lituanien de 884 millions d'euros",
       "lien": "https://employment-social-affairs.ec.europa.eu/news/commission-endorses-lithuanias-eu884-million-social-climate-plan-support-vulnerable-households-and-2026-06-05_en",
       "date": "2026-06-05T10:51:10.000Z",
       "source": "Commission UE — Emploi & social",
       "srcType": "DG",
       "resume": "p The European Commission has adopted Lithuania’s Social Climate Plan, the second one under the new Social Climate Fund. /p",
-      "chapo": "La Commission approuve le Plan climatique social lituanien de 884 millions d'euros du Fonds pour une transition juste climatique.",
+      "chapo": "La Commission européenne adopte le deuxième Plan Climatique Social visant à soutenir les ménages vulnérables et PME dans la transition bas-carbone.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
@@ -741,17 +803,18 @@
         "departement"
       ],
       "secteurs": [
-        "social"
+        "social",
+        "energie"
       ]
     },
     {
-      "titre": "Alternatives au logement en nature pour les demandeurs de protection internationale : étude du Réseau européen des migrations",
+      "titre": "Examen REM sur les alternatives à l'hébergement en nature pour les demandeurs de protection internationale",
       "lien": "https://home-affairs.ec.europa.eu/news/emn-inform-examines-alternatives-providing-housing-kind-applicants-international-protection-2026-06-04_en",
       "date": "2026-06-04T12:20:05.000Z",
       "source": "Commission UE — Migration & asile",
       "srcType": "DG",
       "resume": "p From financial allowances to service provision and monitoring, find out how EMN Member and Observer countries, as well as Norway and Serbia are using alternatives to in‑kind housing to support applicants for international protection. /p",
-      "chapo": "Le Réseau européen des migrations examine les modalités alternatives au logement en nature (allocations, services, suivi) pour les demandeurs d'asile.",
+      "chapo": "Le Réseau européen des migrations analyse les alternatives à l'hébergement en nature pour demandeurs de protection (allocations, services, suivi).",
       "comp": "asn",
       "impact": 2,
       "keep": true,
@@ -764,64 +827,74 @@
       ]
     },
     {
-      "titre": "La Commission accueille l'accord historique sur les droits révisés des passagers aériens",
+      "titre": "Conseil d'État — Avis sur un projet de loi relatif à la protection des enfants",
+      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-relatif-a-la-protection-des-enfants2",
+      "date": "2026-05-18T00:00:00.000Z",
+      "source": "Conseil d'État — avis (projets de loi)",
+      "srcType": "CE",
+      "resume": "",
+      "chapo": "Le Conseil d'État rend un avis sur un projet de loi concernant la protection des enfants.",
+      "comp": "asn",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "departement",
+        "etat",
+        "sante"
+      ],
+      "secteurs": [
+        "social"
+      ]
+    },
+    {
+      "titre": "Centre pénitentiaire de Baie-Mahault : le tribunal administratif ordonne l'exécution de plusieurs mesures d'urgence",
+      "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/centre-penitentiaire-de-baie-mahault-le-tribunal-administratif-ordonne-l-execution-de-plusieurs-mesures-d-urgence",
+      "date": "2026-04-30T00:00:00.000Z",
+      "source": "TA de Guadeloupe",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Guadeloupe ordonne des mesures d'urgence pour améliorer les conditions de détention en prison.",
+      "comp": "asn",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "La Commission accueille un accord majeur sur la révision des droits des passagers aériens",
       "lien": "https://transport.ec.europa.eu/news-events/news/commission-welcomes-landmark-agreement-revised-air-passenger-rights-2026-06-15_en",
       "date": "2026-06-15T16:57:23.000Z",
       "source": "Commission UE — Transports",
       "srcType": "DG",
       "resume": "p The Commission welcomes the political agreement reached by the European Parliament and the Council of the EU on the revision of EU air passenger rights. /p",
-      "chapo": "Un accord politique historique entre le Parlement européen et le Conseil réforme les droits des passagers aériens.",
+      "chapo": "Accord politique entre Parlement et Conseil sur la révision des droits des passagers aériens, renforçant la protection des voyageurs.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
       "profils": [
-        "entreprise",
-        "etat"
+        "etat",
+        "entreprise"
       ],
       "secteurs": [
         "transport"
       ]
     },
     {
-      "titre": "Décisions du collège de la Grande Chambre - juin 2026",
-      "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8564663-12174845\"]}",
-      "date": "2026-06-15T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "Publication des décisions rendues par la Grande Chambre de la Cour européenne des droits de l'homme en juin 2026.",
+      "titre": "Proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat",
+      "lien": "https://www.vie-publique.fr/loi/302835-etrangers-dangereux-retention-proposition-de-loi-dite-philippine?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-06-14T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Texte législatif renforçant les pouvoirs de rétention administrative et les dispositifs préventifs contre la menace terroriste.",
       "comp": "lib",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
-      "profils": [],
-      "secteurs": []
-    },
-    {
-      "titre": "Résumé hebdomadaire des mesures provisoires (semaine du 1er au 5 juin 2026)",
-      "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8563763-12172949\"]}",
-      "date": "2026-06-15T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "Publication régulière de la Cour européenne des droits de l'homme sur les mesures provisoires ordonnées durant la semaine.",
-      "comp": "lib",
-      "impact": 1,
-      "keep": true,
-      "profils": [],
-      "secteurs": []
-    },
-    {
-      "titre": "Communiqué hebdomadaire sur les mesures provisoires (semaine du 1er au 5 juin 2026)",
-      "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8563766-12172955\"]}",
-      "date": "2026-06-15T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "Publication régulière de la Cour européenne des droits de l'homme sur les mesures provisoires ordonnées durant la semaine.",
-      "comp": "lib",
-      "impact": 1,
-      "keep": true,
-      "profils": [],
+      "profils": [
+        "etat"
+      ],
       "secteurs": []
     },
     {
@@ -831,43 +904,13 @@
       "source": "Vie-publique — actualités",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Analyse des moyens et procédures judiciaires pour le traitement des violences sexuelles devant la justice pénale.",
+      "chapo": "Analyse des dispositifs procéduraux et des ressources judiciaires dédiées à l'action pénale en matière de violences sexuelles.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
-      "secteurs": []
-    },
-    {
-      "titre": "Proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat",
-      "lien": "https://www.vie-publique.fr/loi/302835-etrangers-dangereux-retention-proposition-de-loi-dite-philippine?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
-      "date": "2026-06-14T22:00:00.000Z",
-      "source": "Vie-publique — lois",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Projet législatif renforçant les pouvoirs de rétention administrative et les mesures de prévention du terrorisme.",
-      "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "La parole de l'enfant devant la justice : le point en six questions",
-      "lien": "https://www.vie-publique.fr/questions-reponses/303614-la-parole-de-lenfant-devant-la-justice-le-point-en-6-questions?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-06-14T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Clarifications sur le régime juridique et procédural de la parole des enfants dans les contentieux judiciaires.",
-      "comp": "lib",
-      "impact": 1,
-      "keep": true,
-      "profils": [],
       "secteurs": []
     },
     {
@@ -877,7 +920,7 @@
       "source": "Vie-publique — actualités",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Entrée en vigueur du Pacte européen réformant le cadre juridique de l'asile et de la migration pour les États membres.",
+      "chapo": "Présentation du cadre législatif européen entré en application régissant l'asile, la migration et le contrôle des frontières extérieures.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
@@ -893,7 +936,7 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi reconnaissant la responsabilité de l'État et établissant un régime d'indemnisation pour les victimes de la pollution au chlordécone.",
+      "chapo": "Loi reconnaissant la responsabilité de l'État et instituting un régime d'indemnisation pour les victimes de la pollution au chlordécone.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
@@ -905,15 +948,79 @@
       ]
     },
     {
-      "titre": "Le Pacte sur la migration et l'asile entre en application : quels changements ?",
+      "titre": "Les nouvelles règles migratoires et d'asile entrent en application : qu'est-ce qui change ?",
       "lien": "https://home-affairs.ec.europa.eu/news/new-migration-and-asylum-rules-enter-application-what-changing-2026-06-12_en",
       "date": "2026-06-12T13:18:59.000Z",
       "source": "Commission UE — Migration & asile",
       "srcType": "DG",
       "resume": "p On 12 June, the Pact on Migration and Asylum entered into application, overhauling the EU's migration and asylum system. Now that the two-year transition period needed to implement the 10 legislative acts has ended, what changes can we ex",
-      "chapo": "Entrée en vigueur le 12 juin du Pacte UE sur la migration et l'asile restructurant le régime européen de droit des étrangers et des procédures d'asile.",
+      "chapo": "Le Pacte sur la migration et l'asile de l'UE entre en application le 12 juin, restructurant en profondeur le système européen.",
       "comp": "lib",
       "impact": 3,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Arrêt Congrégation chrétienne des Témoins de Jéhovah c. Italie - Impossibilité pour une association religieuse de conclure un accord avec l'État",
+      "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8559878-12166278\"]}",
+      "date": "2026-06-11T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "La Cour européenne des droits de l'homme statue sur le droit d'une association religieuse de conclure un accord avec l'État italien en matière de statut et de reconnaissance.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Rapport de la Commission UE sur la mise en œuvre du Pacte sur la migration et l'asile",
+      "lien": "https://home-affairs.ec.europa.eu/news/commission-reports-progress-implementing-pact-migration-and-asylum-2026-05-08_en",
+      "date": "2026-06-04T12:59:50.000Z",
+      "source": "Commission UE — Migration & asile",
+      "srcType": "DG",
+      "resume": "p On 8 May 2026, the Commission published a report on the state of play on the Pact on Migration and Asylum's implementation, showing that Member States have significantly advanced in implementing the Pact. However, continuous continuous ef",
+      "chapo": "La Commission européenne publie un rapport bilan sur l'application du Pacte migration et asile, détaillant les avancées et défis dans chaque État membre.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Conclusions de l'avocat général dans l'affaire C-41/25 (Espace de liberté, sécurité et justice)",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000084236",
+      "date": "2026-06-04T07:56:43.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class=' ' Orsay br/ Espace de liberté, sécurité et justice br/ div class= p Avocat général Norkus : un État membre ne peut pas opposer l’immunité de juridiction à l’exercice de la compétence des juridictions de l’État d’ouverture de la ",
+      "chapo": "L'avocat général Norkus rend ses conclusions dans l'affaire C-41/25 portant sur l'espace de liberté, sécurité et justice de l'UE.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Arrêt de la Cour de justice dans l'affaire C-560/24 [Besthame] : citoyenneté européenne et enquête préalable",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000084204",
+      "date": "2026-06-04T07:24:01.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class=' ' [Besthame] br/ Citoyenneté européenne br/ div class= p Citoyenneté de l’Union : un État membre peut enquêter sur une fraude liée à un mariage de complaisance et en constater l’existence même après l’acquisition de sa nationali",
+      "chapo": "La Cour de justice se prononce sur la capacité d'un État membre à enquêter sur la citoyenneté européenne d'une personne.",
+      "comp": "lib",
+      "impact": 2,
       "keep": true,
       "profils": [
         "etat"
@@ -927,12 +1034,11 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "La CNIL vous propose de décrypter un sujet ou une actualité en lien avec la protection des données à travers une série de webinaires. Retrouvez ce nouvel épisode consacré aux pixels de suivi.",
-      "chapo": "La CNIL présente ses recommandations sur les pixels de suivi dans les courriels pour la protection des données.",
+      "chapo": "La CNIL présente ses recommandations sur les pixels de suivi dans les courriels électroniques et la protection des données.",
       "comp": "dpi",
       "impact": 1,
       "keep": true,
       "profils": [
-        "etat",
         "entreprise"
       ],
       "secteurs": [
@@ -946,7 +1052,7 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Proposition de loi modernisant les contrats d'édition musicale et simplifiant les exceptions au droit d'auteur pour les personnes handicapées.",
+      "chapo": "Proposition de loi modernisant le contrat d'édition, encadrant les pratiques contractuelles et élargissant l'exception au droit d'auteur pour l'accessibilité aux personnes handicapées.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -964,13 +1070,12 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Lors de sa dernière session plénière, le CEPD a rencontré Michael McGrath, commissaire européen chargé de la démocratie, de la justice, de l'État de droit et de la protection des consommateurs. Par ailleurs, le CEPD a adopté un ; ;modèle co",
-      "chapo": "Le Comité européen de la protection des données adopte un modèle standardisé pour la notification des violations de données personnelles.",
+      "chapo": "Le Comité européen de la protection des données adopte un modèle harmonisé pour notifier les violations de données personnelles.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
-        "entreprise"
+        "etat"
       ],
       "secteurs": [
         "numerique"
@@ -983,7 +1088,7 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Prospection commerciale, messages d’information… les entreprises échangent régulièrement avec leurs prospects et leurs clients. Selon les cas, les personnes doivent soit donner leur accord préalable, soit pouvoir s’opposer facilement.",
-      "chapo": "Guide de la CNIL sur le respect des règles légales de prospection commerciale par voies électroniques et consentement des destinataires.",
+      "chapo": "La CNIL précise les règles de conformité pour les communications commerciales par voie électronique en prospection.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -995,19 +1100,38 @@
       ]
     },
     {
-      "titre": "Données de santé : la CNIL sanctionne IQVIA de 5 millions d'euros",
+      "titre": "Quelles qualifications pour les acteurs de l'informatique en nuage (cloud) ?",
+      "lien": "https://www.cnil.fr/fr/quelles-qualifications-pour-les-acteurs-de-linformatique-en-nuage-cloud",
+      "date": "2026-05-28T12:00:00.000Z",
+      "source": "CNIL — données personnelles",
+      "srcType": "AAI",
+      "resume": "Avant de traiter des données personnelles, il est essentiel que les acteurs identifient leurs rôles. La CNIL fournit des orientations pour aider ceux du secteur de l’informatique en nuage (cloud) à identifier leurs responsabilités avec des ",
+      "chapo": "Guidance de la CNIL clarifiante les rôles et qualifications des responsables de traitement et sous-traitants dans le cloud computing.",
+      "comp": "dpi",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Données de santé : sanction de 5 millions d'euros à l'encontre de la société IQVIA",
       "lien": "https://www.cnil.fr/fr/donnees-sante-sanction-5-millions-iqvia",
       "date": "2026-05-28T12:00:00.000Z",
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Le 26 mai 2026, la société IQVIA OPERATIONS FRANCE a été sanctionnée d’une amende de 5 ; ;millions d’euros, notamment pour non-respect des garanties visant à limiter les risques pour les personnes dans le cadre de la gestion d’entrepôts de ",
-      "chapo": "La CNIL inflige une amende majeure à IQVIA pour violation du RGPD dans le traitement de données de santé personnelles.",
+      "chapo": "La CNIL inflige une amende de 5 millions d'euros à IQVIA pour violations du RGPD concernant le traitement de données de santé.",
       "comp": "dpi",
-      "impact": 3,
+      "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise",
-        "sante"
+        "etat",
+        "entreprise"
       ],
       "secteurs": [
         "sante",
@@ -1015,18 +1139,17 @@
       ]
     },
     {
-      "titre": "Quelles qualifications pour les acteurs du cloud ? La CNIL clarifie les rôles dans le traitement des données personnelles",
-      "lien": "https://www.cnil.fr/fr/quelles-qualifications-pour-les-acteurs-de-linformatique-en-nuage-cloud",
-      "date": "2026-05-28T12:00:00.000Z",
-      "source": "CNIL — données personnelles",
-      "srcType": "AAI",
-      "resume": "Avant de traiter des données personnelles, il est essentiel que les acteurs identifient leurs rôles. La CNIL fournit des orientations pour aider ceux du secteur de l’informatique en nuage (cloud) à identifier leurs responsabilités avec des ",
-      "chapo": "La CNIL fournit des orientations sur l'identification des rôles (responsable de traitement, sous-traitant) pour les prestataires cloud.",
+      "titre": "L'application du DMA améliore les smartphones : étude de cas sur l'interopérabilité et la portabilité des données",
+      "lien": "https://digital-markets-act.ec.europa.eu/factsheet-how-dma-making-smartphones-better-interoperability-and-data-portability-case-studies-2026-05-11_en",
+      "date": "2026-05-21T13:18:53.000Z",
+      "source": "Commission UE — Concurrence",
+      "srcType": "DG",
+      "resume": "The Commission’s enforcement of the Digital Markets Act (DMA) is delivering new interoperability and data portability features for developers and providers of connected devices (such as headphones, smartwatches, and smart glasses). As a res",
+      "chapo": "La Commission européenne présente les résultats de l'application du DMA en matière d'interopérabilité et de portabilité des données.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise",
         "etat"
       ],
       "secteurs": [
@@ -1034,33 +1157,29 @@
       ]
     },
     {
-      "titre": "Nouvelle étude sur le contrôle des incapacités des professionnels et bénévoles en contact avec mineurs",
-      "lien": "https://www.conseil-etat.fr/actualites/ateliers-de-la-simplification-du-conseil-d-etat-nouvelle-etude-sur-le-controle-des-incapacites-des-professionnels-et-des-benevoles-en-contact-ave",
-      "date": "2026-05-20T00:00:00.000Z",
-      "source": "Conseil d'État — actualités",
-      "srcType": "CE",
-      "resume": "",
-      "chapo": "Le Conseil d'État publie une étude sur les mécanismes de vérification des antécédents des professionnels et bénévoles intervenant auprès d'enfants.",
+      "titre": "De la stratégie à l'action : les États membres doivent agir sur l'Union des marchés de capitaux",
+      "lien": "https://finance.ec.europa.eu/news/strategy-delivery-member-states-must-now-act-siu-2026-04-30_en",
+      "date": "2026-05-04T08:31:19.000Z",
+      "source": "Commission UE — Finance (FISMA)",
+      "srcType": "DG",
+      "resume": "The aim of the strategy is to boost efficiency, scale, and market connectivity for the benefit of EU households and businesses.",
+      "chapo": "La Commission européenne appelle les États membres à mettre en œuvre la stratégie d'union des marchés de capitaux pour accroître l'efficacité et la connectivité du marché financier européen.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
-        "departement",
-        "sante"
+        "etat"
       ],
-      "secteurs": [
-        "social"
-      ]
+      "secteurs": []
     },
     {
-      "titre": "Les services de la Commission et le CEDP commencent un travail conjoint sur les lignes directrices de l'interaction entre le droit de la concurrence et le droit de la protection des données",
+      "titre": "Services de la Commission et CEPD démarrent un travail conjoint sur les orientations concernant l'interaction entre le droit de la concurrence et la protection des données",
       "lien": "https://competition-policy.ec.europa.eu/about/news/commission-services-and-edpb-will-start-joint-work-guidance-interplay-between-eu-competition-law-and-2026-04-28_en",
       "date": "2026-04-28T15:00:25.000Z",
       "source": "Commission UE — Concurrence",
       "srcType": "DG",
       "resume": "The Commission services and the European Data Protection Board (EDPB) have agreed to work together to clarify and give guidance on the interplay between EU competition law and data protection law. This joint work between Commission’ service",
-      "chapo": "La Commission européenne et le Comité européen de la protection des données engagent une collaboration pour clarifier l'articulation entre concurrence et protection des données personnelles.",
+      "chapo": "La Commission et l'autorité européenne de protection des données collaborent pour clarifier l'articulation entre droit de la concurrence et droit des données.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -1072,18 +1191,20 @@
       ]
     },
     {
-      "titre": "Instruction conventionnelle et règlement à l'amiable des différends : quels changements ?",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18458?xtor=RSS-112",
-      "date": "2026-06-15T18:53:29.607Z",
+      "titre": "Ce qui change en juillet 2025",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18377?xtor=RSS-112",
+      "date": "2026-06-15T18:54:32.624Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Le décret du 18 juillet 2025 vient réformer les modes amiables de règlement des différends (MARD). Ces nouvelles dispositions s’appliquent aux instances en cours au 1 sup er /sup septembre 2025. /p",
-      "chapo": "Le décret du 18 juillet 2025 réforme les modes amiables de règlement des différends (MARD) avec de nouvelles dispositions.",
+      "resume": "p Éco-PTZ, allocations d'assurance chômage, interdiction de fumer, taux d’intérêt légal, financement de l'apprentissage... em Service-Public.fr /em vous informe sur tous les changements qui interviennent au mois de juillet. /p",
+      "chapo": "Entrée en vigueur de nouveaux dispositifs : éco-PTZ, allocations chômage, interdiction de fumer, taux légal, financement apprentissage.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "commune",
+        "entreprise"
       ],
       "secteurs": []
     },
@@ -1094,7 +1215,7 @@
       "source": "Conseil d'État — analyses de jurisprudence",
       "srcType": "CE",
       "resume": "",
-      "chapo": "Publication régulière des analyses de jurisprudence du Conseil d'État sur le droit public et contentieux administratif.",
+      "chapo": "Synthèse périodique des jurisprudences du Conseil d'État sur des questions de droit public général et contentieux administratif.",
       "comp": "dpg",
       "impact": 1,
       "keep": true,
@@ -1108,9 +1229,25 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Projet de modification constitutionnelle réformant le statut institutionnel et l'autonomie de la Collectivité de Corse.",
+      "chapo": "Projet de révision constitutionnelle visant à instituer une autonomie statutaire pour la Corse dans le cadre républicain.",
       "comp": "dpg",
       "impact": 3,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Dessaisissement en faveur de la Grande Chambre de l'affaire Knopp c. Hongrie",
+      "lien": "http://hudoc.echr.coe.int/fre-press#{\"itemid\":[\"003-8561667-12169237\"]}",
+      "date": "2026-06-12T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "La Cour européenne des droits de l'homme dessaisit le panel au profit de la Grande Chambre pour une affaire.",
+      "comp": "dpg",
+      "impact": 2,
       "keep": true,
       "profils": [
         "etat"
@@ -1124,9 +1261,27 @@
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Consultation publique sur un décret de simplification des normes administratives applicables aux collectivités locales et leurs regroupements.",
+      "chapo": "Le gouvernement consulte sur un décret visant à simplifier les normes et l'action administrative applicables aux collectivités territoriales et leurs groupements.",
       "comp": "dpg",
       "impact": 2,
+      "keep": true,
+      "profils": [
+        "commune",
+        "departement",
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Le tribunal valide les élections municipales de La Brigue",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-valide-les-elections-municipales-de-la-brigue",
+      "date": "2026-06-11T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Nice confirme la régularité des élections municipales de La Brigue à la suite d'un contentieux électoral.",
+      "comp": "dpg",
+      "impact": 1,
       "keep": true,
       "profils": [
         "commune",
@@ -1135,13 +1290,13 @@
       "secteurs": []
     },
     {
-      "titre": "Commission UE : mise à jour de la liste de sûreté aérienne européenne, retrait de Kyrgyzstan, ajout d'Air Express Algeria",
-      "lien": "https://transport.ec.europa.eu/news-events/news/commission-updates-eu-air-safety-list-all-air-carriers-kyrgyzstan-removed-air-express-algeria-added-2026-06-09_en",
-      "date": "2026-06-09T10:02:08.000Z",
+      "titre": "Nouvelles règles de l'UE pour améliorer le trafic ferroviaire transfrontalier et optimiser la capacité des réseaux",
+      "lien": "https://transport.ec.europa.eu/news-events/news/new-eu-rules-will-improve-cross-border-rail-traffic-and-optimise-network-capacity-2026-06-10_en",
+      "date": "2026-06-10T07:21:25.000Z",
       "source": "Commission UE — Transports",
       "srcType": "DG",
-      "resume": "p The Commission updated the EU Air Safety List, the list of airlines that are subject to an operating ban or operational restrictions within the European Union, because they do not meet international safety standards. /p",
-      "chapo": "La Commission met à jour la liste UE de sûreté aérienne excluant les compagnies de Kyrgyzstan et ajoutant Air Express Algeria aux restrictions d'exploitation.",
+      "resume": "p The European Union has adopted new rules on the use of railway infrastructure capacity, marking a significant step towards a more efficient, coordinated and reliable European rail network. /p",
+      "chapo": "L'UE adopte de nouvelles règles sur l'utilisation de la capacité des infrastructures ferroviaires pour améliorer le trafic transfrontalier.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1153,49 +1308,13 @@
       ]
     },
     {
-      "titre": "Les ministres de l'UE soutiennent une initiative transfrontalière pour les bancs d'essai de véhicules autonomes",
-      "lien": "https://transport.ec.europa.eu/news-events/news/eu-ministers-back-cross-border-initiative-autonomous-vehicle-testbeds-2026-06-08_en",
-      "date": "2026-06-08T12:04:45.000Z",
-      "source": "Commission UE — Transports",
-      "srcType": "DG",
-      "resume": "p 18 Member States signed a Joint Declaration of Intent on large-scale cross-border testbeds for autonomous vehicles together with Commissioner for Sustainable Transport and Tourism, Apostolos Tzitzikostas. /p",
-      "chapo": "Dix-huit États membres signent une déclaration conjointe pour développer des bancs d'essai transfrontaliers de grande envergure en véhicules autonomes.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "transport"
-      ]
-    },
-    {
-      "titre": "Les ministres de l'UE soutiennent les corridors de camions à zéro émission",
-      "lien": "https://transport.ec.europa.eu/news-events/news/eu-ministers-back-zero-emission-truck-corridors-2026-06-08_en",
-      "date": "2026-06-08T11:02:31.000Z",
-      "source": "Commission UE — Transports",
-      "srcType": "DG",
-      "resume": "p EU ministers from 9 Member States endorsed the first two roadmaps developed under the Clean Transport Corridor Initiative (CTCI) /p",
-      "chapo": "Neuf États membres de l'UE approuvent les deux premiers plans directeurs des corridors de transports propres pour les poids lourds zéro émission.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "transport"
-      ]
-    },
-    {
-      "titre": "Élections municipales de Saint-Paul-de-Vence : Rejet du recours du candidat « Saint-Paul à cœur »",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/elections-municipales-de-saint-paul-de-vence-rejet-du-recours-de-la-tete-de-liste-saint-paul-a-caeur",
-      "date": "2026-06-05T00:00:00.000Z",
+      "titre": "Le tribunal de Nice valide les élections municipales de La Turbie",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-valide-les-elections-municipales-de-la-turbie",
+      "date": "2026-06-10T00:00:00.000Z",
       "source": "TA de Nice",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Nice rejette le recours contesta l'élection municipale de Saint-Paul-de-Vence.",
+      "chapo": "Le tribunal administratif de Nice valide le scrutin des élections municipales de La Turbie.",
       "comp": "dpg",
       "impact": 1,
       "keep": true,
@@ -1205,36 +1324,37 @@
       "secteurs": []
     },
     {
-      "titre": "Précisions des modalités de régularisation d'un acte illégal en cours d'instance en matière minière",
-      "lien": "https://www.economie.gouv.fr/daj/precisions-des-modalites-de-regularisation-dun-acte-illegal-en-cours-dinstance-en-matiere-miniere",
-      "date": "2026-06-04T09:41:50.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "Dans une nouvelle décision avant-dire droit du 7 mai 2026, le Conseil d’Etat a précisé les modalités de régularisation, en cours d’instance, d’un vice de procédure entachant l’octroi de prolongations de concessions minières accordées par dé",
-      "chapo": "Le Conseil d'État clarifie les conditions de régularisation en cours d'instance d'un acte administratif illégal dans le domaine minier.",
+      "titre": "La Commission met à jour la liste UE de sûreté aérienne : suppression de tous les transporteurs du Kirghizistan, ajout d'Air Express Algérie",
+      "lien": "https://transport.ec.europa.eu/news-events/news/commission-updates-eu-air-safety-list-all-air-carriers-kyrgyzstan-removed-air-express-algeria-added-2026-06-09_en",
+      "date": "2026-06-09T10:02:08.000Z",
+      "source": "Commission UE — Transports",
+      "srcType": "DG",
+      "resume": "p The Commission updated the EU Air Safety List, the list of airlines that are subject to an operating ban or operational restrictions within the European Union, because they do not meet international safety standards. /p",
+      "chapo": "La Commission actualise la liste UE de sûreté aérienne, liste des compagnies aériennes soumises à des restrictions d'exploitation.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "transport"
+      ]
     },
     {
-      "titre": "Responsabilité des gestionnaires publics : trois décisions emblématiques de la Cour des comptes",
-      "lien": "https://www.economie.gouv.fr/daj/responsabilite-des-gestionnaires-publics-trois-decisions-emblematiques-de-la-cour-des-comptes",
-      "date": "2026-06-04T09:20:16.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "Au cours du mois de mai 2026, la chambre du contentieux de la Cour des comptes a rendu des décisions qui illustrent une même exigence : celle du respect des règles encadrant l'engagement, la gestion et l'utilisation des fonds publics. Qu'il",
-      "chapo": "La Cour des comptes rend trois décisions majeures en mai 2026 illustrant la responsabilité des gestionnaires publics.",
+      "titre": "Recours contre les élections municipales et communautaires",
+      "lien": "https://bastia.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/recours-contre-les-elections-municipales-et-communautaires",
+      "date": "2026-06-09T00:00:00.000Z",
+      "source": "TA de Bastia",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Contentieux électoral introduit devant le tribunal administratif de Bastia.",
       "comp": "dpg",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
-        "etat",
         "commune",
-        "departement"
+        "etat"
       ],
       "secteurs": []
     }
