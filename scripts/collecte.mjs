@@ -223,22 +223,29 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour : [{"i":0,"comp":"dpa","imp
 // ===== Génération du réservoir outre-mer =====
 // Détection d'un territoire ultramarin par source locale ou mention dans le titre/résumé.
 const OM_TERRITOIRES_DEF = {
-  guadeloupe:  { label:"Guadeloupe",            re:/guadeloupe|pointe-à-pitre|basse-terre|gourbeyre|baie-mahault/i },
-  martinique:  { label:"Martinique",            re:/martinique|fort-de-france/i },
-  guyane:      { label:"Guyane",                re:/\bguyane\b|cayenne|kourou/i },
-  stbarthelemy:{ label:"Saint-Barthélemy",      re:/saint-barthélemy|saint-barth/i },
-  stmartin:    { label:"Saint-Martin",          re:/saint-martin/i },
-  reunion:     { label:"La Réunion",            re:/\bla réunion\b|saint-denis de la réunion|saint-pierre de la réunion|île de la réunion/i },
-  mayotte:     { label:"Mayotte",               re:/mayotte|mamoudzou/i },
-  ncaledonie:  { label:"Nouvelle-Calédonie",    re:/nouvelle-calédonie|nouvelle-caledonie|nouméa|noumea|kanak/i },
-  polynesie:   { label:"Polynésie française",   re:/polynésie|polynesie|papeete|tahiti/i },
-  wallis:      { label:"Wallis-et-Futuna",      re:/wallis-et-futuna|wallis et futuna|\bwallis\b|futuna/i },
-  stpierre:    { label:"Saint-Pierre-et-Miquelon", re:/saint-pierre-et-miquelon|miquelon/i }
+  guadeloupe:  { label:"Guadeloupe",            src:/guadeloupe/i,            txt:/\bguadeloupe\b|pointe-à-pitre|basse-terre|baie-mahault|gourbeyre/i },
+  martinique:  { label:"Martinique",            src:/martinique/i,            txt:/\bmartinique\b|fort-de-france/i },
+  guyane:      { label:"Guyane",                src:/guyane/i,                txt:/\bguyane française\b|\ben guyane\b|cayenne|kourou|\bguyanais/i },
+  stbarthelemy:{ label:"Saint-Barthélemy",      src:/saint-barthélemy|saint-barth/i, txt:/saint-barthélemy/i },
+  stmartin:    { label:"Saint-Martin",          src:/saint-martin(?!-|\s+(de|en|du|vésubie|d'))/i, txt:/saint-martin \(antilles\)|saint-martin antilles|collectivité de saint-martin/i },
+  reunion:     { label:"La Réunion",            src:/réunion/i,               txt:/\bla réunion\b|saint-denis de la réunion|île de la réunion/i },
+  mayotte:     { label:"Mayotte",               src:/mayotte/i,               txt:/\bmayotte\b|mamoudzou/i },
+  ncaledonie:  { label:"Nouvelle-Calédonie",    src:/calédonie|caledonie/i,   txt:/nouvelle-calédonie|nouméa|\bkanak/i },
+  polynesie:   { label:"Polynésie française",   src:/polynésie|polynesie/i,   txt:/polynésie française|papeete|tahiti/i },
+  wallis:      { label:"Wallis-et-Futuna",      src:/wallis|futuna/i,         txt:/wallis-et-futuna|wallis et futuna/i },
+  stpierre:    { label:"Saint-Pierre-et-Miquelon", src:/saint-pierre-et-miquelon|miquelon/i, txt:/saint-pierre-et-miquelon|miquelon/i }
 };
 function territoiresDe(it){
-  const hay = (it.source||"")+" "+(it.titre||"")+" "+(it.resume||"");
+  const src = it.source||"";
+  const txt = (it.titre||"")+" "+(it.resume||"");
   const ids=[];
-  for(const [id,t] of Object.entries(OM_TERRITOIRES_DEF)){ if(t.re.test(hay)) ids.push(id); }
+  for(const [id,t] of Object.entries(OM_TERRITOIRES_DEF)){
+    // Priorité ABSOLUE à la source : si la juridiction est ultramarine, c'est ce territoire.
+    if(t.src.test(src)){ ids.push(id); continue; }
+    // Sinon, on ne retient une mention dans le texte QUE si elle est très explicite
+    // (évite qu'une décision métropolitaine citant un territoire soit mal classée).
+    if(t.txt.test(txt)) ids.push(id);
+  }
   return ids;
 }
 async function genererOutremer(results, juridictionsOk){
