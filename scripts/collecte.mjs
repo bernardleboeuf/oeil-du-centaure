@@ -80,6 +80,29 @@ async function rawFetch(url){
   return { ok:true, text:new TextDecoder(enc).decode(buf) };
 }
 
+// Extracteur HTML pour la Cour de cassation (pas de flux RSS officiel).
+// La page /toutes-les-actualites rend ses communiqués en <article>…</article> côté serveur :
+//   <h3 class="h4-titre"><a href="/toutes-les-actualites/AAAA/MM/JJ/slug">Titre</a></h3>
+//   <p class="field--name-field-date">JJ/MM/AAAA</p>
+function parseCassationHTML(html, nom, type){
+  const items = [];
+  const articles = html.split(/<article\b/i).slice(1);
+  for(const a of articles){
+    const mLink = a.match(/<h[23][^>]*titre[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i)
+              || a.match(/<a[^>]*href="(\/toutes-les-actualites\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/i);
+    if(!mLink) continue;
+    let lien = mLink[1];
+    let titre = mLink[2].replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
+    if(!titre) continue;
+    if(lien.startsWith("/")) lien = "https://www.courdecassation.fr"+lien;
+    let dateISO = "";
+    const mDate = a.match(/field-date[^>]*>\s*([0-3]?\d)\/([01]?\d)\/(\d{4})/i);
+    if(mDate){ dateISO = `${mDate[3]}-${mDate[2].padStart(2,"0")}-${mDate[1].padStart(2,"0")}T00:00:00.000Z`; }
+    items.push({ titre, lien, date: dateISO, source: nom, srcType: type, resume: "" });
+  }
+  return items;
+}
+
 async function tryUrl(url){
   try{
     const r = await rawFetch(url);
@@ -111,6 +134,19 @@ async function tryUrl(url){
 
 // pour une source : essaie plusieurs variantes d'URL, garde la 1re qui répond
 async function fetchSource(src){
+  // Source HTML (Cour de cassation) : pas de RSS, on extrait les communiqués de la page.
+  if(src.html){
+    for(const url of src.direct){
+      try{
+        const r = await rawFetch(url);
+        if(r.ok){
+          const items = parseCassationHTML(r.text, src.nom, src.type);
+          if(items.length) return { ok:true, url, items };
+        }
+      }catch(e){}
+    }
+    return { ok:false, reason:"HTML : 0 communiqué extrait" };
+  }
   let candidates;
   if(src.direct){
     candidates = src.direct;                          // URLs vérifiées (CE, CJUE, Légifrance…)
