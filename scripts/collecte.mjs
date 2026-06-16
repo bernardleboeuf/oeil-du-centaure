@@ -86,18 +86,19 @@ async function rawFetch(url){
 //   <p class="field--name-field-date">JJ/MM/AAAA</p>
 function parseCassationHTML(html, nom, type){
   const items = [];
-  const articles = html.split(/<article\b/i).slice(1);
-  for(const a of articles){
-    const mLink = a.match(/<h[23][^>]*titre[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i)
-              || a.match(/<a[^>]*href="(\/toutes-les-actualites\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/i);
-    if(!mLink) continue;
-    let lien = mLink[1];
-    let titre = mLink[2].replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
-    if(!titre) continue;
-    if(lien.startsWith("/")) lien = "https://www.courdecassation.fr"+lien;
-    let dateISO = "";
-    const mDate = a.match(/field-date[^>]*>\s*([0-3]?\d)\/([01]?\d)\/(\d{4})/i);
-    if(mDate){ dateISO = `${mDate[3]}-${mDate[2].padStart(2,"0")}-${mDate[1].padStart(2,"0")}T00:00:00.000Z`; }
+  const seen = new Set();
+  // Approche robuste : on cherche directement tous les liens de communiqués,
+  // dont l'URL suit le motif /toutes-les-actualites/AAAA/MM/JJ/slug (très caractéristique).
+  const re = /<a[^>]*href="(\/toutes-les-actualites\/(\d{4})\/(\d{2})\/(\d{2})\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while((m = re.exec(html))!==null){
+    const path = m[1];
+    if(seen.has(path)) continue;
+    seen.add(path);
+    let titre = m[5].replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
+    if(!titre || titre.length < 8) continue; // ignore les liens vides ou trop courts
+    const lien = "https://www.courdecassation.fr"+path;
+    const dateISO = `${m[2]}-${m[3]}-${m[4]}T00:00:00.000Z`;
     items.push({ titre, lien, date: dateISO, source: nom, srcType: type, resume: "" });
   }
   return items;
@@ -108,8 +109,9 @@ async function tryUrl(url){
     const r = await rawFetch(url);
     if(!r.ok) return { ok:false, reason:"HTTP "+r.status };
     const xml = r.text;
-    // vrai flux ? → un seul xml
-    if(/<item[ >]|<entry[ >]/i.test(xml)) return { ok:true, xmls:[xml] };
+    // vrai flux ? → un seul xml. On reconnaît items/entries MAIS aussi l'enveloppe rss/channel/feed
+    // (certains flux valides — ex. WordPress Polynésie — peuvent être rejetés sinon).
+    if(/<item[ >]|<entry[ >]/i.test(xml) || (/<rss[ >]|<channel[ >]|<feed[ >]/i.test(xml) && /<\/(item|entry|channel|rss|feed)>/i.test(xml))) return { ok:true, xmls:[xml] };
     // sinon : page /flux_rss → découvrir TOUS les flux pertinents et les suivre (décisions + lettre de jurisprudence…)
     const origin = new URL(url).origin;
     const links = [...xml.matchAll(/href=["']([^"']*(?:flux-rss|\/rss\/|flux_rss)[^"']*)["']/gi)]
@@ -142,8 +144,12 @@ async function fetchSource(src){
         if(r.ok){
           const items = parseCassationHTML(r.text, src.nom, src.type);
           if(items.length) return { ok:true, url, items };
+          // Diagnostic : montrer le début du HTML reçu pour comprendre pourquoi 0 extrait
+          console.log("  [diag "+src.nom+"] HTTP ok mais 0 extrait. Début reçu :", r.text.slice(0,200).replace(/\s+/g," "));
+        } else {
+          console.log("  [diag "+src.nom+"] HTTP "+r.status);
         }
-      }catch(e){}
+      }catch(e){ console.log("  [diag "+src.nom+"] erreur "+e.message); }
     }
     return { ok:false, reason:"HTML : 0 communiqué extrait" };
   }
@@ -184,7 +190,13 @@ async function fetchSource(src){
       }
       if(uniq.length) return { ok:true, url, items:uniq };
       lastReason = "0 item";
-    } else { lastReason = r.reason; }
+    } else {
+      lastReason = r.reason;
+      // Diagnostic ciblé sur les sources direct (ex. Polynésie) pour comprendre un rejet
+      if(src.direct && r.reason==="pas un flux"){
+        try{ const rr=await rawFetch(url); if(rr.ok) console.log("  [diag "+src.nom+"] 'pas un flux'. Début reçu :", rr.text.slice(0,200).replace(/\s+/g," ")); }catch(e){}
+      }
+    }
   }
   return { ok:false, reason:lastReason };
 }
