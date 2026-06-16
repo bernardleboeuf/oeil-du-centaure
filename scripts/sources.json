@@ -467,6 +467,21 @@
       "direct": [
         "https://hudoc.echr.coe.int/app/transform/rss?library=echrfrepress&query=contentsitename:ECHR%20AND%20doctype=PR&sort=&start=0&length=20&rankingModelId=11111111-0000-0000-0000-000000000000"
       ]
+    },
+    {
+      "type": "CASS",
+      "nom": "Cour de cassation — communiqués",
+      "html": true,
+      "direct": [
+        "https://www.courdecassation.fr/toutes-les-actualites?thematique%5B0%5D=1363&items_per_page=20&sort_bef_combine=created_DESC"
+      ]
+    },
+    {
+      "type": "AAI",
+      "nom": "Autorité polynésienne de la concurrence",
+      "direct": [
+        "https://autorite-concurrence.pf/feed/"
+      ]
     }
   ],
   "EUROPE": [
