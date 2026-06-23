@@ -80,30 +80,6 @@ async function rawFetch(url){
   return { ok:true, text:new TextDecoder(enc).decode(buf) };
 }
 
-// Extracteur HTML pour la Cour de cassation (pas de flux RSS officiel).
-// La page /toutes-les-actualites rend ses communiqués en <article>…</article> côté serveur :
-//   <h3 class="h4-titre"><a href="/toutes-les-actualites/AAAA/MM/JJ/slug">Titre</a></h3>
-//   <p class="field--name-field-date">JJ/MM/AAAA</p>
-function parseCassationHTML(html, nom, type){
-  const items = [];
-  const seen = new Set();
-  // Approche robuste : on cherche directement tous les liens de communiqués,
-  // dont l'URL suit le motif /toutes-les-actualites/AAAA/MM/JJ/slug (très caractéristique).
-  const re = /<a[^>]*href="(\/toutes-les-actualites\/(\d{4})\/(\d{2})\/(\d{2})\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
-  let m;
-  while((m = re.exec(html))!==null){
-    const path = m[1];
-    if(seen.has(path)) continue;
-    seen.add(path);
-    let titre = m[5].replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
-    if(!titre || titre.length < 8) continue; // ignore les liens vides ou trop courts
-    const lien = "https://www.courdecassation.fr"+path;
-    const dateISO = `${m[2]}-${m[3]}-${m[4]}T00:00:00.000Z`;
-    items.push({ titre, lien, date: dateISO, source: nom, srcType: type, resume: "" });
-  }
-  return items;
-}
-
 async function tryUrl(url){
   try{
     const r = await rawFetch(url);
@@ -136,23 +112,6 @@ async function tryUrl(url){
 
 // pour une source : essaie plusieurs variantes d'URL, garde la 1re qui répond
 async function fetchSource(src){
-  // Source HTML (Cour de cassation) : pas de RSS, on extrait les communiqués de la page.
-  if(src.html){
-    for(const url of src.direct){
-      try{
-        const r = await rawFetch(url);
-        if(r.ok){
-          const items = parseCassationHTML(r.text, src.nom, src.type);
-          if(items.length) return { ok:true, url, items };
-          // Diagnostic : montrer le début du HTML reçu pour comprendre pourquoi 0 extrait
-          console.log("  [diag "+src.nom+"] HTTP ok mais 0 extrait. Début reçu :", r.text.slice(0,200).replace(/\s+/g," "));
-        } else {
-          console.log("  [diag "+src.nom+"] HTTP "+r.status);
-        }
-      }catch(e){ console.log("  [diag "+src.nom+"] erreur "+e.message); }
-    }
-    return { ok:false, reason:"HTML : 0 communiqué extrait" };
-  }
   let candidates;
   if(src.direct){
     candidates = src.direct;                          // URLs vérifiées (CE, CJUE, Légifrance…)
@@ -190,13 +149,7 @@ async function fetchSource(src){
       }
       if(uniq.length) return { ok:true, url, items:uniq };
       lastReason = "0 item";
-    } else {
-      lastReason = r.reason;
-      // Diagnostic ciblé sur les sources direct (ex. Polynésie) pour comprendre un rejet
-      if(src.direct && r.reason==="pas un flux"){
-        try{ const rr=await rawFetch(url); if(rr.ok) console.log("  [diag "+src.nom+"] 'pas un flux'. Début reçu :", rr.text.slice(0,200).replace(/\s+/g," ")); }catch(e){}
-      }
-    }
+    } else { lastReason = r.reason; }
   }
   return { ok:false, reason:lastReason };
 }
