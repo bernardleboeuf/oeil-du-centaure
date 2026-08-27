@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T22:35:49.353Z",
-  "juridictionsOk": 84,
-  "count": 66,
+  "generatedAt": "2026-08-27T03:05:25.779Z",
+  "juridictionsOk": 81,
+  "count": 63,
   "items": [
     {
-      "titre": "Publication d'une circulaire relative à l'exécution des contrats de commande publique affectés par les incendies de forêt de l'été 2026",
+      "titre": "Publication d'une circulaire relative à l'exécution des contrats de la commande publique affectés par les incendies de forêt de l'été 2026",
       "lien": "https://www.economie.gouv.fr/daj/publication-dune-circulaire-relative-lexecution-des-contrats-de-la-commande-publique-affectes-par-les-incendies-de-foret-de-lete-2026",
       "date": "2026-08-24T17:10:29.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Face aux conséquences des incendies de forêt survenus à l'été 2026, une circulaire précise les modalités d’adaptation de l’exécution des contrats de la commande publique affectés par ces sinistres. Elle invite les acheteurs et autorités con",
-      "chapo": "Circulaire précisant les modalités d'adaptation des contrats de commande publique impactés par les incendies de forêt estivaux.",
+      "chapo": "Circulaire administrative régissant l'adaptation et l'exécution des marchés publics impactés par les incendies de 2026.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
@@ -20,47 +20,29 @@
         "entreprise"
       ],
       "secteurs": [
-        "btp"
+        "btp",
+        "environnement"
       ]
     },
     {
-      "titre": "Marchés publics de pompes à chaleur : création d'un seuil temporaire de dispense de publicité",
+      "titre": "Marchés publics de pompes à chaleur : création d'un seuil temporaire de dispense de publicité jusqu'au 31 décembre 2026",
       "lien": "https://www.economie.gouv.fr/daj/marches-publics-de-travaux-dinstallation-de-pompes-chaleur-ou-de-raccordement-au-reseau-de-chaleur-urbain-creation-dun-seuil-temporaire-de",
       "date": "2026-08-19T15:31:47.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Le décret n° 2026-792 du 15 août 2026 instaure, jusqu’au 31 décembre 2026, un seuil de 140 000 € HT permettant de dispenser de publicité et de mise en concurrence préalables certains marchés de travaux d’installation de pompes à chaleur et ",
-      "chapo": "Le décret n° 2026-792 institue jusqu'au 31 décembre 2026 un seuil de 140 000 € HT dispensant de mise en concurrence pour les travaux de pompes à chaleur.",
-      "comp": "dpa",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "entreprise",
-        "etat"
-      ],
-      "secteurs": [
-        "energie",
-        "btp"
-      ]
-    },
-    {
-      "titre": "Création du Conseil national de la commande publique : le décret est publié !",
-      "lien": "https://www.economie.gouv.fr/daj/creation-du-conseil-national-de-la-commande-publique-le-decret-est-publie",
-      "date": "2026-08-18T18:49:59.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "Le décret n° 2026-780 du 14 août 2026 relatif à la création du Conseil national de la commande publique (CNCP) a été publié au Journal officiel le 15 août 2026. Il marque une nouvelle étape dans le pilotage et l’animation de la commande pub",
-      "chapo": "Le décret n° 2026-780 institue le Conseil national de la commande publique, organe de gouvernance et de coordination de la politique publique d'achat.",
+      "chapo": "Le décret 2026-792 instaure un seuil de 140 000 € HT permettant aux acheteurs de dispenser publication et mise en concurrence préalables pour les marchés de chaleur.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
         "commune",
-        "etat",
-        "entreprise"
+        "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "btp",
+        "energie"
+      ]
     },
     {
       "titre": "Loi du 18 août 2026 visant à moderniser la gestion du patrimoine immobilier de l'État",
@@ -69,12 +51,31 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Nouvelle loi réformant la gestion et les modes de valorisation du patrimoine immobilier public de l'État.",
+      "chapo": "Réforme majeure de la gestion des biens immobiliers publics et de la domanialité de l'État.",
       "comp": "dpa",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "commune"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Création du Conseil national de la commande publique : le décret est publié",
+      "lien": "https://www.economie.gouv.fr/daj/creation-du-conseil-national-de-la-commande-publique-le-decret-est-publie",
+      "date": "2026-08-18T18:49:59.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Le décret n° 2026-780 du 14 août 2026 relatif à la création du Conseil national de la commande publique (CNCP) a été publié au Journal officiel le 15 août 2026. Il marque une nouvelle étape dans le pilotage et l’animation de la commande pub",
+      "chapo": "Publication du décret n° 2026-780 créant le Conseil national de la commande publique (CNCP).",
+      "comp": "dpa",
+      "impact": 3,
+      "keep": true,
+      "profils": [
+        "commune",
+        "etat",
+        "entreprise"
       ],
       "secteurs": []
     },
@@ -85,7 +86,7 @@
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Afin d’accompagner les autorités concédantes et les concessionnaires dans la mise en œuvre de la loi « Climat et résilience », la direction des Affaires juridiques publie un nouveau guide pratique du Conseil national de la commande publique",
-      "chapo": "La DAJ de Bercy publie un guide d'accompagnement pour intégrer les considérations environnementales et sociales dans les concessions, en application de la loi Climat et résilience.",
+      "chapo": "La DAJ Bercy publie un guide pour aider les autorités concédantes à intégrer les critères environnementaux et sociaux dans les contrats de concession.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
@@ -94,7 +95,7 @@
         "etat"
       ],
       "secteurs": [
-        "btp"
+        "environnement"
       ]
     },
     {
@@ -104,145 +105,99 @@
       "source": "TA de Nice",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Nice annule l'autorisation d'occupation d'un chantier naval au port de Nice.",
+      "chapo": "Le tribunal administratif de Nice annule ou résilie une autorisation d'occupation d'un domaine public portuaire liée à un chantier naval.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
       "profils": [
         "commune",
-        "etat"
+        "entreprise"
       ],
       "secteurs": [
         "transport"
       ]
     },
     {
-      "titre": "Considérations environnementales et sociales dans les marchés publics et contrats de concession : publication de fiches pratiques",
+      "titre": "Considérations environnementales et sociales dans les marchés publics et les contrats de concession : publication de fiches pratiques pour répondre aux nouvelles exigences de la loi Climat et résilience",
       "lien": "https://www.economie.gouv.fr/daj/considerations-environnementales-et-sociales-dans-les-marches-publics-publication-de-fiches-pratiques-pour-repondre-aux-nouvelles-exigences-de-la",
       "date": "2026-07-23T16:55:10.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "À partir du 22 août 2026, une nouvelle étape sera franchie dans l'intégration des enjeux de développement durable au sein de la commande publique. Pour accompagner les acheteurs et autorités concédantes et se conformer aux nouvelles obligat",
-      "chapo": "Le DAJ Bercy publie des fiches pratiques pour l'intégration des critères de développement durable dans les marchés publics et concessions, applicables à partir du 22 août 2026.",
+      "chapo": "Bercy publie des fiches pratiques pour intégrer les critères de développement durable dans les marchés publics et concessions à partir du 22 août 2026.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
         "commune",
         "etat",
-        "bailleur"
+        "entreprise",
+        "sante"
       ],
       "secteurs": [
-        "btp",
         "environnement"
       ]
     },
     {
-      "titre": "Un questionnaire pour comprendre les changements qui vont impacter votre entreprise",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18664?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p À moins d’un an de l’entrée en vigueur de la réforme sur la facturation électronique, impots.gouv.fr propose un questionnaire vous permettant d’obtenir les réponses adaptées à votre situation. /p",
-      "chapo": "Questionnaire sur la réforme de la facturation électronique entrant en vigueur prochainement pour préparer les entreprises.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Un nouveau mode de calcul pour les aides aux contrats d'apprentissage",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18570?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Vous employez un ou plusieurs apprentis ? Vous bénéficiez d’une aide à cet effet ? De nouvelles modalités de versement s’appliquent aux aides allouées aux employeurs d'apprentis. /p",
-      "chapo": "Nouvelles modalités de calcul et versement des aides aux contrats d'apprentissage à compter de 2026.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Paiement de la CFE 2025 au plus tard le 15 décembre 2025",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17831?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Vous exercez une activité professionnelle non salariée ? Dans ce cas, sauf exonération, vous devez consulter l'avis d'impôt de cotisation foncière des entreprises (CFE) puis procéder au paiement. Cet avis est consultable en ligne sur impo",
-      "chapo": "Rappel du délai de paiement de la Contribution Foncière des Entreprises 2025 pour les professionnels non salariés.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Versement mobilité : les nouveaux taux au 1er janvier 2026",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18659?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Au 1 sup er /sup janvier 2026, les taux relatifs au versement mobilité évoluent. em Entreprendre Service Public /em vous explique ces changements. /p",
-      "chapo": "Évolution des taux du versement mobilité applicables à partir du 1er janvier 2026.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Loi de finances spéciale : quels sont les risques d'une application prolongée en 2027 ?",
-      "lien": "https://www.vie-publique.fr/en-bref/304382-loi-de-finances-speciale-quels-sont-les-risques-dune-prolongation?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-08-23T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Analyse des risques juridiques et financiers d'une application prolongée du régime de la loi de finances spéciale en 2027.",
-      "comp": "dpe",
+      "titre": "Promulgation de la loi relançant les investissements en hydroélectricité pour la transition énergétique",
+      "lien": "https://www.economie.gouv.fr/daj/la-loi-visant-relancer-les-investissements-dans-le-secteur-de-lhydroelectricite-pour-contribuer-la-transition-energetique-ete-promulguee-le-29",
+      "date": "2026-07-07T14:02:42.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "La DAJ a apporté son expertise juridique pluridisciplinaire dans l’accompagnement de la réforme portant sur l’avenir des concessions hydroélectriques françaises, dans des domaines aussi variés que le droit de la commande publique, de l’éner",
+      "chapo": "La loi hydroélectricité est promulguée; la DAJ Bercy expose son expertise juridique en matière de marchés publics et commande publique.",
+      "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
         "etat",
         "commune"
       ],
-      "secteurs": []
+      "secteurs": [
+        "energie",
+        "btp"
+      ]
     },
     {
-      "titre": "L'UE prolonge la suspension des mesures de rééquilibrage contre les États-Unis",
-      "lien": "https://policy.trade.ec.europa.eu/news/eu-extends-suspension-eu-rebalancing-measures-against-united-states-2026-07-31_en",
-      "date": "2026-08-20T10:49:00.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p Today, the European Commission adopted an Implementing Regulation extending the suspension of EU rebalancing measures on US exports to the European Union. ; /p",
-      "chapo": "La Commission européenne prolonge la suspension des mesures de rééquilibrage commercial adoptées contre les États-Unis.",
+      "titre": "Action de groupe : quels sont les tribunaux compétents ?",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18403?xtor=RSS-112",
+      "date": "2026-08-27T03:01:47.904Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Le décret du 16 juillet 2025 désigne les tribunaux compétents pour statuer sur les actions de groupe. Cette action permet à plusieurs personnes (physiques ou morales) d’agir collectivement en justice afin d’obtenir réparation d’un même do",
+      "chapo": "Le décret du 16 juillet 2025 désigne les tribunaux compétents pour les actions de groupe, clarifiant la compétence contentieuse.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
         "entreprise"
       ],
       "secteurs": []
     },
     {
-      "titre": "Régulation de l'acier UE : la Commission lance une consultation ciblée sur le champ produits",
-      "lien": "https://policy.trade.ec.europa.eu/news/eu-steel-regulation-commission-launches-targeted-consultation-first-product-scope-review-2026-07-30_en",
-      "date": "2026-08-20T10:48:37.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p Today, the European Commission launched a targeted consultation seeking stakeholders’ feedback on the product scope as required under the EU Steel Regulation, which will assess which products should be included in the scope of the regulat",
-      "chapo": "La Commission européenne engage une consultation des parties prenantes sur l'étendue du champ de produits soumis à la régulation de l'acier.",
+      "titre": "Locations touristiques : de nouvelles règles en 2025 ?",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A17883?xtor=RSS-112",
+      "date": "2026-08-27T03:01:47.904Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p La fiscalité des locations aux touristes de biens immobiliers meublés va changer : nouveaux taux d’abattement fiscal, diagnostic de performance énergétique (DPE) obligatoire, pouvoirs élargis aux maires de communes… em Service-Public.fr /",
+      "chapo": "Modification de la fiscalité des locations meublées touristiques avec nouveaux taux d'abattement, changement de régime fiscal.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Entreprises en difficulté : désignation et instauration des tribunaux des activités économiques",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17504?xtor=RSS-112",
+      "date": "2026-08-27T03:01:47.904Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Un arrêté du 5 juillet 2024 désigne les 12 tribunaux de commerce qui deviendront des tribunaux des activités économiques à partir du 1 sup er /sup janvier 2025. Explications. /p",
+      "chapo": "Arrêté du 5 juillet 2024 désignant les 12 tribunaux de commerce devenant tribunaux des activités économiques.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
@@ -253,92 +208,38 @@
       "secteurs": []
     },
     {
-      "titre": "La Commission agit contre les importations de téréphtalate d'acide dumping",
-      "lien": "https://policy.trade.ec.europa.eu/news/commission-acts-against-dumped-imports-terephthalic-acid-2026-08-10_en",
-      "date": "2026-08-20T10:42:06.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p Today the Commission imposed anti-dumping duties on imports into the EU of terephthalic acid from the Republic of Korea and Mexico. /p",
-      "chapo": "La Commission impose des droits antidumping sur les importations d'acide téréphthalique en provenance de Corée du Sud.",
+      "titre": "Les contrats entre marques et influenceurs plus encadrés dès 2026",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18674?xtor=RSS-112",
+      "date": "2026-08-27T03:01:47.903Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p À compter du 1 sup er /sup janvier 2026, un contrat liant un annonceur à un influenceur sera obligatoirement écrit dès lors que la valeur de la campagne promotionnelle dépasse 1 000 €. /p",
+      "chapo": "À partir du 1er janvier 2026, obligation d'écrit pour les contrats liant annonceurs et influenceurs, encadrement contractuel.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
         "entreprise"
       ],
-      "secteurs": []
-    },
-    {
-      "titre": "La Commission européenne publie une série de documents d'orientation pour soutenir la mise en œuvre du MACF en période définitive",
-      "lien": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
-      "date": "2026-08-18T09:47:55.000Z",
-      "source": "Commission UE — Fiscalité & douanes",
-      "srcType": "DG",
-      "resume": "p On 14 August 2026, the European Commission published a series of ten guidance documents to help non-EU operators with the implementation of the Carbon Border Adjustment Mechanism (CBAM) during its definitive period. ; /p",
-      "chapo": "La Commission publie dix guides techniques pour aider les opérateurs non-européens à se conformer au mécanisme d'ajustement carbone aux frontières en phase définitive.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "entreprise"
-      ],
       "secteurs": [
-        "energie"
+        "numerique"
       ]
     },
     {
-      "titre": "Appel d'offres pour la procédure EC-TRADE/2026/OP/0021",
-      "lien": "https://ted.europa.eu/en/notice/-/detail/541158-2026",
-      "date": "2026-08-06T08:59:47.000Z",
-      "source": "Commission UE — Commerce & sanctions",
-      "srcType": "DG",
-      "resume": "p EC-TRADE/2026/OP/0021: Procurement of data for the 'Tariffs', 'Taxes' and 'Procedures and Formalities' section of Access2Markets for 2027-2030 /p",
-      "chapo": "Marché public de la Commission portant sur la fourniture de données commerciales et tarifaires.",
+      "titre": "La Commission européenne approuve une aide de 6,1 milliards d'euros pour la défense de l'Ukraine",
+      "lien": "https://www.vie-publique.fr/en-bref/304424-ukraine-une-aide-de-61-milliards-deuros-approuvee-par-la-commission?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-08-25T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Approbation par la Commission européenne d'une aide financière de 6,1 milliards d'euros pour la défense ukrainienne.",
       "comp": "dpe",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
       "secteurs": []
-    },
-    {
-      "titre": "La conservation des herbiers de posidonies est cruciale pour les stratégies climatiques du carbone bleu",
-      "lien": "https://environment.ec.europa.eu/news/conserving-seagrass-meadows-crucial-blue-carbon-climate-strategies-2026-08-19_en",
-      "date": "2026-08-24T13:06:17.000Z",
-      "source": "Commission UE — Environnement",
-      "srcType": "DG",
-      "resume": "p A study shows that seagrass meadows have the capacity to be one of the largest carbon sinks among plant ecosystems, with the Mediterranean holding the highest seagrass biomass carbon stock per hectare. /p",
-      "chapo": "Étude démontrant le rôle majeur des herbiers de posidonies comme puits de carbone pour les stratégies climatiques de l'UE.",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "environnement",
-        "eau"
-      ]
-    },
-    {
-      "titre": "Les chercheurs demandent une meilleure prise en compte des mélanges chimiques dans la législation UE de sécurité chimique",
-      "lien": "https://environment.ec.europa.eu/news/researchers-call-greater-consideration-chemical-mixtures-improve-eu-chemical-safety-legislation-2026-08-19_en",
-      "date": "2026-08-24T13:05:56.000Z",
-      "source": "Commission UE — Environnement",
-      "srcType": "DG",
-      "resume": "p The impact of coincidental chemical mixtures is currently missing from EU regulations on chemical safety, according to a team of European scientists, who call for a ‘mixture allocation factor’ to be introduced. /p",
-      "chapo": "Appel à renforcer la réglementation européenne sur la sécurité chimique en intégrant l'évaluation des mélanges chimiques.",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "environnement"
-      ]
     },
     {
       "titre": "La Commission européenne publie des orientations pour les vérificateurs du MACF et les organismes d'accréditation",
@@ -347,66 +248,146 @@
       "source": "Commission UE — Fiscalité & douanes",
       "srcType": "DG",
       "resume": "p On 24 August 2026, ;the European Commission published new Guidance on CBAM verification and accreditation for verifiers and National Accreditation Bodies. /p",
-      "chapo": "Nouvelle guidance de la Commission sur la vérification et l'accréditation des vérificateurs du mécanisme carbone aux frontières.",
-      "comp": "urb",
+      "chapo": "Orientations de la Commission européenne sur la vérification et l'accréditation des vérificateurs du mécanisme carbone aux frontières.",
+      "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise",
+        "entreprise"
+      ],
+      "secteurs": [
+        "energie"
+      ]
+    },
+    {
+      "titre": "L'UE prolonge la suspension des mesures de rééquilibrage contre les États-Unis",
+      "lien": "https://policy.trade.ec.europa.eu/news/eu-extends-suspension-eu-rebalancing-measures-against-united-states-2026-07-31_en",
+      "date": "2026-08-20T10:49:00.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p Today, the European Commission adopted an Implementing Regulation extending the suspension of EU rebalancing measures on US exports to the European Union. ; /p",
+      "chapo": "La Commission UE prolonge la suspension des droits de rétorsion commerciaux contre les produits américains dans le différend aérien.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Règlement Acier UE : la Commission lance une consultation ciblée sur le champ d'application des produits",
+      "lien": "https://policy.trade.ec.europa.eu/news/eu-steel-regulation-commission-launches-targeted-consultation-first-product-scope-review-2026-07-30_en",
+      "date": "2026-08-20T10:48:37.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p Today, the European Commission launched a targeted consultation seeking stakeholders’ feedback on the product scope as required under the EU Steel Regulation, which will assess which products should be included in the scope of the regulat",
+      "chapo": "La Commission UE ouvre une consultation publique sur le périmètre de produits régis par son règlement protection contre l'acier moins-disant.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "La Commission agit contre les importations de l'acide téréphtalique subventionnées",
+      "lien": "https://policy.trade.ec.europa.eu/news/commission-acts-against-dumped-imports-terephthalic-acid-2026-08-10_en",
+      "date": "2026-08-20T10:42:06.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p Today the Commission imposed anti-dumping duties on imports into the EU of terephthalic acid from the Republic of Korea and Mexico. /p",
+      "chapo": "La Commission UE impose des droits antidumping sur l'acide téréphtalique coréen pour contrer une concurrence déloyale.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Appel d'offres pour la procédure EC-TRADE/2026/OP/0021 — Fourniture de données",
+      "lien": "https://ted.europa.eu/en/notice/-/detail/541158-2026",
+      "date": "2026-08-06T08:59:47.000Z",
+      "source": "Commission UE — Commerce & sanctions",
+      "srcType": "DG",
+      "resume": "p EC-TRADE/2026/OP/0021: Procurement of data for the 'Tariffs', 'Taxes' and 'Procedures and Formalities' section of Access2Markets for 2027-2030 /p",
+      "chapo": "La Commission UE lance un marché pour l'approvisionnement en données commerciales (tarifs, taxes, formalités douanières).",
+      "comp": "dpe",
+      "impact": 1,
+      "keep": true,
+      "profils": [
         "etat"
       ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Les chercheurs demandent une plus grande prise en compte des mélanges chimiques pour améliorer la législation européenne sur la sécurité chimique",
+      "lien": "https://environment.ec.europa.eu/news/researchers-call-greater-consideration-chemical-mixtures-improve-eu-chemical-safety-legislation-2026-08-19_en",
+      "date": "2026-08-24T13:05:56.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p The impact of coincidental chemical mixtures is currently missing from EU regulations on chemical safety, according to a team of European scientists, who call for a ‘mixture allocation factor’ to be introduced. /p",
+      "chapo": "Les chercheurs appellent à intégrer l'impact des mélanges chimiques dans la réglementation européenne de sécurité chimique.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [],
       "secteurs": [
         "environnement"
       ]
     },
     {
-      "titre": "Nappes phréatiques : un niveau d'eau en baisse",
-      "lien": "https://www.vie-publique.fr/questions-reponses/288610-nappes-phreatiques-un-niveau-deau-en-baisse?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-08-23T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Baisse du niveau des nappes phréatiques et implications en matière de gestion des ressources hydriques.",
+      "titre": "La conservation des prairies de phytoplancton est cruciale pour les stratégies climatiques du « carbone bleu »",
+      "lien": "https://environment.ec.europa.eu/news/conserving-seagrass-meadows-crucial-blue-carbon-climate-strategies-2026-08-19_en",
+      "date": "2026-08-24T13:06:17.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p A study shows that seagrass meadows have the capacity to be one of the largest carbon sinks among plant ecosystems, with the Mediterranean holding the highest seagrass biomass carbon stock per hectare. /p",
+      "chapo": "Étude sur la capacité des prairies marines à agir comme puits de carbone dans les stratégies climatiques.",
       "comp": "urb",
       "impact": 1,
       "keep": true,
-      "profils": [
-        "commune",
-        "departement",
-        "etat"
-      ],
+      "profils": [],
       "secteurs": [
-        "eau"
+        "environnement"
       ]
     },
     {
-      "titre": "La résistance antimicrobienne pourrait être tracée par les eaux usées selon l'approche « One Health »",
+      "titre": "La résistance antimicrobienne pourrait être tracée via les eaux usées selon l'approche One Health",
       "lien": "https://environment.ec.europa.eu/news/antimicrobial-resistance-could-be-traced-through-wastewater-under-one-health-approach-2026-08-19_en",
       "date": "2026-08-21T09:08:45.000Z",
       "source": "Commission UE — Environnement",
       "srcType": "DG",
       "resume": "p Microbes becoming resistant to antibiotics – known as antimicrobial resistance (AMR) – is a leading threat to global health. Tracing relevant genes in sewage could help address this challenge, according to recent research. /p",
-      "chapo": "Approche intégrée de santé permettant de tracer la résistance antimicrobienne via le monitoring des eaux usées.",
+      "chapo": "La Commission UE propose de surveiller l'antibiorésistance via les eaux usées dans une perspective sanitaire et environnementale intégrée.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
       "profils": [
         "sante",
-        "commune"
+        "departement"
       ],
       "secteurs": [
-        "eau",
-        "sante"
+        "sante",
+        "environnement"
       ]
     },
     {
-      "titre": "La conception intelligente des espaces verts urbains pourrait être un moyen efficace et abordable de réduire le bruit en ville",
+      "titre": "Un urbanisme intelligent des espaces verts pourrait être un moyen efficace et abordable de réduire le bruit urbain",
       "lien": "https://environment.ec.europa.eu/news/smart-design-urban-green-space-could-be-effective-affordable-way-reduce-city-noise-2026-08-19_en",
       "date": "2026-08-21T09:09:14.000Z",
       "source": "Commission UE — Environnement",
       "srcType": "DG",
       "resume": "p A new study exploring how urban green spaces influence noise levels suggests that smarter planning could help cities tackle one of today’s most pressing environmental health threats: noise pollution. /p",
-      "chapo": "Étude montrant que l'aménagement intelligent des espaces verts urbains peut contribuer à la réduction du bruit et des nuisances sonores.",
+      "chapo": "Étude sur le rôle des espaces verts urbains intelligemment aménagés pour réduire la pollution sonore.",
       "comp": "urb",
       "impact": 1,
       "keep": true,
@@ -414,7 +395,7 @@
         "commune"
       ],
       "secteurs": [
-        "amenagement"
+        "environnement"
       ]
     },
     {
@@ -424,17 +405,16 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi d'urgence réformant l'encadrement environnemental et réglementaire de l'agriculture pour renforcer sa souveraineté.",
+      "chapo": "Loi d'urgence renforçant la protection et l'autosuffisance agricoles françaises face aux enjeux de souveraineté alimentaire.",
       "comp": "urb",
       "impact": 3,
       "keep": true,
       "profils": [
-        "commune",
-        "etat"
+        "etat",
+        "commune"
       ],
       "secteurs": [
-        "agriculture",
-        "environnement"
+        "agriculture"
       ]
     },
     {
@@ -444,16 +424,36 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi d'aménagement et de développement durable des zones de montagne adaptant les règles d'urbanisme et d'environnement.",
+      "chapo": "Nouvelle loi cadre sur l'aménagement, la protection et le développement économique des territoires de montagne français.",
       "comp": "urb",
       "impact": 3,
       "keep": true,
       "profils": [
         "commune",
-        "etat"
+        "etat",
+        "bailleur"
       ],
       "secteurs": [
         "amenagement",
+        "environnement"
+      ]
+    },
+    {
+      "titre": "La Commission européenne publie des documents d'orientation pour soutenir la mise en œuvre du MACF en période définitive",
+      "lien": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
+      "date": "2026-08-18T09:47:55.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p On 14 August 2026, the European Commission published a series of ten guidance documents to help non-EU operators with the implementation of the Carbon Border Adjustment Mechanism (CBAM) during its definitive period. ; /p",
+      "chapo": "La Commission publie dix documents d'orientation aiding opérateurs non-UE pour la conformité au Mécanisme d'ajustement carbone aux frontières (MACF).",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
         "environnement"
       ]
     },
@@ -464,7 +464,7 @@
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Projet de modification du régime réglementaire des installations classées (ICPE), soumis à consultation publique avant adoption.",
+      "chapo": "Consultation sur un projet de décret révisant la nomenclature ICPE applicable aux installations classées.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -484,7 +484,7 @@
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Projet d'arrêté fixant les conditions techniques et environnementales d'exploitation des installations de galvanisation discontinue, soumis à consultation.",
+      "chapo": "Consultation sur un arrêté fixant les prescriptions environnementales applicables aux installations de galvanisation discontinue.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -494,143 +494,74 @@
         "entreprise"
       ],
       "secteurs": [
-        "environnement",
-        "btp"
+        "environnement"
       ]
     },
     {
-      "titre": "Un accord peut-il modifier la requalification du CDD en CDI ?",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18656?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Dans un arrêt rendu le 8 octobre 2025, la Cour de cassation indique que les termes d’une requalification du CDD en CDI peuvent être modifiés si une transaction a eu lieu à un moment donné. /p",
-      "chapo": "Arrêt de la Cour de cassation du 8 octobre 2025 sur l'effet d'un accord dans la requalification d'un CDD en CDI.",
-      "comp": "fps",
+      "titre": "L'UE appelle à une action mondiale pour rendre les terres et l'eau plus résilientes face à l'intensification de la sécheresse et de la désertification",
+      "lien": "https://environment.ec.europa.eu/news/eu-calls-global-action-make-land-and-water-more-resilient-drought-and-desertification-intensify-2026-08-14_en",
+      "date": "2026-08-14T09:38:51.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p As Europe faces another summer of extreme heat, water scarcity and drought, the European Union is calling for stronger global action to restore degraded land, strengthen drought resilience and protect water resources. /p",
+      "chapo": "L'Union européenne lance un appel pour renforcer la résilience des terres et de l'eau face à l'aggravation de la sécheresse et de la désertification en Europe.",
+      "comp": "urb",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise"
+        "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "environnement"
+      ]
     },
     {
-      "titre": "Un salarié peut-il travailler plus de 6 jours consécutifs ?",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18657?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Dans un arrêt du 13 novembre 2025, la Cour de cassation vient de se prononcer sur le nombre de jours consécutifs qu’un salarié peut travailler. Décryptage. /p",
-      "chapo": "Arrêt de la Cour de cassation du 13 novembre 2025 fixant les règles sur le nombre maximum de jours consécutifs de travail.",
-      "comp": "fps",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Atteintes à la probité au sein des administrations : une circulaire pour renforcer la prévention et les sanctions",
-      "lien": "https://www.vie-publique.fr/en-bref/304374-probite-des-agents-publics-une-circulaire-du-premier-ministre?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-08-20T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Circulaire gouvernementale renforçant les mesures de prévention et de sanctions contre les atteintes à la probité dans les administrations.",
-      "comp": "fps",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "commune",
-        "departement"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Nouvelle Garantie pour les compétences de la Commission européenne : six projets pilotes lancés pour soutenir les travailleurs menacés de chômage",
+      "titre": "Nouvelle Garantie pour les compétences de la Commission européenne : six projets pilotes lancés pour soutenir les travailleurs en risque de chômage",
       "lien": "https://employment-social-affairs.ec.europa.eu/news/european-commissions-new-skills-guarantee-all-six-pilot-projects-launched-support-workers-risk-2026-07-15_en",
       "date": "2026-08-18T15:33:08.000Z",
       "source": "Commission UE — Emploi & social",
       "srcType": "DG",
       "resume": "p Six pilot projects were selected and launched under the new Skills Guarantee. The pilot has a budget of €14.5 million and will support almost 1,000 European workers at risk of unemployment in the car industry by offering them on-the-job t",
-      "chapo": "La Commission européenne a lancé six projets pilotes de Garantie pour les compétences, dotés de 14,5 millions d'euros, pour préparer les salariés à risque à de nouveaux emplois.",
+      "chapo": "La Commission européenne lance six projets pilotes de Garantie pour les compétences (budget 14,5 millions d'euros) pour l'aide aux travailleurs menacés de chômage.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "departement"
       ],
       "secteurs": [
         "social"
       ]
     },
     {
-      "titre": "Réformes de la formation professionnelle en Europe : l'outil Timeline de Cedefop montre 700 mesures en cours",
-      "lien": "https://employment-social-affairs.ec.europa.eu/news/vet-reforms-across-europe-cedefops-updated-timeline-tool-shows-700-measures-motion-2026-06-24_en",
-      "date": "2026-07-23T07:44:42.000Z",
+      "titre": "Déclaration du Vice-Président exécutif Mînzatu sur une proposition de Journée européenne en mémoire des victimes d'accidents du travail",
+      "lien": "https://employment-social-affairs.ec.europa.eu/news/statement-executive-vice-president-minzatu-proposal-european-day-remembrance-victims-accidents-work-2026-08-07_en",
+      "date": "2026-08-07T09:50:24.000Z",
       "source": "Commission UE — Emploi & social",
       "srcType": "DG",
-      "resume": "p New data from Cedefop's updated online tool Timeline of VET policies show that vocational education and training reforms across EU-27, Norway and Iceland are moving forward, with countries shifting from planning to active implementation. ",
-      "chapo": "Cedefop présente des données actualisées sur 700 mesures de réforme de l'éducation et la formation professionnelles en Europe via son outil en ligne Timeline.",
-      "comp": "fps",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "La Commission réaffirme son engagement envers le Pilier européen des droits sociaux",
-      "lien": "https://employment-social-affairs.ec.europa.eu/policies-and-activities/european-pillar-social-rights-building-fairer-and-more-inclusive-european-union/renewed-commitment-future-ready-social-europe_en",
-      "date": "2026-07-22T10:38:55.000Z",
-      "source": "Commission UE — Emploi & social",
-      "srcType": "DG",
-      "resume": "p Today, the Commission adopted a Communication on the European Pillar of Social Rights, launching a strategic process towards a renewed commitment to Social Europe ahead of the Pillar's 10th anniversary in 2027. ; ; /p",
-      "chapo": "La Commission adopte une communication sur le Pilier européen des droits sociaux et lance un processus stratégique de suivi et de renforcement.",
+      "resume": "p Executive Vice-President Mînzatu issued the following statement on a proposal for a European Day in Remembrance of Victims of Accidents at Work ahead of the 70 year commemoration of the Marcinelle tragedy. /p",
+      "chapo": "La Commission UE propose l'instauration d'une journée européenne commémorative des victimes d'accidents du travail, annoncée par voie de déclaration officielle.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
-      "profils": [
-        "etat"
-      ],
+      "profils": [],
       "secteurs": []
     },
     {
-      "titre": "Fraude à l'assurance maladie : un rapport propose un meilleur ciblage des contrôles",
-      "lien": "https://www.vie-publique.fr/en-bref/304384-fraude-lassurance-maladie-rapport-inspection-igas-igf?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-08-24T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Un rapport recommande d'améliorer le ciblage des contrôles de fraude à l'assurance maladie pour renforcer son efficacité.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante",
-        "departement"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "La Commission approuve le Plan climatique social de Malte pour les ménages vulnérables",
+      "titre": "La Commission ouvre la voie à Malte pour mettre en œuvre son Plan climat social de 60 millions d'euros",
       "lien": "https://employment-social-affairs.ec.europa.eu/news/commission-paves-way-malta-implement-its-eur60-million-social-climate-plan-support-vulnerable-2026-07-29_en",
       "date": "2026-08-11T12:30:31.000Z",
       "source": "Commission UE — Emploi & social",
       "srcType": "DG",
       "resume": "p Malta’s Social Climate Plan is the fourth plan adopted under the ;Social Climate Fund. Its aim is to make the clean transition fairer and to help protect people from higher energy and transport costs. /p",
-      "chapo": "Malte met en œuvre un plan d'aide de 60 millions d'euros pour soutenir les ménages et utilisateurs de transports dans la transition verte.",
+      "chapo": "La Commission européenne approuve le Plan climat social de Malte visant à soutenir les ménages vulnérables et les usagers des transports dans la transition verte.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
       "profils": [
-        "departement",
-        "etat"
+        "etat",
+        "departement"
       ],
       "secteurs": [
         "social"
@@ -643,9 +574,9 @@
       "source": "CESE — travaux",
       "srcType": "VP",
       "resume": "div class=\"travaux-image\" div class=\" --name- -image --type-image --label-hidden field__item\" a href=\"https://www.lecese.fr/travaux-publies/loi-visant-lutter-de-maniere-integrale-contre-les-violences-sexistes-et-sexuelles-faites-aux-femmes-",
-      "chapo": "Avis du CESE sur un projet de loi global de lutte contre les violences sexistes et sexuelles, couvrant protection, prévention et accompagnement des victimes.",
+      "chapo": "Le CESE examine le projet de loi intégrale contre les violences sexistes et sexuelles envers les femmes et les enfants.",
       "comp": "asn",
-      "impact": 3,
+      "impact": 2,
       "keep": true,
       "profils": [
         "departement",
@@ -656,22 +587,22 @@
       ]
     },
     {
-      "titre": "Avis sur une lettre rectificative au projet de loi relatif à la protection des enfants",
-      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-une-lettre-rectificative-au-projet-de-loi-relatif-a-la-protection-des-enfants",
-      "date": "2026-06-25T00:00:00.000Z",
+      "titre": "Avis du Conseil d'État sur la mise en œuvre des dispositions de sécurité sociale en l'absence de loi de financement",
+      "lien": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-concernant-la-mise-en-aeuvre-en-l-absence-d-adoption-d-une-loi-de-financement-de-securite-sociale-des-dispositions-du-code-de-la-securite-soc",
+      "date": "2026-07-09T00:00:00.000Z",
       "source": "Conseil d'État — avis (projets de loi)",
       "srcType": "CE",
       "resume": "",
-      "chapo": "Le Conseil d'État rend un avis sur les amendements rectificatifs d'un projet de loi renforçant la protection de l'enfance et la prévention de la malveillance.",
+      "chapo": "Le Conseil d'État rend un avis sur les modalités d'application du code de la sécurité sociale en cas de non-adoption d'une loi de financement.",
       "comp": "asn",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
         "etat",
         "departement"
       ],
       "secteurs": [
-        "social"
+        "sante"
       ]
     },
     {
@@ -681,12 +612,16 @@
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "Arrêt de Grande Chambre de la CEDH ordonnant la libération immédiate de Osman Kavala et l'annulation de sa condamnation.",
+      "chapo": "La CEDH ordonne à la Turquie la libération immédiate de Kavala et l'effacement de sa condamnation, consacrant la violation de ses droits fondamentaux.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
-      "profils": [],
-      "secteurs": []
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "regalien"
+      ]
     },
     {
       "titre": "Arrêt de Grande Chambre Kavala c. Türkiye (n° 2) - La Cour juge qu'il incombe à la Türkiye de libérer immédiatement M. Kavala et d'effacer les conséquences de sa condamnation",
@@ -695,31 +630,44 @@
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "Arrêt de Grande Chambre de la CEDH ordonnant la libération immédiate de Osman Kavala et l'annulation de sa condamnation.",
+      "chapo": "La CEDH ordonne à la Turquie la libération immédiate de Kavala et l'effacement de sa condamnation, consacrant la violation de ses droits fondamentaux.",
       "comp": "lib",
       "impact": 3,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "regalien"
+      ]
+    },
+    {
+      "titre": "Arrêts du 25 août 2026",
+      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8614839-12265323",
+      "date": "2026-08-25T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "Publication d'une liste d'arrêts de la CEDH du 25 août 2026 sans détail substantiel accessible.",
+      "comp": "lib",
+      "impact": 2,
       "keep": true,
       "profils": [],
       "secteurs": []
     },
     {
-      "titre": "Loi du 24 août 2026 visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux",
-      "lien": "https://www.vie-publique.fr/loi/301799-proteger-les-mineurs-risques-des-reseaux-sociaux-loi-du-24-aout-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
-      "date": "2026-08-24T22:00:00.000Z",
-      "source": "Vie-publique — lois",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Loi nouvelle encadrant l'utilisation des réseaux sociaux par les mineurs et imposant des obligations de protection contre les risques identifiés.",
+      "titre": "Arrêts du 25 août 2026",
+      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8614838-12265322",
+      "date": "2026-08-25T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "Publication d'une liste d'arrêts de la CEDH du 25 août 2026 sans détail substantiel accessible.",
       "comp": "lib",
-      "impact": 3,
+      "impact": 2,
       "keep": true,
-      "profils": [
-        "etat",
-        "sante"
-      ],
-      "secteurs": [
-        "numerique"
-      ]
+      "profils": [],
+      "secteurs": []
     },
     {
       "titre": "Résumé hebdomadaire des mesures provisoires (semaine du 10 au 14 août 2026)",
@@ -728,7 +676,7 @@
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "Synthèse hebdomadaire des mesures provisoires ordonnées par la Cour européenne des droits de l'homme.",
+      "chapo": "Récapitulatif hebdomadaire des mesures provisoires prononcées par la Cour européenne des droits de l'homme.",
       "comp": "lib",
       "impact": 1,
       "keep": true,
@@ -742,7 +690,7 @@
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "Synthèse hebdomadaire des mesures provisoires ordonnées par la Cour européenne des droits de l'homme.",
+      "chapo": "Récapitulatif hebdomadaire des mesures provisoires prononcées par la Cour européenne des droits de l'homme.",
       "comp": "lib",
       "impact": 1,
       "keep": true,
@@ -750,20 +698,19 @@
       "secteurs": []
     },
     {
-      "titre": "Loi du 18 août 2026 visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public",
+      "titre": "Loi du 18 août 2026 visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquillité",
       "lien": "https://www.vie-publique.fr/loi/302565-loi-ripost-ordre-public-securite-et-tranquillite-18-aout-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
       "date": "2026-08-18T22:00:00.000Z",
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Nouvelle loi renforçant les outils de police administrative pour répondre aux troubles à l'ordre public et à la tranquillité.",
+      "chapo": "Nouvelle loi française renforçant les outils de police administrative et de maintien de l'ordre public face aux troubles.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
       "profils": [
-        "commune",
         "etat",
-        "departement"
+        "commune"
       ],
       "secteurs": []
     },
@@ -774,26 +721,26 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi encadrant l'accès à l'aide à mourir et définissant les procédures et garanties applicables.",
+      "chapo": "Loi réformant le cadre juridique de l'aide à mourir et des droits des personnes en fin de vie.",
       "comp": "lib",
       "impact": 3,
       "keep": true,
       "profils": [
         "sante",
-        "departement"
+        "etat"
       ],
       "secteurs": [
         "sante"
       ]
     },
     {
-      "titre": "Le système d'entrée-sortie (EES) est pleinement opérationnel depuis le 10 avril 2026. Qui en est exempté ?",
+      "titre": "Le Système entrée-sortie est pleinement opérationnel depuis le 10 avril 2026 : qui est exempté ?",
       "lien": "https://home-affairs.ec.europa.eu/news/entry-exit-system-fully-operational-10-april-2026-who-exempt-2026-07-27_en",
       "date": "2026-08-18T14:44:33.000Z",
       "source": "Commission UE — Migration & asile",
       "srcType": "DG",
       "resume": "p While the EES will record millions of non-EU travellers, certain categories are not recorded in the system. Border checks for travellers from these categories remain as usual – they need to show the ID or passport together with their long",
-      "chapo": "L'EES enregistre les voyageurs non-européens à leurs franchissements de frontières ; certaines catégories en sont exemptées selon les règles de l'UE.",
+      "chapo": "Le système de contrôle des frontières EES (Entry Exit System) est opérationnel ; certaines catégories de voyageurs ne sont pas enregistrées.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -805,13 +752,13 @@
       ]
     },
     {
-      "titre": "L'EES empêche les personnes porteuses de fausses identités d'entrer dans l'UE",
+      "titre": "Le Système entrée-sortie prévient l'entrée de personnes munies de fausses identités dans l'UE",
       "lien": "https://home-affairs.ec.europa.eu/news/ees-prevents-people-fake-identities-entering-eu-2026-08-06_en",
       "date": "2026-08-18T14:33:08.000Z",
       "source": "Commission UE — Migration & asile",
       "srcType": "DG",
       "resume": "p The EES helps border officers and law enforcement authorities to spot security risks and support the fight against serious crimes and terrorism. One of the examples is the case from February 2026, when the system was able to reveal the ma",
-      "chapo": "Le système d'entrée-sortie aide les autorités de contrôle frontalier et la police à détecter les risques de sécurité et à lutter contre la fraude documentaire.",
+      "chapo": "L'EES aide les autorités de contrôle frontalier et les forces de sécurité à détecter les risques et combattre la fraude d'identité.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -823,45 +770,32 @@
       ]
     },
     {
-      "titre": "Absence d'urgence à statuer sur la légalité de l'expulsion de Mme F.",
-      "lien": "https://paris.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/absence-d-urgence-a-statuer-sur-la-legalite-de-l-expulsion-de-mme-f",
-      "date": "2026-08-14T00:00:00.000Z",
-      "source": "TA de Paris",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Paris rejette une demande de référé-suspension contre une mesure d'expulsion, estimant que les conditions d'urgence ne sont pas remplies.",
-      "comp": "lib",
-      "impact": 1,
-      "keep": true,
-      "profils": [],
-      "secteurs": []
-    },
-    {
-      "titre": "Directive « Accessibilité » : possibilité de demander une exemption en ligne",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18669?xtor=RSS-112",
-      "date": "2026-08-25T22:32:24.555Z",
+      "titre": "Le dirigeant peut désormais protéger les informations relatives à son domicile personnel",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18435?xtor=RSS-112",
+      "date": "2026-08-27T03:01:47.904Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Depuis le 28 juin 2025, de nouvelles obligations relatives à l’accessibilité s’appliquent aux produits et services. À cet effet, une démarche en ligne est disponible pour demander une exemption ou signaler la non-conformité d’un produit. ",
-      "chapo": "Depuis juin 2025, nouvelles obligations d'accessibilité pour les produits et services numériques avec possibilité d'exemption en ligne.",
+      "resume": "p Les dirigeants de sociétés peuvent dorénavant demander la confidentialité des informations relatives à leur domicile personnel. Cette mesure vise à protéger les dirigeants contre les risques d’agressions physiques, de harcèlement ou de cy",
+      "chapo": "Les dirigeants peuvent demander la confidentialité de leur adresse personnelle dans les registres publics, protection des données personnelles.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise"
+        "entreprise",
+        "etat"
       ],
       "secteurs": [
         "numerique"
       ]
     },
     {
-      "titre": "Décisions automatisées : sanction de près de 825 millions d'euros à l'encontre d'UBER",
-      "lien": "https://www.cnil.fr/fr/decisions-automatisees-sanction-de-pres-de-825-millions-deuros-lencontre-duber",
-      "date": "2026-08-24T12:00:00.000Z",
-      "source": "CNIL — données personnelles",
-      "srcType": "AAI",
-      "resume": "En coopération avec la CNIL, l’autorité néerlandaise de protection des données a prononcé à l’encontre des sociétés UBER B.V. et UBER TECHNOLOGIES INC. une amende de 824 ; ;990 ; ;000 euros pour avoir pris des décisions individuelles automa",
-      "chapo": "Sanction conjointe CNIL-autorité néerlandaise contre UBER pour violations relatives aux décisions automatisées et traitement de données.",
+      "titre": "Loi du 24 août 2026 visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux",
+      "lien": "https://www.vie-publique.fr/loi/301799-proteger-les-mineurs-risques-des-reseaux-sociaux-loi-du-24-aout-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-08-24T22:00:00.000Z",
+      "source": "Vie-publique — lois",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Nouvelle loi française encadrant l'exposition des mineurs aux risques numériques et réseaux sociaux, établissant des obligations de protection.",
       "comp": "dpi",
       "impact": 3,
       "keep": true,
@@ -869,6 +803,22 @@
         "etat",
         "entreprise"
       ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Décisions automatisées : sanction de près de 825 millions d'euros à l'encontre d'Uber",
+      "lien": "https://www.cnil.fr/fr/decisions-automatisees-sanction-de-pres-de-825-millions-deuros-lencontre-duber",
+      "date": "2026-08-24T12:00:00.000Z",
+      "source": "CNIL — données personnelles",
+      "srcType": "AAI",
+      "resume": "En coopération avec la CNIL, l’autorité néerlandaise de protection des données a prononcé à l’encontre des sociétés UBER B.V. et UBER TECHNOLOGIES INC. une amende de 824 ; ;990 ; ;000 euros pour avoir pris des décisions individuelles automa",
+      "chapo": "La CNIL et l'autorité néerlandaise sanctionnent Uber pour traitement de données automatisé en violation du RGPD.",
+      "comp": "dpi",
+      "impact": 3,
+      "keep": true,
+      "profils": [],
       "secteurs": [
         "numerique"
       ]
@@ -880,13 +830,11 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Les établissements d’enseignement supérieur souhaitant recourir à des outils collaboratifs en ligne doivent se montrer vigilants concernant la protection des données personnelles. La CNIL rappelle les règles applicables pour la mise en œuvr",
-      "chapo": "Guide de la CNIL fixant les règles et recommandations pour l'utilisation d'outils collaboratifs en ligne dans l'enseignement supérieur.",
+      "chapo": "La CNIL fixe les règles RGPD pour l'utilisation d'outils collaboratifs en ligne dans l'enseignement supérieur.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
-      "profils": [
-        "etat"
-      ],
+      "profils": [],
       "secteurs": [
         "numerique"
       ]
@@ -898,12 +846,29 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Les établissements du premier et du second degrés souhaitant recourir à des outils collaboratifs en ligne doivent se montrer vigilants concernant la protection des données personnelles. La CNIL rappelle les règles à suivre pour la mise en œ",
-      "chapo": "Guide de la CNIL établissant les règles et bonnes pratiques pour l'utilisation d'outils collaboratifs numériques dans les écoles et collèges.",
+      "chapo": "La CNIL définit les règles RGPD pour l'utilisation d'outils collaboratifs en ligne en école et collège.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
+        "commune"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Le refus de crédit en questions",
+      "lien": "https://www.cnil.fr/fr/le-refus-de-credit-en-questions",
+      "date": "2026-08-19T12:00:00.000Z",
+      "source": "CNIL — données personnelles",
+      "srcType": "AAI",
+      "resume": "Vous avez demandé un crédit et on vous l’a refusé ; ;? Vous êtes inscrit dans un fichier géré par la Banque de France ou un fichier tenu par votre banque ; ;? Quelles sont les différentes démarches à effectuer ; ;?",
+      "chapo": "La CNIL explicite les droits des demandeurs face à un refus de crédit et les fichiers gérés par la Banque de France.",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": [
         "etat"
       ],
       "secteurs": [
@@ -917,7 +882,7 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "La CNIL a été notifiée de violations de données affectant le système d’information de la Direction générale des Finances publiques (DGFiP). Elle est donc d’ores et déjà saisie de ces violations et, dans ce contexte, il n’est plus nécessaire",
-      "chapo": "La CNIL a été notifiée d'une violation de données affectant le système informatique de la Direction générale des Finances ; enquête en cours.",
+      "chapo": "La CNIL enquête sur une violation de données personnelles affectant le système d'information de la Direction générale des Finances.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -929,13 +894,31 @@
       ]
     },
     {
-      "titre": "CNIL : identifier et gérer les conflits d'intérêts du délégué à la protection des données",
+      "titre": "Relevé d'activité 2024-2025 du coordinateur pour les services numériques au titre de l'article 55 du Règlement sur les services numériques",
+      "lien": "https://www.vie-publique.fr/rapport/304355-releve-dactivite-2024-2025-du-coordinateur-pour-les-services-numeriques?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
+      "date": "2026-08-17T22:00:00.000Z",
+      "source": "Vie-publique — rapports",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Rapport d'activité du coordinateur européen pour l'application du Règlement sur les services numériques (DSA).",
+      "comp": "dpi",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Délégué à la protection des données : identifier et gérer les conflits d'intérêts liés à la fonction de DPO",
       "lien": "https://www.cnil.fr/fr/dpo-identifier-gerer-conflits-interets",
       "date": "2026-08-10T12:00:00.000Z",
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Le RGPD autorise les organismes à confier d’autres missions à leur délégué à la protection des données (DPO). Ces missions ne doivent néanmoins pas faire obstacle à ses missions de DPO ou le placer en situation de conflit d’intérêts. Commen",
-      "chapo": "La CNIL clarifie les règles du RGPD sur les conflits d'intérêts liés à la fonction de DPO chargé de missions additionnelles.",
+      "chapo": "La CNIL fournit des orientations sur l'identification et la gestion des conflits d'intérêts du délégué à la protection des données dans le cadre du RGPD.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -951,83 +934,20 @@
       ]
     },
     {
-      "titre": "Puis-je demander à supprimer des données me concernant figurant dans un article de presse diffusé en ligne ?",
+      "titre": "Droit à l'oubli numérique : suppression de données personnelles dans les articles de presse en ligne",
       "lien": "https://www.cnil.fr/fr/supprimer-mes-donnees-presse",
       "date": "2026-08-05T12:00:00.000Z",
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Toute personne concernée a le droit de demander à un organisme de presse l'effacement de données personnelles la concernant figurant dans un article de presse diffusé en ligne. Il ne s’agit toutefois pas d’un droit absolu ; ;: une balance e",
-      "chapo": "La CNIL répond à une question fréquente sur le droit à l'oubli et les données personnelles dans la presse.",
+      "chapo": "La CNIL confirme que toute personne peut demander l'effacement de ses données personnelles figurant dans un article de presse en ligne.",
       "comp": "dpi",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [],
-      "secteurs": []
-    },
-    {
-      "titre": "Arrêts Imagens Médicas Integradas, Synlabhealth II et SIBS : propriété intellectuelle et données",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000085283",
-      "date": "2026-07-16T08:24:20.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class=' ' C-258/23 Imagens Médicas Integradas, C-259/23 Synlabhealth II et C-260/23 SIBS – Sociedade Gestora de Participações Sociais e.a. br/ Concurrence br/ div class= p Inspections d’une autorité de concurrence : le droit de l’Union ",
-      "chapo": "La Cour de justice rend plusieurs arrêts concernant les données médicales, les droits de propriété intellectuelle et la gestion de bases de données.",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante"
-      ],
-      "secteurs": [
-        "sante",
-        "numerique"
-      ]
-    },
-    {
-      "titre": "Commission d'enquête « dépendances et vulnérabilités dans le secteur du numérique » - phase finale des travaux",
-      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2026/commission-d-enquete-dependances-et-vulnerabilites-dans-le-secteur-du-numerique-phase-finale-des-travaux",
-      "date": "2026-07-01T13:57:55.000Z",
-      "source": "Assemblée nationale — communiqués",
-      "srcType": "AN",
-      "resume": "Le mercredi 8 juillet 2026, la commission d’enquête sur les dépendances structurelles et les vulnérabilités systémiques dans le secteur du numérique et les risques pour l’indépendance de la France, présidée par M. Philippe Latombe (Dem, Ven",
-      "chapo": "La commission d'enquête de l'Assemblée nationale finalise ses travaux sur les risques de dépendances structurelles dans le numérique.",
-      "comp": "dpi",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
       "secteurs": [
         "numerique"
       ]
-    },
-    {
-      "titre": "Le juge des référés confirme la relégation du club de football des Girondins de Bordeaux",
-      "lien": "https://paris.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-confirme-la-relegation-du-club-de-football-des-girondins-de-bordeaux",
-      "date": "2026-08-21T00:00:00.000Z",
-      "source": "TA de Paris",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Décision du juge des référés du tribunal administratif de Paris confirmant la relégation du club des Girondins de Bordeaux.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [],
-      "secteurs": []
-    },
-    {
-      "titre": "La clause de défense mutuelle de l'Union européenne en 5 questions",
-      "lien": "https://www.vie-publique.fr/questions-reponses/297150-quest-ce-que-la-clause-de-defense-mutuelle-de-lunion-europeenne?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-08-20T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Explication de la clause de défense mutuelle de l'Union européenne et de ses implications pour les États membres.",
-      "comp": "dpg",
-      "impact": 1,
-      "keep": true,
-      "profils": [],
-      "secteurs": []
     },
     {
       "titre": "Loi du 16 août 2026 actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense",
@@ -1036,14 +956,16 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Loi de programmation militaire modifiant les objectifs d'investissement et les dispositions législatives relatives à la défense française pour la période 2024-2030.",
+      "chapo": "Loi de programmation militaire modernisant les investissements et capacités de défense pour la période 2024-2030.",
       "comp": "dpg",
       "impact": 3,
       "keep": true,
       "profils": [
         "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "regalien"
+      ]
     },
     {
       "titre": "Couvre-feu pour les mineurs de moins de quinze ans à Cagnes-sur-Mer : le juge des référés suspend uniquement son caractère permanent",
@@ -1052,23 +974,24 @@
       "source": "TA de Nice",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le TA de Nice annule le caractère permanent d'un arrêté de couvre-feu pour mineurs ; décision de contentieux administratif sur le pouvoir de police du maire.",
+      "chapo": "Le tribunal administratif de Nice partiellement suspend un arrêté municipal instaurant un couvre-feu pour mineurs.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune"
+        "commune",
+        "etat"
       ],
       "secteurs": []
     },
     {
-      "titre": "Festival « les Bure'lesques » : le TA de Nancy maintient les mesures de police",
+      "titre": "Festival « les Bure'lesques » : le juge des référés du TA de Nancy maintient l'essentiel des mesures de police",
       "lien": "https://nancy.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/festival-les-bure-lesques-le-juge-des-referes-du-tribunal-administratif-de-nancy-maintient-l-essentiel-des-mesures-de-police-prises-par-la-p",
       "date": "2026-08-12T00:00:00.000Z",
       "source": "TA de Nancy",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le juge des référés du TA de Nancy valide les mesures de police administrative prises pour le festival.",
+      "chapo": "Le tribunal administratif de Nancy confirme en référé les mesures de police administrative prises à l'occasion du festival « les Bure'lesques ».",
       "comp": "dpg",
       "impact": 1,
       "keep": true,
@@ -1078,30 +1001,13 @@
       "secteurs": []
     },
     {
-      "titre": "Le juge des référés suspend l'interdiction des tenues manifestant une appartenance religieuse sur les plages de Mandelieu-la-Napoule",
-      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-suspend-l-interdiction-des-tenues-manifestant-une-appartenance-religieuse-sur-les-plages-de-mandelieu-la-napoule",
-      "date": "2026-08-07T00:00:00.000Z",
-      "source": "TA de Nice",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Suspension d'un arrêté municipal relatif aux libertés publiques et à la manifestation du culte en matière de police administrative.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Couvre-feu pour les mineurs de moins de 16 ans : la juge des référés suspend 4 arrêtés municipaux en Loire",
+      "titre": "Le tribunal administratif de Lyon suspend quatre arrêtés municipaux imposant un couvre-feu aux mineurs de moins de 16 ans",
       "lien": "https://lyon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/couvre-feu-pour-les-mineurs-de-moins-de-16-ans-la-juge-des-referes-du-tribunal-supend-4-arretes-municipaux-pris-dans-loire",
       "date": "2026-08-06T00:00:00.000Z",
       "source": "TA de Lyon",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Suspension par la juridiction administrative de mesures de police municipale imposant un couvre-feu mineur.",
+      "chapo": "Le juge des référés annule quatre arrêtés de couvre-feu municipal pour mineurs en Loire, estimant une atteinte disproportionnée aux libertés publiques.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1112,13 +1018,13 @@
       "secteurs": []
     },
     {
-      "titre": "La Commission européenne expose les étapes pratiques pour la mise en œuvre des nouvelles règles de l'UE sur les permis de conduire et les interdictions de conduire",
+      "titre": "La Commission européenne expose les mesures pratiques pour mettre en œuvre les nouvelles règles UE sur les permis de conduire",
       "lien": "https://transport.ec.europa.eu/news-events/news/european-commission-outlines-practical-steps-implementing-new-eu-rules-driving-licences-and-driving-2026-07-29_en",
       "date": "2026-07-29T14:14:33.000Z",
       "source": "Commission UE — Transports",
       "srcType": "DG",
       "resume": "p The European Commission has published its implementation strategy for its Directives to modernise EU rules on driving licences and driving disqualifications. /p",
-      "chapo": "La Commission européenne publie sa stratégie de mise en œuvre des directives modernisant les règles de l'UE sur les permis de conduire et les interdictions.",
+      "chapo": "La Commission publie une stratégie de mise en œuvre des directives modernisant les règles UE sur les permis de conduire et les suspensions.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1136,7 +1042,7 @@
       "source": "TA de Toulon",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Toulon annule un refus d'autorisation d'implantation d'un dispositif publicitaire numérique.",
+      "chapo": "Le tribunal administratif de Toulon annule un refus d'implantation d'un panneau publicitaire numérique au titre de l'excès de pouvoir.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1146,18 +1052,69 @@
       "secteurs": []
     },
     {
-      "titre": "Évacuation de la « ZAD » de Notre-Dame-des-Landes en avril 2018 : l'État condamné à indemniser cinq personnes blessées",
-      "lien": "https://nantes.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/evacuation-de-la-zad-de-notre-dame-des-landes-en-avril-2018-l-etat-condamne-a-indemniser-cinq-personnes-blessees-durant-l-intervention-des-fo",
-      "date": "2026-07-22T00:00:00.000Z",
-      "source": "TA de Nantes",
+      "titre": "Le tribunal suspend l'évacuation immédiate de l'immeuble situé 159 rue Louis Plana et 23 rue Henri Guillaumet à Toulouse",
+      "lien": "https://toulouse.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-suspend-l-evacuation-immediate-de-l-immeuble-situe-159-rue-louis-plana-et-23-rue-henri-guillaumet-a-toulouse",
+      "date": "2026-07-23T00:00:00.000Z",
+      "source": "TA de Toulouse",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Nantes condamne l'État à indemniser cinq personnes blessées lors de l'intervention des forces de l'ordre en avril 2018 à Notre-Dame-des-Landes.",
+      "chapo": "Le tribunal administratif de Toulouse suspend l'exécution immédiate d'une décision d'évacuation d'immeuble par mesure de suspension en référé.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
       "profils": [
+        "commune"
+      ],
+      "secteurs": [
+        "amenagement"
+      ]
+    },
+    {
+      "titre": "Transfert des dauphins de Marineland en Espagne : le juge des référés rejette les demandes formulées par l'association Sea Shepherd France",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/transfert-des-dauphins-de-marineland-en-espagne-le-juge-des-referes-rejette-les-demandes-formulees-par-l-association-sea-shepherd-france",
+      "date": "2026-07-21T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Nice rejette en référé les demandes de l'association contestant le transfert de cétacés captifs hors de France.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [],
+      "secteurs": [
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Tribunal administratif de Toulouse — Réglementation de l'espace public à Foix : le juge des référés valide l'arrêté « anti-mendicité » mais suspend l'interdiction générale des quêtes",
+      "lien": "https://toulouse.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/reglementation-de-l-espace-public-a-foix-le-juge-des-referes-valide-l-arrete-anti-mendicite-mais-suspend-l-interdiction-generale-des-quetes",
+      "date": "2026-07-16T00:00:00.000Z",
+      "source": "TA de Toulouse",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le TA de Toulouse valide partiellement un arrêté anti-mendicité mais censure l'interdiction générale des quêtes pour excès de pouvoir.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "commune",
         "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Règlementation de la publicité dans la Métropole de Lyon : certaines restrictions portent une atteinte disproportionnée aux libertés économiques",
+      "lien": "https://lyon.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/reglementation-de-la-publicite-dans-la-metropole-de-lyon-certaines-restrictions-portent-une-atteinte-disproportionnee-aux-libertes-economiques",
+      "date": "2026-07-13T00:00:00.000Z",
+      "source": "TA de Lyon",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Lyon annule certaines restrictions à la publicité jugées disproportionnées au regard des libertés économiques.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "commune"
       ],
       "secteurs": []
     }
