@@ -1,28 +1,8 @@
 {
-  "generatedAt": "2026-10-10T01:40:21.181Z",
-  "juridictionsOk": 80,
-  "count": 72,
+  "generatedAt": "2026-10-11T00:49:18.551Z",
+  "juridictionsOk": 85,
+  "count": 69,
   "items": [
-    {
-      "titre": "Marchés publics : nouveaux seuils et simplification pour les marchés de travaux",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18673?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Au 1 sup er /sup janvier 2026, les seuils de procédure adaptée et de procédure formalisée appliqués aux marchés publics évoluent. /p",
-      "chapo": "Modification des seuils de procédure adaptée et formalisée applicables aux marchés publics de travaux au 1er janvier 2026.",
-      "comp": "dpa",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat",
-        "entreprise"
-      ],
-      "secteurs": [
-        "btp"
-      ]
-    },
     {
       "titre": "CEF Transport : près de 3 milliards d'euros demandés pour des projets d'infrastructure de transport",
       "lien": "https://cinea.ec.europa.eu/news-events/news/cef-transport-almost-eur3-billion-requested-transport-infrastructure-projects-2026-10-07_en",
@@ -30,17 +10,16 @@
       "source": "Commission UE — Transports",
       "srcType": "DG",
       "resume": "p CINEA received 246 applications requesting almost €3 billion in co-funding from the Connecting Europe Facility (CEF) Transport by the 6 October 2026 call deadline. This represents nearly 2.69 times the €1.1 billion budget available under ",
-      "chapo": "La Commission européenne reçoit 246 demandes de cofinancement au titre du Mécanisme pour l'interconnexion en Europe (CEF) pour des infrastructures de transport.",
+      "chapo": "La Commission européenne a reçu 246 candidatures pour le cofinancement de projets d'infrastructure de transport via le mécanisme Connecting Europe Facility.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
-        "etat"
+        "etat",
+        "commune"
       ],
       "secteurs": [
-        "transport",
-        "btp"
+        "transport"
       ]
     },
     {
@@ -50,25 +29,40 @@
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Le 9 septembre 2026, la Commission européenne a publié sa proposition de Public Procurement Act dans le cadre de la révision des directives européennes de 2014 sur la commande publique. Simplification des procédures, souveraineté européenne",
-      "chapo": "La Commission UE propose une refonte majeure des directives sur les marchés publics (« Public Procurement Act ») en septembre 2026.",
+      "chapo": "La Commission européenne dévoile sa proposition d'actualisation du cadre normatif de la commande publique européenne.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
         "commune",
-        "etat",
-        "entreprise"
+        "etat"
       ],
       "secteurs": []
     },
     {
-      "titre": "Marchés publics de travaux : la Cour de cassation consacre la compétence du juge judiciaire entre membres d'un groupement",
+      "titre": "Signification des décisions de justice : formalité préalable à l'exécution des intérêts civils",
+      "lien": "https://www.economie.gouv.fr/daj/signification-des-decisions-de-justice-un-prealable-incontournable-la-mise-execution-des-decisions-penales-statuant-sur-les-interets-civils",
+      "date": "2026-10-05T11:14:43.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Conformément aux dispositions de l'article 503 du code de procédure civile, la signification est une formalité préalable et indispensable à toute mesure d'exécution forcée.",
+      "chapo": "Clarification de la Direction des affaires juridiques sur la signification requise avant exécution des décisions pénales statuant intérêts civils.",
+      "comp": "dpa",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Cour de cassation : compétence du juge judiciaire en cas de litiges entre membres d'un groupement dans les marchés de travaux",
       "lien": "https://www.economie.gouv.fr/daj/marches-publics-de-travaux-la-cour-de-cassation-consacre-la-competence-du-juge-judiciaire-entre-membres-dun-groupement",
       "date": "2026-10-02T17:22:24.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "La Cour de cassation rappelle la distinction entre, d’une part, le contrat administratif conclu avec le maître d’ouvrage public et, d’autre part, le contrat de droit privé liant les membres d’un groupement. Dès lors que le litige concerne e",
-      "chapo": "La Cour de cassation confirme la compétence du juge judiciaire pour les litiges entre membres d'un groupement au sein d'un marché public de travaux.",
+      "chapo": "La Cour de cassation affirme que le juge judiciaire est compétent pour trancher les différends entre membres d'un groupement contractant avec une personne publique.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
@@ -81,23 +75,22 @@
       ]
     },
     {
-      "titre": "Le juge des référés suspend les actes faisant obstruction à la reconstruction de la caserne des pompiers de Megève",
-      "lien": "https://grenoble.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-suspend-les-actes-faisant-obstruction-a-la-reconstruction-de-la-caserne-des-pompiers-de-megeve",
-      "date": "2026-09-11T00:00:00.000Z",
-      "source": "TA de Grenoble",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Grenoble suspend les actes administratifs bloquant la reconstruction d'une caserne de pompiers.",
+      "titre": "Marchés de représentation légale : le Conseil d'État précise les conditions du bénéfice de l'exclusion de publicité et de mise en concurrence",
+      "lien": "https://www.economie.gouv.fr/daj/marches-de-representation-legale-le-conseil-detat-precise-les-conditions-du-benefice-de-lexclusion-de-publicite-et-de-mise-en-concurrence",
+      "date": "2026-09-04T09:27:47.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "L’exception permettant de conclure un marché de services juridiques sans publicité ni mise en concurrence préalables doit être appréciée au regard des conditions concrètes d’exécution du contrat. Le seul fait que le titulaire soit un cabine",
+      "chapo": "Le Conseil d'État clarifie les conditions du recours à l'exception permettant de conclure des marchés de services juridiques sans mise en concurrence.",
       "comp": "dpa",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
         "commune",
-        "etat"
+        "etat",
+        "departement"
       ],
-      "secteurs": [
-        "btp"
-      ]
+      "secteurs": []
     },
     {
       "titre": "Billetterie ferroviaire : la Commission européenne propose de nouvelles règles pour accompagner l'ouverture à la concurrence",
@@ -106,7 +99,26 @@
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "La Commission européenne a présenté, le 13 mai 2026, un « paquet billettique » destiné à faciliter l’achat de billets de train et à renforcer les droits des voyageurs. Trois propositions de règlement prévoient notamment un meilleur accès au",
-      "chapo": "La Commission européenne propose un cadre réglementaire pour les systèmes de billetterie ferroviaire en contexte de libéralisation.",
+      "chapo": "La Commission propose un paquet billettique harmonisant les règles d'accès et de vente de billets de transport ferroviaire en Europe.",
+      "comp": "dpa",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune"
+      ],
+      "secteurs": [
+        "transport"
+      ]
+    },
+    {
+      "titre": "Contrat de performance État-SNCF Réseau 2024-2033 : l'ART salue l'effort d'investissement mais appelle à en sécuriser le financement et à préciser la stratégie de long terme",
+      "lien": "https://www.autorite-transports.fr/communiques/contrat-de-performance-etat-sncf-reseau-2024-2033-lart-salue-leffort-dinvestissement-mais-appelle-a-en-securiser-le-financement-et-a-preciser-la-strategie-de-long-terme/",
+      "date": "2026-09-04T08:58:29.000Z",
+      "source": "ART — transports",
+      "srcType": "AAI",
+      "resume": "L Autorité de régulation des transports (ART) publie ce jour son avis sur le projet de contrat de performance actualisé entre [ ] The post Contrat de performance État-SNCF Réseau 2024-2033 : l ART salue l effort d’investissement mais appell",
+      "chapo": "L'Autorité de régulation des transports analyse le projet de contrat de performance actualisé entre l'État et SNCF Réseau, saluant l'investissement mais soulevant des enjeux de financement.",
       "comp": "dpa",
       "impact": 2,
       "keep": true,
@@ -118,47 +130,31 @@
       ]
     },
     {
-      "titre": "Marchés de représentation légale : le Conseil d'État précise les conditions du bénéfice de l'exclusion de publicité et de mise en concurrence",
-      "lien": "https://www.economie.gouv.fr/daj/marches-de-representation-legale-le-conseil-detat-precise-les-conditions-du-benefice-de-lexclusion-de-publicite-et-de-mise-en-concurrence",
-      "date": "2026-09-04T09:27:47.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "L’exception permettant de conclure un marché de services juridiques sans publicité ni mise en concurrence préalables doit être appréciée au regard des conditions concrètes d’exécution du contrat. Le seul fait que le titulaire soit un cabine",
-      "chapo": "Le Conseil d'État clarifie le régime dérogatoire des marchés de services juridiques sans formalités de mise en concurrence.",
-      "comp": "dpa",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "commune"
-      ],
-      "secteurs": []
-    },
-    {
       "titre": "Le Conseil constitutionnel valide la loi prévoyant la création d'une foncière de l'État",
       "lien": "https://www.economie.gouv.fr/daj/le-conseil-constitutionnel-valide-la-loi-prevoyant-la-creation-dune-fonciere-de-letat",
       "date": "2026-09-03T17:08:44.000Z",
       "source": "DAJ Bercy — commande publique",
       "srcType": "DAJ",
       "resume": "Saisi par plus de soixante députés, le Conseil constitutionnel a rendu, le 14 août 2026, une décision de conformité concernant la loi visant à moderniser la gestion du patrimoine immobilier de l’État. Cette loi, qui prévoit la création d’un",
-      "chapo": "Le Conseil constitutionnel déclare conforme à la Constitution la loi créant une foncière d'État destinée à acquérir et gérer des immeubles publics.",
+      "chapo": "Le Conseil constitutionnel déclare conforme la loi créant une foncière d'État destinée à acquérir et gérer des immeubles pour les besoins publics.",
       "comp": "dpa",
       "impact": 3,
       "keep": true,
       "profils": [
-        "etat",
-        "commune"
+        "etat"
       ],
-      "secteurs": []
+      "secteurs": [
+        "amenagement"
+      ]
     },
     {
-      "titre": "Employeurs : découvrez ce qui change au 1er janvier 2026 !",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18722?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
+      "titre": "Un questionnaire pour comprendre les changements qui vont impacter votre entreprise",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18664?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Au 1 sup er /sup janvier 2026, de nombreux changements impacteront les entreprises (mesures, taux, tarifs...). em Entreprendre Service Public /em vous informe dans un dossier complet des évolutions prévues. /p",
-      "chapo": "Synthèse des changements législatifs et réglementaires impactant les entreprises à compter de janvier 2026.",
+      "resume": "p À moins d’un an de l’entrée en vigueur de la réforme sur la facturation électronique, impots.gouv.fr propose un questionnaire vous permettant d’obtenir les réponses adaptées à votre situation. /p",
+      "chapo": "Questionnaire en ligne pour aider les entreprises à anticiper l'impact de la réforme de la facturation électronique.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
@@ -168,13 +164,13 @@
       "secteurs": []
     },
     {
-      "titre": "Maintien du taux de la cotisation AGS à 0,25 % au 1er janvier 2026",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17906?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
+      "titre": "Un accord peut-il modifier la requalification du CDD en CDI ?",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18656?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Le taux de la cotisation d'assurance garantie des salaires (AGS) reste fixé à 0,25 % au 1er janvier 2026. Cette contribution vise à financer le risque de non-paiement des rémunérations dues aux salariés en cas de procédure collective. Un ",
-      "chapo": "Le taux de cotisation d'assurance garantie des salaires reste inchangé à 0,25 % pour 2026.",
+      "resume": "p Dans un arrêt rendu le 8 octobre 2025, la Cour de cassation indique que les termes d’une requalification du CDD en CDI peuvent être modifiés si une transaction a eu lieu à un moment donné. /p",
+      "chapo": "La Cour de cassation précise que les termes d'un accord ne peuvent écarter une requalification de CDD en CDI.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
@@ -184,29 +180,13 @@
       "secteurs": []
     },
     {
-      "titre": "Aides de minimis : seuils applicables et création d'un registre national",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17026?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
+      "titre": "Paiement de la CFE 2025 au plus tard le 15 décembre 2025",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17831?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Depuis le 1 sup er /sup janvier 2024, le plafond des aides de minimis par entreprise est fixé à 300 000 €. em Entreprendre Service Public /em vous détaille les seuils fixés par les réglements européens et vous informe qu’un registre natio",
-      "chapo": "Le plafond des aides de minimis par entreprise reste fixé à 300 000 € avec création d'un registre national depuis 2024.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Découvrez le tarif 2026 des annonces légales !",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18724?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Les tarifications forfaitaires et au caractère dont font l'objet les annonces judiciaires et légales sont actualisées au 1 sup er /sup janvier 2026. /p",
-      "chapo": "Mise à jour des tarifs forfaitaires et au caractère des annonces judiciaires et légales pour 2026.",
+      "resume": "p Vous exercez une activité professionnelle non salariée ? Dans ce cas, sauf exonération, vous devez consulter l'avis d'impôt de cotisation foncière des entreprises (CFE) puis procéder au paiement. Cet avis est consultable en ligne sur impo",
+      "chapo": "Rappel de l'échéance du paiement de la Cotisation Foncière des Entreprises pour 2025.",
       "comp": "dpe",
       "impact": 1,
       "keep": true,
@@ -216,62 +196,13 @@
       "secteurs": []
     },
     {
-      "titre": "Nouvel entrepreneur ? Effectuez votre déclaration initiale de CFE !",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18720?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Vous avez créé votre entreprise en 2025 ? Vous devez avant le 31 décembre 2025 remplir la déclaration initiale de cotisation foncière des entreprises (CFE) et demander le cas échéant les exonérations vous concernant. /p",
-      "chapo": "Rappel de l'obligation pour les nouveaux entrepreneurs de déposer leur déclaration initiale à la CFE avant le 31 décembre 2025.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Sécurité sociale : quel sera le plafond annuel en 2026 ?",
-      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A15386?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
-      "source": "Service-public — actualités pro",
-      "srcType": "VP",
-      "resume": "p Le plafond annuel de la Sécurité sociale (PASS) sert de base pour calculer le montant des indemnités journalières pour maladie, accident du travail ou maternité, les pensions d'invalidité, les retraites, etc. Il est réévalué chaque année ",
-      "chapo": "Information sur le plafond annuel de la Sécurité sociale (PASS) pour 2026, servant de base aux calculs d'indemnités.",
-      "comp": "dpe",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "entreprise"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "La Commission propose de prolonger les outils clés de lutte anti-fraude à la TVA jusqu'à juin 2030",
+      "titre": "La Commission propose de prolonger les outils clés de lutte contre la fraude à la TVA jusqu'à juin 2030",
       "lien": "https://taxation-customs.ec.europa.eu/news/commission-proposes-extending-key-anti-vat-fraud-tools-until-june-2030-2026-10-09_en",
       "date": "2026-10-09T09:01:58.000Z",
       "source": "Commission UE — Fiscalité & douanes",
       "srcType": "DG",
       "resume": "p A new Commission proposal adopted on 1 October 2026 aims to extend the optional reverse charge mechanism and the quick reaction mechanism against VAT fraud until 30 June 2030. ; /p",
-      "chapo": "La Commission propose de prolonger les mécanismes facultatifs d'inversion du mécanisme de facturation et d'autres mesures de lutte contre la fraude TVA jusqu'en 2030.",
-      "comp": "dpe",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "entreprise",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Le Conseil met à jour la liste de l'UE des juridictions fiscales non coopératives",
-      "lien": "https://taxation-customs.ec.europa.eu/news/council-updates-eu-list-non-cooperative-tax-jurisdictions-cooperation-delivers-further-progress-2026-10-09_en",
-      "date": "2026-10-09T08:59:14.000Z",
-      "source": "Commission UE — Fiscalité & douanes",
-      "srcType": "DG",
-      "resume": "p On 9 October, EU Finance Ministers agreed on the latest revision of the EU list of non-cooperative tax jurisdictions. ;The update reflects both progress made by jurisdictions through cooperation with the EU and remaining concerns in the a",
-      "chapo": "Les ministres des Finances de l'UE ont révisé la liste des juridictions fiscales non coopératives en fonction de progrès en matière de conformité.",
+      "chapo": "La Commission européenne propose de reconduire les mécanismes facultatifs d'inversion du mécanisme d'autoliquidation et de déclaration rapide jusqu'en 2030.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
@@ -282,46 +213,141 @@
       "secteurs": []
     },
     {
-      "titre": "Guidance actualisée sur le droit de douane de 3 € incluant les frais de gestion de l'UE",
+      "titre": "Le Conseil met à jour la liste de l'UE des juridictions non coopératives en matière fiscale",
+      "lien": "https://taxation-customs.ec.europa.eu/news/council-updates-eu-list-non-cooperative-tax-jurisdictions-cooperation-delivers-further-progress-2026-10-09_en",
+      "date": "2026-10-09T08:59:14.000Z",
+      "source": "Commission UE — Fiscalité & douanes",
+      "srcType": "DG",
+      "resume": "p On 9 October, EU Finance Ministers agreed on the latest revision of the EU list of non-cooperative tax jurisdictions. ;The update reflects both progress made by jurisdictions through cooperation with the EU and remaining concerns in the a",
+      "chapo": "Les ministres des finances de l'UE révisent la liste des juridictions non coopératives suite aux progrès de la coopération fiscale internationale.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Orientation mise à jour sur le droit de douane de 3 € incluant les frais de traitement",
       "lien": "https://taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en?filename=Customs%20Guidance%20on%20EUR%203%20customs%20duty.pdf",
       "date": "2026-10-08T12:09:09.000Z",
       "source": "Commission UE — Fiscalité & douanes",
       "srcType": "DG",
       "resume": "p From 1 November 2026, the EU will apply a €2 Union handling fee. Guidance on this fee are now included on the previous guidance document on the €3 customs duty. This guidance will be updated periodically as needed. /p",
-      "chapo": "La Commission européenne met à jour ses orientations sur le droit de douane de 3 €, intégrant la nouvelle redevance d'exécution de 2 € à partir de novembre 2026.",
+      "chapo": "À partir de novembre 2026, une redevance de 2 € de traitement d'union s'ajoutera aux droits de douane ; guidance actualisée disponible.",
       "comp": "dpe",
       "impact": 2,
       "keep": true,
       "profils": [
-        "entreprise",
-        "etat"
+        "etat",
+        "entreprise"
       ],
       "secteurs": []
     },
     {
-      "titre": "Budget de la défense : étapes pour atteindre 5% du PIB en 2035",
-      "lien": "https://www.vie-publique.fr/eclairage/284741-budget-de-la-defense-quelles-etapes-pour-le-porter-5-du-pib?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-10-06T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
+      "titre": "Arrêt de la Cour dans l'affaire C-482/24 P — Global 8 Airlines/Commission",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000088477",
+      "date": "2026-10-08T07:42:58.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class=' ' Global 8 Airlines/Commission br/ Politique étrangère et de sécurité commune br/ div class= p Mesures restrictives : l’inscription, par la Commission, d’aéronefs sur une liste d’interdiction de vol est un acte qui peut être con",
+      "chapo": "La Cour de justice tranche un recours en matière de mesures restrictives commerciales et de sanctions économiques à l'encontre d'une compagnie aérienne.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
+        "transport"
+      ]
+    },
+    {
+      "titre": "Freins au développement de l'économie du tourisme : 18 recommandations pour un cadre cohérent",
+      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2026/freins-au-developpement-de-l-economie-du-tourisme-18-recommandations-pour-creer-un-cadre-coherent-qui-transformerait-les-atouts-du-pays-en-valeur",
+      "date": "2026-10-07T12:35:14.000Z",
+      "source": "Assemblée nationale — communiqués",
+      "srcType": "AN",
+      "resume": "Mercredi 7 octobre 2026, Alexis Jolly (RN, Isère) et Vincent Rolland (DR, Savoie) ont présenté en commission des affaires économiques les conclusions de la mission d’information sur les freins au développement de l’économie du tourisme.La F",
+      "chapo": "Une commission parlementaire formule 18 recommandations pour créer un cadre juridique et réglementaire favorisant le développement du secteur touristique français.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune"
+      ],
+      "secteurs": [
+        "culture"
+      ]
+    },
+    {
+      "titre": "Projet de loi de finances pour 2027",
+      "lien": "https://www.vie-publique.fr/loi/304797-budget-2027-projet-de-loi-de-finances-plf?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
+      "date": "2026-10-01T22:00:00.000Z",
+      "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Une analyse des étapes nécessaires pour porter le budget militaire français à 5% du PIB d'ici 2035.",
+      "chapo": "Le projet de loi de finances 2027 fixe les grandes orientations budgétaires et fiscales de l'État.",
       "comp": "dpe",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
-        "etat"
+        "etat",
+        "commune",
+        "departement"
       ],
       "secteurs": []
     },
     {
-      "titre": "Projet d'arrêté fixant le nombre maximum d'alouettes des champs capturables par pantes en 2026-2027",
+      "titre": "Fiche d'information — Comment le DMA garantit aux entreprises utilisant Booking.com la liberté de fixer leurs tarifs",
+      "lien": "https://digital-markets-act.ec.europa.eu/factsheet-how-dma-ensures-businesses-using-bookingcom-are-free-set-their-prices-and-bookingcom-2026-09-28_en",
+      "date": "2026-10-01T14:02:17.000Z",
+      "source": "Commission UE — Concurrence",
+      "srcType": "DG",
+      "resume": "The Commission’s regulatory dialogues with gatekeepers in the framework of its enforcement of the Digital Markets Act (DMA) are delivering more fairness and transparency. Businesses which are active on Booking.com in the European Economic A",
+      "chapo": "La Commission précise l'application du DMA aux gatekeepers pour garantir la liberté tarifaire des entreprises utilisant Booking.com.",
+      "comp": "dpe",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Déclaration d'un accident ou d'un incident dans une ICPE : une nouvelle démarche en ligne est disponible",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18653?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Depuis le 8 octobre, une nouvelle démarche en ligne disponible sur em Entreprendre Service Public /em permet de déclarer un incident ou un accident survenu dans une installation classée pour la protection de l'environnement (ICPE). À part",
+      "chapo": "Nouvelle procédure numérique pour la déclaration d'accidents et incidents en ICPE.",
+      "comp": "urb",
+      "impact": 1,
+      "keep": true,
+      "profils": [
+        "commune",
+        "etat"
+      ],
+      "secteurs": [
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Projet d'arrêté fixant le nombre maximum d'alouettes des champs capturables au moyen de pantes en Nouvelle-Aquitaine",
       "lien": "https://www.vie-publique.fr/consultations/304917-arrete-relatif-au-nombre-maximum-dalouettes-des-champs",
       "date": "2026-10-09T10:00:00.000Z",
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Consultation sur l'arrêté définissant les quotas de capture d'alouettes dans quatre départements d'Aquitaine pour la campagne 2026-2027.",
+      "chapo": "Ouverture de la consultation publique sur la limitation des captures d'alouettes des champs dans quatre départements pour la campagne 2026-2027.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -335,13 +361,13 @@
       ]
     },
     {
-      "titre": "Consultation du public sur les mesures compensatoires de risque inondation du contournement Ouest de Montpellier",
+      "titre": "Consultation du public sur le complément à l'étude d'impact du contournement Ouest de Montpellier",
       "lien": "https://www.vie-publique.fr/consultations/304918-complement-letude-dimpact-pour-le-contournement-ouest-de-montpellier",
       "date": "2026-10-09T10:00:00.000Z",
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Enquête publique pour la déclaration d'utilité publique du contournement Ouest de Montpellier avec focus sur les mesures de compensation des risques d'inondation.",
+      "chapo": "Consultation publique sur les mesures compensatoires aux risques d'inondation liées au projet de contournement Ouest de Montpellier.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -355,32 +381,31 @@
       ]
     },
     {
-      "titre": "L'UE renforce la protection des travailleurs exposés à des substances dangereuses",
-      "lien": "https://www.vie-publique.fr/en-bref/304887-lue-renforce-la-protection-des-travailleurs-aux-substances-dangereuses?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-10-08T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "L'UE adopte une nouvelle directive pour renforcer la protection des travailleurs confrontés à des substances chimiques dangereuses sur les lieux de travail.",
-      "comp": "urb",
-      "impact": 3,
-      "keep": true,
-      "profils": [
-        "entreprise",
-        "etat"
-      ],
-      "secteurs": [
-        "environnement"
-      ]
-    },
-    {
       "titre": "Changement climatique : la CNCDH recommande l'adoption d'une loi-cadre",
       "lien": "https://www.vie-publique.fr/en-bref/304891-changement-climatique-et-droits-fondamentaux-lalerte-de-la-cncdh?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
       "date": "2026-10-08T22:00:00.000Z",
       "source": "Vie-publique — actualités",
       "srcType": "VP",
       "resume": "",
-      "chapo": "La Commission nationale consultative des droits de l'homme préconise un cadre législatif unifié pour la politique climatique française.",
+      "chapo": "La CNCDH recommande une loi-cadre sur le climat pour renforcer la cohérence normative et institutionnelle de la politique climatique française.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "environnement"
+      ]
+    },
+    {
+      "titre": "Consultation publique sur l'arrêté relatif à la lutte contre la flavescence dorée de la vigne",
+      "lien": "https://www.vie-publique.fr/consultations/304904-arrete-abrogeant-et-remplacant-arrete-lutte-contre-la-flavescence-doree",
+      "date": "2026-10-08T10:00:00.000Z",
+      "source": "Vie-publique — débats & consultations",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Consultation publique sur un arrêté abrogeant et remplaçant les mesures de lutte contre la flavescence dorée et son vecteur.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -389,22 +414,21 @@
         "commune"
       ],
       "secteurs": [
-        "environnement"
+        "agriculture"
       ]
     },
     {
-      "titre": "Consultation publique sur le projet d'arrêté contre la flavescence dorée de la vigne",
-      "lien": "https://www.vie-publique.fr/consultations/304904-arrete-abrogeant-et-remplacant-arrete-lutte-contre-la-flavescence-doree",
-      "date": "2026-10-08T10:00:00.000Z",
-      "source": "Vie-publique — débats & consultations",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Mise en consultation d'un arrêté abrogeant et remplaçant le texte de 2021 relatif à cette maladie végétale et son vecteur.",
+      "titre": "Nouveau cadre UE d'émissions pour l'élevage de volailles et de porcs",
+      "lien": "https://environment.ec.europa.eu/news/new-eu-emissions-framework-poultry-pig-rearing-2026-10-08_en",
+      "date": "2026-10-08T09:36:30.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p The measures, which will begin applying between 2030 and 2032, simplify rules for farmers and reduce red tape. /p",
+      "chapo": "Nouvelles mesures UE simplifiées et applicables entre 2030 et 2032 pour réduire les émissions et la charge administrative des éleveurs.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
       "profils": [
-        "commune",
         "etat"
       ],
       "secteurs": [
@@ -412,32 +436,13 @@
       ]
     },
     {
-      "titre": "Nouveau cadre UE d'émissions pour l'élevage avicole et porcin",
-      "lien": "https://environment.ec.europa.eu/news/new-eu-emissions-framework-poultry-pig-rearing-2026-10-08_en",
-      "date": "2026-10-08T09:36:30.000Z",
-      "source": "Commission UE — Environnement",
-      "srcType": "DG",
-      "resume": "p The measures, which will begin applying between 2030 and 2032, simplify rules for farmers and reduce red tape. /p",
-      "chapo": "L'UE adopte des mesures simplifiées applicables entre 2030 et 2032 pour réduire les émissions de l'élevage intensif.",
-      "comp": "urb",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "commune"
-      ],
-      "secteurs": [
-        "agriculture"
-      ]
-    },
-    {
-      "titre": "Annulation de l'autorisation préfectorale pour un projet de parc photovoltaïque à Warluis (Oise)",
+      "titre": "Projet de parc photovoltaïque à Warluis (Oise) : annulation de l'autorisation préfectorale",
       "lien": "https://amiens.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/projet-de-parc-photovoltaique-a-warluis-oise-le-tribunal-administratif-d-amiens-annule-l-autorisation-prefectorale-au-titre-de-la-derogation-es",
       "date": "2026-10-08T00:00:00.000Z",
       "source": "TA de Amiens",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif d'Amiens annule l'autorisation préfectorale relative à un projet de parc photovoltaïque, remettant en cause la dérogation accordée.",
+      "chapo": "Le tribunal administratif d'Amiens annule l'autorisation d'un parc photovoltaïque pour non-respect des dérogations environnementales requises.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -451,51 +456,33 @@
       ]
     },
     {
-      "titre": "Le système gazier européen préparé à l'hiver malgré des stocks réduits",
-      "lien": "https://energy.ec.europa.eu/news/eu-gas-system-prepared-winter-despite-lower-storage-levels-2026-10-08_en",
-      "date": "2026-10-08T15:55:59.000Z",
-      "source": "Commission UE — Énergie",
-      "srcType": "DG",
-      "resume": "p The Gas Coordination Group has met again today to take stock of the current gas market situation in Europe. /p",
-      "chapo": "Le groupe de coordination gazière évalue la résilience du marché gazier européen face aux conditions hivernales.",
-      "comp": "urb",
-      "impact": 1,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "energie"
-      ]
-    },
-    {
-      "titre": "Projet d'ordonnance sur la création, le fonctionnement et l'exploitation des élevages d'animaux",
+      "titre": "Projet d'ordonnance relative à la création de régimes de mise en service, de fonctionnement, d'exploitation, de contrôle et de cessation d'activité des élevages d'animaux",
       "lien": "https://www.vie-publique.fr/consultations/304844-ordonnance-creation-controle-fonctionnement-elevages-danimaux",
       "date": "2026-10-06T10:00:00.000Z",
       "source": "Vie-publique — débats & consultations",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Consultation publique sur un projet d'ordonnance établissant les régimes de mise en service, contrôle et cessation d'activité des élevages.",
+      "chapo": "Une ordonnance crée un régime d'autorisation, de contrôle et de fermeture applicable aux installations d'élevage d'animaux.",
       "comp": "urb",
-      "impact": 2,
+      "impact": 3,
       "keep": true,
       "profils": [
-        "commune",
-        "etat"
+        "etat",
+        "commune"
       ],
       "secteurs": [
-        "agriculture",
-        "environnement"
+        "environnement",
+        "agriculture"
       ]
     },
     {
-      "titre": "Rapports de l'UE sur l'eau douce à la mer : appel à une action renforcée en matière de résilience face à la pollution",
+      "titre": "Les rapports source-vers-mer de l'UE exhortent à une action de résilience contre la pollution",
       "lien": "https://environment.ec.europa.eu/news/eu-source-sea-reports-urge-pollution-resilience-action-2026-10-05_en",
       "date": "2026-10-05T14:18:35.000Z",
       "source": "Commission UE — Environnement",
       "srcType": "DG",
       "resume": "p The new assessments for certain Member States also highlight progress in the state of EU water bodies over the past six years. /p",
-      "chapo": "La Commission européenne publie des évaluations par État membre sur l'état des masses d'eau et demande une meilleure résilience environnementale.",
+      "chapo": "La Commission européenne publie des évaluations sur l'état des masses d'eau et les progrès en matière de prévention de la pollution.",
       "comp": "urb",
       "impact": 2,
       "keep": true,
@@ -503,23 +490,76 @@
         "etat"
       ],
       "secteurs": [
-        "eau",
-        "environnement"
+        "environnement",
+        "eau"
       ]
     },
     {
-      "titre": "Paiement trimestriel des cotisations en 2026 : délai d'option pour les petites entreprises",
-      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A17932?xtor=RSS-112",
-      "date": "2026-10-10T01:35:57.063Z",
+      "titre": "L'UE et l'Allemagne s'engagent pour un renforcement de la résilience hydrique",
+      "lien": "https://environment.ec.europa.eu/news/roswall-schneider-commit-stronger-eu-water-enforcement-2026-10-05_en",
+      "date": "2026-10-05T11:23:47.000Z",
+      "source": "Commission UE — Environnement",
+      "srcType": "DG",
+      "resume": "p Commissioner Jessika Roswall ; German Federal Minister Carsten Schneider signed a joint statement on water resilience in Germany. /p",
+      "chapo": "La Commission européenne et le ministre allemand signent une déclaration conjointe sur la résilience hydrique et l'application du droit de l'eau.",
+      "comp": "urb",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": [
+        "eau"
+      ]
+    },
+    {
+      "titre": "Un salarié peut-il travailler plus de 6 jours consécutifs ?",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18657?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
       "source": "Service-public — actualités pro",
       "srcType": "VP",
-      "resume": "p Les entreprises de moins de 11 salariés peuvent opter jusqu'au strong 31 décembre 2025 inclus /strong pour le paiement trimestriel de leurs cotisations sociales en 2026. /p",
-      "chapo": "Les entreprises de moins de 11 salariés peuvent opter jusqu'au 31 décembre 2025 pour passer au paiement trimestriel de leurs cotisations sociales.",
+      "resume": "p Dans un arrêt du 13 novembre 2025, la Cour de cassation vient de se prononcer sur le nombre de jours consécutifs qu’un salarié peut travailler. Décryptage. /p",
+      "chapo": "La Cour de cassation se prononce sur les limites du travail consécutif, encadrant le repos obligatoire.",
       "comp": "fps",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
         "entreprise"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Nouveau mode de calcul pour les aides aux contrats d'apprentissage",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18570?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Vous employez un ou plusieurs apprentis ? Vous bénéficiez d’une aide à cet effet ? De nouvelles modalités de versement s’appliquent aux aides allouées aux employeurs d'apprentis. /p",
+      "chapo": "Les modalités de versement des aides à l'apprentissage évoluent ; une nouvelle formule de calcul entre en vigueur pour les employeurs.",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise",
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "L'UE renforce la protection des travailleurs exposés à des substances dangereuses",
+      "lien": "https://www.vie-publique.fr/en-bref/304887-lue-renforce-la-protection-des-travailleurs-aux-substances-dangereuses?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-10-08T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "La directive UE renforce les normes de protection des travailleurs exposés aux substances dangereuses, avec obligations renforcées pour les employeurs publics et privés.",
+      "comp": "fps",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "commune",
+        "departement"
       ],
       "secteurs": []
     },
@@ -530,9 +570,9 @@
       "source": "Vie-publique — publications",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Réflexion sur le régime juridique spécifique des militaires après deux décennies du statut général.",
+      "chapo": "Bilan des vingt années d'application du statut général des militaires en tant que fonctionnaires.",
       "comp": "fps",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
         "etat"
@@ -540,30 +580,13 @@
       "secteurs": []
     },
     {
-      "titre": "Arrêt de la Cour dans l'affaire C-706/23 (École gimnaziale « Mihai Eminescu »)",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000088478",
-      "date": "2026-10-08T07:42:59.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class=' ' Şcoala gimnazială « Mihai Eminescu » br/ Politique sociale br/ div class= p La Cour précise les exigences du droit de l’Union en ce qui concerne la non-discrimination des travailleurs en cas de cumul de contrats de travail /p ",
-      "chapo": "La Cour de justice précise les exigences de protection sociale applicables aux personnels des établissements scolaires.",
-      "comp": "fps",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat",
-        "departement"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Note relative au déploiement des générateurs d'aérosols incapacitants de petite capacité pour les personnels de surveillance dans les locaux de détention",
+      "titre": "Déploiement des générateurs d'aérosols incapacitants pour les personnels de surveillance pénitentiaire",
       "lien": "https://www.justice.gouv.fr/documentation/bulletin-officiel/note-relative-au-deploiement-generateurs-daerosols-incapacitants-petite-capacite",
       "date": "2026-10-05T09:48:57.000Z",
       "source": "Ministère de la Justice — actualités",
       "srcType": "MIN",
       "resume": "span class=\" --name-title --type-string --label-hidden\" Note relative au déploiement des générateurs d'aérosols incapacitants de petite capacité pour les personnels de surveillance dans les locaux de détention /span span class=\" --name-uid ",
-      "chapo": "Instruction administrative sur l'utilisation et le déploiement de générateurs d'aérosols incapacitants pour les surveillants pénitentiaires.",
+      "chapo": "Note ministérielle sur le déploiement de générateurs d'aérosols incapacitants de petite capacité pour les agents des locaux de détention.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -573,13 +596,13 @@
       "secteurs": []
     },
     {
-      "titre": "Circulaire relative aux modalités de mise en œuvre de la procédure alternative aux poursuites disciplinaires",
+      "titre": "Circulaire sur les modalités de mise en œuvre de la procédure alternative aux poursuites disciplinaires",
       "lien": "https://www.justice.gouv.fr/documentation/bulletin-officiel/circulaire-relative-aux-modalites-mise-oeuvre-procedure-alternative-aux-poursuites",
       "date": "2026-10-05T09:44:10.000Z",
       "source": "Ministère de la Justice — actualités",
       "srcType": "MIN",
       "resume": "span class=\" --name-title --type-string --label-hidden\" Circulaire relative aux modalités de mise en œuvre de la procédure alternative aux poursuites disciplinaires /span span class=\" --name-uid --type-entity-reference --label-hidden\" span ",
-      "chapo": "Circulaire définissant les modalités d'application de la procédure alternative aux poursuites disciplinaires dans la fonction publique pénitentiaire.",
+      "chapo": "Circulaire du ministère de la Justice précisant les modalités de la procédure alternative aux poursuites disciplinaires en matière de fonction publique.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -589,13 +612,13 @@
       "secteurs": []
     },
     {
-      "titre": "Circulaire relative au placement des personnes détenues à l'isolement",
+      "titre": "Circulaire relative au placement à l'isolement des personnes détenues",
       "lien": "https://www.justice.gouv.fr/documentation/bulletin-officiel/circulaire-relative-au-placement-personnes-detenues-lisolement",
       "date": "2026-10-05T09:36:15.000Z",
       "source": "Ministère de la Justice — actualités",
       "srcType": "MIN",
       "resume": "span class=\" --name-title --type-string --label-hidden\" Circulaire relative au placement des personnes détenues à l'isolement /span span class=\" --name-uid --type-entity-reference --label-hidden\" span DELIBIE Martine /span /span span class=",
-      "chapo": "Circulaire encadrant les conditions et modalités du placement à l'isolement des personnes incarcérées.",
+      "chapo": "Circulaire définissant les modalités de placement des personnes détenues à l'isolement dans les établissements pénitentiaires.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -605,13 +628,13 @@
       "secteurs": []
     },
     {
-      "titre": "Annulation du règlement « Pénibilité » du département de la Haute-Garonne par le tribunal",
+      "titre": "Le tribunal annule le règlement « Pénibilité » du département de la Haute-Garonne",
       "lien": "https://toulouse.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-annule-le-reglement-penibilite-permettant-une-reduction-de-la-duree-annuelle-de-travail-des-agents-du-departement-de-la-haute-garonne",
       "date": "2026-09-30T00:00:00.000Z",
       "source": "TA de Toulouse",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal annule le dispositif de réduction du temps de travail accordé aux agents exposés à la pénibilité au département.",
+      "chapo": "Le tribunal administratif annule le règlement permettant une réduction de la durée annuelle de travail des agents du département pour vice de forme ou incompétence.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -621,13 +644,13 @@
       "secteurs": []
     },
     {
-      "titre": "Validation par le tribunal de l'organisation du temps de travail au CCAS de Tournefeuille",
+      "titre": "Le tribunal valide l'essentiel des dispositions relatives à l'organisation du temps de travail au CCAS de Tournefeuille",
       "lien": "https://toulouse.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-valide-l-essentiel-des-dispositions-relatives-a-l-organisation-du-temps-de-travail-au-sein-du-ccas-de-tournefeuille",
       "date": "2026-09-30T00:00:00.000Z",
       "source": "TA de Toulouse",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal valide les dispositions du CCAS relatives à l'organisation du temps de travail des agents.",
+      "chapo": "Le tribunal administratif valide les principales règles d'organisation du temps de travail adoptées par le centre communal d'action sociale de Tournefeuille.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -637,13 +660,13 @@
       "secteurs": []
     },
     {
-      "titre": "Pensions supplémentaires : Renforcer l'épargne retraite par l'adhésion automatique",
-      "lien": "https://finance.ec.europa.eu/news/supplementary-pensions-boosting-retirement-savings-through-auto-enrolment-2026-09-25_en",
-      "date": "2026-09-25T10:24:26.000Z",
-      "source": "Commission UE — Finance (FISMA)",
-      "srcType": "DG",
-      "resume": "Auto‑enrolment has proved effective in increasing participation and reducing pension gaps, particularly in Member States with low occupational pensions coverage.",
-      "chapo": "La Commission européenne analyse l'efficacité de l'adhésion automatique aux régimes de pensions supplémentaires pour augmenter la participation et réduire les écarts de retraite.",
+      "titre": "Indemnité d'éloignement des fonctionnaires",
+      "lien": "https://nouvelle-caledonie.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/indemnite-d-eloignement-des-fonctionnaires",
+      "date": "2026-09-23T00:00:00.000Z",
+      "source": "TA de Nouvelle-Calédonie",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Décision du tribunal administratif de Nouvelle-Calédonie concernant l'indemnité d'éloignement des agents publics.",
       "comp": "fps",
       "impact": 2,
       "keep": true,
@@ -653,36 +676,38 @@
       "secteurs": []
     },
     {
-      "titre": "Projet de loi portant transposition de la directive européenne du 10 mai 2023 relative à l'égalité des rémunérations entre les femmes et les hommes par la transparence des rémunérations",
-      "lien": "https://www.vie-publique.fr/loi/304502-transposition-directive-transparence-des-salaires-projet-de-loi?egn-publisher=dila_vp&amp;egn-name=informer_rss_lois",
-      "date": "2026-09-09T22:00:00.000Z",
-      "source": "Vie-publique — lois",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Projet de loi transposant la directive européenne sur la transparence des rémunérations pour l'égalité femmes-hommes.",
-      "comp": "fps",
-      "impact": 3,
-      "keep": true,
-      "profils": [
-        "entreprise",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Examen par les pairs sur les mesures de prévention de la dépendance aux allocations de sécurité sociale",
-      "lien": "https://employment-social-affairs.ec.europa.eu/news/peer-review-measures-prevent-and-reduce-long-term-dependency-social-security-benefits-2026-09-29_en",
-      "date": "2026-10-06T10:07:57.000Z",
-      "source": "Commission UE — Emploi & social",
-      "srcType": "DG",
-      "resume": "p The Peer Review held in Helsinki on 29–30 September 2026 focused on policy measures to prevent and reduce long-term dependency on social security benefits. /p",
-      "chapo": "Un examen comparatif européen analyse les politiques de prévention et réduction de la dépendance aux prestations sociales de long terme.",
+      "titre": "Arrêt de la Cour dans l'affaire C-706/23 — Şcoala gimnazială « Mihai Eminescu »",
+      "lien": "https://curia.europa.eu/site/jcms/p1_1000088478",
+      "date": "2026-10-08T07:42:59.000Z",
+      "source": "Cour de justice de l'UE",
+      "srcType": "CJUE",
+      "resume": "div class=' ' Şcoala gimnazială « Mihai Eminescu » br/ Politique sociale br/ div class= p La Cour précise les exigences du droit de l’Union en ce qui concerne la non-discrimination des travailleurs en cas de cumul de contrats de travail /p ",
+      "chapo": "La Cour de justice de l'UE précise les exigences de la politique sociale en matière d'égalité de traitement dans les services éducatifs et sociaux.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
       "profils": [
-        "departement",
-        "etat"
+        "etat",
+        "departement"
+      ],
+      "secteurs": [
+        "social"
+      ]
+    },
+    {
+      "titre": "Arrêt L.Z. et D.Z. c. Italie",
+      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8656055-12339692",
+      "date": "2026-10-08T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "La CEDH constate un problème systémique en Italie dans l'inexécution des décisions judiciaires ordonnant la réunification familiale parent-enfant.",
+      "comp": "asn",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat",
+        "departement"
       ],
       "secteurs": [
         "social"
@@ -695,9 +720,9 @@
       "source": "TA de Lyon",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le TA de Lyon refuse d'indemniser une infirmière pour le préjudice d'anxiété lié à l'exposition aux fumées chirurgicales en bloc opératoire.",
+      "chapo": "Le tribunal administratif de Lyon rejette la réclamation d'une infirmière pour préjudice d'anxiété lié aux fumées chirurgicales en bloc opératoire.",
       "comp": "asn",
-      "impact": 2,
+      "impact": 1,
       "keep": true,
       "profils": [
         "sante"
@@ -713,44 +738,28 @@
       "source": "Vie-publique — lois",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Le gouvernement présente le projet de loi de financement de la sécurité sociale pour 2027, régissant les équilibres des régimes.",
+      "chapo": "Le projet de loi de financement de la sécurité sociale pour 2027 détermine les enveloppes budgétaires du système de protection sociale.",
       "comp": "asn",
       "impact": 3,
       "keep": true,
       "profils": [
+        "sante",
         "departement",
-        "sante"
+        "etat"
       ],
       "secteurs": [
-        "sante"
+        "sante",
+        "social"
       ]
     },
     {
-      "titre": "C-131/25 Dris : arrêt de la Cour sur l'accès aux études de médecine en Belgique",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000088268",
-      "date": "2026-10-01T07:43:28.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class=' ' Dris br/ Principes du droit communautaire br/ div class= p Accès aux études de médecine en Belgique : un étudiant qui a effectué une partie significative de sa scolarité dans cet État membre tout en résidant dans un autre État",
-      "chapo": "Arrêt de la Cour de justice sur les principes du droit communautaire appliquées à l'accès aux études de médecine.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "Les dépenses de santé en 2025 - Comptes de la santé",
+      "titre": "Les dépenses de santé en 2025 — Résultats des comptes de la santé (édition 2026)",
       "lien": "https://www.vie-publique.fr/rapport/304836-les-depenses-de-sante-2025-resultats-des-comptes-de-la-sante-2026-drees?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
       "date": "2026-09-30T22:00:00.000Z",
       "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Rapport d'analyse des comptes de la santé 2025 présentant les dépenses et indicateurs du système de santé français.",
+      "chapo": "Publication du rapport annuel sur les dépenses de santé 2025 et l'analyse des comptes de la santé française.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
@@ -758,44 +767,6 @@
         "sante",
         "etat",
         "departement"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "Le dispositif du médecin traitant : une ambition partagée à mieux soutenir",
-      "lien": "https://www.vie-publique.fr/rapport/304802-le-dispositif-du-medecin-traitant-cour-des-comptes?egn-publisher=dila_vp&amp;egn-name=informer_rss_rapports",
-      "date": "2026-09-29T22:00:00.000Z",
-      "source": "Vie-publique — rapports",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Rapport sur le système du médecin traitant et les mesures pour renforcer son rôle dans le système de santé.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante",
-        "etat"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "Rapport sur la répartition des dépenses entre assurance maladie obligatoire et complémentaire",
-      "lien": "https://www.assemblee-nationale.fr/dyn/espace-presse/communiques-de-presse/2026/publication-du-rapport-d-information-sur-la-repartition-des-depenses-entre-l-assurance-maladie-obligatoire-et-l-assurance-maladie-complementaire",
-      "date": "2026-09-29T18:48:49.000Z",
-      "source": "Assemblée nationale — communiqués",
-      "srcType": "AN",
-      "resume": "Ce mardi 29 septembre 2026, la mission d’évaluation et de contrôle des lois de financement de la sécurité sociale (Mecss), co-présidée par MM. Cyrille Isaac-Sibille (Dem, Rhône) et Jérôme Guedj (Soc, Essonne), a adopté le rapport d’informat",
-      "chapo": "La Mecss publie un rapport d'évaluation sur le financement et la répartition des charges entre assurance maladie obligatoire et complémentaire.",
-      "comp": "asn",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "sante",
-        "etat"
       ],
       "secteurs": [
         "sante"
@@ -808,35 +779,17 @@
       "source": "Vie-publique — rapports",
       "srcType": "VP",
       "resume": "",
-      "chapo": "Un rapport propose une réforme majeure de la politique périnatale française pour améliorer la prise en charge des femmes, nouveau-nés et familles.",
-      "comp": "asn",
-      "impact": 3,
-      "keep": true,
-      "profils": [
-        "sante",
-        "departement",
-        "etat"
-      ],
-      "secteurs": [
-        "sante"
-      ]
-    },
-    {
-      "titre": "Les conditions de détention en question",
-      "lien": "https://marseille.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/les-conditions-de-detention-en-question",
-      "date": "2026-09-08T00:00:00.000Z",
-      "source": "TA de Marseille",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Marseille examine les conditions de détention et leur conformité aux règles de protection des droits.",
+      "chapo": "Rapport proposant une réforme du modèle de prise en charge périnatale en France pour améliorer les outcomes maternels et néonatals.",
       "comp": "asn",
       "impact": 2,
       "keep": true,
       "profils": [
-        "etat",
+        "sante",
         "departement"
       ],
-      "secteurs": []
+      "secteurs": [
+        "sante"
+      ]
     },
     {
       "titre": "Bilan judiciaire des violences urbaines en marge du mouvement lycéen",
@@ -845,7 +798,7 @@
       "source": "Ministère de la Justice — actualités",
       "srcType": "MIN",
       "resume": "span class=\" --name-title --type-string --label-hidden\" Bilan judiciaire des violences urbaines en marge du mouvement lycéen /span span class=\" --name-uid --type-entity-reference --label-hidden\" span GARAUDET Zakary /span /span span class=\"",
-      "chapo": "Le ministère de la Justice publie un bilan des poursuites judiciaires relatives aux violences urbaines lors du mouvement de protestation lycéen.",
+      "chapo": "Le ministère de la Justice communique un bilan judiciaire des poursuites relatives aux violences urbaines accompagnant un mouvement lycéen.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -855,66 +808,13 @@
       "secteurs": []
     },
     {
-      "titre": "Le juge des référés de Caen suspend l'interdiction préfectorale de porter des équipements de protection en Aisne",
-      "lien": "https://caen.tribunal-administratif.fr/tribunal-administratif-d-amiens/decisions-de-justice/dernieres-decisions/le-juge-des-referes-suspend-l-interdiction-de-la-prefete-de-l-aisne-de-porter-et-transporter-des-equipements-de-protection-dans-les-communes-ou-se",
+      "titre": "Le juge des référés suspend l'interdiction de la préfète de l'Aisne de porter et transporter des équipements de protection",
+      "lien": "https://amiens.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-suspend-l-interdiction-de-la-prefete-de-l-aisne-de-porter-et-transporter-des-equipements-de-protection-dans-les-communes-ou-se",
       "date": "2026-10-09T00:00:00.000Z",
-      "source": "TA de Caen",
+      "source": "TA de Amiens",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif suspend l'arrêté de la préfète de l'Aisne interdisant le port d'équipements de protection dans certaines communes.",
-      "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Arrêt de la Cour de justice de l'UE dans l'affaire C-482/24 P — Global 8 Airlines/Commission — Politique étrangère et de sécurité commune — Mesures restrictives",
-      "lien": "https://curia.europa.eu/site/jcms/p1_1000088477",
-      "date": "2026-10-08T07:42:58.000Z",
-      "source": "Cour de justice de l'UE",
-      "srcType": "CJUE",
-      "resume": "div class=' ' Global 8 Airlines/Commission br/ Politique étrangère et de sécurité commune br/ div class= p Mesures restrictives : l’inscription, par la Commission, d’aéronefs sur une liste d’interdiction de vol est un acte qui peut être con",
-      "chapo": "La Cour de justice de l'UE statue sur un recours en appel concernant l'application de mesures restrictives de politique étrangère et de sécurité commune à une compagnie aérienne.",
-      "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "transport"
-      ]
-    },
-    {
-      "titre": "Arrêt L.Z. et D.Z. c. Italie — Défaillance systémique dans l'exécution de décisions de réunification familiale",
-      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8656055-12339692",
-      "date": "2026-10-08T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "La CEDH identifie un problème systémique en Italie : l'inexécution des ordres judiciaires de réunification entre une mère et son enfant.",
-      "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": [
-        "social"
-      ]
-    },
-    {
-      "titre": "Décision Mouzin c. France — Disparition d'Estelle Mouzin et indemnisation des défaillances judiciaires",
-      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8656122-12339775",
-      "date": "2026-10-08T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "La CEDH reconnaît les défaillances du système judiciaire français dans l'affaire Estelle Mouzin et ordonne l'indemnisation du préjudice moral.",
+      "chapo": "Le tribunal administratif d'Amiens ordonne le sursis à l'interdiction préfectorale du port et du transport d'équipements de protection dans certaines communes.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -924,15 +824,15 @@
       "secteurs": []
     },
     {
-      "titre": "Décision Manavidis c. Grèce — Conditions de détention",
+      "titre": "Décision Manavidis c. Grèce",
       "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8656285-12340004",
       "date": "2026-10-08T00:00:00.000Z",
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "La Cour européenne des droits de l'homme reconnaît l'effectivité du recours d'un requérant contestant les conditions de sa détention.",
+      "chapo": "La CEDH reconnait le caractère effectif du recours contentieux relatif aux conditions de détention contestées en 2022.",
       "comp": "lib",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
         "etat"
@@ -940,47 +840,77 @@
       "secteurs": []
     },
     {
-      "titre": "TA de Paris : suspension de l'interdiction d'une manifestation pour Gaza",
+      "titre": "Décision Mouzin c. France",
+      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8656122-12339775",
+      "date": "2026-10-08T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "La CEDH reconnaît les défaillances du système judiciaire français dans l'affaire Mouzin et ordonne une indemnisation du préjudice moral.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Le TA de Paris suspend l'interdiction de la manifestation « contre le génocide à Gaza et pour le respect du cessez-le-feu »",
       "lien": "https://paris.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/suspension-de-l-interdiction-de-la-manifestation-contre-le-genocide-a-gaza-et-pour-le-respect-du-cessez-le-feu",
       "date": "2026-10-07T00:00:00.000Z",
       "source": "TA de Paris",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif suspend l'interdiction d'une manifestation relative au conflit israélo-palestinien.",
+      "chapo": "Le tribunal administratif annule l'interdiction d'une manifestation liée au conflit israélo-palestinien, reconnaissant un atteinte disproportionnée à la liberté d'expression.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
+      "profils": [],
       "secteurs": []
     },
     {
-      "titre": "TA de Grenoble : suspension de l'interdiction des rassemblements lycéens en Isère",
-      "lien": "https://grenoble.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/mouvement-lyceen-le-juge-des-referes-suspend-l-interdiction-des-rassemblements-en-isere",
-      "date": "2026-10-06T00:00:00.000Z",
-      "source": "TA de Grenoble",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le juge des référés suspend l'interdiction des rassemblements lycéens en Isère ordonnée par l'autorité administrative.",
-      "comp": "lib",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Arrêt Sodba Makovac et Latin c. Slovénie — droit à un procès équitable dans une procédure concernant des amendes pour des activités de pêche",
+      "titre": "Arrêt Sodba Makovac et Latin c. Slovénie - droit à un procès équitable dans une procédure concernant des amendes pour des activités de pêche dans les eaux slovènes",
       "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8653806-12335608",
       "date": "2026-10-06T00:00:00.000Z",
       "source": "CEDH — communiqués de presse",
       "srcType": "CEDH",
       "resume": "-",
-      "chapo": "La CEDH se prononce sur le droit à un procès équitable dans une procédure pénale/administrative concernant des infractions de pêche en eaux slovènes.",
+      "chapo": "La CEDH reconnaît un droit à un procès équitable en matière de poursuites administratives relatives aux activités de pêche illégale.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [],
+      "secteurs": [
+        "eau",
+        "agriculture"
+      ]
+    },
+    {
+      "titre": "Arrêt Makovac et Latin c. Slovénie - droit à un procès équitable dans une procédure concernant des amendes pour des activités de pêche dans les eaux slovènes",
+      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8653928-12335848",
+      "date": "2026-10-06T00:00:00.000Z",
+      "source": "CEDH — communiqués de presse",
+      "srcType": "CEDH",
+      "resume": "-",
+      "chapo": "La CEDH reconnaît un droit à un procès équitable en matière de poursuites administratives pour activités de pêche en eaux slovènes.",
+      "comp": "lib",
+      "impact": 2,
+      "keep": true,
+      "profils": [],
+      "secteurs": [
+        "eau",
+        "agriculture"
+      ]
+    },
+    {
+      "titre": "TA de Rouen : arrêtés préfectoraux d'interdiction de rassemblements lors du mouvement lycéen",
+      "lien": "https://rouen.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/arretes-prefectoraux-d-interdiction-de-rassemblements-intervenus-dans-le-cadre-du-mouvement-lyceen",
+      "date": "2026-10-05T00:00:00.000Z",
+      "source": "TA de Rouen",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif examine la légalité d'arrêtés préfectoraux interdisant les rassemblements dans le contexte du mouvement lycéen.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -990,13 +920,13 @@
       "secteurs": []
     },
     {
-      "titre": "Arrêt Makovac et Latin c. Slovénie — droit à un procès équitable dans une procédure concernant des amendes pour des activités de pêche dans les eaux slovènes",
-      "lien": "https://hudoc.echr.coe.int/fre-press?i=003-8653928-12335848",
-      "date": "2026-10-06T00:00:00.000Z",
-      "source": "CEDH — communiqués de presse",
-      "srcType": "CEDH",
-      "resume": "-",
-      "chapo": "La CEDH se prononce sur le droit à un procès équitable dans une procédure pénale/administrative concernant des infractions de pêche en eaux slovènes.",
+      "titre": "TA de Strasbourg : suspension de l'arrêté interdisant les rassemblements aux abords des lycées",
+      "lien": "https://strasbourg.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/communique-de-presse-du-05-octobre-2026-la-juge-des-referes-suspend-l-arrete-interdisant-les-rassemblements-aux-abords-des-lycees-mais-autorise",
+      "date": "2026-10-05T00:00:00.000Z",
+      "source": "TA de Strasbourg",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "La juge des référés du TA de Strasbourg suspend un arrêté interdisant les rassemblements aux abords des lycées pour excès de pouvoir.",
       "comp": "lib",
       "impact": 2,
       "keep": true,
@@ -1004,6 +934,61 @@
         "etat"
       ],
       "secteurs": []
+    },
+    {
+      "titre": "Droit de se taire : application à la procédure de sanction du comité de règlement des différends et des sanctions de la Commission de régulation de l'énergie — Censure partielle du Conseil constitutionnel",
+      "lien": "https://www.economie.gouv.fr/daj/droit-de-se-taire-application-la-procedure-de-sanction-du-comite-de-reglement-des-differends-et-des-sanctions-de-la-commission-de-regulation-de",
+      "date": "2026-10-02T16:54:00.000Z",
+      "source": "DAJ Bercy — commande publique",
+      "srcType": "DAJ",
+      "resume": "Dans une décision du 6 août 2026, le Conseil constitutionnel censure partiellement des dispositions du code de l’énergie relatives à la procédure de sanction du comité de règlement des différends et des sanctions de la Commission de régulat",
+      "chapo": "Le Conseil constitutionnel censure partiellement des dispositions du code de l'énergie relatives au droit de se taire dans les procédures de sanction de la CRE.",
+      "comp": "lib",
+      "impact": 3,
+      "keep": true,
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
+        "energie"
+      ]
+    },
+    {
+      "titre": "Les contrats entre marques et influenceurs plus encadrés dès 2026",
+      "lien": "https://www.service-public.gouv.fr/particuliers/actualites/A18674?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p À compter du 1 sup er /sup janvier 2026, un contrat liant un annonceur à un influenceur sera obligatoirement écrit dès lors que la valeur de la campagne promotionnelle dépasse 1 000 €. /p",
+      "chapo": "Obligation de formaliser par écrit les contrats entre annonceurs et influenceurs à partir du 1er janvier 2026.",
+      "comp": "dpi",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
+    },
+    {
+      "titre": "Directive « Accessibilité » : possibilité de demander une exemption en ligne",
+      "lien": "https://entreprendre.service-public.gouv.fr/actualites/A18669?xtor=RSS-112",
+      "date": "2026-10-11T00:45:07.080Z",
+      "source": "Service-public — actualités pro",
+      "srcType": "VP",
+      "resume": "p Depuis le 28 juin 2025, de nouvelles obligations relatives à l’accessibilité s’appliquent aux produits et services. À cet effet, une démarche en ligne est disponible pour demander une exemption ou signaler la non-conformité d’un produit. ",
+      "chapo": "Nouvelle procédure en ligne pour demander exemption aux obligations d'accessibilité des produits et services depuis juin 2025.",
+      "comp": "dpi",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "entreprise"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
     },
     {
       "titre": "Clôture de l'injonction prononcée à l'encontre de FRANCE TRAVAIL",
@@ -1012,7 +997,7 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Par délibération du 23 septembre 2026, la CNIL a clos l’injonction prononcée le 22 ; ;janvier 2026 à l’encontre de FRANCE TRAVAIL, sans liquider l’astreinte prévue compte tenu de sa mise en conformité.",
-      "chapo": "La CNIL clôt l'injonction du 22 janvier 2026 contre FRANCE TRAVAIL suite à la mise en conformité du traitement de données.",
+      "chapo": "La CNIL a clos l'injonction du 22 janvier 2026 adressée à France Travail suite à la mise en conformité de ses traitements de données.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
@@ -1024,37 +1009,21 @@
       ]
     },
     {
-      "titre": "Conclusions de l'avocate générale Laila Medina — Affaire C-222/25 (Rahapesu Andmebüroo)",
+      "titre": "Conclusions de l'avocate générale Medina dans l'affaire C-222/25 (Rahapesu Andmebüroo)",
       "lien": "https://curia.europa.eu/site/jcms/p1_1000088506",
       "date": "2026-10-08T08:04:57.000Z",
       "source": "Cour de justice de l'UE",
       "srcType": "CJUE",
       "resume": "div class=' ' Rahapesu Andmebüroo br/ Rapprochement des législations br/ div class= p Avocate générale Medina : la directive en matière de protection des données dans le domaine répressif s’applique au traitement des données à caractère per",
-      "chapo": "L'avocate générale analyse l'interprétation de la directive anti-blanchiment dans l'affaire concernant les obligations déclaratives.",
+      "chapo": "Conclusions de l'avocate générale sur un dossier de rapprochement des législations en matière de données et de protection.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
       "profils": [
         "etat"
       ],
-      "secteurs": []
-    },
-    {
-      "titre": "Droit de se taire : application à la procédure de sanction du comité de règlement des différends et des sanctions de la Commission de régulation de l'énergie",
-      "lien": "https://www.economie.gouv.fr/daj/droit-de-se-taire-application-la-procedure-de-sanction-du-comite-de-reglement-des-differends-et-des-sanctions-de-la-commission-de-regulation-de",
-      "date": "2026-10-02T16:54:00.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "Dans une décision du 6 août 2026, le Conseil constitutionnel censure partiellement des dispositions du code de l’énergie relatives à la procédure de sanction du comité de règlement des différends et des sanctions de la Commission de régulat",
-      "chapo": "Le Conseil constitutionnel censure partiellement des dispositions du code de l'énergie relatives au droit de ne pas s'auto-incriminer dans les procédures de sanction de la CRE.",
-      "comp": "dpi",
-      "impact": 3,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
       "secteurs": [
-        "energie"
+        "numerique"
       ]
     },
     {
@@ -1064,35 +1033,43 @@
       "source": "CNIL — données personnelles",
       "srcType": "AAI",
       "resume": "Une fuite ou un vol de données peut causer un préjudice pour les personnes concernées. Si l’incident résulte d’un manquement au RGPD, elles peuvent, sous certaines conditions, demander une indemnisation. C’est au juge, et non à la CNIL, de ",
-      "chapo": "La CNIL précise les conditions d'indemnisation des préjudices résultant d'une fuite ou d'un vol de données personnelles en cas de manquement.",
+      "chapo": "La CNIL précise les conditions d'indemnisation des préjudices résultant d'une fuite ou d'un vol de données personnelles.",
       "comp": "dpi",
       "impact": 2,
       "keep": true,
-      "profils": [],
-      "secteurs": []
+      "profils": [
+        "etat",
+        "entreprise"
+      ],
+      "secteurs": [
+        "numerique"
+      ]
     },
     {
-      "titre": "Cybermois 2026 : la CNIL et Cybermalveillance.gouv.fr publient une nouvelle ressource pour adopter les bons réflexes face à une violation de données",
-      "lien": "https://www.cnil.fr/fr/cybermois-2026",
-      "date": "2026-10-01T12:00:00.000Z",
-      "source": "CNIL — données personnelles",
-      "srcType": "AAI",
-      "resume": "À l’occasion du Mois européen de la cybersécurité, Cybermois en France, la CNIL et Cybermalveillance.gouv.fr s’associent autour d’un nouveau support pratique pour aider les particuliers à réagir en cas de violation de données personnelles e",
-      "chapo": "La CNIL et Cybermalveillance.gouv.fr publient une ressource pédagogique lors du Mois européen de la cybersécurité pour prévenir les violations de données.",
-      "comp": "dpi",
+      "titre": "Élections municipales de Nice : le tribunal déclare inéligible M. Ippolito mais valide le résultat du scrutin",
+      "lien": "https://nice.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/elections-municipales-de-nice-le-tribunal-declare-ineligible-m.-ippolito-mais-valide-le-resultat-du-scrutin",
+      "date": "2026-10-09T00:00:00.000Z",
+      "source": "TA de Nice",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Nice prononce l'inéligibilité d'un candidat tout en validant le résultat global du scrutin municipal de Nice.",
+      "comp": "dpg",
       "impact": 2,
       "keep": true,
-      "profils": [],
+      "profils": [
+        "commune",
+        "etat"
+      ],
       "secteurs": []
     },
     {
-      "titre": "Arrêt de la Cour dans l'affaire C-108/26 RX (Décision relative à la gestion du trafic aérien)",
+      "titre": "Arrêt de la Cour dans l'affaire C-108/26 RX (Gestion du trafic aérien)",
       "lien": "https://curia.europa.eu/site/jcms/p1_1000088495",
       "date": "2026-10-08T07:54:14.000Z",
       "source": "Cour de justice de l'UE",
       "srcType": "CJUE",
       "resume": "div class=' ' D (Décision relative à la gestion du trafic aérien) br/ Droit institutionnel br/ div class= p Vol retardé : une décision de gestion du trafic aérien ne constitue pas, à elle seule, une circonstance extraordinaire permettant au",
-      "chapo": "La Cour de justice se prononce sur les responsabilités en cas de retard aérien imputable à des décisions de gestion du trafic.",
+      "chapo": "Décision de la CJUE relative à la gestion du trafic aérien et aux retards de vol.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1110,7 +1087,7 @@
       "source": "TA de Rouen",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Rouen annule les élections municipales d'Evreux, entraînant l'obligation d'organiser un nouveau scrutin.",
+      "chapo": "Le tribunal administratif de Rouen prononce l'annulation des élections municipales d'Evreux pour vice de procédure.",
       "comp": "dpg",
       "impact": 2,
       "keep": true,
@@ -1121,97 +1098,15 @@
       "secteurs": []
     },
     {
-      "titre": "TA de Guadeloupe : annulation des élections municipales et communautaires du Gosier",
+      "titre": "Le tribunal administratif de Guadeloupe annule les élections municipales et communautaires du Gosier",
       "lien": "https://guadeloupe.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-tribunal-administratif-annule-les-elections-municipales-et-communautaires-des-15-et-22-mars-2026-dans-la-commune-du-gosier",
       "date": "2026-10-07T00:00:00.000Z",
       "source": "TA de Guadeloupe",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif annule les élections municipales et communautaires des 15 et 22 mars 2026 dans la commune du Gosier.",
+      "chapo": "Le TA de Guadeloupe annule les élections municipales et communautaires du 15 et 22 mars 2026 dans la commune du Gosier pour motifs légaux.",
       "comp": "dpg",
       "impact": 3,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Nouvelles règles de temps de parole politique dans les médias depuis le 1er octobre 2026",
-      "lien": "https://www.vie-publique.fr/en-bref/304878-temps-de-parole-dans-les-medias-nouvelles-regles-au-1er-octobre-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-10-07T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Mise en œuvre de nouvelles dispositions réglementant l'équité du temps de parole politique accordé aux candidats dans les médias audiovisuels.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "États d'urgence et autres régimes d'exception : état d'alerte de sécurité nationale, article 16, état de siège",
-      "lien": "https://www.vie-publique.fr/questions-reponses/269427-etat-durgence-et-autres-regimes-dexception-le-point-en-7-questions?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
-      "date": "2026-10-07T22:00:00.000Z",
-      "source": "Vie-publique — actualités",
-      "srcType": "VP",
-      "resume": "",
-      "chapo": "Étude synthétique sur les différents régimes d'exception du droit public français et leurs cadres constitutionnels et légaux.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "TA d'Amiens : rejet de la requête en référé pour réouverture rapide d'un groupe scolaire privé",
-      "lien": "https://amiens.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-rejette-les-requetes-des-associations-requerantes-visant-a-la-reouverture-rapide-des-locaux-du-groupe-scolaire-prive-hors-contr",
-      "date": "2026-10-07T00:00:00.000Z",
-      "source": "TA de Amiens",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le juge des référés rejette les demandes d'associations visant la réouverture immédiate d'un établissement scolaire privé.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "commune",
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Suspension de l'arrêté du préfet des Vosges interdisant les rassemblements autour de certains lycées d'Épinal",
-      "lien": "https://nancy.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/l-execution-de-l-arrete-du-prefet-des-vosges-interdisant-les-rassemblements-autour-de-certains-lycees-d-epinal-est-suspendue",
-      "date": "2026-10-06T00:00:00.000Z",
-      "source": "TA de Nancy",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Nancy suspend l'exécution d'un arrêté préfectoral restrictif des libertés de rassemblement devant des lycées épinaliens.",
-      "comp": "dpg",
-      "impact": 2,
-      "keep": true,
-      "profils": [
-        "etat"
-      ],
-      "secteurs": []
-    },
-    {
-      "titre": "Le tribunal annule les opérations électorales municipales 2026 à Wittelsheim",
-      "lien": "https://strasbourg.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/communique-de-presse-du-6-octobre-2026-elections-municipales-2026-le-tribunal-annule-les-operations-electorales-a-wittelsheim",
-      "date": "2026-10-06T00:00:00.000Z",
-      "source": "TA de Strasbourg",
-      "srcType": "TA",
-      "resume": "",
-      "chapo": "Le TA de Strasbourg annule les opérations électorales municipales 2026 à Wittelsheim sur recours contestant leur régularité.",
-      "comp": "dpg",
-      "impact": 2,
       "keep": true,
       "profils": [
         "commune"
@@ -1219,13 +1114,45 @@
       "secteurs": []
     },
     {
-      "titre": "Signification des décisions de justice : un préalable incontournable à la mise à exécution des décisions pénales statuant sur les intérêts civils",
-      "lien": "https://www.economie.gouv.fr/daj/signification-des-decisions-de-justice-un-prealable-incontournable-la-mise-execution-des-decisions-penales-statuant-sur-les-interets-civils",
-      "date": "2026-10-05T11:14:43.000Z",
-      "source": "DAJ Bercy — commande publique",
-      "srcType": "DAJ",
-      "resume": "Conformément aux dispositions de l'article 503 du code de procédure civile, la signification est une formalité préalable et indispensable à toute mesure d'exécution forcée.",
-      "chapo": "La signification est une formalité préalable obligatoire à l'exécution des décisions pénales relatives aux intérêts civils, conformément à l'article 503 du code de procédure civile.",
+      "titre": "Temps de parole politique dans les médias : nouvelles règles depuis le 1er octobre 2026",
+      "lien": "https://www.vie-publique.fr/en-bref/304878-temps-de-parole-dans-les-medias-nouvelles-regles-au-1er-octobre-2026?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-10-07T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Entrée en vigueur de nouvelles règles régissant le temps de parole des candidats et partis politiques dans les médias audiovisuels.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "États d'urgence et autres régimes d'exception (état d'alerte de sécurité nationale, article 16, état de siège)",
+      "lien": "https://www.vie-publique.fr/questions-reponses/269427-etat-durgence-et-autres-regimes-dexception-le-point-en-7-questions?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-10-07T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "Analyse des régimes d'exception du droit public français : leur régime juridique et leur mise en œuvre.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Le juge des référés du TA d'Amiens rejette les requêtes en réouverture du groupe scolaire privé hors contrat",
+      "lien": "https://amiens.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/le-juge-des-referes-rejette-les-requetes-des-associations-requerantes-visant-a-la-reouverture-rapide-des-locaux-du-groupe-scolaire-prive-hors-contr",
+      "date": "2026-10-07T00:00:00.000Z",
+      "source": "TA de Amiens",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif d'Amiens refuse d'ordonner en urgence la réouverture des locaux d'un groupe scolaire privé fermé.",
       "comp": "dpg",
       "impact": 1,
       "keep": true,
@@ -1233,18 +1160,50 @@
       "secteurs": []
     },
     {
-      "titre": "Mise à disposition du bâtiment du « 38 rue d'Alembert » à l'association « les ami.e.s du 38 » : le tribunal rejette le recours",
-      "lien": "https://grenoble.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/mise-a-disposition-du-batiment-du-38-rue-d-alembert-a-l-association-les-ami.e.s-du-38-le-tribunal-rejette-le-recours",
-      "date": "2026-10-05T00:00:00.000Z",
+      "titre": "Budget de la défense : étapes pour le porter à 5 % du PIB en 2035",
+      "lien": "https://www.vie-publique.fr/eclairage/284741-budget-de-la-defense-quelles-etapes-pour-le-porter-5-du-pib?egn-publisher=dila_vp&amp;egn-name=informer_rss_actualites",
+      "date": "2026-10-06T22:00:00.000Z",
+      "source": "Vie-publique — actualités",
+      "srcType": "VP",
+      "resume": "",
+      "chapo": "L'État fixe un cadre programmatique pour augmenter progressivement les dépenses de défense de 3 % à 5 % du PIB d'ici 2035.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "Mouvement lycéen : le juge des référés suspend l'interdiction des rassemblements en Isère",
+      "lien": "https://grenoble.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/mouvement-lyceen-le-juge-des-referes-suspend-l-interdiction-des-rassemblements-en-isere",
+      "date": "2026-10-06T00:00:00.000Z",
       "source": "TA de Grenoble",
       "srcType": "TA",
       "resume": "",
-      "chapo": "Le tribunal administratif de Grenoble rejette un recours relatif à la mise à disposition d'un bâtiment communal à une association.",
+      "chapo": "Le tribunal administratif de Grenoble suspend l'arrêté préfectoral interdisant les rassemblements autour de lycées lors du mouvement lycéen.",
       "comp": "dpg",
-      "impact": 1,
+      "impact": 2,
       "keep": true,
       "profils": [
-        "commune"
+        "etat"
+      ],
+      "secteurs": []
+    },
+    {
+      "titre": "L'exécution de l'arrêté du préfet des Vosges interdisant les rassemblements autour de certains lycées d'Epinal est suspendue",
+      "lien": "https://nancy.tribunal-administratif.fr/decisions-de-justice/dernieres-decisions/l-execution-de-l-arrete-du-prefet-des-vosges-interdisant-les-rassemblements-autour-de-certains-lycees-d-epinal-est-suspendue",
+      "date": "2026-10-06T00:00:00.000Z",
+      "source": "TA de Nancy",
+      "srcType": "TA",
+      "resume": "",
+      "chapo": "Le tribunal administratif de Nancy suspend l'arrêté préfectoral des Vosges interdisant les rassemblements autour de lycées épinaliens.",
+      "comp": "dpg",
+      "impact": 2,
+      "keep": true,
+      "profils": [
+        "etat"
       ],
       "secteurs": []
     }
